@@ -5,36 +5,55 @@ In deze opdracht bouw ik een systeem dat het technische landschap van een klant 
 Het doel is om met behulp van een LLM een rapport te maken over welke technologieën, tools, platformen en systemen een klant waarschijnlijk gebruikt. Het systeem haalt ook technische termen uit de antwoorden van de LLM. Als het systeem een term nog niet kent, wordt daar extra informatie over opgezocht en opgeslagen voor later gebruik.
 
 ## Welke stappen ik ga ondernemen
-1. Ik maak fictieve HUMINT-bestanden aan in markdown.
-Ik maak of verzamel WEBINT-informatie, bijvoorbeeld uit fictieve vacatures of websites.
-Ik lees deze bestanden in met Python.
-Ik sla de ruwe informatie op in MongoDB.
-Ik splits de tekst op in kleinere stukken.
-Ik zet deze stukken om naar embeddings.
-Ik sla deze embeddings op in Qdrant.
-Ik lees vaste prompts in uit een prompt-directory.
-Ik stuur de prompt met relevante context naar de LLM.
-Ik laat de LLM een eerste analyse maken van het technische landschap.
-Ik haal technische termen uit het antwoord.
-Ik controleer of deze termen al bekend zijn in de vector store.
-Als een term nog niet bekend is, vraag ik extra uitleg aan de LLM.
-Ik sla deze nieuwe informatie op in MongoDB en Qdrant.
-Ik herhaal dit proces voor vervolgprompts.
-Tot slot laat ik het systeem een markdownrapport genereren.
+1. Ik maak fictieve HUMINT-bestanden aan in Markdown.
+2. Ik maak WEBINT-instructiebestanden aan in Markdown.
+3. Ik start de CLI-agent.
+4. De CLI-agent voert main.py uit.
+5. main.py leest de WEBINT-instructies in.
+6. De CLI-agent gebruikt Codex om publieke webinformatie op te zoeken.
+7. De CLI-agent genereert een WEBINT-markdownbestand.
+8. De Python-code leest de HUMINT- en WEBINT-markdownbestanden in.
+9. De Python-code slaat de ruwe HUMINT- en WEBINT-informatie op in MongoDB.
+10. De Pythoncode haalt de tekst op van MongoDB 
+10. De Python-code splitst de tekst op in kleinere chunks.
+11. De Python-code stuurt deze chunks via een API-request naar een embeddingmodel.
+12. Het embeddingmodel maakt embeddings van de chunks.
+13. De Python-code slaat de embeddings op in Qdrant.
+14. De Python-code leest vaste prompts in uit de prompt-directory.
+15. Per prompt maakt de Python-code via een API-request een embedding van de prompt.
+16. De prompt-embedding wordt gebruikt om relevante context op te halen uit Qdrant.
+17. De Python-code stuurt de originele prompt + opgehaalde context naar het LLM.
+18. Het LLM maakt een analyse van het technische landschap van de klant.
+19. De Python-code slaat deze analyse op in MongoDB.
+20. Met een vervolgpunt/prompt haalt het LLM technische termen uit de analyse.
+21. De Python-code controleert per technische term of er al kennis over bestaat in Qdrant.
+22. Als de term bekend is, gebruikt het systeem bestaande informatie.
+23. Als de term onbekend is, vraagt de Python-code extra uitleg aan het LLM.
+24. Het LLM genereert generieke uitleg over de onbekende technische term.
+25. De Python-code slaat deze nieuwe kennis op in MongoDB.
+26. De Python-code maakt embeddings van deze nieuwe kennis en slaat die op in Qdrant.
+27. Het systeem herhaalt dit proces voor vervolgprompts.
+28. Uiteindelijk stuurt de Python-code alle verzamelde klantinformatie naar het LLM.
+29. Het LLM genereert een markdownrapport over de WEBINT- en HUMINT-informatie van de klant.
+30. De Python-code slaat het rapport op in MongoDB en eventueel als markdownbestand.
+31. Het rapport wordt ook gechunked, omgezet naar embeddings en opgeslagen in Qdrant.
+
 
 ## Welke tools en technologieën ik ga gebruiken
 
 Ik ga Python gebruiken als programmeertaal. Python gebruik ik om bestanden in te lezen, data te verwerken, verbinding te maken met databases en de LLM aan te roepen.
 
-Voor de LLM gebruik ik bijvoorbeeld de OpenAI API. Deze gebruik ik om analyses, definities en rapporten te genereren.
+Voor de LLM gebruik ik bijvoorbeeld de Openrouter API. Deze gebruik ik om analyses, definities en rapporten te genereren.
 
 MongoDB gebruik ik om de originele informatie op te slaan, zoals HUMINT-bestanden, WEBINT-resultaten, LLM-antwoorden en rapporten.
 
 Qdrant gebruik ik als vector database. Hierin sla ik embeddings op, zodat het systeem informatie op betekenis kan terugvinden.
 
-Docker gebruik ik om MongoDB en Qdrant lokaal te draaien zonder dat ik alles handmatig hoef te installeren.
+Docker gebruik ik om MongoDB en Qdrant lokaal te draaien zonder dat ik alles handmatig hoef te installeren.  
 
 Daarnaast gebruik ik markdownbestanden voor prompts en HUMINT-data.
+
+
 
 ## Hoe ik de onderdelen ga implementeren
 
@@ -76,6 +95,14 @@ Zo kan ik bepalen of het systeem technisch werkt en inhoudelijk bruikbare result
 
 
 ### Opdracht 2 
+
+USE A CLI tool, make it read the markdown file with instructions I can use openrouter.ai for this 
+
+
+Technische Ontwerp 
+
+
+1. 
 1. Lees configuratiebestand
 2. Lees HUMINT markdownfiles
 3. Lees WEBINT markdownfiles
