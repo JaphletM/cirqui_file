@@ -98,11 +98,7 @@ Zo kan ik bepalen of het systeem technisch werkt en inhoudelijk bruikbare result
 
 USE A CLI tool, make it read the markdown file with instructions I can use openrouter.ai for this 
 
-
 Technische Ontwerp 
-
-
-1. 
 1. Lees configuratiebestand
 2. Lees HUMINT markdownfiles
 3. Lees WEBINT markdownfiles
@@ -124,57 +120,59 @@ Technische Ontwerp
 
 CIRQUI System
 │
-├── ConfigLoader
-│   └── Leest configuratiebestanden
+├── INSTRUCTION READER
+│   └── Leest WEBINT-instructies
 │
-├── FileIngestionModule
-│   ├── Leest HUMINT bestanden
-│   └── Leest WEBINT bestanden
+├── PROMPT ARGUMENT LOADER
+│   └── Leest configuratie- en promptargumenten
 │
-├── MongoRepository
-│   └── Opslag van documenten en analyses
+├── WEBINT COLLECTOR
+│   └── Verzamelt publieke WEBINT via Codex
 │
-├── TextChunker
+├── MARKDOWN WRITER
+│   └── Genereert WEBINT- en rapportbestanden in markdown
+│
+├── INTELLIGENCE READER
+│   ├── Leest HUMINT-bestanden
+│   └── Leest WEBINT-bestanden
+│
+├── MONGODB REPOSITORY
+│   └── Opslag van documenten, analyses en rapporten
+│
+├── CHUNKING SERVICE
 │   └── Splitst tekst op in chunks
 │
-├── EmbeddingService
-│   └── Genereert embeddings
+├── EMBEDDING SERVICE
+│   └── Genereert embeddings via embedding API
 │
-├── QdrantRepository
-│   ├── Opslag van embeddings
-│   └── Semantic search
+├── QDRANT REPOSITORY
+│   └── Opslag van embeddings in Qdrant
 │
-├── PromptLoader
-│   └── Leest prompts uit directory
+├── PROMPT READER
+│   └── Leest prompts uit prompt-directory
 │
-├── LLMService
+├── CONTEXT RETRIEVER
+│   └── Haalt relevante context op via semantic search
+│
+├── LLM CLIENT
 │   └── Communicatie met OpenAI API
 │
-├── TermExtractor
-│   └── Herkent technische termen
+├── TECHNICAL TERM EXTRACTOR
+│   └── Extraheert technische termen via LLM-prompts
 │
-├── IterationManager
-│   ├── Controleert bestaande kennis
+├── KNOWLEDGE CHECKER
+│   └── Controleert of kennis bestaat in Qdrant
+│
+├── WORKFLOW ORCHESTRATOR
+│   ├── Start iteratieve analyses
 │   ├── Genereert vervolgprompts
-│   └── Start nieuwe analyses
+│   └── Stuurt workflow aan
 │
-└── ReportGenerator
-    └── Genereert eindrapport
+├── REPORT GENERATOR
+│   └── Genereert markdown eindrapport
+│
+└── REPORT WRITER
+    └── Slaat rapporten op als markdownbestand
 
 
 
-De FileIngestionModule leest HUMINT- en WEBINT-bestanden in en stuurt deze door naar MongoRepository.
-
-De TextChunker splitst documenten op in kleinere stukken tekst. Daarna maakt de EmbeddingService embeddings van deze chunks.
-
-Deze embeddings worden opgeslagen in QdrantRepository.
-
-De PromptLoader leest prompts uit de prompt-directory. Vervolgens haalt QdrantRepository relevante context op.
-
-De LLMService stuurt prompts en context naar de OpenAI API.
-
-De antwoorden worden opgeslagen in MongoDB. Daarna gebruikt TermExtractor de output om technische termen te herkennen.
-
-De IterationManager controleert of kennis over deze termen al bestaat. Als dat niet zo is, worden vervolgprompts gegenereerd.
-
-Tot slot maakt ReportGenerator een eindrapport.
