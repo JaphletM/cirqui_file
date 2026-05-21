@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="wHmMk8kYgmqYwnLMpybx" name="Page-1">
-        <mxGraphModel dx="3872" dy="4185" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="3650" dy="4000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -62,7 +62,7 @@
                     <mxGeometry x="5" y="-1630" width="150" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="41" value="Pool" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=20;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="-90" y="-1500" width="1095" height="710" as="geometry"/>
+                    <mxGeometry x="-80" y="-1500" width="1095" height="710" as="geometry"/>
                 </mxCell>
                 <mxCell id="42" value="" style="swimlane;startSize=20;html=1;" parent="41" vertex="1">
                     <mxGeometry y="20" width="270" height="690" as="geometry"/>
@@ -107,11 +107,47 @@
                 <mxCell id="154" value="RapportOpbouwer" style="rounded=0;whiteSpace=wrap;html=1;" parent="54" vertex="1">
                     <mxGeometry x="133.75" y="480" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="55" value="Model" style="swimlane;startSize=20;html=1;" parent="41" vertex="1">
+                <mxCell id="252" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="54">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="253.75" y="509" as="sourcePoint"/>
+                        <mxPoint x="480" y="509" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="253" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="54">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="253.75" y="379" as="sourcePoint"/>
+                        <mxPoint x="480" y="379" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="254" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="54">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="253.75" y="309" as="sourcePoint"/>
+                        <mxPoint x="480" y="309" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="255" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="54">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="260" y="239" as="sourcePoint"/>
+                        <mxPoint x="486.25" y="239" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="55" value="&lt;p style=&quot;caret-color: rgb(255, 255, 255); color: rgb(255, 255, 255); font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-line: none; text-decoration-thickness: auto; text-decoration-style: solid;&quot;&gt;Ik waardeer dat echt 😊 Ik hoop dat het ons allebei lukt en dat we een manier vinden om in de richting/velden te komen waar we graag willen werken.&lt;/p&gt;" style="swimlane;startSize=20;html=1;" parent="41" vertex="1">
                     <mxGeometry x="657.5" y="20" width="437.5" height="690" as="geometry"/>
                 </mxCell>
                 <mxCell id="156" value="Web intellifence Instructie File" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="55" vertex="1">
                     <mxGeometry x="92.5" y="60" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="248" value="HUMINT laden" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="55">
+                    <mxGeometry x="92.5" y="280" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="249" value="Prompts Laden&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="55">
+                    <mxGeometry x="102.5" y="210" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="250" value="TT Uitbreider" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="55">
+                    <mxGeometry x="92.5" y="350" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="251" value="RapportOpbouwer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="55">
+                    <mxGeometry x="92.5" y="480" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="176" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="41" source="130" target="137" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -322,6 +358,15 @@
                 </mxCell>
                 <mxCell id="225" value="&lt;div&gt;LLMClient&lt;/div&gt;Maak samenvatting&lt;div&gt;(LLM aanvraag)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="229">
                     <mxGeometry x="110" y="56" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="256" value="EmbeddingService" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="229">
+                    <mxGeometry x="90" y="220" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="257" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="229">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-70" y="249" as="sourcePoint"/>
+                        <mxPoint x="90" y="250" as="targetPoint"/>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="233" value="Pool" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=20;html=1;" vertex="1" parent="1">
                     <mxGeometry x="-100" y="40" width="1090" height="600" as="geometry"/>
