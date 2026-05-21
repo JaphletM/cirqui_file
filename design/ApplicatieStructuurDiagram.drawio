@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="wHmMk8kYgmqYwnLMpybx" name="Page-1">
-        <mxGraphModel dx="3189" dy="3616" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="3872" dy="4185" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -67,10 +67,10 @@
                 <mxCell id="42" value="" style="swimlane;startSize=20;html=1;" parent="41" vertex="1">
                     <mxGeometry y="20" width="270" height="690" as="geometry"/>
                 </mxCell>
-                <mxCell id="130" value="Analyse Uitvoeren" style="rounded=0;whiteSpace=wrap;html=1;" parent="42" vertex="1">
+                <mxCell id="130" value="AnalyseUitvoerder" style="rounded=0;whiteSpace=wrap;html=1;" parent="42" vertex="1">
                     <mxGeometry x="80" y="200" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="131" value="Rapport Opleveren" style="rounded=0;whiteSpace=wrap;html=1;" parent="42" vertex="1">
+                <mxCell id="131" value="RapportOphaler" style="rounded=0;whiteSpace=wrap;html=1;" parent="42" vertex="1">
                     <mxGeometry x="80" y="480" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="129" value="CLI Tool/Klant Ophalen" style="rounded=0;whiteSpace=wrap;html=1;" parent="42" vertex="1">
@@ -92,19 +92,19 @@
                 <mxCell id="54" value="Business Logic" style="swimlane;startSize=20;html=1;" parent="41" vertex="1">
                     <mxGeometry x="270" y="20" width="387.5" height="690" as="geometry"/>
                 </mxCell>
-                <mxCell id="134" value="WebIntelligence File Reader" style="rounded=0;whiteSpace=wrap;html=1;" parent="54" vertex="1">
+                <mxCell id="134" value="WebIntelligence File Lezer" style="rounded=0;whiteSpace=wrap;html=1;" parent="54" vertex="1">
                     <mxGeometry x="133.75" y="60" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="137" value="Prompts Laden&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" parent="54" vertex="1">
+                <mxCell id="137" value="PrmoptLader" style="rounded=0;whiteSpace=wrap;html=1;" parent="54" vertex="1">
                     <mxGeometry x="133.75" y="210" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="138" value="HUMINT laden&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" parent="54" vertex="1">
+                <mxCell id="138" value="HUMINTLader" style="rounded=0;whiteSpace=wrap;html=1;" parent="54" vertex="1">
                     <mxGeometry x="133.75" y="280" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="139" value="Technicsche Term Uitbreiden" style="rounded=0;whiteSpace=wrap;html=1;" parent="54" vertex="1">
+                <mxCell id="139" value="Technicsche Term Uitbreider" style="rounded=0;whiteSpace=wrap;html=1;" parent="54" vertex="1">
                     <mxGeometry x="133.75" y="350" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="154" value="Rapport Opbouwen" style="rounded=0;whiteSpace=wrap;html=1;" parent="54" vertex="1">
+                <mxCell id="154" value="RapportOpbouwer" style="rounded=0;whiteSpace=wrap;html=1;" parent="54" vertex="1">
                     <mxGeometry x="133.75" y="480" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="55" value="Model" style="swimlane;startSize=20;html=1;" parent="41" vertex="1">
@@ -230,7 +230,7 @@
                 <mxCell id="172" value="Term Zoeken" style="rounded=0;whiteSpace=wrap;html=1;" parent="171" vertex="1">
                     <mxGeometry x="300" y="56" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="173" value="TT uitbreiden" style="rounded=0;whiteSpace=wrap;html=1;" parent="171" vertex="1">
+                <mxCell id="173" value="TT Uitbreider" style="rounded=0;whiteSpace=wrap;html=1;" parent="171" vertex="1">
                     <mxGeometry x="30" y="56" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="189" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="171" edge="1">
@@ -242,10 +242,10 @@
                 <mxCell id="209" value="" style="edgeStyle=none;html=1;" edge="1" parent="171" source="202" target="203">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="202" value="Term en definities embedden&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="171">
+                <mxCell id="202" value="EmbeddingService" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="171">
                     <mxGeometry x="310" y="370" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="203" value="Term opslaan in Qdrant&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="171">
+                <mxCell id="203" value="QdrantOplag" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="171">
                     <mxGeometry x="310" y="480" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="208" value="" style="edgeStyle=none;html=1;" edge="1" parent="171" source="204" target="202">
@@ -294,10 +294,10 @@
                 <mxCell id="216" value="Business Logic" style="swimlane;startSize=20;html=1;" vertex="1" parent="214">
                     <mxGeometry x="270" y="20" width="500" height="580" as="geometry"/>
                 </mxCell>
-                <mxCell id="218" value="Genereer Markdown" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="216">
+                <mxCell id="218" value="MarkdownGenereerder" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="216">
                     <mxGeometry x="300" y="56" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="219" value="Rapport Opbouwen" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="216">
+                <mxCell id="219" value="RapportOpbouwer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="216">
                     <mxGeometry x="30" y="56" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="220" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="216">
@@ -306,7 +306,7 @@
                         <mxPoint x="300" y="85.28999999999996" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="222" value="Embed de samenvatting&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="216">
+                <mxCell id="222" value="EmbeddingService" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="216">
                     <mxGeometry x="310" y="220" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="224" value="" style="edgeStyle=none;html=1;exitX=0.662;exitY=0.967;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="216" source="219" target="222">
@@ -320,7 +320,7 @@
                 <mxCell id="229" value="Model" style="swimlane;startSize=20;html=1;" vertex="1" parent="214">
                     <mxGeometry x="770" y="20" width="320" height="580" as="geometry"/>
                 </mxCell>
-                <mxCell id="225" value="Maak samenvatting&lt;div&gt;(LLM aanvraag)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="229">
+                <mxCell id="225" value="&lt;div&gt;LLMClient&lt;/div&gt;Maak samenvatting&lt;div&gt;(LLM aanvraag)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="229">
                     <mxGeometry x="110" y="56" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="233" value="Pool" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=20;html=1;" vertex="1" parent="1">
@@ -332,10 +332,10 @@
                 <mxCell id="235" value="Business Logic" style="swimlane;startSize=20;html=1;" vertex="1" parent="233">
                     <mxGeometry x="270" y="20" width="500" height="580" as="geometry"/>
                 </mxCell>
-                <mxCell id="239" value="Embed de samenvatting&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="235">
+                <mxCell id="239" value="EmbeddingService" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="235">
                     <mxGeometry x="50" y="90" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="246" value="Sla opslaan in Qdrant&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="235">
+                <mxCell id="246" value="QdrantOpslag" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="235">
                     <mxGeometry x="320" y="90" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="242" value="" style="edgeStyle=none;html=1;" edge="1" parent="235" source="239" target="246">
