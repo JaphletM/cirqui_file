@@ -1,0 +1,25 @@
+# Customer settings
+customer_name=APG
+
+# Prompt settings
+language=nl
+max_iterations=3
+
+# LLM settings
+model=gpt-4
+temperature=0.2
+
+# Directory settings
+prompts_directory=data/prompts
+humint_directory=data/humanInt
+output_directory=output
+
+# MongoDB settings
+mongodb_host=localhost
+mongodb_port=27017
+mongodb_database=cirqui
+
+# QDrant settings
+qdrant_host=localhost
+qdrant_port=6333
+qdrant_collection=technical_knowledge
