@@ -10,5 +10,3 @@ Focus op:
 - data-platformen
 
 Gebruik publieke informatie.
-
-Geef het antwoord in het Nederlands.
