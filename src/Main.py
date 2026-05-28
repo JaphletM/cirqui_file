@@ -1,12 +1,12 @@
 from Extractors.TermComparator import compare_terms
-from Readers.PromptReader import PromptReader
+from Readers.PromptReader import read_prompts
 from Readers.ConfigReader import ConfigReader
 from Readers.HUMIntReader import HumintReader
 from LLMclient import LLMClient
 from Extractors.TechnicalTermExtractor import extract_technical_terms
-from database import load_existing_terms, save_new_terms
+from Savers.MongoSaver import load_existing_terms, save_new_terms
 from EmbeddingService import embed_term
-from QdrantSaver import save_term_embedding
+from Savers.QdrantSaver import save_term_embedding
 
 
 # Load config
@@ -17,9 +17,15 @@ customer_name = config_reader.get_config("customer_name")
 model = config_reader.get_config("model")
 
 
-# Load prompt template
-reader = PromptReader("data/prompts/001-technical-landscape.md")
-template = reader.read_prompt()
+# Initialize LLM
+llm_client = LLMClient(model)
+
+
+# Load prompts
+prompt_templates = read_prompts("data/prompts")
+
+technical_landscape_prompt = prompt_templates[0]
+extract_terms_prompt = prompt_templates[1]
 
 
 # Load HUMINT data
@@ -32,8 +38,8 @@ humint_text = humint_reader.read_humint()
 print(humint_text)
 
 
-# Fill prompt
-filled_prompt = template.format(
+# Fill technical landscape prompt
+filled_prompt = technical_landscape_prompt.format(
     CUSTOMER_NAME=customer_name,
     HUMINT_TEXT=humint_text
 )
@@ -41,20 +47,17 @@ filled_prompt = template.format(
 print(filled_prompt)
 
 
-# Initialize LLM
-llm_client = LLMClient(model)
-
-
-# Generate response
+# Generate technical landscape response
 response = llm_client.ask(filled_prompt)
 
 print(response)
 
 
-# Extract technical terms
+# Extract technical terms from response
 extracted_terms = extract_technical_terms(
     response,
-    llm_client
+    llm_client,
+    extract_terms_prompt
 )
 
 print(extracted_terms)
