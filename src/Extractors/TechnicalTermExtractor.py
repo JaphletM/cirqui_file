@@ -1,12 +1,8 @@
 import json
 
 
-class TechnicalTermExtractor:
-    def __init__(self, llm_client):
-        self.llm_client = llm_client
-
-    def extract(self, text):
-        prompt = f"""
+def extract_technical_terms(text, llm_client):
+    prompt = f"""
 Extract technical terms from the following text.
 
 Return ONLY valid JSON.
@@ -28,13 +24,13 @@ Text:
 {text}
 """
 
-        response = self.llm_client.ask(prompt)
+    response = llm_client.ask(prompt)
 
-        try:
-            return json.loads(response)
+    try:
+        return json.loads(response)
 
-        except json.JSONDecodeError:
-            print("Invalid JSON returned by LLM:")
-            print(response)
+    except json.JSONDecodeError:
+        print("Invalid JSON returned by LLM:")
+        print(response)
 
-            return []
+        return []

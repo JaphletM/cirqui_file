@@ -5,6 +5,9 @@ from Readers.HUMIntReader import HumintReader
 from LLMclient import LLMClient
 from Extractors.TechnicalTermExtractor import TechnicalTermExtractor
 from database import load_existing_terms, save_new_terms
+from EmbeddingService import embed_term
+from QdrantSaver import save_term_embedding
+from database import load_existing_terms
 
 
 #prompt-lader
@@ -60,3 +63,11 @@ for result in comparison_results:
 
 save_new_terms(comparison_results)
 
+
+save_new_terms(comparison_results)
+
+mongo_terms = load_existing_terms()
+
+for term_doc in mongo_terms:
+    embedding = embed_term(term_doc)
+    save_term_embedding(term_doc, embedding)
