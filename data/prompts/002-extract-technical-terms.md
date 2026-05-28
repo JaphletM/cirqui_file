@@ -8,11 +8,11 @@ Do not wrap the JSON in ```.
 Use this exact format:
 
 [
-    {
+    {{
         "term": "Docker",
         "definition": "A platform for building and running containerized applications.",
         "category": "DevOps"
-    }
+    }}
 ]
 
 Text:
