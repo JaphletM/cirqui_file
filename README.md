@@ -117,7 +117,7 @@ Technische Ontwerp
 16. Sla nieuwe kennis op
 17. Genereer eindrapport
 
-
+```shell
 CIRQUI System
 │
 ├── INSTRUCTION READER
@@ -173,6 +173,6 @@ CIRQUI System
 │
 └── REPORT WRITER
     └── Slaat rapporten op als markdownbestand
-
+```
 
 
