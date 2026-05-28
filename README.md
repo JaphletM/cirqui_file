@@ -1,3 +1,4 @@
+### Plan van Aanpak 
 ## Wat de opdracht inhoudt
 
 In deze opdracht bouw ik een systeem dat het technische landschap van een klant onderzoekt. Het systeem verzamelt informatie uit HUMINT en WEBINT. HUMINT bestaat uit menselijke bronnen, zoals gesprekken, interviews of notities. WEBINT bestaat uit publiek beschikbare online informatie, zoals websites, vacatures en documentatie.
@@ -94,11 +95,8 @@ Zo kan ik bepalen of het systeem technisch werkt en inhoudelijk bruikbare result
 
 
 
-### Opdracht 2 
+### Technische Ontwerp 
 
-USE A CLI tool, make it read the markdown file with instructions I can use openrouter.ai for this 
-
-Technische Ontwerp 
 1. Lees configuratiebestand
 2. Lees HUMINT markdownfiles
 3. Lees WEBINT markdownfiles
@@ -176,3 +174,62 @@ CIRQUI System
 ```
 
 
+### Huidige implementatie
+De huidige versie van het systeem kan:
+
+- configuratiebestanden inlezen
+- HUMINT-markdownbestanden verwerken
+- prompts laden vanuit een prompt-directory
+- prompts naar een LLM sturen
+- technische termen extraheren
+- termen vergelijken met bestaande MongoDB-data
+- embeddings genereren
+- embeddings opslaan in Qdrant
+
+``` shell
+
+
+Huidige CIRQUI Systeem
+│
+├── CONFIG READER
+│   └── Leest configuratie-instellingen uit config.txt
+│
+├── PROMPT READER
+│   └── Leest prompt templates uit de prompt-directory
+│
+├── HUMINT READER
+│   └── Leest HUMINT-markdownbestanden van klanten
+│
+├── LLM CLIENT
+│   └── Stuurt prompts naar het LLM en ontvangt antwoorden
+│
+├── TECHNICAL TERM EXTRACTOR
+│   └── Extraheert technische termen uit LLM-output
+│
+├── TERM COMPARATOR
+│   └── Controleert of technische termen al bestaan in MongoDB
+│
+├── MONGODB REPOSITORY
+│   └── Opslag van technische termen en analyses
+│
+├── EMBEDDING SERVICE
+│   └── Genereert embeddings van termen via embedding API
+│
+├── QDRANT REPOSITORY
+│   └── Opslag van embeddings in Qdrant
+│
+└── MAIN WORKFLOW
+    └── Stuurt de volledige analysepipeline aan
+```
+
+## Wat momenteel nog ontbreekt
+
+De huidige versie van het systeem bevat al een eerste werkende pipeline, maar een aantal onderdelen uit het ontwerp zijn nog niet volledig geïmplementeerd.
+
+* WEBINT wordt momenteel nog niet automatisch verzameld via publieke websites. Dit wil ik later toevoegen via een aparte WEBINT-module.
+* Het iteratieve promptingmechanisme is nog niet volledig uitgewerkt. In een volgende versie wil ik automatisch vervolgprompts genereren op basis van gevonden technische termen.
+* Qdrant wordt momenteel gebruikt voor opslag van embeddings, maar semantic search wordt nog niet actief gebruikt tijdens analyses.
+* Chunking van documenten is nog niet geïmplementeerd. Later wil ik teksten automatisch opdelen in kleinere stukken voor betere embeddings.
+* Het systeem genereert momenteel nog geen volledig automatisch markdownrapport.
+* De workflowlogica staat nu grotendeels in `main.py`. In een volgende versie wil ik dit opsplitsen in aparte workflowcomponenten.
+* Momenteel wordt één prompt handmatig geladen. Later wil ik meerdere prompts automatisch in numerieke volgorde laten uitvoeren.
