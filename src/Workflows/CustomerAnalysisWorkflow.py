@@ -7,6 +7,7 @@ from Extractors.TechnicalTermExtractor import extract_technical_terms
 from Savers.MongoSaver import load_existing_terms, save_new_terms
 from Services.EmbeddingService import embed_term
 from Savers.QdrantSaver import save_term_embedding
+from Savers.QdrantSaver import find_existing_term
 
 
 def run_customer_analysis_workflow():
@@ -18,7 +19,7 @@ def run_customer_analysis_workflow():
     llm_client = LLMClient(model)
 
     # Load workflow prompts
-    technical_landscape_prompt, extract_terms_prompt = load_prompts()
+    technical_landscape_prompt, extract_terms_prompt, followup_prompts_prompt = load_prompts()
 
     # Read HUMINT notes for the customer
     humint_text = load_humint(customer_name)
@@ -46,6 +47,16 @@ def run_customer_analysis_workflow():
     # Print results to verify term matching
     print_comparison_results(comparison_results)
 
+    check_terms_in_vector_store(comparison_results)
+
+    followup_prompts = generate_followup_prompts(
+        comparison_results,
+        llm_client,
+        followup_prompts_prompt
+    )
+
+    print(followup_prompts)
+
     # Store new terms in MongoDB
     save_terms(comparison_results)
 
@@ -68,8 +79,13 @@ def load_prompts():
 
     technical_landscape_prompt = prompt_templates[0]
     extract_terms_prompt = prompt_templates[1]
+    generate_followup_prompts = prompt_templates[2]
 
-    return technical_landscape_prompt, extract_terms_prompt
+    return (
+        technical_landscape_prompt,
+        extract_terms_prompt,
+        generate_followup_prompts
+    )
 
 
 def load_humint(customer_name):
@@ -132,3 +148,18 @@ def generate_and_save_embeddings():
         save_term_embedding(term_doc, embedding)
 
         print(f"Saved embedding for: {term_doc.get('term')}")
+
+def check_terms_in_vector_store(comparison_results):
+    for result in comparison_results:
+        term = result.get("term")
+
+        if not term:
+            continue
+
+        existing_info = find_existing_term(term)
+
+        if existing_info:
+            print(f"Found existing semantic knowledge for: {term}")
+            print(existing_info)
+        else:
+            print(f"No semantic knowledge found for: {term}") 

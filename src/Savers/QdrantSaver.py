@@ -1,5 +1,6 @@
 from qdrant_client import QdrantClient
 from qdrant_client.models import PointStruct, VectorParams, Distance
+from Services.EmbeddingService import embed_text
 import uuid
 
 
@@ -58,3 +59,25 @@ def save_term_embedding(term_doc, embedding):
         collection_name=COLLECTION_NAME,
         points=[point]
     )
+
+    def search_similar_terms(query_text, limit=5):
+    create_collection_if_not_exists()
+
+    query_embedding = embed_text(query_text)
+
+    results = client.query_points(
+        collection_name=COLLECTION_NAME,
+        query=query_embedding,
+        limit=limit,
+        with_payload=True
+    )
+
+    return results.points
+
+    def find_existing_term(term, threshold=0.80):
+    results = search_similar_terms(term, limit=1)
+
+    if results and results[0].score >= threshold:
+        return results[0].payload
+
+    return None
