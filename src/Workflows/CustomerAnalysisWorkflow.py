@@ -163,3 +163,32 @@ def check_terms_in_vector_store(comparison_results):
             print(existing_info)
         else:
             print(f"No semantic knowledge found for: {term}") 
+
+            
+def generate_followup_prompts(
+    comparison_results,
+    llm_client,
+    followup_prompts_prompt
+):
+    technical_terms = []
+
+    for result in comparison_results:
+        term = result.get("term")
+
+        if term:
+            technical_terms.append(term)
+
+    terms_text = "\n".join(
+        f"- {term}"
+        for term in technical_terms
+    )
+
+    filled_prompt = followup_prompts_prompt.format(
+        TECHNICAL_TERMS=terms_text
+    )
+
+    response = llm_client.ask(
+        filled_prompt
+    )
+
+    return response

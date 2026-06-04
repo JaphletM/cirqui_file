@@ -11,6 +11,7 @@ client = QdrantClient(
 
 COLLECTION_NAME = "technical_knowledge"
 
+
 def create_collection_if_not_exists():
     collection_names = [
         collection.name
@@ -28,8 +29,8 @@ def create_collection_if_not_exists():
             )
         )
 
-def save_term_embedding(term_doc, embedding):
 
+def save_term_embedding(term_doc, embedding):
     create_collection_if_not_exists()
 
     point = PointStruct(
@@ -46,21 +47,8 @@ def save_term_embedding(term_doc, embedding):
         points=[point]
     )
 
-    point = PointStruct(
-        id=str(term_doc.get("_id", uuid.uuid4())),
-        vector=embedding,
-        payload={
-            "term": term_doc["term"],
-            "definition": term_doc.get("definition", "")
-        }
-    )
 
-    client.upsert(
-        collection_name=COLLECTION_NAME,
-        points=[point]
-    )
-
-    def search_similar_terms(query_text, limit=5):
+def search_similar_terms(query_text, limit=5):
     create_collection_if_not_exists()
 
     query_embedding = embed_text(query_text)
@@ -74,7 +62,8 @@ def save_term_embedding(term_doc, embedding):
 
     return results.points
 
-    def find_existing_term(term, threshold=0.80):
+
+def find_existing_term(term, threshold=0.80):
     results = search_similar_terms(term, limit=1)
 
     if results and results[0].score >= threshold:
