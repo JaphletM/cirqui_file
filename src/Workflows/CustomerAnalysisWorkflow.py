@@ -2,12 +2,13 @@ from Extractors.TermComparator import compare_terms
 from Readers.PromptReader import read_prompts
 from Readers.ConfigReader import ConfigReader
 from Readers.HUMIntReader import HumintReader
+from SaversJson.MongoJsonSaver import append_to_mongo_json, read_mongo_json_safe
 from Services.LLMclient import LLMClient
 from Extractors.TechnicalTermExtractor import extract_technical_terms
-from Savers.MongoSaver import load_existing_terms, save_new_terms
+#from Savers.MongoSaver import load_existing_terms, save_new_terms
 from Services.EmbeddingService import embed_term
-from Savers.QdrantSaver import save_term_embedding
-from Savers.QdrantSaver import find_existing_term
+#from Savers.QdrantSaver import save_term_embedding
+#from Savers.QdrantSaver import find_existing_term
 
 
 def run_customer_analysis_workflow():
@@ -47,7 +48,7 @@ def run_customer_analysis_workflow():
     # Print results to verify term matching
     print_comparison_results(comparison_results)
 
-    check_terms_in_vector_store(comparison_results)
+   # check_terms_in_vector_store(comparison_results)
 
     followup_prompts = generate_followup_prompts(
         comparison_results,
@@ -61,7 +62,7 @@ def run_customer_analysis_workflow():
     save_terms(comparison_results)
 
     # Create embeddings and push them to Qdrant
-    generate_and_save_embeddings()
+    #generate_and_save_embeddings()
 
 
 def load_config():
@@ -121,8 +122,17 @@ def extract_terms(
         extract_terms_prompt
     )
 
-
 def compare_terms_with_database(extracted_terms):
+    existing_terms = read_mongo_json_safe()
+
+    return compare_terms(
+        extracted_terms,
+        existing_terms
+    )
+
+
+
+#def compare_terms_with_database(extracted_terms):
     existing_terms = load_existing_terms()
 
     return compare_terms(
@@ -135,34 +145,39 @@ def print_comparison_results(comparison_results):
     for result in comparison_results:
         print(result)
 
-
 def save_terms(comparison_results):
-    save_new_terms(comparison_results)
+    append_to_mongo_json(comparison_results)
+    
 
 
-def generate_and_save_embeddings():
-    mongo_terms = load_existing_terms()
 
-    for term_doc in mongo_terms:
-        embedding = embed_term(term_doc)
-        save_term_embedding(term_doc, embedding)
+#def save_terms(comparison_results):
+#    save_new_terms(comparison_results)
 
-        print(f"Saved embedding for: {term_doc.get('term')}")
 
-def check_terms_in_vector_store(comparison_results):
-    for result in comparison_results:
-        term = result.get("term")
+#def generate_and_save_embeddings():
+#    mongo_terms = load_existing_terms()
 
-        if not term:
-            continue
+#    for term_doc in mongo_terms:
+#        embedding = embed_term(term_doc)
+#        save_term_embedding(term_doc, embedding)
 
-        existing_info = find_existing_term(term)
+#        print(f"Saved embedding for: {term_doc.get('term')}")
 
-        if existing_info:
-            print(f"Found existing semantic knowledge for: {term}")
-            print(existing_info)
-        else:
-            print(f"No semantic knowledge found for: {term}") 
+#def check_terms_in_vector_store(comparison_results):
+#    for result in comparison_results:
+#        term = result.get("term")
+
+#        if not term:
+#            continue
+
+#        existing_info = find_existing_term(term)
+
+#        if existing_info:
+#            print(f"Found existing semantic knowledge for: {term}")
+#            print(existing_info)
+#        else:
+#            print(f"No semantic knowledge found for: {term}") 
 
             
 def generate_followup_prompts(

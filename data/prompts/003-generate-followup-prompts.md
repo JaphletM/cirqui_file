@@ -14,12 +14,12 @@ Technische termen:
 Geef het resultaat als JSON in dit formaat:
 
 [
-  {
+  {{
     "term": "termnaam",
     "followup_prompts": [
       "prompt 1",
       "prompt 2",
       "prompt 3"
     ]
-  }
+  }}
 ]
