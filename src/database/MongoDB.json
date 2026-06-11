@@ -1,730 +1,895 @@
 [
-    [
-        {
-            "term": "Java",
-            "definition": "A high-level, class-based, object-oriented programming language designed to have as few implementation dependencies as possible. It is widely used for enterprise-level applications, back-end systems, and microservices.",
-            "category": "Programming Language",
-            "status": "new"
-        },
-        {
-            "term": "C#",
-            "definition": "A modern, object-oriented programming language developed by Microsoft as part of its .NET initiative. It is commonly used for developing Windows desktop applications, web applications with ASP.NET, and games with Unity.",
-            "category": "Programming Language",
-            "status": "new"
-        },
-        {
-            "term": ".NET",
-            "definition": "A free, cross-platform, open-source developer platform for building many different types of applications. It includes a runtime called .NET Core, a set of class libraries, and a rich ecosystem of tools and services.",
-            "category": "Framework",
-            "status": "new"
-        },
-        {
-            "term": "Python",
-            "definition": "A high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. It is widely used for web development, data analysis, artificial intelligence, scientific computing, and automation.",
-            "category": "Programming Language",
-            "status": "new"
-        },
-        {
-            "term": "SQL",
-            "definition": "A domain-specific language used in programming and designed for managing data held in a relational database management system, or for stream processing in a relational data stream management system. It includes DDL, DML, and DQL.",
-            "category": "Programming Language",
-            "status": "new"
-        },
-        {
-            "term": "DQL",
-            "definition": "Data Query Language, a subset of SQL statements used for retrieving data from a database.",
-            "category": "Programming Language",
-            "status": "new"
-        },
-        {
-            "term": "DML",
-            "definition": "Data Manipulation Language, a subset of SQL statements used for adding, deleting, and modifying data in a database.",
-            "category": "Programming Language",
-            "status": "new"
-        },
-        {
-            "term": "DDL",
-            "definition": "Data Definition Language, a subset of SQL statements used for defining and managing the structure of a database, including creating, modifying, and deleting tables or other database objects.",
-            "category": "Programming Language",
-            "status": "new"
-        },
-        {
-            "term": "JavaScript",
-            "definition": "A high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It is a multi-paradigm language, supporting event-driven, functional, and imperative programming styles. It is essential for front-end web development.",
-            "category": "Programming Language",
-            "status": "new"
-        },
-        {
-            "term": "TypeScript",
-            "definition": "An open-source language that builds on JavaScript by adding static type definitions. It is designed for the development of large applications and transpiles to JavaScript.",
-            "category": "Programming Language",
-            "status": "new"
-        },
-        {
-            "term": "COBOL",
-            "definition": "Common Business-Oriented Language, one of the oldest programming languages, primarily designed for business, finance, and administrative systems for companies and governments. Still used in many legacy systems.",
-            "category": "Programming Language",
-            "status": "new"
-        },
-        {
-            "term": "Scala",
-            "definition": "A high-level, strongly typed, general-purpose programming language that supports both object-oriented and functional programming paradigms. It is designed to be concise, elegant, and provides strong static types for building large, scalable applications.",
-            "category": "Programming Language",
-            "status": "new"
-        },
-        {
-            "term": "Apache Spark",
-            "definition": "An open-source distributed general-purpose cluster-computing framework. It provides an interface for programming entire clusters with implicit data parallelism and fault tolerance. Used for large-scale data processing.",
-            "category": "Big Data Technology",
-            "status": "new"
-        },
-        {
-            "term": "multi-cloud strategy",
-            "definition": "The use of multiple cloud computing services from different providers in a single, heterogeneous architecture. This approach can help avoid vendor lock-in, improve disaster recovery, and optimize costs.",
-            "category": "Cloud Computing",
-            "status": "new"
-        },
-        {
-            "term": "Microsoft Azure",
-            "definition": "A cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through a Microsoft-managed data center network.",
-            "category": "Cloud Provider",
-            "status": "new"
-        },
-        {
-            "term": "Amazon Web Services (AWS)",
-            "definition": "A comprehensive, broadly adopted, and fastest-growing cloud platform, offering over 200 fully featured services from data centers globally. It provides on-demand cloud computing platforms and APIs to individuals, companies, and governments.",
-            "category": "Cloud Provider",
-            "status": "new"
-        },
-        {
-            "term": "Private Cloud",
-            "definition": "A cloud computing environment dedicated to a single organization, often managed internally or by a third party. It offers greater control and security.",
-            "category": "Cloud Computing",
-            "status": "new"
-        },
-        {
-            "term": "On-premise",
-            "definition": "Refers to software and technology that is installed and operates on the premises of the organization using the software, rather than at a remote facility such as a cloud provider's data center.",
-            "category": "Infrastructure",
-            "status": "new"
-        },
-        {
-            "term": "Hybrid Cloud",
-            "definition": "A cloud computing environment that uses a mix of on-premises, private cloud, and public cloud services with orchestration between the platforms. This allows data and applications to move between the different environments.",
-            "category": "Cloud Computing",
-            "status": "new"
-        },
-        {
-            "term": "Oracle Database",
-            "definition": "A multi-model database management system produced and marketed by Oracle Corporation. It is commonly used for running online transaction processing (OLTP), data warehousing (DW), and mixed (OLTP & DW) database workloads.",
-            "category": "Database",
-            "status": "new"
-        },
-        {
-            "term": "Microsoft SQL Server",
-            "definition": "A relational database management system developed by Microsoft. It is a full-featured database primarily used for enterprise-level applications.",
-            "category": "Database",
-            "status": "new"
-        },
-        {
-            "term": "PostgreSQL",
-            "definition": "A powerful, open-source object-relational database system with over 30 years of active development. It is known for its reliability, feature robustness, and performance.",
-            "category": "Database",
-            "status": "new"
-        },
-        {
-            "term": "MySQL",
-            "definition": "An open-source relational database management system. It is a popular choice for web applications and is widely used for its robust features and reliable performance.",
-            "category": "Database",
-            "status": "new"
-        },
-        {
-            "term": "NoSQL databases",
-            "definition": "A class of non-relational database management systems that provides a mechanism for storage and retrieval of data that is modeled in means other than the tabular relations used in relational databases.",
-            "category": "Database",
-            "status": "new"
-        },
-        {
-            "term": "MongoDB",
-            "definition": "A source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas.",
-            "category": "Database",
-            "status": "new"
-        },
-        {
-            "term": "Cassandra",
-            "definition": "A free and open-source, distributed, wide-column store, NoSQL database management system designed to handle large amounts of data across many commodity servers, providing high availability with no single point of failure.",
-            "category": "Database",
-            "status": "new"
-        },
-        {
-            "term": "DataStax",
-            "definition": "A software company that provides a distributed, cloud-native data platform based on Apache Cassandra. It offers enterprise-grade features and support for Cassandra.",
-            "category": "Database",
-            "status": "new"
-        },
-        {
-            "term": "Redis",
-            "definition": "An open-source, in-memory data structure store, used as a database, cache, and message broker. It supports data structures such as strings, hashes, lists, sets, sorted sets with range queries, etc.",
-            "category": "Database",
-            "status": "new"
-        },
-        {
-            "term": "Data Warehouses",
-            "definition": "A system used for reporting and data analysis, and is considered a core component of business intelligence. They are central repositories of integrated data from one or more disparate sources.",
-            "category": "Data Management",
-            "status": "new"
-        },
-        {
-            "term": "Lakehouses",
-            "definition": "A new open data management architecture that combines the features of data lakes and data warehouses. It allows flexible data storage with the structured management and performance of data warehouses.",
-            "category": "Data Management",
-            "status": "new"
-        },
-        {
-            "term": "Azure Synapse Analytics",
-            "definition": "A limitless analytics service that brings together enterprise data warehousing and Big Data analytics. It gives you the freedom to query data on your terms, using either serverless or dedicated resources\u2014at scale.",
-            "category": "Data Platform",
-            "status": "new"
-        },
-        {
-            "term": "Snowflake",
-            "definition": "A cloud-based data warehousing platform provided as 'Software-as-a-Service'. It provides a single data platform for data warehousing, data lakes, data engineering, data science, data application development, and secure data sharing.",
-            "category": "Data Platform",
-            "status": "new"
-        },
-        {
-            "term": "Databricks",
-            "definition": "A company founded by the creators of Apache Spark, Delta Lake, and MLflow. It provides a web-based platform for working with Spark, offering a Unified Analytics Platform for data engineering, machine learning, and data science.",
-            "category": "Data Platform",
-            "status": "new"
-        },
-        {
-            "term": "Teradata",
-            "definition": "A company that sells database-related software products and services. Its flagship product is a massively parallel processing (MPP) data warehouse platform used for large-scale data analysis.",
-            "category": "Data Platform",
-            "status": "new"
-        },
-        {
-            "term": "Spring Boot",
-            "definition": "An open-source, microservice-based Java framework. It provides a platform to create stand-alone, production-grade Spring-based applications that you can just run.",
-            "category": "Framework",
-            "status": "new"
-        },
-        {
-            "term": "Spring Framework",
-            "definition": "An open-source application framework for the Java platform. It provides comprehensive infrastructure support for developing robust Java applications, including support for transaction management, remote access technologies, and caching.",
-            "category": "Framework",
-            "status": "new"
-        },
-        {
-            "term": "Hibernate",
-            "definition": "An object-relational mapping (ORM) framework for Java. It provides an abstraction layer over JDBC, simplifying interaction with relational databases by mapping Java objects to database tables.",
-            "category": "Framework",
-            "status": "new"
-        },
-        {
-            "term": "JPA",
-            "definition": "Java Persistence API, a Java API specification for managing relational data in applications using Java Platform Standard Edition and Java Platform Enterprise Edition. Hibernate is a popular implementation of JPA.",
-            "category": "Framework",
-            "status": "new"
-        },
-        {
-            "term": "Apache Camel",
-            "definition": "An open-source integration framework that implements various enterprise integration patterns. It allows developers to integrate different applications using a wide range of routing and mediation rules.",
-            "category": "Framework",
-            "status": "new"
-        },
-        {
-            "term": "Django",
-            "definition": "A high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development, so you can focus on writing your app without needing to reinvent the wheel.",
-            "category": "Framework",
-            "status": "new"
-        },
-        {
-            "term": "Flask",
-            "definition": "A micro web framework for Python. It is designed to make getting started quick and easy, with the ability to scale up to complex applications.",
-            "category": "Framework",
-            "status": "new"
-        },
-        {
-            "term": "Pandas",
-            "definition": "A software library written for the Python programming language for data manipulation and analysis. In particular, it offers data structures and operations for manipulating numerical tables and time series.",
-            "category": "Python Library",
-            "status": "new"
-        },
-        {
-            "term": "NumPy",
-            "definition": "A library for the Python programming language, adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.",
-            "category": "Python Library",
-            "status": "new"
-        },
-        {
-            "term": "SciPy",
-            "definition": "An open-source Python library used for scientific computing and technical computing. It builds on NumPy and provides many user-friendly and efficient numerical routines, such as numerical integration, optimization, and signal processing.",
-            "category": "Python Library",
-            "status": "new"
-        },
-        {
-            "term": "Scikit-learn",
-            "definition": "A free software machine learning library for the Python programming language. It features various classification, regression and clustering algorithms including support vector machines, random forests, gradient boosting, k-means and DBSCAN, and is designed to interoperate with the Python numerical and scientific libraries NumPy and SciPy.",
-            "category": "Python Library",
-            "status": "new"
-        },
-        {
-            "term": "TensorFlow",
-            "definition": "An open-source software library for machine learning. It is used for a range of tasks but has a particular focus on training and inference of deep neural networks.",
-            "category": "Machine Learning Library",
-            "status": "new"
-        },
-        {
-            "term": "PyTorch",
-            "definition": "An open-source machine learning library based on the Torch library, used for applications such as computer vision and natural language processing. It is primarily developed by Facebook's AI Research lab (FAIR).",
-            "category": "Machine Learning Library",
-            "status": "new"
-        },
-        {
-            "term": "Keras",
-            "definition": "An open-source software library that provides a Python interface for artificial neural networks. Keras acts as an interface for the TensorFlow library.",
-            "category": "Machine Learning Library",
-            "status": "new"
-        },
-        {
-            "term": "PySpark",
-            "definition": "The Python API for Apache Spark. It enables Python developers to write applications using Spark's powerful distributed computing capabilities.",
-            "category": "Big Data Technology",
-            "status": "new"
-        },
-        {
-            "term": "Angular",
-            "definition": "A TypeScript-based, free and open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. It is used for building single-page client applications.",
-            "category": "Front-end Framework",
-            "status": "new"
-        },
-        {
-            "term": "React",
-            "definition": "A free and open-source front-end JavaScript library for building user interfaces based on UI components. It is maintained by Meta and a community of individual developers and companies.",
-            "category": "Front-end Framework",
-            "status": "new"
-        },
-        {
-            "term": "Vue.js",
-            "definition": "An open-source model\u2013view\u2013viewmodel front end JavaScript framework for building user interfaces and single-page applications. It is maintained by Evan You and the rest of the active core team members.",
-            "category": "Front-end Framework",
-            "status": "new"
-        },
-        {
-            "term": "Docker",
-            "definition": "A platform for building, running, and managing containerized applications. It packages software into standardized units called containers that include everything needed to run the software.",
-            "category": "Containerization",
-            "status": "new"
-        },
-        {
-            "term": "Kubernetes",
-            "definition": "An open-source container orchestration system for automating application deployment, scaling, and management.",
-            "category": "Container Orchestration",
-            "status": "new"
-        },
-        {
-            "term": "Azure Kubernetes Service (AKS)",
-            "definition": "A managed Kubernetes service offered by Microsoft Azure. It simplifies deploying, managing, and scaling containerized applications using Kubernetes.",
-            "category": "Container Orchestration",
-            "status": "new"
-        },
-        {
-            "term": "Monolithic architecture",
-            "definition": "A traditional software architecture where all the components of an application are tightly coupled and run as a single process.",
-            "category": "Architecture",
-            "status": "new"
-        },
-        {
-            "term": "Service-Oriented Architecture (SOA)",
-            "definition": "An architectural style where services are provided to other components by application components, through a communication protocol over a network. It focuses on loose coupling and interoperability.",
-            "category": "Architecture",
-            "status": "new"
-        },
-        {
-            "term": "Microservices Architectuur",
-            "definition": "An architectural style that structures an application as a collection of loosely coupled services. Each service is self-contained, runs its own process, and communicates using lightweight mechanisms.",
-            "category": "Architecture",
-            "status": "new"
-        },
-        {
-            "term": "API-gateways",
-            "definition": "A server that acts as an entry point for APIs. It handles requests, routes them to the appropriate microservices, and often handles authentication, authorization, and rate limiting.",
-            "category": "Architecture",
-            "status": "new"
-        },
-        {
-            "term": "service meshes",
-            "definition": "A configurable infrastructure layer for handling service-to-service communication in a microservices architecture. It provides features like traffic management, security, and observability.",
-            "category": "Architecture",
-            "status": "new"
-        },
-        {
-            "term": "event-driven architecture (EDA)",
-            "definition": "A software architecture paradigm promoting the production, detection, consumption of, and reaction to events. It is a highly decoupled and distributed architectural pattern.",
-            "category": "Architecture",
-            "status": "new"
-        },
-        {
-            "term": "Event-Driven Architecture (EDA)",
-            "definition": "A software architecture paradigm promoting the production, detection, consumption of, and reaction to events. It is a highly decoupled and distributed architectural pattern.",
-            "category": "Architecture",
-            "status": "new"
-        },
-        {
-            "term": "messaging queues",
-            "definition": "A form of asynchronous service-to-service communication used in serverless and microservices architectures. Messages are stored temporarily until the consuming service processes them.",
-            "category": "Messaging",
-            "status": "new"
-        },
-        {
-            "term": "Apache Kafka",
-            "definition": "An open-source distributed event streaming platform used for building real-time data pipelines and streaming applications.",
-            "category": "Messaging",
-            "status": "new"
-        },
-        {
-            "term": "Azure Service Bus",
-            "definition": "A fully managed enterprise integration message broker. Service Bus can decouple applications and services, and offers reliable and secure asynchronous messaging capabilities.",
-            "category": "Messaging",
-            "status": "new"
-        },
-        {
-            "term": "Data Mesh architectuur",
-            "definition": "An organizational and technical approach to data management that decentralizes data ownership and enables domain-oriented data products. It treats data as a product and emphasizes self-service infrastructure.",
-            "category": "Architecture",
-            "status": "new"
-        },
-        {
-            "term": "Cloud-Native Architectuur",
-            "definition": "An approach to designing, developing, and deploying applications that fully leverage the benefits of cloud computing. It typically involves microservices, containers, serverless functions, and managed services.",
-            "category": "Architecture",
-            "status": "new"
-        },
-        {
-            "term": "DevOps",
-            "definition": "A set of practices that combines software development (Dev) and IT operations (Ops) to shorten the systems development life cycle and provide continuous delivery with high software quality.",
-            "category": "Methodology",
-            "status": "new"
-        },
-        {
-            "term": "agile-methodieken",
-            "definition": "A set of principles for software development where solutions evolve through the collaborative effort of self-organizing and cross-functional teams and their customer(s) at the right pace.",
-            "category": "Methodology",
-            "status": "new"
-        },
-        {
-            "term": "Git",
-            "definition": "A distributed version-control system for tracking changes in source code during software development. It is designed for coordinating work among programmers, but it can be used to track changes in any set of files.",
-            "category": "Version Control",
-            "status": "new"
-        },
-        {
-            "term": "GitHub Enterprise",
-            "definition": "The on-premises version of GitHub, designed for organizations that want to host their own private repositories and take advantage of GitHub's collaboration features within their own infrastructure.",
-            "category": "Version Control",
-            "status": "new"
-        },
-        {
-            "term": "Azure DevOps Repos",
-            "definition": "A set of version control tools provided by Azure DevOps for managing source code, including Git repositories and Team Foundation Version Control (TFVC).",
-            "category": "Version Control",
-            "status": "new"
-        },
-        {
-            "term": "CI/CD",
-            "definition": "Continuous Integration/Continuous Deployment (or Delivery). A set of practices that enables faster and more reliable software releases by automating the building, testing, and deployment processes.",
-            "category": "DevOps",
-            "status": "new"
-        },
-        {
-            "term": "Azure DevOps Pipelines",
-            "definition": "A cloud service that provides continuous integration and continuous delivery (CI/CD) to deploy your code to any platform. It supports any language, platform, and cloud.",
-            "category": "CI/CD Tool",
-            "status": "new"
-        },
-        {
-            "term": "Jenkins",
-            "definition": "An open-source automation server. It helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery.",
-            "category": "CI/CD Tool",
-            "status": "new"
-        },
-        {
-            "term": "GitLab CI/CD",
-            "definition": "A part of GitLab that performs continuous integration, continuous delivery, and continuous deployment. It automatically builds, tests, and deploys your code.",
-            "category": "CI/CD Tool",
-            "status": "new"
-        },
-        {
-            "term": "Helm",
-            "definition": "The package manager for Kubernetes. Helm Charts help you define, install, and upgrade even the most complex Kubernetes application.",
-            "category": "Kubernetes Tool",
-            "status": "new"
-        },
-        {
-            "term": "Infrastructure as Code (IaC)",
-            "definition": "The process of managing and provisioning computer data centers through machine-readable definition files, rather than physical hardware configuration or interactive configuration tools.",
-            "category": "DevOps",
-            "status": "new"
-        },
-        {
-            "term": "Terraform",
-            "definition": "An open-source infrastructure as code software tool created by HashiCorp. Users define and provision data center infrastructure using a declarative configuration language.",
-            "category": "IaC Tool",
-            "status": "new"
-        },
-        {
-            "term": "Ansible",
-            "definition": "An open-source software provisioning, configuration management, and application-deployment tool. It connects over SSH, does not require agents to be installed on remote systems.",
-            "category": "Configuration Management",
-            "status": "new"
-        },
-        {
-            "term": "Chef",
-            "definition": "A configuration management tool written in Ruby and Erlang. It is used to streamline the task of configuring and maintaining a company's servers, and can integrate with cloud-based platforms to automatically provision and de-provision new machines.",
-            "category": "Configuration Management",
-            "status": "new"
-        },
-        {
-            "term": "Puppet",
-            "definition": "An open-core software configuration management tool. It is designed to manage the configuration of Unix-like and Microsoft Windows systems declaratively.",
-            "category": "Configuration Management",
-            "status": "new"
-        },
-        {
-            "term": "Azure Resource Manager (ARM) templates",
-            "definition": "JSON files that define the infrastructure and configuration for your Azure solution. They allow you to deploy Azure resources declaratively.",
-            "category": "IaC Tool",
-            "status": "new"
-        },
-        {
-            "term": "Bicep",
-            "definition": "A declarative language that is used to deploy Azure resources. It provides a concise syntax, reliable type safety, and support for code reuse for your Azure deployments.",
-            "category": "IaC Tool",
-            "status": "new"
-        },
-        {
-            "term": "Prometheus",
-            "definition": "An open-source monitoring system with a dimensional data model, flexible query language, efficient time series database, and modern alerting approach.",
-            "category": "Monitoring Tool",
-            "status": "new"
-        },
-        {
-            "term": "Grafana",
-            "definition": "An open-source analytics and interactive visualization web application. It provides charts, graphs, and alerts for the web when connected to supported data sources.",
-            "category": "Monitoring Tool",
-            "status": "new"
-        },
-        {
-            "term": "ELK Stack",
-            "definition": "A collection of three open-source products: Elasticsearch, Logstash, and Kibana. They are often used together for log management, analysis, and data visualization.",
-            "category": "Logging/Monitoring Tool",
-            "status": "new"
-        },
-        {
-            "term": "Elasticsearch",
-            "definition": "A distributed, RESTful search and analytics engine capable of solving a growing number of use cases. It centralizes and correlates data, making it usable for real-time search, analytics, and more.",
-            "category": "Logging/Monitoring Tool",
-            "status": "new"
-        },
-        {
-            "term": "Logstash",
-            "definition": "An open-source server-side data processing pipeline that ingests data from a multitude of sources simultaneously, transforms it, and then sends it to a 'stash', like Elasticsearch.",
-            "category": "Logging/Monitoring Tool",
-            "status": "new"
-        },
-        {
-            "term": "Kibana",
-            "definition": "An open-source analytical and visualization platform designed to work with Elasticsearch. It helps you search, view, and interact with data stored in Elasticsearch indices.",
-            "category": "Logging/Monitoring Tool",
-            "status": "new"
-        },
-        {
-            "term": "Azure Monitor",
-            "definition": "A comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments. It helps you understand how your applications and other resources are performing.",
-            "category": "Monitoring Tool",
-            "status": "new"
-        },
-        {
-            "term": "Azure Log Analytics",
-            "definition": "A service within Azure Monitor that collects and aggregates log and performance data from various sources.",
-            "category": "Logging/Monitoring Tool",
-            "status": "new"
-        },
-        {
-            "term": "Application Insights",
-            "definition": "An extensible Application Performance Management (APM) service for web developers on multiple platforms. It monitors live web applications, detects performance anomalies, and includes powerful analytics tools to help you diagnose issues.",
-            "category": "Monitoring Tool",
-            "status": "new"
-        },
-        {
-            "term": "Artifactory",
-            "definition": "A universal Artifact Repository Manager by JFrog. It supports all major package formats, enabling end-to-end automation of your build and release processes.",
-            "category": "Artifact Management",
-            "status": "new"
-        },
-        {
-            "term": "Nexus",
-            "definition": "A product by Sonatype, designed to manage software artifacts required for development. It acts as a universal repository manager, supporting various repository formats.",
-            "category": "Artifact Management",
-            "status": "new"
-        },
-        {
-            "term": "JUnit",
-            "definition": "A unit testing framework for the Java programming language. It is a fundamental tool for test-driven development.",
-            "category": "Testing Framework",
-            "status": "new"
-        },
-        {
-            "term": "NUnit",
-            "definition": "A unit-testing framework for all .NET languages. It is the .NET equivalent of JUnit and is used for writing automated tests for .NET applications.",
-            "category": "Testing Framework",
-            "status": "new"
-        },
-        {
-            "term": "Selenium",
-            "definition": "A portable framework for testing web applications. Selenium provides a playback tool for authoring functional tests without the need to learn a test scripting language (Selenium IDE).",
-            "category": "Testing Framework",
-            "status": "new"
-        },
-        {
-            "term": "Cypress",
-            "definition": "A JavaScript-based end-to-end testing framework built for the modern web. It allows for fast, easy, and reliable testing of anything that runs in a browser.",
-            "category": "Testing Framework",
-            "status": "new"
-        },
-        {
-            "term": "Playwright",
-            "definition": "A Microsoft-developed Node.js library to automate Chromium, Firefox and WebKit with a single API. It enables reliable end-to-end testing for modern web apps.",
-            "category": "Testing Framework",
-            "status": "new"
-        },
-        {
-            "term": "Data Lake",
-            "definition": "A centralized repository that allows you to store all your structured and unstructured data at any scale. You can store data as is, without having to first structure the data.",
-            "category": "Data Management",
-            "status": "new"
-        },
-        {
-            "term": "Azure Data Lake Storage (Gen2)",
-            "definition": "A set of capabilities dedicated to big data analytics, built on Azure Blob Storage. It provides a highly scalable and cost-effective data lake solution for big data analytics.",
-            "category": "Data Management",
-            "status": "new"
-        },
-        {
-            "term": "Big Data Processing Engines",
-            "definition": "Software or frameworks designed to handle, process, and analyze extremely large datasets that traditional data processing applications cannot handle.",
-            "category": "Big Data Technology",
-            "status": "new"
-        },
-        {
-            "term": "ETL/ELT",
-            "definition": "Extract, Transform, Load (ETL) and Extract, Load, Transform (ELT). These are data integration processes used to combine data from multiple sources into a single, consistent data store.",
-            "category": "Data Integration",
-            "status": "new"
-        },
-        {
-            "term": "Azure Databricks",
-            "definition": "An Apache Spark-based analytics platform optimized for the Microsoft Azure cloud services platform. It provides a fast, easy, and collaborative Apache Spark-based analytics service.",
-            "category": "Data Platform",
-            "status": "new"
-        },
-        {
-            "term": "Confluent Cloud on Azure",
-            "definition": "A fully managed, cloud-native service for Apache Kafka on the Azure platform. It provides a simple, scalable, and resilient streaming data service.",
-            "category": "Messaging",
-            "status": "new"
-        },
-        {
-            "term": "Azure Event Hubs",
-            "definition": "A highly scalable data streaming platform and event ingestion service that can receive and process millions of events per second.",
-            "category": "Messaging",
-            "status": "new"
-        },
-        {
-            "term": "Business Intelligence (BI)",
-            "definition": "A technology-driven process for analyzing data and presenting actionable information to help executives, managers, and other corporate end users make informed business decisions.",
-            "category": "Data Analysis",
-            "status": "new"
-        },
-        {
-            "term": "Microsoft Power BI",
-            "definition": "A business intelligence and visualization tool from Microsoft that allows users to create interactive reports and dashboards.",
-            "category": "BI Tool",
-            "status": "new"
-        },
-        {
-            "term": "Tableau",
-            "definition": "A powerful and fastest-growing data visualization tool used in the Business Intelligence Industry. It helps in simplifying raw data into an easily understandable format.",
-            "category": "BI Tool",
-            "status": "new"
-        },
-        {
-            "term": "Looker",
-            "definition": "A business intelligence software and big data analytics platform that helps you explore, analyze and share real-time business analytics.",
-            "category": "BI Tool",
-            "status": "new"
-        },
-        {
-            "term": "Qlik",
-            "definition": "A software company specializing in data visualization and business intelligence platforms, most notably Qlik Sense and QlikView.",
-            "category": "BI Tool",
-            "status": "new"
-        },
-        {
-            "term": "Domo",
-            "definition": "A cloud-based business intelligence platform that integrates data from various sources, visualizes it, and provides real-time insights.",
-            "category": "BI Tool",
-            "status": "new"
-        },
-        {
-            "term": "Machine Learning / AI Platforms",
-            "definition": "Integrated platforms that provide tools and services for building, deploying, and managing machine learning and artificial intelligence models.",
-            "category": "AI/ML",
-            "status": "new"
-        },
-        {
-            "term": "Azure Machine Learning",
-            "definition": "A cloud service for accelerating and managing the machine learning project lifecycle. It empowers data scientists and developers to build, train, and deploy machine learning models faster.",
-            "category": "AI/ML Platform",
-            "status": "new"
-        },
-        {
-            "term": "Databricks Unified Analytics Platform",
-            "definition": "A cloud-based platform that unifies data engineering, machine learning, and data science on an open and reliable data lakehouse architecture.",
-            "category": "AI/ML Platform",
-            "status": "new"
-        },
-        {
-            "term": "Metadata Management",
-            "definition": "The process of managing metadata, which describes other data, to help users understand, interpret, and manage data assets. It involves cataloging, classifying, and governing data definitions.",
-            "category": "Data Governance",
-            "status": "new"
-        },
-        {
-            "term": "Data Governance",
-            "definition": "A system of decision rights and accountabilities for information-related processes, executed according to agreed-upon models which describe who can take what actions with what information, and when, under what circumstances, using what methods.",
-            "category": "Data Governance",
-            "status": "new"
-        },
-        {
-            "term": "Azure Purview",
-            "definition": "A unified data governance service that helps you manage and govern your on-premises, multi-cloud, and software-as-a-service (SaaS) data.",
-            "category": "Data Governance Tool",
-            "status": "new"
-        },
-        {
-            "term": "Collibra",
-            "definition": "A company that provides a data governance and data intelligence platform. It helps organizations find, understand, and trust their data.",
-            "category": "Data Governance Tool",
-            "status": "new"
-        },
-        {
-            "term": "Informatica",
-            "definition": "A software development company that offers data integration, data quality, data governance, and master data management solutions.",
-            "category": "Data Management Tool",
-            "status": "new"
-        }
-    ]
+    {
+        "term": "Java",
+        "definition": "Een objectgeoriënteerde programmeertaal die veel wordt gebruikt voor bedrijfskritieke applicaties, backend-services, databewerking en integratie.",
+        "category": "Programmeertalen",
+        "status": "new"
+    },
+    {
+        "term": "Python",
+        "definition": "Een veelzijdige programmeertaal populair voor data science, machine learning, automatisering, scripting en data-analyse.",
+        "category": "Programmeertalen",
+        "status": "new"
+    },
+    {
+        "term": "C#",
+        "definition": "Een programmeertaal ontwikkeld door Microsoft, vaak gebruikt in omgevingen met Microsoft-technologieën.",
+        "category": "Programmeertalen",
+        "status": "new"
+    },
+    {
+        "term": ".NET",
+        "definition": "Een open-source ontwikkelaarsplatform van Microsoft voor het bouwen van verschillende applicaties.",
+        "category": "Programmeertalen",
+        "status": "new"
+    },
+    {
+        "term": "JavaScript",
+        "definition": "Een programmeertaal die essentieel is voor de ontwikkeling van moderne front-end applicaties, webportals en user interfaces.",
+        "category": "Programmeertalen",
+        "status": "new"
+    },
+    {
+        "term": "TypeScript",
+        "definition": "Een superset van JavaScript die statische typen toevoegt, ontworpen voor de ontwikkeling van grote applicaties.",
+        "category": "Programmeertalen",
+        "status": "new"
+    },
+    {
+        "term": "SQL",
+        "definition": "Structured Query Language, een domeinspecifieke taal voor het beheren van gegevens in een relationeel databasebeheersysteem.",
+        "category": "Programmeertalen",
+        "status": "new"
+    },
+    {
+        "term": "Microsoft Azure",
+        "definition": "Een cloud computing platform van Microsoft, met een breed scala aan diensten, waaronder IaaS, PaaS, serverless functies, data storage en analytics-diensten.",
+        "category": "Cloudplatformen",
+        "status": "new"
+    },
+    {
+        "term": "IaaS",
+        "definition": "Infrastructure as a Service, een cloud computing model waarbij computing resources worden aangeboden via virtualisatie.",
+        "category": "Cloudplatformen",
+        "status": "new"
+    },
+    {
+        "term": "PaaS",
+        "definition": "Platform as a Service, een cloud computing model dat een platform en omgeving biedt voor het ontwikkelen, uitvoeren en beheren van applicaties.",
+        "category": "Cloudplatformen",
+        "status": "new"
+    },
+    {
+        "term": "AWS",
+        "definition": "Amazon Web Services, een uitgebreid, breed en veel gebruikt cloudplatform.",
+        "category": "Cloudplatformen",
+        "status": "new"
+    },
+    {
+        "term": "Private Cloud",
+        "definition": "Een cloudinfrastructuur die uitsluitend wordt gebruikt door één organisatie.",
+        "category": "Cloudplatformen",
+        "status": "new"
+    },
+    {
+        "term": "On-premise",
+        "definition": "Software en infrastructuur die lokaal wordt gehost en beheerd door de organisatie zelf.",
+        "category": "Cloudplatformen",
+        "status": "new"
+    },
+    {
+        "term": "Oracle Database",
+        "definition": "Een commercieel relationeel databasebeheersysteem, traditioneel gebruikt voor kernapplicaties en transactionele systemen.",
+        "category": "Databases",
+        "status": "new"
+    },
+    {
+        "term": "Microsoft SQL Server",
+        "definition": "Een relationeel databasebeheersysteem ontwikkeld door Microsoft.",
+        "category": "Databases",
+        "status": "new"
+    },
+    {
+        "term": "PostgreSQL",
+        "definition": "Een open-source relationeel databasebeheersysteem, bekend om zijn robuustheid en compatibiliteit.",
+        "category": "Databases",
+        "status": "new"
+    },
+    {
+        "term": "NoSQL",
+        "definition": "Niet-relationele databases die schema-less zijn en geschikt zijn voor ongestructureerde of semi-gestructureerde data.",
+        "category": "Databases",
+        "status": "new"
+    },
+    {
+        "term": "MongoDB",
+        "definition": "Een NoSQL-databaseprogramma dat documentgeoriënteerde databases gebruikt.",
+        "category": "Databases",
+        "status": "new"
+    },
+    {
+        "term": "Cassandra",
+        "definition": "Een gedistribueerd NoSQL-databasebeheersysteem ontworpen om grote hoeveelheden gegevens te verwerken over vele commodity-servers.",
+        "category": "Databases",
+        "status": "new"
+    },
+    {
+        "term": "Apache HBase",
+        "definition": "Een open-source, niet-relationele, gedistribueerde database gemodelleerd naar Googles Bigtable.",
+        "category": "Databases",
+        "status": "new"
+    },
+    {
+        "term": "Data warehouses",
+        "definition": "Systemen voor het opslaan en analyseren van grootschalige, gehistoriseerde datasets voor rapportage en analyse.",
+        "category": "Databases",
+        "status": "new"
+    },
+    {
+        "term": "Data lakes",
+        "definition": "Opslagplaatsen voor grote hoeveelheden onbewerkte data in hun oorspronkelijke formaat.",
+        "category": "Databases",
+        "status": "new"
+    },
+    {
+        "term": "Spring Boot",
+        "definition": "Een framework voor het eenvoudig bouwen van stand-alone, productieklaar Spring-gebaseerde applicaties met minimale configuratie.",
+        "category": "Frameworks",
+        "status": "new"
+    },
+    {
+        "term": "Spring Framework",
+        "definition": "Een open-source applicatieroosterframework voor de Java-platform.",
+        "category": "Frameworks",
+        "status": "new"
+    },
+    {
+        "term": "Hibernate",
+        "definition": "Een Object-Relational Mapping (ORM) tool voor het omzetten van object-georiënteerde data naar relationele databases.",
+        "category": "Frameworks",
+        "status": "new"
+    },
+    {
+        "term": "React",
+        "definition": "Een JavaScript-bibliotheek voor het bouwen van gebruikersinterfaces, populair voor single-page applications (SPA's).",
+        "category": "Frameworks",
+        "status": "new"
+    },
+    {
+        "term": "Angular",
+        "definition": "Een open-source, JavaScript-gebaseerd front-end web framework voor het bouwen van webapplicaties.",
+        "category": "Frameworks",
+        "status": "new"
+    },
+    {
+        "term": "Django",
+        "definition": "Een Python web framework dat snelle ontwikkeling en pragmatisch ontwerp bevordert.",
+        "category": "Frameworks",
+        "status": "new"
+    },
+    {
+        "term": "Flask",
+        "definition": "Een lichte Python web framework, geschikt voor kleinere applicaties of microservices.",
+        "category": "Frameworks",
+        "status": "new"
+    },
+    {
+        "term": "Pandas",
+        "definition": "Een Python-bibliotheek voor data-analyse en -manipulatie.",
+        "category": "Frameworks",
+        "status": "new"
+    },
+    {
+        "term": "NumPy",
+        "definition": "Een fundamentele Python-bibliotheek voor wetenschappelijk computergebruik, met ondersteuning voor arrays en matrices.",
+        "category": "Frameworks",
+        "status": "new"
+    },
+    {
+        "term": "Scikit-learn",
+        "definition": "Een Python-bibliotheek voor machine learning-algoritmen.",
+        "category": "Frameworks",
+        "status": "new"
+    },
+    {
+        "term": "TensorFlow",
+        "definition": "Een open-source softwarebibliotheek voor machine learning en kunstmatige intelligentie, ontwikkeld door Google.",
+        "category": "Frameworks",
+        "status": "new"
+    },
+    {
+        "term": "PyTorch",
+        "definition": "Een open-source machine learning-bibliotheek gebaseerd op het Torch-bibliotheek, gebruikt voor deep learning-toepassingen.",
+        "category": "Frameworks",
+        "status": "new"
+    },
+    {
+        "term": "Microservices Architectuur",
+        "definition": "Een architectuurstijl waarbij een applicatie is opgebouwd als een verzameling kleine, onafhankelijke services.",
+        "category": "Architectuur",
+        "status": "new"
+    },
+    {
+        "term": "SOA",
+        "definition": "Service-oriented Architecture, een benadering van architectuurontwerp waarbij diensten worden gebruikt als de bouwstenen van applicaties.",
+        "category": "Architectuur",
+        "status": "new"
+    },
+    {
+        "term": "Cloud-Native Architectuur",
+        "definition": "Een architectuurstijl die is ontworpen om optimaal gebruik te maken van cloud computing, met containers, serverless functies en managed services.",
+        "category": "Architectuur",
+        "status": "new"
+    },
+    {
+        "term": "Data Mesh architectuur",
+        "definition": "Een architectuurstijl voor gedecentraliseerd databeheer, waarbij de verantwoordelijkheid voor data domeinen bij specifieke teams ligt.",
+        "category": "Architectuur",
+        "status": "new"
+    },
+    {
+        "term": "CI/CD",
+        "definition": "Continuous Integration/Continuous Delivery, een set van praktijken voor softwareontwikkeling die gericht zijn op het snel en betrouwbaar leveren van software.",
+        "category": "DevOps-tools",
+        "status": "new"
+    },
+    {
+        "term": "Azure DevOps",
+        "definition": "Een suite van development tools van Microsoft voor continue integratie, continue levering, projectmanagement en versiebeheer.",
+        "category": "DevOps-tools",
+        "status": "new"
+    },
+    {
+        "term": "Jenkins",
+        "definition": "Een open-source automatiseringsserver voor continue integratie en continue levering.",
+        "category": "DevOps-tools",
+        "status": "new"
+    },
+    {
+        "term": "Git",
+        "definition": "Een gedistribueerd versiebeheersysteem voor het bijhouden van wijzigingen in broncode tijdens softwareontwikkeling.",
+        "category": "DevOps-tools",
+        "status": "new"
+    },
+    {
+        "term": "Docker",
+        "definition": "Een platform voor het bouwen, verzenden en uitvoeren van applicaties in containers.",
+        "category": "DevOps-tools",
+        "status": "new"
+    },
+    {
+        "term": "Kubernetes",
+        "definition": "Een open-source systeem voor het automatiseren van de implementatie, schaling en het beheer van containerized applicaties.",
+        "category": "DevOps-tools",
+        "status": "new"
+    },
+    {
+        "term": "Azure Kubernetes Service (AKS)",
+        "definition": "Een managed Kubernetes-service op Microsoft Azure.",
+        "category": "DevOps-tools",
+        "status": "new"
+    },
+    {
+        "term": "Grafana",
+        "definition": "Een open-source platform voor het monitoren en visualiseren van metrics.",
+        "category": "DevOps-tools",
+        "status": "new"
+    },
+    {
+        "term": "Prometheus",
+        "definition": "Een open-source monitoring- en waarschuwingssysteem.",
+        "category": "DevOps-tools",
+        "status": "new"
+    },
+    {
+        "term": "Elastic Stack",
+        "definition": "Een suite van open-source tools (Elasticsearch, Kibana, Logstash) voor data-ingestie, opslag, zoeken en visualisatie.",
+        "category": "DevOps-tools",
+        "status": "new"
+    },
+    {
+        "term": "Elasticsearch",
+        "definition": "Een gedistribueerde, RESTful zoek- en analysesysteem.",
+        "category": "DevOps-tools",
+        "status": "new"
+    },
+    {
+        "term": "Kibana",
+        "definition": "Een open-source datavisualisatie- en verkenningsinstrument, ontworpen om te werken met Elasticsearch.",
+        "category": "DevOps-tools",
+        "status": "new"
+    },
+    {
+        "term": "Logstash",
+        "definition": "Een open-source data pipeline voor het verzamelen, verwerken en doorsturen van gebeurtenissen en logbestanden.",
+        "category": "DevOps-tools",
+        "status": "new"
+    },
+    {
+        "term": "Azure Monitor",
+        "definition": "Een uitgebreide oplossing voor het verzamelen, analyseren en handelen op telemetrie van uw cloud- en on-premise omgevingen.",
+        "category": "DevOps-tools",
+        "status": "new"
+    },
+    {
+        "term": "Terraform",
+        "definition": "Een open-source Infrastructure as Code (IaC) tool voor het provisioneren en beheren van infrastructuur.",
+        "category": "DevOps-tools",
+        "status": "new"
+    },
+    {
+        "term": "Ansible",
+        "definition": "Een open-source automatiseringsengine die wordt gebruikt voor configuratiebeheer, applicatie-implementatie en taakautomatisering.",
+        "category": "DevOps-tools",
+        "status": "new"
+    },
+    {
+        "term": "PowerShell",
+        "definition": "Een opdrachtregel-shell en scripttaal ontwikkeld door Microsoft voor systeembeheer.",
+        "category": "DevOps-tools",
+        "status": "new"
+    },
+    {
+        "term": "Bash scripting",
+        "definition": "Het schrijven van scripts voor de Bash-shell, veel gebruikt op Linux en Unix-achtige systemen voor taakautomatisering.",
+        "category": "DevOps-tools",
+        "status": "new"
+    },
+    {
+        "term": "Azure Data Lake Storage (ADLS)",
+        "definition": "Een schaalbare en veilige data lake-oplossing voor high-performance analytics workloads.",
+        "category": "Data-platformen",
+        "status": "new"
+    },
+    {
+        "term": "Azure Databricks",
+        "definition": "Een geoptimaliseerde Apache Spark-gebaseerde analyseservice op Azure.",
+        "category": "Data-platformen",
+        "status": "new"
+    },
+    {
+        "term": "Apache Spark",
+        "definition": "Een open-source gedistribueerd computervermogen framework voor big data-verwerking.",
+        "category": "Data-platformen",
+        "status": "new"
+    },
+    {
+        "term": "Azure Synapse Analytics",
+        "definition": "Een geïntegreerde analyse-service die data warehousing, data-integratie, big data verwerking en machine learning combineert.",
+        "category": "Data-platformen",
+        "status": "new"
+    },
+    {
+        "term": "Azure Data Factory",
+        "definition": "Een cloud-gebaseerde ETL-service die het schalen van data-integratie en transformatie mogelijk maakt.",
+        "category": "Data-platformen",
+        "status": "new"
+    },
+    {
+        "term": "Azure Stream Analytics",
+        "definition": "Een real-time analyse-engine voor het verwerken van grote volumes streaming data.",
+        "category": "Data-platformen",
+        "status": "new"
+    },
+    {
+        "term": "Azure Event Hubs",
+        "definition": "Een schaalbare data streaming-platform en event ingestie-service.",
+        "category": "Data-platformen",
+        "status": "new"
+    },
+    {
+        "term": "Apache Kafka",
+        "definition": "Een gedistribueerd streamingplatform dat wordt gebruikt voor het publiceren, abonneren op, opslaan en verwerken van gebeurtenisstroomrecords in real-time.",
+        "category": "Data-platformen",
+        "status": "new"
+    },
+    {
+        "term": "Microsoft Power BI",
+        "definition": "Een business intelligence-tool van Microsoft voor interactieve visualisaties en business intelligence-mogelijkheden met een eenvoudige interface.",
+        "category": "Data-platformen",
+        "status": "new"
+    },
+    {
+        "term": "Tableau",
+        "definition": "Een datavisualisatie-tool gebruikt voor business intelligence.",
+        "category": "Data-platformen",
+        "status": "new"
+    },
+    {
+        "term": "RESTful API's",
+        "definition": "Application Programming Interfaces (API's) die de principes van Representational State Transfer (REST) gebruiken voor communicatie.",
+        "category": "Overige",
+        "status": "new"
+    },
+    {
+        "term": "ORM (Object-Relational Mapping)",
+        "definition": "Een techniek om objecten in een objectgeoriënteerde programmeertaal te mappen aan recordsets in een relationele database.",
+        "category": "Overige",
+        "status": "new"
+    },
+    {
+        "term": "Single-Page Applications (SPA's)",
+        "definition": "Webapplicaties die de hele applicatie in één pagina laden en dynamisch content bijwerken zonder de hele pagina te herladen.",
+        "category": "Overige",
+        "status": "new"
+    },
+    {
+        "term": "ETL",
+        "definition": "Extract, Transform, Load, een proces in data warehousing voor het integreren van data uit meerdere bronnen.",
+        "category": "Overige",
+        "status": "new"
+    },
+    {
+        "term": "Kotlin",
+        "definition": "A cross-platform, statically typed, general-purpose programming language with type inference. Kotlin is designed to interoperate fully with Java.",
+        "category": "Programmeertalen"
+    },
+    {
+        "term": "Scala",
+        "definition": "A strong statically typed general-purpose programming language that supports both object-oriented and functional programming paradigms.",
+        "category": "Programmeertalen"
+    },
+    {
+        "term": "Go",
+        "definition": "A statically typed, compiled programming language designed at Google.",
+        "category": "Programmeertalen"
+    },
+    {
+        "term": "YAML",
+        "definition": "A human-friendly data serialization standard for all programming languages.",
+        "category": "Programmeertalen"
+    },
+    {
+        "term": "JSON",
+        "definition": "An open standard file format and data interchange format that uses human-readable text to store and transmit data objects consisting of attribute–value pairs and array data types.",
+        "category": "Programmeertalen"
+    },
+    {
+        "term": "XML",
+        "definition": "A markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable.",
+        "category": "Programmeertalen"
+    },
+    {
+        "term": "AWS (Amazon Web Services)",
+        "definition": "A comprehensive, broadly adopted, and an industry-leading cloud platform, offering over 200 fully featured services from data centers globally.",
+        "category": "Cloud"
+    },
+    {
+        "term": "Google Cloud Platform (GCP)",
+        "definition": "A suite of cloud computing services that runs on the same infrastructure that Google uses internally for its end-user products, such as Google Search and YouTube.",
+        "category": "Cloud"
+    },
+    {
+        "term": "SQL Server",
+        "definition": "A relational database management system developed by Microsoft.",
+        "category": "Databases"
+    },
+    {
+        "term": "Oracle",
+        "definition": "A multi-model database management system produced and marketed by Oracle Corporation.",
+        "category": "Databases"
+    },
+    {
+        "term": "Azure SQL Database",
+        "definition": "A fully managed platform as a service (PaaS) database engine that handles most of the database management functions such as upgrading, patching, backups, and monitoring without user involvement.",
+        "category": "Databases"
+    },
+    {
+        "term": "Azure SQL Managed Instance",
+        "definition": "A scalable cloud data service that provides broad SQL Server engine compatibility with all the benefits of a fully managed PaaS.",
+        "category": "Databases"
+    },
+    {
+        "term": "Cosmos DB",
+        "definition": "A globally distributed, multi-model database service from Microsoft for managing data at a planetary scale.",
+        "category": "Databases"
+    },
+    {
+        "term": "Databricks",
+        "definition": "A company that provides a web-based platform for working with Apache Spark, providing automated cluster management and IPython-style notebooks.",
+        "category": "Databases"
+    },
+    {
+        "term": "Snowflake",
+        "definition": "A cloud-based data warehousing company that provides a cloud-based data storage and analytics service, generally termed 'data warehouse-as-a-service'.",
+        "category": "Databases"
+    },
+    {
+        "term": "Azure Data Lake Storage",
+        "definition": "A highly scalable and cost-effective data lake solution for big data analytics.",
+        "category": "Big Data & Analytics"
+    },
+    {
+        "term": "Power BI",
+        "definition": "A business intelligence and data visualization tool developed by Microsoft.",
+        "category": "Big Data & Analytics"
+    },
+    {
+        "term": "Qlik Sense",
+        "definition": "A data visualization and business intelligence solution.",
+        "category": "Big Data & Analytics"
+    },
+    {
+        "term": "Machine Learning (ML)",
+        "definition": "An application of artificial intelligence (AI) that provides systems with the ability to automatically learn and improve from experience without being explicitly programmed.",
+        "category": "Big Data & Analytics"
+    },
+    {
+        "term": "AI (Artificial Intelligence)",
+        "definition": "Intelligence demonstrated by machines, in contrast to the natural intelligence displayed by humans and other animals.",
+        "category": "Big Data & Analytics"
+    },
+    {
+        "term": "Kubernetes (AKS)",
+        "definition": "An open-source container orchestration system for automating deployment, scaling, and management of containerized applications. AKS is Azure Kubernetes Service.",
+        "category": "Containers & Orchestratie"
+    },
+    {
+        "term": "OpenShift",
+        "definition": "A family of containerization software products developed by Red Hat.",
+        "category": "Containers & Orchestratie"
+    },
+    {
+        "term": "Azure DevOps (Pipelines)",
+        "definition": "A suite of development services built on Azure, including Azure Pipelines for CI/CD.",
+        "category": "CI/CD & DevOps"
+    },
+    {
+        "term": "GitHub",
+        "definition": "A provider of Internet hosting for software development and version control using Git.",
+        "category": "CI/CD & DevOps"
+    },
+    {
+        "term": "GitLab CI/CD",
+        "definition": "A powerful tool for continuous integration, delivery, and deployment, fully integrated with GitLab.",
+        "category": "CI/CD & DevOps"
+    },
+    {
+        "term": "Helm",
+        "definition": "The package manager for Kubernetes.",
+        "category": "CI/CD & DevOps"
+    },
+    {
+        "term": "ArgoCD",
+        "definition": "A declarative, GitOps continuous delivery tool for Kubernetes.",
+        "category": "CI/CD & DevOps"
+    },
+    {
+        "term": "Jira",
+        "definition": "A proprietary issue tracking product, developed by Atlassian, that allows bug tracking and agile project management.",
+        "category": "CI/CD & DevOps"
+    },
+    {
+        "term": "Confluence",
+        "definition": "A web-based corporate wiki developed by Atlassian, used for team collaboration.",
+        "category": "CI/CD & DevOps"
+    },
+    {
+        "term": ".NET Core",
+        "definition": "A free and open-source managed computer software framework, cross-platform successor to .NET Framework.",
+        "category": "Frameworks & Libraries"
+    },
+    {
+        "term": "Vue.js",
+        "definition": "An open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications.",
+        "category": "Frameworks & Libraries"
+    },
+    {
+        "term": "Node.js",
+        "definition": "An open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.",
+        "category": "Frameworks & Libraries"
+    },
+    {
+        "term": "ELK Stack (Elasticsearch, Logstash, Kibana)",
+        "definition": "A collection of three open-source products—Elasticsearch, Logstash, and Kibana—from Elastic. Elasticsearch is a search and analytics engine. Logstash is a server-side data processing pipeline that ingests data from multiple sources simultaneously, transforms it, and then sends it to a 'stash' like Elasticsearch. Kibana lets users visualize data with charts and graphs in Elasticsearch.",
+        "category": "Monitoring & Logging"
+    },
+    {
+        "term": "Splunk",
+        "definition": "A software platform to search, analyze and visualize the machine-generated data collected from the websites, applications, sensors, devices etc.",
+        "category": "Monitoring & Logging"
+    },
+    {
+        "term": "Azure Service Bus",
+        "definition": "A fully managed enterprise integration message broker.",
+        "category": "Messaging & Event Streaming"
+    },
+    {
+        "term": "RabbitMQ",
+        "definition": "The most widely deployed open-source message broker.",
+        "category": "Messaging & Event Streaming"
+    },
+    {
+        "term": "ARM Templates (Azure Resource Manager Templates)",
+        "definition": "JSON files that define the infrastructure and configuration for your Azure solution.",
+        "category": "Infrastructuur als Code (IaC)"
+    },
+    {
+        "term": "Bicep",
+        "definition": "A domain-specific language (DSL) for deploying Azure resources declaratively.",
+        "category": "Infrastructuur als Code (IaC)"
+    },
+    {
+        "term": "APIs (REST, SOAP)",
+        "definition": "Application Programming Interfaces. REST (Representational State Transfer) is an architectural style for networked hypermedia applications. SOAP (Simple Object Access Protocol) is a messaging protocol specification for exchanging structured information in the implementation of web services.",
+        "category": "Overige Tools & Technieken"
+    },
+    {
+        "term": "GraphQL",
+        "definition": "An open-source data query and manipulation language for APIs, and a runtime for fulfilling queries with existing data.",
+        "category": "Overige Tools & Technieken"
+    },
+    {
+        "term": "Domain Driven Design (DDD)",
+        "definition": "An approach to software development for complex needs by connecting the implementation to an evolving model of the core business concepts.",
+        "category": "Overige Tools & Technieken"
+    },
+    {
+        "term": "Scrum / Agile",
+        "definition": "Agile is an iterative approach to software development and Scrum is a framework within which people can address complex adaptive problems, while productively and creatively delivering products of the highest possible value.",
+        "category": "Overige Tools & Technieken"
+    },
+    {
+        "term": "Test Automation (Selenium, Cypress, Playwright, Jest)",
+        "definition": "The use of software to control the execution of tests and the comparison of actual outcomes with predicted outcomes. Selenium, Cypress, Playwright, and Jest are popular test automation frameworks.",
+        "category": "Overige Tools & Technieken"
+    },
+    {
+        "term": "Security (OWASP, Fortify)",
+        "definition": "Measures taken to protect systems and data. OWASP (Open Web Application Security Project) is an online community that produces articles, methodologies, documentation, tools, and technologies in the field of web application security. Fortify offers software security solutions.",
+        "category": "Overige Tools & Technieken"
+    },
+    {
+        "term": "Networking (TCP/IP, DNS, Firewalls)",
+        "definition": "The practice of connecting computer systems to share information and resources. TCP/IP (Transmission Control Protocol/Internet Protocol) is the fundamental protocol suite for the internet. DNS (Domain Name System) translates domain names to IP addresses. Firewalls are network security systems.",
+        "category": "Overige Tools & Technieken"
+    },
+    {
+        "term": "Active Directory",
+        "definition": "A directory service developed by Microsoft for Windows domain networks.",
+        "category": "Overige Tools & Technieken"
+    },
+    {
+        "term": "Entra ID (Azure AD)",
+        "definition": "Microsoft's cloud-based identity and access management service, formerly known as Azure Active Directory.",
+        "category": "Overige Tools & Technieken"
+    },
+    {
+        "term": "Container Security (Aqua, Prisma Cloud)",
+        "definition": "The protection of containerized applications throughout their lifecycle. Aqua and Prisma Cloud are container security platforms.",
+        "category": "Overige Tools & Technieken"
+    },
+    {
+        "term": "GitOps",
+        "definition": "An operational framework that takes DevOps best practices used for application development such as version control, collaboration, compliance, and CI/CD, and applies them to infrastructure automation.",
+        "category": "Overige Tools & Technieken"
+    },
+    {
+        "term": "DevSecOps",
+        "definition": "An extension of DevOps that integrates security into every phase of the software development lifecycle.",
+        "category": "Overige Tools & Technieken"
+    },
+    {
+        "term": "Observability",
+        "definition": "A measure of how well internal states of a system can be inferred from knowledge of its external outputs.",
+        "category": "Overige Tools & Technieken"
+    },
+    {
+        "term": "Java",
+        "definition": "A high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.",
+        "category": "Programming Languages",
+        "status": "exists"
+    },
+    {
+        "term": "Python",
+        "definition": "A high-level, general-purpose programming language often used for web development, data analysis, artificial intelligence, and scientific computing.",
+        "category": "Programming Languages",
+        "status": "exists"
+    },
+    {
+        "term": "C#",
+        "definition": "A modern, object-oriented programming language developed by Microsoft as part of its .NET initiative.",
+        "category": "Programming Languages",
+        "status": "exists"
+    },
+    {
+        "term": "SQL",
+        "definition": "Structured Query Language, a domain-specific language used in programming and designed for managing data held in a relational database management system (RDBMS).",
+        "category": "Programming Languages",
+        "status": "exists"
+    },
+    {
+        "term": "Scala",
+        "definition": "A high-level language combining functional and object-oriented programming paradigms, often run on the Java Virtual Machine (JVM).",
+        "category": "Programming Languages",
+        "status": "exists"
+    },
+    {
+        "term": "R",
+        "definition": "A programming language and free software environment for statistical computing and graphics.",
+        "category": "Programming Languages",
+        "status": "new"
+    },
+    {
+        "term": "Bash scripting",
+        "definition": "A command language interpreter used for interacting with the operating system, often for automating tasks and managing system configurations.",
+        "category": "Programming Languages",
+        "status": "exists"
+    },
+    {
+        "term": "Microsoft Azure",
+        "definition": "A cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers.",
+        "category": "Cloud",
+        "status": "exists"
+    },
+    {
+        "term": "AWS",
+        "definition": "Amazon Web Services, a comprehensive, broadly adopted, and secure cloud platform offered by Amazon.",
+        "category": "Cloud",
+        "status": "exists"
+    },
+    {
+        "term": "SQL Server",
+        "definition": "A relational database management system developed by Microsoft.",
+        "category": "Databases",
+        "status": "exists"
+    },
+    {
+        "term": "Oracle",
+        "definition": "A multi-model database management system produced and marketed by Oracle Corporation.",
+        "category": "Databases",
+        "status": "exists"
+    },
+    {
+        "term": "PostgreSQL",
+        "definition": "A powerful, open-source object-relational database system.",
+        "category": "Databases",
+        "status": "exists"
+    },
+    {
+        "term": "Databricks",
+        "definition": "A cloud-based data engineering platform that provides tools for big data processing and machine learning, often built on Apache Spark.",
+        "category": "Databases",
+        "status": "exists"
+    },
+    {
+        "term": "Snowflake",
+        "definition": "A cloud-based data warehousing platform that enables data storage, processing, and analytic solutions.",
+        "category": "Databases",
+        "status": "exists"
+    },
+    {
+        "term": "Apache Spark",
+        "definition": "An open-source, distributed general-purpose cluster computing framework for processing large datasets.",
+        "category": "Big Data/Data Science",
+        "status": "exists"
+    },
+    {
+        "term": "Kafka",
+        "definition": "A distributed streaming platform capable of handling trillions of events a day, often used for building real-time data pipelines and streaming applications.",
+        "category": "Big Data/Data Science",
+        "status": "new"
+    },
+    {
+        "term": "Power BI",
+        "definition": "A business intelligence tool developed by Microsoft for interactive visualizations and business intelligence capabilities with an interface simple enough for end users to create their own reports and dashboards.",
+        "category": "Big Data/Data Science",
+        "status": "exists"
+    },
+    {
+        "term": "Azure Data Factory",
+        "definition": "A cloud-based data integration service that allows you to create, schedule, and orchestrate your ETL/ELT workflows.",
+        "category": "Big Data/Data Science",
+        "status": "exists"
+    },
+    {
+        "term": "Azure Synapse Analytics",
+        "definition": "An analytics service that brings together enterprise data warehousing and Big Data analytics.",
+        "category": "Big Data/Data Science",
+        "status": "exists"
+    },
+    {
+        "term": "Kubernetes",
+        "definition": "An open-source system for automating deployment, scaling, and management of containerized applications.",
+        "category": "Containerization & Orchestration",
+        "status": "exists"
+    },
+    {
+        "term": "Docker",
+        "definition": "A platform for building, shipping, and running containerized applications.",
+        "category": "Containerization & Orchestration",
+        "status": "exists"
+    },
+    {
+        "term": "Jira",
+        "definition": "A proprietary issue tracking product developed by Atlassian that allows bug tracking and agile project management.",
+        "category": "DevOps & Tools",
+        "status": "exists"
+    },
+    {
+        "term": "Git",
+        "definition": "A distributed version control system for tracking changes in source code during software development.",
+        "category": "DevOps & Tools",
+        "status": "exists"
+    },
+    {
+        "term": "Azure DevOps",
+        "definition": "A suite of development services for version control, reporting, requirements management, project management, automated builds, testing, and release management.",
+        "category": "DevOps & Tools",
+        "status": "exists"
+    },
+    {
+        "term": "Terraform",
+        "definition": "An open-source infrastructure as code software tool created by HashiCorp.",
+        "category": "DevOps & Tools",
+        "status": "exists"
+    },
+    {
+        "term": "Ansible",
+        "definition": "An open-source software provisioning, configuration management, and application-deployment tool.",
+        "category": "DevOps & Tools",
+        "status": "exists"
+    },
+    {
+        "term": "Jenkins",
+        "definition": "An open-source automation server that helps to automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery.",
+        "category": "DevOps & Tools",
+        "status": "exists"
+    },
+    {
+        "term": "Maven",
+        "definition": "A software project management and comprehension tool primarily used for Java projects.",
+        "category": "DevOps & Tools",
+        "status": "new"
+    },
+    {
+        "term": "Angular",
+        "definition": "A TypeScript-based open-source front-end web application platform led by the Angular Team at Google and by a community of individuals and corporations.",
+        "category": "Frontend",
+        "status": "exists"
+    },
+    {
+        "term": "React",
+        "definition": "A JavaScript library for building user interfaces, maintained by Meta and a community of individual developers and companies.",
+        "category": "Frontend",
+        "status": "exists"
+    },
+    {
+        "term": "Spring Boot",
+        "definition": "An open-source, microservice-based Java web framework developed by Pivotal Team.",
+        "category": "Other",
+        "status": "exists"
+    },
+    {
+        "term": "OpenShift",
+        "definition": "A family of containerization software products developed by Red Hat.",
+        "category": "Other",
+        "status": "exists"
+    },
+    {
+        "term": "Linux",
+        "definition": "A family of open-source Unix-like operating systems based on the Linux kernel.",
+        "category": "Other",
+        "status": "new"
+    },
+    {
+        "term": "R",
+        "definition": "A programming language and free software environment for statistical computing and graphics.",
+        "category": "Programming Languages"
+    },
+    {
+        "term": "Kafka",
+        "definition": "A distributed streaming platform capable of handling trillions of events a day, often used for building real-time data pipelines and streaming applications.",
+        "category": "Big Data/Data Science"
+    },
+    {
+        "term": "Maven",
+        "definition": "A software project management and comprehension tool primarily used for Java projects.",
+        "category": "DevOps & Tools"
+    },
+    {
+        "term": "Linux",
+        "definition": "A family of open-source Unix-like operating systems based on the Linux kernel.",
+        "category": "Other"
+    }
 ]
