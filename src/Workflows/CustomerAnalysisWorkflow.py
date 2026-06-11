@@ -5,7 +5,7 @@ from Readers.HUMIntReader import HumintReader
 from SaversJson.MongoJsonSaver import append_to_mongo_json, read_mongo_json_safe
 from Services.LLMclient import LLMClient
 from Extractors.TechnicalTermExtractor import extract_technical_terms
-#from Savers.MongoSaver import load_existing_terms, save_new_terms
+from Savers.MongoSaver import load_existing_terms, save_new_terms
 from Services.EmbeddingService import embed_term
 #from Savers.QdrantSaver import save_term_embedding
 #from Savers.QdrantSaver import find_existing_term
@@ -122,7 +122,7 @@ def extract_terms(
         extract_terms_prompt
     )
 
-def compare_terms_with_database(extracted_terms):
+#def compare_terms_with_database(extracted_terms):
     existing_terms = read_mongo_json_safe()
 
     return compare_terms(
@@ -132,7 +132,7 @@ def compare_terms_with_database(extracted_terms):
 
 
 
-#def compare_terms_with_database(extracted_terms):
+def compare_terms_with_database(extracted_terms):
     existing_terms = load_existing_terms()
 
     return compare_terms(
@@ -145,14 +145,14 @@ def print_comparison_results(comparison_results):
     for result in comparison_results:
         print(result)
 
-def save_terms(comparison_results):
+#def save_terms(comparison_results):
     append_to_mongo_json(comparison_results)
     
 
 
 
-#def save_terms(comparison_results):
-#    save_new_terms(comparison_results)
+def save_terms(comparison_results):
+    save_new_terms(comparison_results)
 
 
 #def generate_and_save_embeddings():
