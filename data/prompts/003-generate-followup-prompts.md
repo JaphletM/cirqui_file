@@ -11,6 +11,8 @@ Voor elke term:
 Technische termen:
 {TECHNICAL_TERMS}
 
+
+
 Geef het resultaat als JSON in dit formaat:
 
 [
