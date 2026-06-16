@@ -83,3 +83,10 @@ def save_new_terms(comparison_results):
     except PyMongoError:
         save_terms_to_json(new_terms)
         print(f"MongoDB unavailable. Saved {len(new_terms)} new terms to JSON.")
+
+
+
+
+
+
+
