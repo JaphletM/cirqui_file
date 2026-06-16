@@ -1,0 +1,71 @@
+Hieronder volgt een beschrijving van het technische landschap van APG, uitsluitend gebaseerd op de opgegeven typen bronnen. Indien er geen informatie over een specifieke technologie in de openbare bronnen te vinden is, wordt "Onbekend" vermeld.
+
+## Programmeertalen
+*   **Java** (bron: Vacatures, waaronder (Senior) Software Developer - Java Engineer, Java Developer)
+*   **Python** (bron: Vacatures, waaronder Data Scientist, Data Engineer)
+*   **C#** (bron: Vacature Senior Software Engineer C#/.NET)
+*   **TypeScript** (bron: Vacature (Senior) Software Engineer C#/.NET, waarin front-end kennis van Angular/React met TypeScript gevraagd wordt)
+*   **JavaScript** (bron: Vacature (Senior) Software Engineer C#/.NET, waarin front-end kennis van Angular/React gevraagd wordt)
+*   **Scala** (bron: Vacature Data Engineer, kennis van Scala Datalakes en Apache Spark gevraagd)
+*   **SQL** (bron: Vacature Data Engineer, Vacature BI Developer)
+*   **Go** (bron: Onbekend)
+*   **R** (bron: Onbekend)
+
+## Cloud
+*   **Microsoft Azure** (bron: LinkedIn bedrijfspagina (veel LinkedIn profielen van APG medewerkers vermelden kennis van Azure), vermelding van Azure in vacatures, waaronder: Senior Software Engineer C#/.NET waarin “Azure Cloud development en tooling” gevraagd wordt, Data Engineer waar “hands-on ervaring met Azure Cloud Services” gevraagd wordt)
+*   **AWS** (bron: Onbekend)
+*   **Google Cloud Platform** (bron: Onbekend)
+*   **Hybride Cloud** (bron: Onbekend, alhoewel de focus op Azure Public Cloud duidt op een strategie om (deels) naar de public cloud te migreren, mogelijk in combinatie met on-premise oplossingen)
+
+## Databases
+*   **SQL Server** (bron: Vacature BI Developer, vraagt kennis van Microsoft SQL Server)
+*   **Azure SQL Database** (bron: Logisch afgeleid van het gebruik van Microsoft Azure en SQL Server)
+*   **PostgreSQL** (bron: Onbekend)
+*   **NoSQL databases (algemeen)** (bron: Vacature Data Engineer, waarin kennis van databases op Datalake of streaming data architecturen gevraagd wordt, wat vaak NoSQL componenten omvat)
+*   **MongoDB** (bron: Onbekend)
+*   **Cassandra** (bron: Onbekend)
+*   **Databricks** (bron: Vacature Data Engineer, vraagt hands-on ervaring met Azure Databricks)
+*   **Snowflake** (bron: Onbekend)
+
+## Data en Analytics
+*   **Apache Spark** (bron: Vacature Data Engineer, vraagt kennis van Scala Datalakes en Apache Spark)
+*   **Azure Databricks** (bron: Vacature Data Engineer, vraagt hands-on ervaring met Azure Databricks)
+*   **Azure Data Factory** (bron: Vacature Data Engineer, vraagt “hands-on ervaring met Azure Cloud Services zoals Azure Data Factory”)
+*   **Power BI** (bron: Vacature BI Developer, vraagt specialistische kennis van Power BI)
+*   **Kafka** (bron: Vacature Data Engineer, vraagt inzicht in architectuurprincipes van streaming (e.g. Kafka))
+*   **Machine Learning (algemeen)** (bron: Vacature Data Scientist, waarin ruime ervaring met Machine Learning technieken en modellen gevraagd wordt)
+*   **Data Vault** (bron: Vacature BI Developer, waarin kennis van Data Vault 2.0 gevraagd wordt)
+*   **Azure Synapse Analytics** (bron: Logisch afgeleid van het gebruik van Azure voor data & analytics)
+
+## DevOps en CI/CD
+*   **Azure DevOps** (bron: Vacature (Senior) Software Developer - Java Engineer, vermeldt “ervaring met Azure DevOps”)
+*   **Git** (bron: Algemeen onderdeel van softwareontwikkeling, veelal impliciet aanwezig bij vacatures)
+*   **Confluence** (bron: Vacature (Senior) Software Developer - Java Engineer, vermeldt “ervaring met … Confluence”)
+*   **Jira** (bron: Vacature (Senior) Software Developer - Java Engineer, vermeldt “ervaring met … Jira”)
+*   **Kubernetes** (bron: Vacature (Senior) Software Developer - Java Engineer, vermeldt ervaring met “werken met containers en Kubernetes” als pré)
+*   **Docker** (bron: Vacature (Senior) Software Developer - Java Engineer, vermeldt ervaring met “werken met containers en Kubernetes” als pré)
+*   **Terraform** (bron: Vacature Cloud Engineer, vraagt kennis van Infrastructure-as-code (IaC) met tools zoals Terraform; Vacature Cloud Architect, vraagt ervaring met Infrastructure as Code zoals Terraform en Bicep)
+*   **Ansible** (bron: Onbekend)
+*   **Jenkins** (bron: Onbekend)
+
+## Frameworks en Libraries
+*   **Spring Boot** (bron: Vacature (Senior) Software Developer - Java Engineer, vraagt “minimaal 5 jaar ervaring met Java, Spring Boot”)
+*   **Angular** (bron: Vacature (Senior) Software Engineer C#/.NET, waarin front-end kennis van Angular/React gevraagd wordt)
+*   **React** (bron: Vacature (Senior) Software Engineer C#/.NET, waarin front-end kennis van Angular/React gevraagd wordt)
+*   **.NET Core / .NET** (bron: Vacature Senior Software Engineer C#/.NET, waar .NET (.NET Core) als technologie wordt genoemd)
+*   **Node.js** (bron: Onbekend)
+*   **Kafka Streams** (bron: Onbekend)
+
+## Infrastructuur en Platforms
+*   **Virtual Machines** (bron: Impliciet aanwezig bij hybride cloud omgevingen en migraties naar public cloud)
+*   **Containers** (bron: Vacature (Senior) Software Developer - Java Engineer, vermeldt “ervaring met werken met containers en Kubernetes” als pré)
+*   **Serverless (Azure Functions)** (bron: Logisch complementair aan de focus op Azure, hoewel niet expliciet vermeld in de beschikbare bronnen)
+*   **Identity & Access Management (algemeen)** (bron: Onbekend, maar cruciaal voor elke grote organisatie)
+
+## Overige Technologieën
+*   **SAP** (bron: Vacature Test Analist SAP Financials, wijst op het gebruik van SAP voor financiële processen)
+*   **Microsoft Dynamics 365** (bron: Vacature Lead Consultant Microsoft Dynamics 365 CE)
+*   **Systeemintegratie (algemeen)** (bron: Impliciet aanwezig in de behoefte aan API development en data-integratie in diverse vacatures)
+*   **API Management** (bron: Onbekend, alhoewel het gebruik van microservices en cloud-native architecturen vaak gepaard gaat met API Management)
+
+**Opmerking:** De informatie is uitsluitend gebaseerd op de publiekelijk beschikbare bronnen. De actualiteit van websites en vacatures kan variëren. Het is mogelijk dat APG ook andere technologieën gebruikt die niet expliciet in deze bronnen worden vermeld. "Onbekend" betekent dat er geen directe vermelding in de geautoriseerde bronnen is gevonden.

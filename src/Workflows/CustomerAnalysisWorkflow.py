@@ -12,7 +12,8 @@ from Savers.MongoSaver import load_existing_terms, save_new_terms
 from Services.EmbeddingService import embed_term
 from Savers.QdrantSaver import save_term_embedding
 from Savers.QdrantSaver import find_existing_term
-from Savers.JsonSaver import save_to_json
+from Savers.JsonSaver import save_to_json, save_webint
+from Savers.MarkdownSaver import save_to_markdown
 
 
 def run_customer_analysis_workflow():
@@ -38,6 +39,8 @@ def run_customer_analysis_workflow():
         llm_client
     )
 
+    save_webint(customer_name, technical_landscape_response)
+
     # Extract relevant technologies and technical concepts
     extracted_terms = extract_terms(
         technical_landscape_response,
@@ -55,7 +58,7 @@ def run_customer_analysis_workflow():
 
     check_terms_in_vector_store(comparison_results)
 
-    followup_prompts = generate_followup_prompts(
+    followup_prompts,rapport = generate_followup_prompts(
         comparison_results,
         llm_client,
         followup_prompts_prompt,
@@ -66,9 +69,11 @@ def run_customer_analysis_workflow():
     )
 
     # Save analysis to JSON
+
     clean = followup_prompts.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
     parsed = json.loads(clean)
     save_to_json(customer_name, parsed)
+    save_to_markdown(customer_name, rapport)  # Save rapport to Markdown
 
 
     # Store new terms in MongoDB
@@ -232,5 +237,5 @@ def generate_followup_prompts(
         filled_rapports_prompt
     )
 
-    return rapport
+    return response, rapport
 
