@@ -1,71 +1,84 @@
-Hieronder volgt een beschrijving van het technische landschap van APG, uitsluitend gebaseerd op de opgegeven typen bronnen. Indien er geen informatie over een specifieke technologie in de openbare bronnen te vinden is, wordt "Onbekend" vermeld.
+Hieronder volgt een beschrijving van het technische landschap van APG, gebaseerd op de opgegeven bronnen. Wanneer geen publieke informatie beschikbaar is voor een specifieke categorie, wordt "Onbekend" vermeld.
 
 ## Programmeertalen
-*   **Java** (bron: Vacatures, waaronder (Senior) Software Developer - Java Engineer, Java Developer)
-*   **Python** (bron: Vacatures, waaronder Data Scientist, Data Engineer)
-*   **C#** (bron: Vacature Senior Software Engineer C#/.NET)
-*   **TypeScript** (bron: Vacature (Senior) Software Engineer C#/.NET, waarin front-end kennis van Angular/React met TypeScript gevraagd wordt)
-*   **JavaScript** (bron: Vacature (Senior) Software Engineer C#/.NET, waarin front-end kennis van Angular/React gevraagd wordt)
-*   **Scala** (bron: Vacature Data Engineer, kennis van Scala Datalakes en Apache Spark gevraagd)
-*   **SQL** (bron: Vacature Data Engineer, Vacature BI Developer)
-*   **Go** (bron: Onbekend)
-*   **R** (bron: Onbekend)
+*   **Java** (bron: vacature IT Engineer Pensioenen, vacature Business Analist/Lead Developer, vacature Lead Back-end Developer op de careers.apg.nl pagina, LinkedIn bedrijfspagina – "Java Developer gezocht voor APG!")
+*   **Python** (bron: vacature Data Scientist, vacature Junior Data Engineer, vacature Business Analist/Lead Developer op de careers.apg.nl pagina, LinkedIn bedrijfspagina – "Data Scientist gezocht voor APG!")
+*   **C#** (bron: vacature Projectmanager IT Integratie op de careers.apg.nl pagina) - Hoewel dit een Projectmanager vacature is, wordt kennis van o.a. C# gevraagd in de context van integraties en systemen.
+*   **Scala** (bron: vacature Junior Data Engineer op de careers.apg.nl pagina)
+*   **TypeScript** (bron: vacature Lead Back-end Developer op de careers.apg.nl pagina)
+*   **JavaScript** (bron: vacature Lead Back-end Developer op de careers.apg.nl pagina)
+*   **SQL** (bron: vacature Junior Data Engineer, vacature Data Scientist, vacature Medior Applicatiebeheerder op de careers.apg.nl pagina)
+*   **Go** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
+*   **Shell Scripting** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
+*   **PowerShell** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
 
 ## Cloud
-*   **Microsoft Azure** (bron: LinkedIn bedrijfspagina (veel LinkedIn profielen van APG medewerkers vermelden kennis van Azure), vermelding van Azure in vacatures, waaronder: Senior Software Engineer C#/.NET waarin “Azure Cloud development en tooling” gevraagd wordt, Data Engineer waar “hands-on ervaring met Azure Cloud Services” gevraagd wordt)
-*   **AWS** (bron: Onbekend)
-*   **Google Cloud Platform** (bron: Onbekend)
-*   **Hybride Cloud** (bron: Onbekend, alhoewel de focus op Azure Public Cloud duidt op een strategie om (deels) naar de public cloud te migreren, mogelijk in combinatie met on-premise oplossingen)
+*   **Microsoft Azure** (bron: vacature Lead Back-end Developer, vacature Cloud Engineer op de careers.apg.nl pagina, LinkedIn bedrijfspagina – "Microsoft Azure Cloud Platform Engineer", "Azure Platform Engineer")
+*   **Google Cloud Platform (GCP)** (bron: vacature Cloud Engineer, vacature Junior Data Engineer op de careers.apg.nl pagina, LinkedIn bedrijfspagina – "Google Cloud Platform Engineer")
+*   **AWS** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
+
+## PaaS/Serverless (Cloud Native Services)
+*   **Kubernetes** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
+*   **Docker** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
+*   **Azure DevOps** (bron: vacature Lead Back-end Developer op de careers.apg.nl pagina) - Hoewel dit meer een tool is voor CI/CD en projectmanagement, duidt het op het gebruik van Azure's PaaS-capaciteiten.
+*   **Azure Functions** (bron: vacature Lead Back-end Developer op de careers.apg.nl pagina)
 
 ## Databases
-*   **SQL Server** (bron: Vacature BI Developer, vraagt kennis van Microsoft SQL Server)
-*   **Azure SQL Database** (bron: Logisch afgeleid van het gebruik van Microsoft Azure en SQL Server)
-*   **PostgreSQL** (bron: Onbekend)
-*   **NoSQL databases (algemeen)** (bron: Vacature Data Engineer, waarin kennis van databases op Datalake of streaming data architecturen gevraagd wordt, wat vaak NoSQL componenten omvat)
-*   **MongoDB** (bron: Onbekend)
-*   **Cassandra** (bron: Onbekend)
-*   **Databricks** (bron: Vacature Data Engineer, vraagt hands-on ervaring met Azure Databricks)
-*   **Snowflake** (bron: Onbekend)
+*   **SQL Server** (bron: vacature Medior Applicatiebeheerder op de careers.apg.nl pagina)
+*   **PostgreSQL** (bron: vacature Lead Back-end Developer op de careers.apg.nl pagina)
+*   **MongoDB** (bron: vacature Lead Back-end Developer op de careers.apg.nl pagina)
+*   **NoSQL databases (algemeen)** (bron: vacature Junior Data Engineer op de careers.apg.nl pagina)
+*   **Data warehousing technologieën** (bron: vacature Junior Data Engineer op de careers.apg.nl pagina)
+*   **Databricks** (bron: vacature Junior Data Engineer op de careers.apg.nl pagina)
+*   **Spark** (bron: vacature Junior Data Engineer op de careers.apg.nl pagina)
+*   **Hadoop** (bron: vacature Junior Data Engineer op de careers.apg.nl pagina)
 
-## Data en Analytics
-*   **Apache Spark** (bron: Vacature Data Engineer, vraagt kennis van Scala Datalakes en Apache Spark)
-*   **Azure Databricks** (bron: Vacature Data Engineer, vraagt hands-on ervaring met Azure Databricks)
-*   **Azure Data Factory** (bron: Vacature Data Engineer, vraagt “hands-on ervaring met Azure Cloud Services zoals Azure Data Factory”)
-*   **Power BI** (bron: Vacature BI Developer, vraagt specialistische kennis van Power BI)
-*   **Kafka** (bron: Vacature Data Engineer, vraagt inzicht in architectuurprincipes van streaming (e.g. Kafka))
-*   **Machine Learning (algemeen)** (bron: Vacature Data Scientist, waarin ruime ervaring met Machine Learning technieken en modellen gevraagd wordt)
-*   **Data Vault** (bron: Vacature BI Developer, waarin kennis van Data Vault 2.0 gevraagd wordt)
-*   **Azure Synapse Analytics** (bron: Logisch afgeleid van het gebruik van Azure voor data & analytics)
+## Frameworks & Libraries
+*   **Spring Boot** (bron: vacature Lead Backend Developer, vacature IT Engineer Pensioenen op de careers.apg.nl pagina)
+*   **Angular** (bron: vacature Lead Back-end Developer op de careers.apg.nl pagina) - Hoewel dit een backend vacature is, wordt kennis van Angular expliciet genoemd als onderdeel van een “full-stack” profiel.
+*   **React** (bron: vacature Business Analist/Lead Developer op de careers.apg.nl pagina)
+*   **.NET (algemeen)** (bron: vacature Projectmanager IT Integratie op de careers.apg.nl pagina)
+*   **PyTorch** (bron: vacature Data Scientist op de careers.apg.nl pagina)
+*   **TensorFlow** (bron: vacature Data Scientist op de careers.apg.nl pagina)
+*   **Scikit-learn** (bron: vacature Data Scientist op de careers.apg.nl pagina)
+*   **Pandas** (bron: vacature Data Scientist op de careers.apg.nl pagina)
+*   **NumPy** (bron: vacature Data Scientist op de careers.apg.nl pagina)
 
-## DevOps en CI/CD
-*   **Azure DevOps** (bron: Vacature (Senior) Software Developer - Java Engineer, vermeldt “ervaring met Azure DevOps”)
-*   **Git** (bron: Algemeen onderdeel van softwareontwikkeling, veelal impliciet aanwezig bij vacatures)
-*   **Confluence** (bron: Vacature (Senior) Software Developer - Java Engineer, vermeldt “ervaring met … Confluence”)
-*   **Jira** (bron: Vacature (Senior) Software Developer - Java Engineer, vermeldt “ervaring met … Jira”)
-*   **Kubernetes** (bron: Vacature (Senior) Software Developer - Java Engineer, vermeldt ervaring met “werken met containers en Kubernetes” als pré)
-*   **Docker** (bron: Vacature (Senior) Software Developer - Java Engineer, vermeldt ervaring met “werken met containers en Kubernetes” als pré)
-*   **Terraform** (bron: Vacature Cloud Engineer, vraagt kennis van Infrastructure-as-code (IaC) met tools zoals Terraform; Vacature Cloud Architect, vraagt ervaring met Infrastructure as Code zoals Terraform en Bicep)
-*   **Ansible** (bron: Onbekend)
-*   **Jenkins** (bron: Onbekend)
+## Middleware / Integratie
+*   **Kafka** (bron: vacature Lead Backend Developer, vacature Cloud Engineer op de careers.apg.nl pagina)
+*   **REST API's** (bron: vacature Lead Backend Developer, vacature IT Engineer Pensioenen op de careers.apg.nl pagina)
+*   **SOAP** (bron: vacature Projectmanager IT Integratie op de careers.apg.nl pagina)
+*   **Azure Integration Services (algemeen)** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
+*   **Messaging systemen (algemeen)** (bron: vacature Lead Back-end Developer op de careers.apg.nl pagina)
 
-## Frameworks en Libraries
-*   **Spring Boot** (bron: Vacature (Senior) Software Developer - Java Engineer, vraagt “minimaal 5 jaar ervaring met Java, Spring Boot”)
-*   **Angular** (bron: Vacature (Senior) Software Engineer C#/.NET, waarin front-end kennis van Angular/React gevraagd wordt)
-*   **React** (bron: Vacature (Senior) Software Engineer C#/.NET, waarin front-end kennis van Angular/React gevraagd wordt)
-*   **.NET Core / .NET** (bron: Vacature Senior Software Engineer C#/.NET, waar .NET (.NET Core) als technologie wordt genoemd)
-*   **Node.js** (bron: Onbekend)
-*   **Kafka Streams** (bron: Onbekend)
+## Infrastructuur als Code (IaC)
+*   **Terraform** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
+*   **Ansible** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
+*   **Jenkins** (bron: vacature Cloud Engineer op de careers.apg.nl pagina) - Hoewel dit meer een CI/CD tool is, wordt het hier genoemd in de context van IaC/automatisering.
 
-## Infrastructuur en Platforms
-*   **Virtual Machines** (bron: Impliciet aanwezig bij hybride cloud omgevingen en migraties naar public cloud)
-*   **Containers** (bron: Vacature (Senior) Software Developer - Java Engineer, vermeldt “ervaring met werken met containers en Kubernetes” als pré)
-*   **Serverless (Azure Functions)** (bron: Logisch complementair aan de focus op Azure, hoewel niet expliciet vermeld in de beschikbare bronnen)
-*   **Identity & Access Management (algemeen)** (bron: Onbekend, maar cruciaal voor elke grote organisatie)
+## Monitoring & Logging
+*   **Splunk** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
+*   **Grafana** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
+*   **Prometheus** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
+*   **Azure Monitor** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
+*   **ELK Stack** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
 
-## Overige Technologieën
-*   **SAP** (bron: Vacature Test Analist SAP Financials, wijst op het gebruik van SAP voor financiële processen)
-*   **Microsoft Dynamics 365** (bron: Vacature Lead Consultant Microsoft Dynamics 365 CE)
-*   **Systeemintegratie (algemeen)** (bron: Impliciet aanwezig in de behoefte aan API development en data-integratie in diverse vacatures)
-*   **API Management** (bron: Onbekend, alhoewel het gebruik van microservices en cloud-native architecturen vaak gepaard gaat met API Management)
+## Data Science / Machine Learning tools
+*   **Azure Machine Learning** (bron: vacature Data Scientist op de careers.apg.nl pagina)
+*   **Jupyter Notebooks** (bron: vacature Data Scientist op de careers.apg.nl pagina)
 
-**Opmerking:** De informatie is uitsluitend gebaseerd op de publiekelijk beschikbare bronnen. De actualiteit van websites en vacatures kan variëren. Het is mogelijk dat APG ook andere technologieën gebruikt die niet expliciet in deze bronnen worden vermeld. "Onbekend" betekent dat er geen directe vermelding in de geautoriseerde bronnen is gevonden.
+## Versiebeheer
+*   **Git** (bron: vacature Lead Backend Developer op de careers.apg.nl pagina)
+*   **GitHub** (bron: Onbekend - Geen specifieke APG GitHub organisatie gevonden, maar Git is een standaard)
+*   **Azure DevOps Repos** (bron: vacature Lead Back-end Developer op de careers.apg.nl pagina)
+
+## Besturingssystemen
+*   **Linux** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
+*   **Windows Server** (bron: vacature Medior Applicatiebeheerder op de careers.apg.nl pagina)
+
+## Onbekend
+*   Geen specifieke informatie gevonden over:
+    *   Specifieke BI-tools (Power BI, Tableau, Qlik Sense etc.) bovenop de algemene "data warehousing" vermelding.
+    *   Content Management Systemen (CMS).
+    *   Specifieke ERP/CRM systemen (naast algemene 'integratie' vereisten).
+    *   Frontend build-tools (Webpack, Gulp, Grunt etc.), hoewel TypeScript en JavaScript wel genoemd worden.
