@@ -1,71 +1,89 @@
-Hieronder volgt een beschrijving van het technische landschap van Ernst & Young (EY), uitsluitend gebaseerd op de opgegeven brontypen.
+Aangezien ik geen live toegang heb tot het internet om de actuele websites, carrièrepagina's, blogs, GitHub-profielen, etc. van Ernst & Young te doorzoeken, kan ik geen volledig accuraat en up-to-date technisch landschap van Ernst & Young samenstellen op basis van de gevraagde bronnen.
+
+Ik kan echter wel een *voorbeeldstructuur* geven en aangeven hoe je dit zelf zou moeten invullen als je toegang hebt tot deze bronnen, op basis van wat algemeen bekend is over dit soort consultancybedrijven en hun IT-gebruik.
+
+**Belangrijke notities voor het zelf invullen:**
+
+*   **Vacatures:** Dit is een van de rijkste bronnen. Zoek naar trefwoorden in de functie-eisen en 'must-haves'.
+*   **Partnerschappen:** Microsoft Partner / AWS Partner profielen geven direct inzicht in de primaire cloudproviders.
+*   **Persberichten/Tech Conferentie Presentaties:** Deze kunnen strategische keuzes in technologieën onthullen, of focusgebieden zoals AI, blockchain.
+*   **LinkedIn/Crunchbase:** Kunnen soms meldingen bevatten van specifieke projecten of acquisities die technologieën omvatten.
+*   **Engineering Blog/GitHub:** Dit zijn de meest directe bronnen voor specifieke tools, frameworks en programmeertalen die daadwerkelijk worden gebruikt, maar EY is mogelijk minder open dan pure tech bedrijven.
+
+---
+
+Hieronder volgt een voorbeeldstructuur met *hypothetische* invullingen zoals je die zou kunnen vinden, met "Onbekend" waar ik geen algemene aanname kan doen zonder externe data.
+
+---
+
+## Technisch Landschap van Ernst & Young
+
+*Let op: Onderstaande informatie is veelal hypothetisch en dient als voorbeeld van hoe het ingevuld zou kunnen worden op basis van de gevraagde bronnen. Zonder realtime toegang tot de bronnen kan een accurate beschrijving niet worden gegeven.*
+
+---
 
 ## Programmeertalen
-*   **Java** (bron: EY Careers - Software Engineer vacatures voor diverse locaties vermelden "proficient in Java" of "Java development experience")
-*   **Python** (bron: EY Careers - Data Scientist of Data Engineer vacatures vermelden vaak "strong programming skills in Python" of "Python development expertise")
-*   **JavaScript** (bron: EY Careers - Frontend Developer of Full Stack Engineer vacatures vermelden regelmatig "expertise in JavaScript" of "modern JavaScript frameworks")
-*   **TypeScript** (bron: EY Careers - Frontend Developer of Full Stack Engineer vacatures vermelden soms "experience with TypeScript")
-*   **C# / .NET** (bron: Microsoft Partner Profiel - EY's samenwerking met Microsoft impliceert het gebruik van .NET-technologieën, en vacatures voor oplossingen gebaseerd op Microsoft platformen vragen hier soms naar)
+
+*   **Java** (bron: Hypothetische vacature voor "Backend Developer", "Solution Architect")
+*   **Python** (bron: Hypothetische vacature voor "Data Scientist", "Machine Learning Engineer", "Cloud Engineer")
+*   **C# / .NET** (bron: Hypothetische Microsoft Partner Project Beschrijving, "Software Engineer" vacature)
+*   **JavaScript / TypeScript** (bron: Hypothetische vacature voor "Frontend Developer", "Fullstack Engineer")
 *   **Go** (bron: Onbekend)
 *   **Scala** (bron: Onbekend)
-*   **R** (bron: EY Careers - Data Scientist vacatures vermelden soms "experience with R for statistical analysis")
-*   **C++** (bron: Onbekend)
-*   **SQL** (bron: EY Careers - Data Engineer, Database Developer of Business Intelligence Developer vacatures vermelden "strong SQL skills")
+*   **R** (bron: Hypothetische vacature voor "Data Scientist", "Statistical Analyst")
 
 ## Cloud
-*   **Microsoft Azure** (bron: Microsoft Partner Profiel - EY is een belangrijke partner van Microsoft en promoot actief Azure-gerelateerde diensten en oplossingen. Ook vermeld in diverse persberichten over cloud partnerships en dienstenaanbod. EY Careers vacatures voor cloud engineers vragen specifiek naar Azure ervaring.)
-*   **Amazon Web Services (AWS)** (bron: AWS Partner Profiel - EY heeft een uitgebreid partnerschap met AWS en biedt AWS-gebaseerde diensten aan. Tevens vermeld in persberichten. EY Careers vacatures voor cloud engineers vragen specifiek naar AWS ervaring.)
-*   **Google Cloud Platform (GCP)** (bron: Officiële bedrijfswebsite - EY vermeldt GCP als onderdeel van hun multi-cloudstrategie en aanbod aan klanten. Persberichten over samenwerking op het gebied van data en AI vermelden vaak GCP. EY Careers vacatures voor cloud engineers vermelden soms GCP als een pre of vereiste.)
+
+*   **Microsoft Azure** (bron: Hypothetisch Microsoft Partner Profiel van EY, persbericht over strategische cloud partnership)
+*   **Amazon Web Services (AWS)** (bron: Hypothetisch AWS Partner Profiel van EY, vacature voor "Cloud Architect AWS")
+*   **Google Cloud Platform (GCP)** (bron: Hypothetisch persbericht over specifieke data-analyse projecten met GCP, vacature "Cloud Engineer GCP")
 
 ## Databases
-*   **SQL Server** (bron: Microsoft Partner Profiel - Door het partnerschap met Microsoft is het zeer waarschijnlijk dat SQL Server intern en bij klanten wordt gebruikt. Tevens vermeld in EY Careers vacatures voor database specialisten.)
-*   **PostgreSQL** (bron: EY Careers - Vacatures voor data engineers of backend developers vermelden soms "experience with PostgreSQL")
-*   **MySQL** (bron: EY Careers - Vacatures voor data engineers of backend developers vermelden soms "experience with MySQL")
-*   **Oracle Database** (bron: Persberichten - EY vermeldt partnerships met Oracle en het aanbieden van diensten rondom Oracle-oplossingen. EY Careers vacatures voor ERP-consultants of database administrators vragen hier soms naar.)
-*   **NoSQL Databases (bijv. MongoDB, Cassandra, DynamoDB, Cosmos DB)** (bron: EY Careers - Vacatures voor data engineers of cloud developers vermelden vaak algemeen "experience with NoSQL databases" of specifieke NoSQL-technologieën gerelateerd aan AWS of Azure services.)
-*   **Data Warehouses (bijv. Snowflake, Azure Synapse, AWS Redshift, Google BigQuery)** (bron: Officiële bedrijfswebsite - EY promoot actief analytics- en datacapaciteiten, waarbij deze technologieën centraal staan. EY Careers vacatures voor data engineers of BI-ontwikkelaars vragen specifiek om ervaring met deze platforms.)
 
-## Frontend Frameworks & Libraries
-*   **React** (bron: EY Careers - Frontend Developer of Full Stack Engineer vacatures vermelden "experience with React.js" of "React framework expertise")
-*   **Angular** (bron: EY Careers - Frontend Developer of Full Stack Engineer vacatures vermelden "experience with Angular" of "Angular framework expertise")
-*   **Vue.js** (bron: Onbekend)
+*   **Microsoft SQL Server** (bron: Hypothetische Microsoft Partner Project Beschrijving, vacature "Database Administrator")
+*   **PostgreSQL** (bron: Hypothetische vacature "Backend Engineer" met ervaring in Open Source databases)
+*   **MongoDB** (NoSQL) (bron: Onbekend)
+*   **Cosmos DB** (NoSQL) (bron: Hypothetische Azure gerelateerde projectbeschrijving)
+*   **Databricks** (voor Data Lake en Analytics) (bron: Hypothetische vacature "Data Engineer", persbericht over AI/Data initiatieven)
+*   **Snowflake** (Data Warehouse) (bron: Onbekend, maar veel gebruikt in consultancy)
+*   **Oracle** (bron: Legacy systemen vacature, Enterprise Architect vacature)
 
-## Backend Frameworks
-*   **Spring / Spring Boot** (bron: EY Careers - Java Developer vacatures vermelden "experience with Spring Boot" of "Spring Framework knowledge")
-*   **Node.js** (bron: EY Careers - Full Stack Engineer of Backend Developer vacatures vermelden "proficiency in Node.js")
-*   **ASP.NET Core** (bron: Microsoft Partner Profiel - Door het partnerschap met Microsoft is dit een logische technologie. EY Careers vacatures gerelateerd aan Microsoft Stack vermelden ASP.NET ervaring.)
-*   **Python frameworks (bijv. Django, Flask)** (bron: Onbekend, hoewel Python breed wordt gebruikt, zijn specifieke frameworks minder expliciet genoemd in publieke bronnen zonder context van een engineering blog.)
+## Infrastructuur & Platformen
 
-## DevOps & CI/CD
-*   **Docker** (bron: EY Careers - Software Engineer, Cloud Engineer en DevOps Engineer vacatures vermelden "experience with Docker" of "containerization technologies")
-*   **Kubernetes** (bron: EY Careers - Cloud Engineer, DevOps Engineer vacatures vermelden "experience with Kubernetes" of "container orchestration")
-*   **Azure DevOps** (bron: Microsoft Partner Profiel - Door het partnerschap met Microsoft en het gebruik van Azure, is Azure DevOps een zeer waarschijnlijke en veelgebruikte tool. EY Careers vacatures voor DevOps Engineers vermelden vaak Azure DevOps.)
-*   **Jenkins** (bron: EY Careers - DevOps Engineer vacatures vermelden soms "experience with Jenkins" voor CI/CD pipelines.)
-*   **Git / GitHub / GitLab** (bron: EY Careers - Bijna alle technische vacatures vermelden "experience with Git" of "version control systems" zoals GitHub of GitLab.)
-*   **Terraform** (bron: EY Careers - Cloud Engineer, DevOps Engineer vacatures vermelden "experience with Infrastructure as Code (IaC) tools like Terraform")
-*   **Ansible** (bron: EY Careers - DevOps Engineer vacatures vermelden soms "experience with Ansible for automation")
-*   **CI/CD Pipes (generiek)** (bron: EY Careers - DevOps Engineer vacatures vermelden algemeen "designing and implementing CI/CD pipelines")
+*   **Kubernetes** (Container Orchestration) (bron: Hypothetische vacature "DevOps Engineer", "Cloud Native Architect")
+*   **Docker** (Containerization) (bron: Hypothetische vacature "DevOps Engineer")
+*   **Terraform** (Infrastructure as Code) (bron: Hypothetische vacature "Cloud Engineer", "DevOps Specialist")
+*   **Ansible / Chef / Puppet** (Configuratiemanagement) (bron: Onbekend, mogelijk vermeld in oudere DevOps vacatures)
+*   **Azure DevOps** (CI/CD, Project Management) (bron: Hypothetisch Microsoft Partner implementatievoorbeeld)
+*   **Databricks Platform** (Data Engineering, Machine Learning) (bron: Hypothetische vacature "Data Scientist", "Machine Learning Engineer")
+*   **ServiceNow** (IT Service Management) (bron: Onbekend, maar veel gebruikt in adviescontext)
 
-## Big Data & Analytics
-*   **Apache Spark** (bron: EY Careers - Data Engineer, Big Data Engineer vacatures vermelden "experience with Apache Spark" of "distributed data processing frameworks")
-*   **Apache Kafka** (bron: EY Careers - Data Engineer, Big Data Engineer vacatures vermelden "experience with Apache Kafka" of "real-time data streaming")
-*   **Hadoop** (bron: EY Careers - Oudere Data Engineer vacatures vermeldden dit soms, maar minder prominent dan Spark of cloud-native alternatieven. In-house gebruik is waarschijnlijk nog aanwezig.)
-*   **Data Lake / Lakehouse (bijv. Databricks)** (bron: Officiële bedrijfswebsite - EY promoot data-architecturen. EY Careers - Data Engineer vacatures vermelden vaak "experience with data lake architectures" en soms specifiek Databricks of vergelijkbare platforms.)
-*   **Power BI** (bron: Microsoft Partner Profiel - Door de samenwerking met Microsoft is Power BI een belangrijke tool voor Business Intelligence. EY Careers - BI Consultant / Developer vacatures vragen er specifiek om.)
-*   **Tableau** (bron: EY Careers - Business Intelligence Analyst, Data Visualization Specialist vacatures vermelden "proficiency in Tableau")
-*   **Alteryx** (bron: EY Careers - Data Analyst, Automation Specialist vacatures vermelden soms "experience with Alteryx for data preparation and automation")
+## Data & Analytics
 
-## AI & Machine Learning
-*   **TensorFlow** (bron: EY Careers - Machine Learning Engineer, AI/ML Specialist vacatures vermelden "experience with TensorFlow")
-*   **PyTorch** (bron: EY Careers - Machine Learning Engineer, AI/ML Specialist vacatures vermelden "experience with PyTorch")
-*   **Scikit-learn** (bron: EY Careers - Data Scientist, Machine Learning Engineer vacatures vermelden vaak "experience with scikit-learn" voor klassieke ML algoritmes)
-*   **Azure ML** (bron: Microsoft Partner Profiel - Door het partnerschap met Microsoft is Azure ML een belangrijke component van hun AI-oplossingen. EY Careers - AI/ML Engineer vacatures vermelden dit soms.)
-*   **AWS SageMaker** (bron: AWS Partner Profiel - Door het partnerschap met AWS is AWS SageMaker een belangrijke component. EY Careers - AI/ML Engineer vacatures vermelden dit soms.)
-*   **Google AI Platform** (bron: Officiële bedrijfswebsite - EY vermeldt GCP als onderdeel van hun AI-strategie. EY Careers - AI/ML Engineer vacatures vermelden dit soms.)
-*   **MLOps tools & practices** (bron: EY Careers - Machine Learning Engineer, MLOps Engineer vacatures vermelden algemeen "experience with MLOps practices and tools")
+*   **Power BI** (Business Intelligence) (bron: Hypothetische vacature "Business Intelligence Consultant")
+*   **Tableau** (Business Intelligence) (bron: Hypothetische vacature "Data Visualization Specialist")
+*   **Azure Synapse Analytics** (Data Warehousing & Big Data Analytics) (bron: Hypothetisch Microsoft Partner Project Beschrijving)
+*   **Apache Spark** (Big Data Processing) (bron: Hypothetische vacature "Data Engineer")
+*   **Python Libraries (Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch)** (Machine Learning/Data Science) (bron: Hypothetische vacature "Data Scientist", "Machine Learning Engineer")
 
-## Overig
-*   **ServiceNow** (bron: Officiële bedrijfswebsite - EY heeft een uitgebreid partnerschap met ServiceNow en biedt implementatie- en consultancy-diensten aan. EY Careers - ServiceNow Developer / Consultant vacatures zijn veelvoorkomend.)
-*   **SAP** (bron: Officiële bedrijfswebsite - EY is een grote implementatiepartner van SAP. Diverse persberichten en EY Careers vacatures voor SAP consultants/developers.)
-*   **Salesforce** (bron: Officiële bedrijfswebsite - EY biedt advies- en implementatiediensten rondom Salesforce. EY Careers vacatures voor Salesforce Developer / Consultant.)
-*   **Robotic Process Automation (RPA) tools (bijv. UiPath, Automation Anywhere)** (bron: Officiële bedrijfswebsite - EY promoot actief RPA-diensten. EY Careers - RPA Developer / Consultant vacatures zijn veelvoorkomend.)
+## Cyber Security
+
+*   **Microsoft Azure Security Center / Defender for Cloud** (bron: Hypothetisch strategisch partnership focus cybersecurity met Microsoft)
+*   **Splunk** (SIEM) (bron: Hypothetische vacature "Cyber Security Analyst")
+*   **SentinelOne / CrowdStrike** (Endpoint Detection & Response) (bron: Onbekend, maar veelgebruikte oplossingen in enterprise omgevingen)
+
+## DevOps & Tools
+
+*   **Git / GitHub / GitLab** (Version Control) (bron: Hypothetische vacature "Software Engineer" - standaardvereiste)
+*   **Jira / Confluence** (Project Management / Documentatie) (bron: Hypothetische vacature "Agile Coach", "Project Manager")
+*   **Selenium** (Automated Testing) (bron: Hypothetische vacature "QA Engineer")
+
+## Enterprise Software (ERP, CRM, etc.)
+
+*   **SAP S/4HANA** (ERP) (bron: Hypothetische vacature "SAP Consultant", persbericht over SAP implementaties)
+*   **Microsoft Dynamics 365** (CRM/ERP) (bron: Hypothetisch Microsoft Partner Project Beschrijving, vacature "Dynamics Consultant")
+*   **Salesforce** (CRM) (bron: Hypothetische vacature "Salesforce Consultant")
+
+---
+
+Zoals je ziet, zou een grondige analyse van de gevraagde bronnen leiden tot een veel gedetailleerder en accurater beeld. De sleutel is om zoektermen te gebruiken die relevant zijn voor technische rollen en projecten.

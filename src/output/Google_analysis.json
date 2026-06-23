@@ -1,0 +1,477 @@
+{
+  "company": "Google",
+  "results": [
+    {
+      "term": "C++",
+      "followup_prompts": [
+        "Welke specifieke C++-standaarden (bijv. C++11, C++17, C++20) worden momenteel intern gebruikt voor nieuwe projecten en codebases, en welke redenen liggen hieraan ten grondslag?",
+        "Kunt u voorbeelden geven van projecten of componenten binnen uw organisatie waarvoor C++ cruciaal is vanwege prestatie-eisen, specifieke hardware-interacties of bestaande legacy-systemen?",
+        "Op welke manier wordt de complexiteit van C++ beheerd binnen uw team, bijvoorbeeld door middel van specifieke codeerrichtlijnen, tooling voor statische analyse, of een focus op best practices voor geheugenbeheer?"
+      ]
+    },
+    {
+      "term": "Java",
+      "followup_prompts": [
+        "Welke versies van Java (bijv. Java 8, Java 11, Java 17+) zijn dominant binnen uw applicatielandschap, en hoe wordt de migratie naar nieuwere versies van het JDK gepland en uitgevoerd?",
+        "Welke frameworks en bibliotheken, naast standaard Java EE/Spring, worden vaak ingezet voor Java-ontwikkeling, en welke zakelijke problemen lossen deze op voor uw organisatie?",
+        "Hoe wordt de performance en resource-footprint van Java-applicaties bij de klant gemonitord en geoptimaliseerd, en welke tools of technieken worden hiervoor gebruikt?"
+      ]
+    },
+    {
+      "term": "Python",
+      "followup_prompts": [
+        "Voor welke primaire toepassingsgebieden (bijv. data-analyse, machine learning, automatisering, webontwikkeling) wordt Python het meest ingezet binnen uw organisatie door de klant?",
+        "Welke specifieke Python-frameworks of -bibliotheken (bijv. Django, Flask, FastAPI, Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch) zijn essentieel voor de workflows van de klant?",
+        "Hoe wordt de afhankelijkheidsmanagement en deployment van Python-applicaties aangepakt binnen uw teams, bijvoorbeeld met tools als Pipenv, Poetry, Docker of virtuele omgevingen?"
+      ]
+    },
+    {
+      "term": "Go",
+      "followup_prompts": [
+        "Voor welke soorten back-end services, microservices of command-line tools wordt Go specifiek ingezet bij uw klant, en welke voordelen biedt Go daarbij ten opzichte van andere talen?",
+        "Hoe wordt de concurrentie (concurrency) in Go-applicaties benut en beheerd door uw team, en welke patronen (bijv. Goroutines, Channels, Context) worden hiervoor veelvuldig toegepast?",
+        "Wat zijn de belangrijkste overwegingen voor uw klant om te kiezen voor Go voor nieuwe projecten, bijvoorbeeld met betrekking tot performance, ontwikkelingssnelheid of onderhoudbaarheid?"
+      ]
+    },
+    {
+      "term": "JavaScript",
+      "followup_prompts": [
+        "Welke primaire JavaScript-frameworks en -bibliotheken (bijv. React, Angular, Vue.js, Node.js, Express) zijn door de klant gestandaardiseerd voor de verschillende toepassingen (front-end, back-end)?",
+        "Hoe wordt het grotere ecosysteem van JavaScript (bijv. transpilers zoals Babel, bundlers zoals Webpack/Vite, testing frameworks zoals Jest/Cypress) binnen uw ontwikkelprocessen geïntegreerd?",
+        "Wat zijn de belangrijkste uitdagingen die uw klant ervaart bij de ontwikkeling en het beheer van grootschalige JavaScript-applicaties, en hoe worden deze aangepakt?"
+      ]
+    },
+    {
+      "term": "Dart",
+      "followup_prompts": [
+        "Wordt Dart voornamelijk gebruikt voor mobiele applicatie-ontwikkeling met Flutter, of zijn er ook andere toepassingen (bijv. web, server-side) binnen uw organisatie waarvoor Dart wordt ingezet?",
+        "Welke voordelen van Dart (bijv. AOT-compilatie, hot reload, type safety) zijn het meest relevant gebleken voor de projecten van uw klant in vergelijking met alternatieven?",
+        "Wat is de mate van adoptie en de strategie voor de lange termijn met betrekking tot Dart en Flutter binnen de ontwikkel-roadmap van de klant?"
+      ]
+    },
+    {
+      "term": "Rust",
+      "followup_prompts": [
+        "Voor welke kritieke systeemcomponenten, infrastructuurtools of performance-gevoelige services wordt Rust ingezet bij de klant?",
+        "Hoe wordt de leercurve van Rust beheerd binnen uw team, en welke ondersteuning (training, mentorship, interne documentatie) wordt geboden aan ontwikkelaars die met Rust beginnen?",
+        "Welke specifieke voordelen van Rust, zoals geheugenveiligheid, concurrente programmering zonder dataraces, of efficiëntie, zijn doorslaggevend geweest voor de adoptie ervan binnen uw organisatie?"
+      ]
+    },
+    {
+      "term": "Kotlin",
+      "followup_prompts": [
+        "Wordt Kotlin primair gebruikt voor Android-ontwikkeling, of wordt het ook ingezet voor server-side applicaties (bijv. met Spring Boot) of andere multi-platform doeleinden binnen het bedrijf van de klant?",
+        "Welke specifieke taalfeatures van Kotlin (bijv. null safety, extension functions, coroutines) hebben de productiviteit en codekwaliteit van uw team het meest verbeterd?",
+        "Hoe wordt de interoperabiliteit tussen bestaande Java-codebases en nieuwe Kotlin-projecten beheerd binnen uw ontwikkelteams?"
+      ]
+    },
+    {
+      "term": "Scala",
+      "followup_prompts": [
+        "Voor welke specifieke toepassingsgebieden, met name binnen distributed systems, big data processing of functionele programmering, wordt Scala ingezet bij de klant?",
+        "Welke frameworks en bibliotheken (bijv. Akka, Spark, Play Framework) worden door uw team gebruikt in combinatie met Scala, en welke zakelijke behoeften vervullen deze?",
+        "Hoe wordt de complexiteit van Scala beheerd, en welke patronen of best practices worden gehanteerd om de leesbaarheid en onderhoudbaarheid van Scala-code te waarborgen?"
+      ]
+    },
+    {
+      "term": "Kubernetes",
+      "followup_prompts": [
+        "Welke Kubernetes-distributies (bijv. GKE, AKS, EKS, OpenShift of on-premise) worden door de klant gebruikt, en wat zijn de beweegredenen voor deze keuze?",
+        "Welke typen applicaties en workloads worden momenteel georkestreerd met Kubernetes, en zijn er plannen om meer legacy-applicaties te migreren naar container-gebaseerde deployments?",
+        "Hoe wordt het beheer, de beveiliging en de schaalbaarheid van Kubernetes-clusters geïmplementeerd en geautomatiseerd binnen uw organisatie?"
+      ]
+    },
+    {
+      "term": "Anthos",
+      "followup_prompts": [
+        "Welke specifieke functionaliteiten van Anthos (bijv. hybride/multi-cloud management, service mesh, policy enforcement) zijn het meest waardevol voor de operaties van de klant, en waarom?",
+        "Welke bedrijfsdoelstellingen probeert uw klant te bereiken met de inzet van Anthos, bijvoorbeeld op het gebied van consistentie, beveiliging of operationele efficiëntie over diverse omgevingen?",
+        "Hoe ver is de adoptie van Anthos gevorderd binnen uw organisatie, en welke uitdagingen zijn er tot nu toe ondervonden bij de implementatie en het gebruik ervan?"
+      ]
+    },
+    {
+      "term": "Spanner",
+      "followup_prompts": [
+        "Voor welke kritieke, global-scale applicaties met hoge consistentie-eisen wordt Google Cloud Spanner ingezet door de klant?",
+        "Hoe wordt de datamodellering en schema-ontwerp in Spanner aangepakt om de voordelen van globaal gedistribueerde schaalbaarheid en transactieconsistentie optimaal te benutten?",
+        "Welke uitdagingen zijn uw teams tegengekomen bij de integratie, migratie of optimalisatie van applicaties die gebruikmaken van Spanner, en hoe zijn deze opgelost?"
+      ]
+    },
+    {
+      "term": "Bigtable",
+      "followup_prompts": [
+        "Voor welke specifieke use-cases, zoals real-time analytics, IoT-dataopslag of grote operationele databases, wordt Google Cloud Bigtable gebruikt bij de klant?",
+        "Hoe wordt de data in Bigtable gemodelleerd en georganiseerd om efficiënte reads en writes te garanderen, rekening houdend met de kenmerken van een wide-column store?",
+        "Welke patronen of technieken worden door uw organisatie gebruikt om de prestaties en kosten van Bigtable-implementaties te bewaken en te optimaliseren?"
+      ]
+    },
+    {
+      "term": "F1 (Distributed SQL)",
+      "followup_prompts": [
+        "Op welke manier heeft Google F1 de architectuur van mission-critical services binnen de organisatie van de klant beïnvloed, met name voor systemen die hoge transactiesnelheden en globale consistentie vereisen?",
+        "Welke specifieke uitdagingen met traditionele relationele databases probeerde de klant op te lossen door over te stappen op een distributed SQL-oplossing zoals F1 (of vergelijkbare concepten)?",
+        "Hoe wordt de operationele complexiteit van een gedistribueerd SQL-systeem zoals F1 beheerd, inclusief monitoring, disaster recovery en schaalbaarheid op lange termijn?"
+      ]
+    },
+    {
+      "term": "Mesa",
+      "followup_prompts": [
+        "Voor welke analytische workloads en grootschalige datamarts wordt Mesa gebruikt binnen de organisatie van de klant, en welke voordelen biedt het ten opzichte van andere data warehouse-oplossingen?",
+        "Hoe wordt de data-integratie en ETL/ELT-processen beheerd voor het laden van data in Mesa, en welke tools of frameworks worden hiervoor gebruikt?",
+        "Welke inzichten heeft de klant verkregen door het gebruik van Mesa, en hoe heeft dit de besluitvorming of productontwikkeling beïnvloed?"
+      ]
+    },
+    {
+      "term": "Colossus (Distributed File System)",
+      "followup_prompts": [
+        "Welke specifieke use-cases vereisten de schaalbaarheid en betrouwbaarheid van een gedistribueerd bestandssysteem zoals Colossus (of HDFS in een bredere context) binnen de organisatie van de klant, denk aan data lakes of back-ups?",
+        "Hoe wordt de data-integriteit, data-replicatie en consistentie beheerd binnen het gedistribueerde bestandssysteem van de klant (gebaseerd op Colossus of vergelijkbare principes)?",
+        "Welke operationele uitdagingen zijn de klant tegengekomen bij het beheren van een gedistribueerd bestandssysteem van deze omvang, en welke oplossingen zijn geïmplementeerd?"
+      ]
+    },
+    {
+      "term": "PostgreSQL",
+      "followup_prompts": [
+        "Voor welke soorten applicaties en services is PostgreSQL de voorkeursdatabase bij de klant, en welke specifieke features (bijv. JSONB, PostGIS, extensies) worden daarbij benut?",
+        "Hoe wordt de schaalbaarheid en hoge beschikbaarheid van PostgreSQL-databases beheerd, bijvoorbeeld met behulp van replicatie, connection pooling of sharding?",
+        "Welke strategieën voor performance tuning en optimalisatie worden toegepast op PostgreSQL-databases van de klant, en welke monitoringtools worden hiervoor gebruikt?"
+      ]
+    },
+    {
+      "term": "MySQL",
+      "followup_prompts": [
+        "In welke onderdelen van de architectuur van de klant speelt MySQL een cruciale rol, en welke typen transacties of gegevensbeheer taken worden hiermee afgehandeld?",
+        "Hoe beheert de klant de replicatie (bijv. master-replica), failover en backup-strategieën voor hun MySQL-databases om hoge beschikbaarheid en data-integriteit te garanderen?",
+        "Welke overwegingen zijn bepalend geweest voor de keuze van MySQL boven andere relationele databases, en hoe worden eventuele schaalbaarheidslimieten aangepakt?"
+      ]
+    },
+    {
+      "term": "Linux (intern aangepaste distributies)",
+      "followup_prompts": [
+        "Welke specifieke aanpassingen of hardeningen zijn aangebracht in de interne Linux-distributies van de klant, en welke beveiligings- of operationele doelen dienen deze aanpassingen?",
+        "Hoe wordt het beheer, de patch-management en de distributie van updates voor de interne Linux-distributies uitgevoerd binnen de organisatie van de klant, en welke tools worden hiervoor gebruikt?",
+        "Welke impact hebben deze aangepaste Linux-distributies op de workflow van de ontwikkelaars en systeembeheerders, en hoe wordt dit proces geoptimaliseerd?"
+      ]
+    },
+    {
+      "term": "Android",
+      "followup_prompts": [
+        "Welke soorten Android-applicaties ontwikkelt de klant (bijv. consumentenapps, enterprise apps, embedded systemen) en voor welke markten of gebruikersgroepen zijn deze bedoeld?",
+        "Hoe wordt de fragmentatie van het Android-ecosysteem (verschillende OS-versies, schermformaten, hardware) beheerd tijdens de ontwikkeling en het testen van Android-applicaties?",
+        "Welke architecturele patronen (bijv. MVVM, MVI), frameworks (bijv. Jetpack Compose) en tools (bijv. Android Studio, Gradle) zijn gestandaardiseerd voor Android-ontwikkeling bij de klant?"
+      ]
+    },
+    {
+      "term": "Chrome OS",
+      "followup_prompts": [
+        "Welke specifieke use-cases of zakelijke behoeften van de klant worden ingevuld door de adoptie of ontwikkeling op Chrome OS, bijvoorbeeld voor onderwijs, zakelijke workloads of kiosken?",
+        "Hoe wordt de integratie van Chrome OS-apparaten beheerd met bestaande IT-infrastructuren en enterprise-systemen van de klant?",
+        "Zijn er interne applicaties die specifiek voor Chrome OS worden ontwikkeld, of wordt er voornamelijk gebruikgemaakt van webapplicaties en Android-apps op Chrome OS?"
+      ]
+    },
+    {
+      "term": "Fuchsia OS",
+      "followup_prompts": [
+        "Heeft de klant plannen om te experimenteren met of te ontwikkelen voor Fuchsia OS, en zo ja, voor welke potentiële productcategorieën of use-cases wordt dit overwogen?",
+        "Welke voordelen van Fuchsia OS, zoals de microkernel-architectuur of de focus op beveiliging en updatability, zijn interessant vanuit het perspectief van de klant voor toekomstige hardware- of softwareproducten?",
+        "Zijn er reeds interne teams die zich verdiepen in de ontwikkeltools en SDK's voor Fuchsia OS, of is dit nog een conceptuele verkenning binnen de organisatie?"
+      ]
+    },
+    {
+      "term": "Borg",
+      "followup_prompts": [
+        "Welke operationele uitdagingen of schaalbaarheidsproblemen probeerde de klant op te lossen met hun eigen containerorkestratieplatform (geïnspireerd op Borg, of een ander) voordat Kubernetes mainstream werd?",
+        "Hoe is de overgang of evolutie van dergelijke interne systemen naar of naast een Kubernetes-gebaseerde aanpak verlopen, en welke lessen zijn hieruit getrokken?",
+        "Welke architecturale principes van containerorkestratie, zoals resource-isolatie, scheduling en self-healing, zijn essentieel gebleken voor de klant, ongeacht het specifieke platform?"
+      ]
+    },
+    {
+      "term": "Istio",
+      "followup_prompts": [
+        "Welke specifieke uitdagingen op het gebied van service-connectiviteit, -beveiliging of -observabiliteit in microservices-architecturen probeert de klant op te lossen met Istio?",
+        "Hoe wordt Istio geïmplementeerd en geconfigureerd binnen de Kubernetes-clusters van de klant, en welke componenten (bijv. Envoy proxy, Mixer, Citadel) worden actief gebruikt?",
+        "Welke concrete voordelen heeft de klant reeds ervaren door de inzet van Istio, zoals verbeterde verkeersbeheer, A/B-tests, of geconsolideerde beveiligingsbeleid?"
+      ]
+    },
+    {
+      "term": "gRPC",
+      "followup_prompts": [
+        "Voor welke soorten van inter-service communicatie, met name bij distributed systems en microservices, wordt gRPC ingezet bij de klant, en welk voordeel biedt dit ten opzichte van REST/HTTP?",
+        "Hoe wordt het lifecycle management van Protocol Buffers (proto-definities) beheerd binnen de organisatie van de klant, en hoe wordt achterwaartse en voorwaartse compatibiliteit gewaarborgd?",
+        "Welke talen en frameworks worden door de klant gebruikt voor de implementatie van gRPC-services en clients, en zijn er specifieke uitdagingen bij de adoptie geweest?"
+      ]
+    },
+    {
+      "term": "TensorFlow Extended (TFX)",
+      "followup_prompts": [
+        "Welke uitdagingen in het MLOps-lifecycle (data validering, model training, deployment, monitoring) probeert de klant op te lossen met TFX?",
+        "Hoe wordt TFX geïntegreerd met bestaande data-infrastructuren en orkestratie-tools (bijv. Kubeflow Pipelines, Airflow) binnen de MLOps-workflows van de klant?",
+        "Welke specifieke componenten van TFX (bijv. TensorFlow Data Validation, TensorFlow Transform, TensorFlow Model Analysis) zijn het meest impactvol gebleken voor de betrouwbaarheid en schaalbaarheid van ML-systemen bij de klant?"
+      ]
+    },
+    {
+      "term": "Software-Defined Networking (SDN)",
+      "followup_prompts": [
+        "Welke specifieke netwerkproblemen (bijv. flexibiliteit, schaalbaarheid, automatisering, beveiliging) probeert de klant op te lossen met de adoptie van SDN-principes en -technologieën?",
+        "Welke SDN-oplossingen of -frameworks (bijv. Open vSwitch, Cisco ACI, VMware NSX) zijn in gebruik bij de klant, of welke worden overwogen voor toekomstige implementaties?",
+        "Hoe wordt de overgang naar een SDN-architectuur beheerd, en welke impact heeft dit op de netwerkoperations en de vaardigheden van het IT-personeel van de klant?"
+      ]
+    },
+    {
+      "term": "OpenFlow",
+      "followup_prompts": [
+        "Wordt OpenFlow specifiek gebruikt als control-plane protocol in de SDN-implementaties van de klant, en zo ja, voor welke specifieke use-cases of netwerksegmenten?",
+        "Welke uitdagingen zijn de klant tegengekomen bij de implementatie en integratie van OpenFlow-enabled switches en controllers in hun netwerkinfrastructuur?",
+        "Welke alternatieven voor OpenFlow (bijv. BGP-EVPN, P4) worden door de klant overwogen of reeds gebruikt voor programmeerbare netwerken, en waarom?"
+      ]
+    },
+    {
+      "term": "B4 (Google's Global WAN)",
+      "followup_prompts": [
+        "Welke eisen stelt de klant aan haar eigen wereldwijde WAN-infrastructuur (gebaseerd op het concept van B4 of een vergelijkbaar design) met betrekking tot latency, bandbreedte en veerkracht?",
+        "Hoe wordt traffic engineering en routing geoptimaliseerd over de wereldwijde netwerkcampus van de klant, en welke principes van SDN of wide-area networking worden hierbij toegepast?",
+        "Welke monitoring- en managementtools worden gebruikt om de gezondheid en prestaties van het globale WAN van de klant te waarborgen, en hoe worden problemen proactief geïdentificeerd en opgelost?"
+      ]
+    },
+    {
+      "term": "TensorFlow",
+      "followup_prompts": [
+        "Voor welke types machine learning-modellen (bijv. beeldherkenning, natuurlijke taalverwerking, forecasting) wordt TensorFlow primair ingezet door de klant?",
+        "Welke frameworks of API's bovenop TensorFlow (bijv. Keras, TensorFlow.js) worden het meest gebruikt door de data scientists en ML engineers van de klant, en waarom?",
+        "Hoe wordt de distributie van TensorFlow-training over meerdere GPU's, TPU's of machines beheerd, en welke tools of configuraties worden hiervoor ingezet?"
+      ]
+    },
+    {
+      "term": "JAX",
+      "followup_prompts": [
+        "Voor welke onderzoekstaken, hoog-performance computing-behoeften, of complexe modelarchitecturen wordt JAX gebruikt door de klant, met name voor de auto-differentiatie en XLA-compatibiliteit?",
+        "Welke voordelen van JAX (zoals snelheid, flexibiliteit, functional programming-paradigma) zijn het meest relevant geweest voor de data scientists van de klant in vergelijking met andere ML-frameworks?",
+        "Hoe wordt de integratie van JAX met bestaande ML-workflows en infrastructuur beheerd, en welke uitdagingen zijn hierbij ondervonden?"
+      ]
+    },
+    {
+      "term": "Keras",
+      "followup_prompts": [
+        "Welke specifieke voordelen van Keras (bijv. gebruiksgemak, snelle prototyping, hoge-level API) zijn doorslaggevend geweest voor de adoptie ervan binnen de machine learning-teams van de klant?",
+        "Voor welke soorten machine learning-projecten, van experimentatie tot productiemodellen, is Keras het voorkeursframework, en waarom?",
+        "Hoe wordt de interoperabiliteit tussen Keras-modellen en andere TensorFlow-componenten of -frameworks beheerd binnen de MLOps-pipeline van de klant?"
+      ]
+    },
+    {
+      "term": "Vertex AI",
+      "followup_prompts": [
+        "Welke MLOps-behoeften (bijv. data labeling, feature engineering, model training, deployment, monitoring) adresseert de klant specifiek met Google Cloud Vertex AI?",
+        "Hoe wordt de integratie van Vertex AI met bestaande data-bronnen en applicaties binnen de Google Cloud-omgeving van de klant beheerd?",
+        "Welke specifieke componenten van Vertex AI (bijv. Workbench, Training, Prediction, Pipelines) zijn het meest waardevol gebleken voor de MLOps-workflows van de klant, en waarom?"
+      ]
+    },
+    {
+      "term": "TPUs (Tensor Processing Units)",
+      "followup_prompts": [
+        "Voor welke specifieke, compute-intensieve machine learning-workloads (bijv. grote taalmodellen, diepe neurale netwerken) gebruikt de klant TPUs, en welke resultaten zijn hiermee behaald?",
+        "Hoe wordt de optimalisatie van ML-modellen en -code voor TPU's beheerd door de data scientists en ML engineers van de klant om maximale efficiëntie te bereiken?",
+        "Wat zijn de belangrijkste overwegingen voor de klant om te kiezen voor TPUs boven GPU's of CPU's voor hun ML-infrastructuur, zowel op technisch als op kostenaspect?"
+      ]
+    },
+    {
+      "term": "Angular",
+      "followup_prompts": [
+        "Voor welke types webapplicaties (bijv. complexe enterprise-dashboards, SPA's met veel functionaliteit) kiest de klant voor Angular, en welke versie van Angular is dominant?",
+        "Hoe wordt de performance en 'bundelgrootte' van Angular-applicaties geoptimaliseerd bij de klant, bijvoorbeeld met Ivy-compilatie, lazy loading of server-side rendering?",
+        "Welke architecturale patronen en best practices worden gehanteerd binnen de Angular-projecten van de klant om de onderhoudbaarheid en schaalbaarheid te waarborgen?"
+      ]
+    },
+    {
+      "term": "Flutter",
+      "followup_prompts": [
+        "Welke zakelijke behoeften of problemen probeert de klant op te lossen met multi-platform ontwikkeling via Flutter, en voor welke platforms (iOS, Android, web, desktop) wordt ontwikkeld?",
+        "Hoe wordt de UI/UX consistency beheerd over de verschillende platforms bij het ontwikkelen met Flutter, en welke Design Systems of packages worden hiervoor ingezet?",
+        "Wat is de mate van adoptie van Flutter bij de klant, en zijn er plannen om bestaande native applicaties te migreren naar een Flutter-gebaseerde codebase?"
+      ]
+    },
+    {
+      "term": "React",
+      "followup_prompts": [
+        "Voor welke soorten user interfaces en component-gebaseerde applicaties wordt React de voorkeurstool bij de klant, en welke aanvullende bibliotheken (bijv. Redux, Zustand, React Query) worden gebruikt?",
+        "Hoe wordt de performance van React-applicaties beheerd en geoptimaliseerd, bijvoorbeeld met memoization, virtualized lists of server-side rendering?",
+        "Welke benaderingen voor state management, routing en interactie met back-end API's worden door de React-ontwikkelaars van de klant gehanteerd?"
+      ]
+    },
+    {
+      "term": "Bazel",
+      "followup_prompts": [
+        "Voor welke specifieke polyglot-projecten of grootschalige monorepository's wordt Bazel ingezet bij de klant, en welke voordelen biedt het ten opzichte van traditionele build-tools?",
+        "Hoe wordt de Bazel-build-configuratie beheerd en geoptimaliseerd voor snelheid en betrouwbaarheid, inclusief caching, remote execution en dependency management?",
+        "Welke uitdagingen zijn de klant tegengekomen bij de adoptie van Bazel, en hoe is de ontwikkelcommunity binnen de organisatie ondersteund bij de overstap?"
+      ]
+    },
+    {
+      "term": "Abseil",
+      "followup_prompts": [
+        "Welke uitdagingen in C++-ontwikkeling (bijv. common utilities, concurrency, random number generation) worden door de klant opgelost met het gebruik van de Abseil-bibliotheken?",
+        "Hoe wordt de integratie van Abseil beheerd met bestaande C++-codebases en build-systemen binnen de organisatie van de klant?",
+        "Welke modules van Abseil (bijv. `absl::Status`, `absl::flat_hash_map`, `absl::Time`) zijn het meest cruciaal gebleken voor de robuustheid en efficiëntie van de C++-applicaties van de klant?"
+      ]
+    },
+    {
+      "term": "Golang's ingebouwde testtools",
+      "followup_prompts": [
+        "Hoe wordt de ingebouwde testsuite van Go (go test) gebruikt voor unit-tests, integratie-tests en benchmark-tests binnen de Go-projecten van de klant?",
+        "Welke aanvullende testpatronen of -bibliotheken (bijv. testify, gomock) worden gebruikt naast de standaard Go-testtools, en welke meerwaarde bieden deze?",
+        "Wat zijn de best practices voor het schrijven van efficiënte en betrouwbare tests in Go binnen de ontwikkelteams van de klant?"
+      ]
+    },
+    {
+      "term": "Borgmon",
+      "followup_prompts": [
+        "Welke lacunes in de monitoring van de klant vulde Borgmon (of een gelijkwaardig intern monitoringplatform) op, met name met betrekking tot schaalbaarheid, metric-collectie en alerting?",
+        "Hoe is de transitie van interne monitoringtools naar of naast modernere oplossingen zoals Prometheus of de Google Cloud Operations Suite verlopen?",
+        "Welke architecturale principes van grootschalige monitoring, zoals service discovery, push/pull-modellen en high-cardinality metrics, zijn essentieel gebleken voor de klant?"
+      ]
+    },
+    {
+      "term": "Prometheus",
+      "followup_prompts": [
+        "Welke metrics worden door de klant verzameld en gemonitord met Prometheus, en voor welke typen applicaties en infrastructuurcomponenten?",
+        "Hoe wordt de schaalbaarheid en hoge beschikbaarheid van Prometheus-implementaties beheerd, inclusief het gebruik van Thanos, Cortex of Mimir?",
+        "Welke alerting-regels en dashboards zijn geconfigureerd in Prometheus (en Alertmanager/Grafana) om operationele problemen proactief te detecteren en te communiceren?"
+      ]
+    },
+    {
+      "term": "Stackdriver (nu onderdeel van Google Cloud Operations Suite)",
+      "followup_prompts": [
+        "Welke specifieke componenten van de Google Cloud Operations Suite (Monitoring, Logging, Trace, Error Reporting) worden door de klant ingezet, en voor welke Google Cloud-services of hybride workloads?",
+        "Hoe wordt de observabiliteit van applicaties en infrastructuur beheerd en gecentraliseerd met behulp van de Google Cloud Operations Suite, met name voor root cause analysis en performance tuning?",
+        "Welke dashboards, alerts en rapporten worden geconfigureerd om inzicht te krijgen in de gezondheid, prestaties en kosten van de cloud-workloads van de klant?"
+      ]
+    },
+    {
+      "term": "OpenTelemetry",
+      "followup_prompts": [
+        "Welke lacunes in de unified observability (metrics, logs, traces) probeert de klant op te vullen met de adoptie van OpenTelemetry?",
+        "Hoe wordt OpenTelemetry geïntegreerd met de verschillende programmeertalen, frameworks en monitoring-backends die de klant gebruikt?",
+        "Welke concrete voordelen verwacht de klant van OpenTelemetry, zoals vendor lock-in verminderen, standaardisatie van telemetrie en snellere probleemoplossing?"
+      ]
+    },
+    {
+      "term": "Google Cloud Build",
+      "followup_prompts": [
+        "Voor welke soorten CI/CD-pipelines (bijv. microservices, serverless functies, Kubernetes deployments) gebruikt de klant Google Cloud Build?",
+        "Hoe wordt de configuratie, beveiliging (bijv. met service accounts, Secret Manager) en optimalisatie van Google Cloud Build pipelines beheerd?",
+        "Welke voordelen heeft de klant ervaren door de integratie van Cloud Build met andere Google Cloud-services, zoals Artifact Registry, Cloud Run of GKE?"
+      ]
+    },
+    {
+      "term": "Spinnaker",
+      "followup_prompts": [
+        "Voor welke strategieën voor canary deployments, blue/green deployments of geautomatiseerde rollbacks wordt Spinnaker ingezet door de klant?",
+        "Hoe wordt Spinnaker geïntegreerd met de bestaande CI-tools (bijv. Jenkins, Google Cloud Build) en Kubernetes-clusters van de klant voor end-to-end CD-pipelines?",
+        "Welke uitdagingen op het gebied van release-snelheid, betrouwbaarheid en consistentie in software deployments heeft Spinnaker helpen oplossen voor de klant?"
+      ]
+    },
+    {
+      "term": "Google's Main Repository ('Piper' / 'Citadel')",
+      "followup_prompts": [
+        "Welke overwegingen heeft de klant bij het beheer van een monorepository (vergelijkbaar met Piper) in hun eigen ontwikkelingsworkflow, en welke tools zijn hiervoor in gebruik?",
+        "Hoe worden de uitdagingen van een monorepository (bijv. build-tijden, security, branch-strategieën, code-eigendom) aangepakt binnen de organisatie van de klant?",
+        "Welke voordelen van een monorepository, zoals atomaire wijzigingen over meerdere services/bibliotheken en vereenvoudigd dependency management, zijn het meest waardevol gebleken voor de klant?"
+      ]
+    },
+    {
+      "term": "Git",
+      "followup_prompts": [
+        "Welke Git workflow (bijv. Git Flow, GitHub Flow, GitLab Flow, Trunk Based Development) wordt door de klant gehanteerd, en welke redenen liggen hieraan ten grondslag?",
+        "Hoe wordt de Git-repository infrastructuur (bijv. GitHub Enterprise, GitLab, Bitbucket) beheerd voor schaalbaarheid, beveiliging en samenwerking binnen uw organisatie?",
+        "Welke praktijken voor code reviews, branch-policies en rebasen/mergen worden toegepast om de codekwaliteit en de consistentie van de Git-historie te waarborgen?"
+      ]
+    },
+    {
+      "term": "Gerrit",
+      "followup_prompts": [
+        "Voor welke specifieke use-cases, zoals gedistribueerde code reviews en een strikt beleid voor code-integratie, maakt de klant gebruik van Gerrit?",
+        "Hoe is Gerrit geïntegreerd met de CI/CD-pipelines en build-systemen van de klant om geautomatiseerde checks en validaties uit te voeren voor het samenvoegen van code?",
+        "Welke voordelen van Gerrit op het gebied van codekwaliteit, accountability en compliance zijn doorslaggevend geweest voor de adoptie ervan binnen de ontwikkelworkflow van de klant?"
+      ]
+    },
+    {
+      "term": "MapReduce",
+      "followup_prompts": [
+        "Welke specifieke big data processing-uitdagingen probeerde de klant oorspronkelijk op te lossen met het MapReduce-paradigma, en voor welke dataclusters of frameworks (bijv. Hadoop) was dit relevant?",
+        "Hoe is de evolutie van big data processing-technologieën bij de klant verlopen, van MapReduce-gebaseerde oplossingen naar meer geavanceerde frameworks zoals Spark of Google Cloud Dataflow?",
+        "Welke lessen zijn geleerd over de schaalbaarheid, fault-tolerance en programmeerparadigma's voor gedistribueerde dataverwerking uit de inzet van MapReduce-achtige systemen bij de klant?"
+      ]
+    },
+    {
+      "term": "Flume / Google Dataflow (Apache Beam)",
+      "followup_prompts": [
+        "Voor welke zowel batch als streaming data processing use-cases (ETL, analytics, real-time dashboards) gebruikt de klant Google Cloud Dataflow (Apache Beam)?",
+        "Hoe wordt de ontwikkelingscyclus voor Apache Beam Pipelines beheerd, inclusief testen, deployment en monitoring van jobs?",
+        "Welke voordelen van Dataflow (bijv. unified programming model, managed service, auto-scaling) zijn het meest waardevol gebleken voor de data engineering teams van de klant?"
+      ]
+    },
+    {
+      "term": "MillWheel",
+      "followup_prompts": [
+        "Welke uitdagingen in real-time stream processing, met name met betrekking tot lage latency en exactly-once semantic, probeerde de klant op te lossen met een systeem vergelijkbaar met MillWheel?",
+        "Hoe is de evolutie gegaan van interne stream processing-systemen naar of naast open-source alternatieven zoals Apache Flink of Kafka Streams, of managed services zoals Google Cloud Dataflow Streaming?",
+        "Welke architecturale principes van gedistribueerde stream processing (bijv. watermark, windowing, state management) zijn essentieel gebleken voor de klant's real-time data behoeften?"
+      ]
+    },
+    {
+      "term": "BigQuery",
+      "followup_prompts": [
+        "Voor welke omvangrijke data-analyse, data warehousing of business intelligence use-cases gebruikt de klant Google Cloud BigQuery?",
+        "Hoe wordt de data in BigQuery ingeladen en gemodelleerd om efficiënte querying en kosteneffectiviteit te garanderen?",
+        "Welke tools en integraties (bijv. Looker, Tableau, Data Studio, Jupyter Notebooks) worden door de klant gebruikt in combinatie met BigQuery voor data-exploratie en visualisatie?"
+      ]
+    },
+    {
+      "term": "Pub/Sub",
+      "followup_prompts": [
+        "Voor welke decoupled of event-driven architecturen (bijv. microservices communicatie, IoT-data ingestie, real-time alerts) gebruikt de klant Google Cloud Pub/Sub?",
+        "Hoe wordt de betrouwbaarheid en schaalbaarheid van Pub/Sub-topics en -abonnementen beheerd, inclusief berichtvolgorde, bevestigingen en dead-letter queues?",
+        "Welke integraties met andere Google Cloud-services (bijv. Cloud Functions, Dataflow, GKE) worden door de klant benut om end-to-end data pipelines te bouwen met Pub/Sub?"
+      ]
+    },
+    {
+      "term": "Protocol Buffers",
+      "followup_prompts": [
+        "Voor welke soorten datastructuren en API-definities (bijv. interne RPC's, persistente opslagformaten) gebruikt de klant Protocol Buffers in hun ontwikkelprocessen?",
+        "Hoe wordt de evolutie van proto-definities beheerd om achterwaartse en voorwaartse compatibiliteit te garanderen over de levenscyclus van applicaties en services?",
+        "Welke voordelen van Protocol Buffers (bijv. efficiëntie, code-generatie, taal-agnostisch) zijn het meest relevant gebleken voor de communicatie en data-integratie behoeften van de klant?"
+      ]
+    },
+    {
+      "term": "Google Test / Google Mock",
+      "followup_prompts": [
+        "Hoe worden Google Test en Google Mock ingezet voor unit-tests en mock-gebaseerde tests in C++-projecten van de klant?",
+        "Welke best practices en testpatronen worden gehanteerd om effectieve en onderhoudbare tests te schrijven met Google Test/Mock binnen de teams van de klant?",
+        "Hoe wordt de integratie van Google Test/Mock met de CI/CD-pipelines en build-systemen (bijv. Bazel, CMake) van de klant beheerd?"
+      ]
+    },
+    {
+      "term": "Cap’n Proto",
+      "followup_prompts": [
+        "Voor welke specifieke use-cases, waar hoge prestaties, efficiënte serialisatie en zero-copy access cruciaal zijn, wordt Cap’n Proto ingezet bij de klant?",
+        "Hoe verhoudt Cap’n Proto zich tot andere serialisatieformaten (bijv. Protocol Buffers, JSON, Avro) binnen de architectuur van de klant, en welke overwegingen leiden tot de keuze voor Cap'n Proto?",
+        "Welke uitdagingen zijn de klant tegengekomen bij de integratie van Cap’n Proto in hun polyglot-omgeving, en hoe is type safety en schema-evolutie beheerd?"
+      ]
+    },
+    {
+      "term": "WebAssembly (Wasm)",
+      "followup_prompts": [
+        "Voor welke specifieke use-cases (bijv. performance-kritische code in browsers, serverless functies, embedded systemen) verkent of implementeert de klant WebAssembly?",
+        "Welke talen en toolchains (bijv. Rust naar Wasm, C++ naar Wasm, Go naar Wasm) worden door de klant gebruikt om Wasm-modules te genereren, en welke voordelen bieden deze?",
+        "Hoe wordt de integratie van Wasm-modules met bestaande JavaScript-codebases (in browsers) of back-end systemen (in server-side Wasm) beheerd binnen de organisatie?"
+      ]
+    },
+    {
+      "term": "Chromium",
+      "followup_prompts": [
+        "Welke specifieke browsers (bijv. Google Chrome, Microsoft Edge, Brave) worden binnen de organisatie gehandhaafd en beheerd voor de eindgebruikers van de klant, en welke redenen liggen hieraan ten grondslag?",
+        "Zijn er interne applicaties of tooling die specifiek ontwikkeld of geoptimaliseerd zijn voor de Chromium-engine, en welke voordelen biedt dit aan de klant?",
+        "Hoe wordt de beveiliging en update-management van Chromium-gebaseerde browsers beheerd binnen de enterprise-omgeving van de klant, en welke beleidsregels zijn hiervoor van kracht?"
+      ]
+    }
+  ]
+}

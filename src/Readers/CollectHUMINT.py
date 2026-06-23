@@ -10,9 +10,26 @@ def collect_humint_data():
     humint=input(
         "Wil je tekst delen of een bestand uploaden? (tekst/bestand)?"
         )
+    
+    if humint.lower() == "bestand":
+        file_path = input("Voer het pad naar het bestand in: ")
+        if os.path.isfile(file_path):
+            with open(file_path, "r", encoding="utf-8") as f:
+                humint = f.read()
+        else:
+            print("Bestand niet gevonden. Voer de informatie handmatig in.")
+            humint = input("Voer de HUMINT-informatie in: ")
+    if humint.lower() == "tekst":
+        humint = input(
+            "Voer de HUMINT-informatie in: "
+        )
+
+    infotype = input("Wat voor soort informatie is dit? (bijv. bedrijfsstrategie, productinformatie, marktinzichten): ")
+
+    bron= input("Wat is de bron van deze informatie? (bijv. interne medewerker, externe consultant, openbare bron): ")
 
     reliability = input(
-        "Hoe betrouwbaar acht je is deze informatie? (1-10) "
+        "Hoe betrouwbaar acht je is deze bron? (1-10) "
         )
 
     reliability_check = input(
@@ -23,7 +40,9 @@ def collect_humint_data():
         "company": choice,
         "humint": humint,
         "reliability": reliability,
-        "reason": reliability_check
+        "reason": reliability_check,
+        "infotype": infotype,
+        "bron": bron
     }
 
 
@@ -37,6 +56,3 @@ def save_humint_data(data):
 
     print("HUMINT data saved successfully.")
 
-
-humint_data = collect_humint_data()
-save_humint_data(humint_data)

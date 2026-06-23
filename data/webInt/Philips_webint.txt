@@ -1,0 +1,123 @@
+Hier is een beschrijving van het technische landschap van Philips, gebaseerd op de opgegeven bronnen. Het is belangrijk op te merken dat de hoeveelheid gedetailleerde technische informatie die openbaar beschikbaar is, kan variëren, en veel interne systemen en technologieën worden mogelijk niet breed geadverteerd.
+
+## Programmeertalen
+
+*   **Java** (bron: Veelvuldig vermeld in diverse openstaande vacatures, bijvoorbeeld voor "Software Engineer", "Backend Developer", "Principal Software Engineer" op de Philips Careers / Vacatures pagina)
+*   **Python** (bron: Vermeld in diverse openstaande vacatures, bijvoorbeeld voor "Data Scientist", "AI Engineer", "Software Test Engineer" op de Philips Careers / Vacatures pagina)
+*   **C++** (bron: Vermeld in diverse openstaande vacatures, bijvoorbeeld voor "Software Engineer", "Embedded Software Developer" op de Philips Careers / Vacatures pagina)
+*   **C#** (bron: Vermeld in diverse openstaande vacatures, bijvoorbeeld voor "Software Engineer", ".NET Developer" op de Philips Careers / Vacatures pagina)
+*   **JavaScript / TypeScript** (bron: Vermeld in diverse openstaande vacatures voor "Frontend Developer", "Full Stack Engineer" op de Philips Careers / Vacatures pagina)
+*   **Kotlin** (bron: Specifiek genoemd in vacatures voor "Android Developer" op de Philips Careers / Vacatures pagina)
+*   **Swift** (bron: Specifiek genoemd in vacatures voor "iOS Developer" op de Philips Careers / Vacatures pagina)
+*   **.NET** (bron: Vermeld in diverse vacatures, vaak in combinatie met C#, voor rollen zoals "Software Engineer" op de Philips Careers / Vacatures pagina)
+*   **Go (Golang)** (bron: Hoewel minder prominent, sporadisch te vinden in vacaturebeschrijvingen voor backend-gerelateerde rollen op de Philips Careers / Vacatures pagina)
+*   **R** (bron: Vermeld in vacatures voor "Data Scientist", "Biostatistician" op de Philips Careers / Vacatures pagina)
+
+## Cloud
+
+*   **AWS (Amazon Web Services)** (bron: Philips wordt erkend als een "Advanced Technology Partner" in het AWS Partner Network, zoals te zien op AWS Partner profielpagina's of via persberichten over partnerschappen. Ook expliciet genoemd in diverse vacatures, bijvoorbeeld "Cloud Engineer", "DevOps Engineer" op de Philips Careers / Vacatures pagina)
+*   **Azure (Microsoft Azure)** (bron: Philips' Microsoft Partner profielpagina bevestigt dit. Daarnaast ook genoemd in diverse vacatures, bijvoorbeeld "Cloud Engineer", "Azure Developer" op de Philips Careers / Vacatures pagina)
+*   **Google Cloud Platform (GCP)** (bron: Minder prominent dan AWS/Azure, maar te vinden in een aantal vacatures voor "Cloud Engineer" of "Data Engineer" op de Philips Careers / Vacatures pagina, vaak in de context van multi-cloud-strategie of specifieke projecten)
+
+## Databases
+
+*   **SQL Databases (algemeen)** (bron: Algemene vereiste in vacatures voor "Backend Developer", "Software Engineer" op de Philips Careers / Vacatures pagina)
+    *   **PostgreSQL** (bron: Specifiek vermeld in vacatures voor "Backend Developer", "Data Engineer" op de Philips Careers / Vacatures pagina)
+    *   **MySQL** (bron: Specifiek vermeld in vacatures voor "Backend Developer", "Software Engineer" op de Philips Careers / Vacatures pagina)
+    *   **SQL Server (Microsoft SQL Server)** (bron: Vaak vermeld in combinatie met .NET/Azure in vacatures voor "Software Engineer", "Database Administrator" op de Philips Careers / Vacatures pagina)
+*   **NoSQL Databases (algemeen)** (bron: Algemene vereiste in vacatures voor "Backend Developer", "Data Engineer" op de Philips Careers / Vacatures pagina)
+    *   **MongoDB** (bron: Specifiek vermeld in vacatures voor "Backend Developer", "Data Engineer" op de Philips Careers / Vacatures pagina)
+    *   **Cassandra** (bron: Te vinden in vacatures gerelateerd aan Big Data of specifieke schaalbare systemen op de Philips Careers / Vacatures pagina)
+    *   **Redis** (bron: Vaak genoemd voor caching of in-memory datastores in vacatures voor "Backend Engineer" op de Philips Careers / Vacatures pagina)
+*   **Data Warehouses (e.g., Snowflake, Redshift, BigQuery)** (bron: Vermeld in vacatures voor "Data Engineer", "BI Developer" op de Philips Careers / Vacatures pagina, vaak gekoppeld aan de relevante cloudprovider)
+
+## Data Bricks / Data Lake
+
+*   **Databricks** (bron: Vermeld in vacatures voor "Data Engineer", "Machine Learning Engineer" op de Philips Careers / Vacatures pagina en kan ook worden afgeleid uit partnerships of tech conferentie presentaties waar data-analyse en AI centraal staan)
+*   **Data Lake (AWS S3, Azure Data Lake Storage, GCP Cloud Storage)** (bron: Impliciet en expliciet vermeld in vacatures voor "Data Engineer", "Cloud Architect" op de Philips Careers / Vacatures pagina, vaak in combinatie met de specifieke cloudprovider)
+
+## Big Data
+
+*   **Apache Kafka** (bron: Vermeld in vacatures voor "Data Engineer", "Streaming Engineer", "Backend Developer" op de Philips Careers / Vacatures pagina, vaak als een vereiste voor real-time data pipelines)
+*   **Apache Spark** (bron: Vermeld in vacatures voor "Data Engineer", "Machine Learning Engineer" op de Philips Careers / Vacatures pagina, vaak gekoppeld aan verwerking van grote datasets)
+*   **Hadoop** (bron: Hoewel soms een oudere technologie, nog steeds vermeld in sommige vacatures voor "Big Data Engineer" op de Philips Careers / Vacatures pagina, met name voor legacy-systemen of specifieke use-cases)
+
+## Machine Learning / AI
+
+*   **TensorFlow** (bron: Vermeld in vacatures voor "Machine Learning Engineer", "AI Scientist" op de Philips Careers / Vacatures pagina)
+*   **PyTorch** (bron: Vermeld in vacatures voor "Machine Learning Engineer", "AI Scientist" op de Philips Careers / Vacatures pagina)
+*   **Scikit-learn** (bron: Vaak genoemd in vacatures voor "Data Scientist", "ML Engineer" op de Philips Careers / Vacatures pagina als een standaard bibliotheek voor machine learning)
+*   **Sagemaker (AWS)** (bron: Vermeld in vacatures voor "Machine Learning Engineer", "Cloud ML Engineer" op de Philips Careers / Vacatures pagina, gekoppeld aan AWS)
+*   **Azure ML** (bron: Vermeld in vacatures voor "Machine Learning Engineer", "Cloud ML Engineer" op de Philips Careers / Vacatures pagina, gekoppeld aan Azure)
+*   **MLflow** (bron: Af en toe te vinden in vacatures voor "MLOps Engineer" op de Philips Careers / Vacatures pagina)
+*   **Kubeflow** (bron: Af en toe te vinden in vacatures voor "MLOps Engineer" op de Philips Careers / Vacatures pagina, vaak in combinatie met Kubernetes)
+
+## Containerisatie / Orchestratie
+
+*   **Docker** (bron: Algemene vereiste in vrijwel alle DevOps en Backend Developer vacatures op de Philips Careers / Vacatures pagina)
+*   **Kubernetes (K8s)** (bron: Algemene vereiste in vrijwel alle DevOps, Cloud, en Backend Developer vacatures op de Philips Careers / Vacatures pagina, vaak als "essential experience")
+*   **Helm** (bron: Vaak vermeld in DevOps / Cloud Engineer vacatures als tool voor het beheren van Kubernetes applicaties op de Philips Careers / Vacatures pagina)
+
+## CI/CD (Continuous Integration / Continuous Deployment)
+
+*   **Jenkins** (bron: Veelvuldig vermeld in DevOps Engineer en Software Engineer vacatures op de Philips Careers / Vacatures pagina)
+*   **Azure DevOps** (bron: Sterk aanwezig in vacatures die Azure als cloudplatform gebruiken, voor rollen zoals "DevOps Engineer", "Software Engineer" op de Philips Careers / Vacatures pagina)
+*   **GitLab CI/CD** (bron: Te vinden in sommige DevOps Engineer vacatures op de Philips Careers / Vacatures pagina)
+*   **GitHub Actions** (bron: Kan worden afgeleid uit het gebruik van GitHub als broncontroleplatform, en wordt ook expliciet vermeld in sommige vacatures op de Philips Careers / Vacatures pagina)
+
+## Versiebeheer
+
+*   **Git** (bron: Universeel vermeld in vrijwel alle technische vacatures op de Philips Careers / Vacatures pagina)
+*   **GitHub** (bron: Philips heeft een GitHub organisatie, hoewel deze voornamelijk open-source projecten of niet-kritieke interne tools kan bevatten. Ook vaak genoemd als platform in vacatures op de Philips Careers / Vacatures pagina)
+*   **Azure Repos (onderdeel van Azure DevOps)** (bron: Zoals bij Azure DevOps, vaak genoemd in vacatures op de Philips Careers / Vacatures pagina)
+
+## Infrastructuur als Code (IaC)
+
+*   **Terraform** (bron: Veelvuldig vermeld in Cloud Engineer en DevOps Engineer vacatures op de Philips Careers / Vacatures pagina)
+*   **Ansible** (bron: Minder prominent dan Terraform, maar wel genoemd in sommige DevOps Engineer vacatures voor configuratiebeheer op de Philips Careers / Vacatures pagina)
+*   **CloudFormation (AWS)** (bron: Vaak vermeld als IaC-tool in vacatures die veel met AWS werken op de Philips Careers / Vacatures pagina)
+*   **Azure Resource Manager (ARM templates)** (bron: Vaak vermeld als IaC-tool in vacatures die veel met Azure werken op de Philips Careers / Vacatures pagina)
+
+## Frameworks / Libraries (Frontend)
+
+*   **React** (bron: Veelvuldig vermeld in Frontend Developer en Full Stack Engineer vacatures op de Philips Careers / Vacatures pagina)
+*   **Angular** (bron: Te vinden in Frontend Developer en Full Stack Engineer vacatures op de Philips Careers / Vacatures pagina)
+*   **Vue.js** (bron: Minder frequent dan React/Angular, maar wel te vinden in sommige Frontend Developer vacatures op de Philips Careers / Vacatures pagina)
+
+## Frameworks / Libraries (Backend)
+
+*   **Spring / Spring Boot (Java)** (bron: Veelvuldig vermeld in Java Backend Developer vacatures op de Philips Careers / Vacatures pagina)
+*   **ASP.NET Core (C#)** (bron: Veelvuldig vermeld in .NET Backend Developer vacatures op de Philips Careers / Vacatures pagina)
+*   **Node.js / Express.js** (bron: Te vinden in Full Stack Engineer vacatures, met name voor JavaScript-georiënteerde backends op de Philips Careers / Vacatures pagina)
+*   **Django / Flask (Python)** (bron: Te vinden in Python Backend Developer of Data Engineer vacatures op de Philips Careers / Vacatures pagina)
+
+## Monitoring & Logging
+
+*   **Prometheus** (bron: Vermeld in DevOps Engineer en Cloud Engineer vacatures voor monitoring metrics op de Philips Careers / Vacatures pagina)
+*   **Grafana** (bron: Vaak in combinatie met Prometheus genoemd in DevOps Engineer en Cloud Engineer vacatures voor visualisatie van metrics op de Philips Careers / Vacatures pagina)
+*   **ELK Stack (Elasticsearch, Logstash, Kibana)** (bron: Vermeld in DevOps Engineer, Cloud Engineer en Software Engineer vacatures voor logmanagement en -analyse op de Philips Careers / Vacatures pagina)
+*   **Splunk** (bron: Af en toe te vinden in vacatures die om meer enterprise-grade logging en SIEM-oplossingen vragen op de Philips Careers / Vacatures pagina)
+*   **Datadog** (bron: Minder frequent, maar af en toe te vinden in DevOps-gerelateerde vacatures op de Philips Careers / Vacatures pagina)
+
+## Medische Specifieke Technologieën / Standaarden
+
+*   **DICOM** (Digital Imaging and Communications in Medicine) (bron: Cruciale standaard vermeld in vacatures voor "Software Engineer Medical Devices", "Imaging Engineer" op de Philips Careers / Vacatures pagina en op de Officiële bedrijfswebsite bij productbeschrijvingen)
+*   **HL7** (Health Level Seven International) (bron: Vermeld in vacatures voor "Integratie Engineer", "Healthcare IT Architect" op de Philips Careers / Vacatures pagina en op de Officiële bedrijfswebsite bij interoperabiliteitsoplossingen)
+*   **FHIR** (Fast Healthcare Interoperability Resources) (bron: Steeds vaker genoemd in vacatures voor "Healthcare IT Specialist", "Software Engineer" op de Philips Careers / Vacatures pagina als de nieuwere standaard voor interoperabiliteit)
+*   **PACS** (Picture Archiving and Communication System) (bron: Vermeld in vacatures gerelateerd aan medische beeldvorming op de Philips Careers / Vacatures pagina)
+*   **Embedded Systems Expertise** (bron: Een algemene vereiste in vacatures voor "Embedded Software Developer", "Hardware-Software Engineer" voor de ontwikkeling van medische apparatuur op de Philips Careers / Vacatures pagina)
+*   **Real-time Operating Systems (RTOS)** (bron: Vaak genoemd in vacatures voor "Embedded Software Developer" op de Philips Careers / Vacatures pagina)
+
+## Overige Technologieën / Tools
+
+*   **Jira** (bron: Algemeen genoemd in vacatures voor projectmanagement en defect tracking op de Philips Careers / Vacatures pagina)
+*   **Confluence** (bron: Vaak in combinatie met Jira genoemd voor documentatie en kennisdeling op de Philips Careers / Vacatures pagina)
+*   **ServiceNow** (bron: Te vinden in vacatures voor IT Service Management rollen op de Philips Careers / Vacatures pagina)
+*   **OpenStack** (bron: Hoewel minder prominent dan publieke clouds, af en toe te vinden in vacatures voor private cloud infrastructuur op de Philips Careers / Vacatures pagina)
+
+## Onbekend
+
+*   **Specifieke (externe) API Gateways (anders dan die van de cloudproviders)**
+*   **Gedetailleerde informatie over interne framework ontwikkeling**
+*   **Specifieke netwerktechnologieën (anders dan algemene cloud networking)**
+*   **Exacte verhoudingen van gebruik per technologie**

@@ -1,158 +1,156 @@
-## Technisch landschapsrapport - Ernst & Young
+## Technisch Landschap Rapport: Ernst & Young (EY)
 
-Dit rapport analyseert het technische landschap van Ernst & Young (EY) op basis van de verstrekte informatie, met een focus op de vermeende inzet van AI. Het doel is om een overzicht te geven van de technologieën en vaardigheden die relevant zijn binnen hun operationele en innovatieve context.
+**Datum:** 26 mei 2024
+**Analist:** [Jouw naam/functie]
 
-### Introductie
+### Inleiding
 
-Ernst & Young is een van de grootste professionele dienstverleningsbedrijven ter wereld, actief op vier hoofdgebieden: assurance, consulting, strategy and transactions, en tax. Als bedrijf dat sterk afhankelijk is van data-analyse, procesoptimalisatie en klantgerichte oplossingen, is EY al geruime tijd bezig met de adoptie van geavanceerde technologieën, waaronder Artificial Intelligence (AI). De bewering dat EY AI gebruikt, komt overeen met de strategische richting van grote consultancybureaus die streven naar efficiëntieverbetering, dieper inzicht en innovatieve dienstverlening.
+Dit rapport schetst een beeld van het technische landschap van Ernst & Young (EY) op basis van de verstrekte informatie en algemene kennis over de technologische trends binnen grote consultancyfirma's. EY is een toonaangevende dienstverlener op het gebied van assurance, consulting, strategie, transacties en belastingen, en opereert wereldwijd. De aard van hun dienstverlening vereist een breed en diepgaand technologisch fundament, gekenmerkt door innovatie, schaalbaarheid en robuustheid.
 
-### 1. Gebruik van AI bij Ernst & Young (Gebaseerd op HUMINT)
+De HUMINT-informatie over EY's gebruik van AI is een belangrijke indicatie van hun focus op geavanceerde technologieën en data-gedreven oplossingen. Dit rapport zal de verschillende aspecten van hun technische ecosysteem belichten en de bijbehorende vaardigheden en tools die waarschijnlijk worden gezocht, identificeren.
 
-**HUMINT Notes - EY uses AI**
+### Overzicht van het Technisch Landschap bij EY
 
-De opmerking dat Ernst & Young AI gebruikt, is een belangrijke indicator. Grote consultancybedrijven als EY investeren aanzienlijk in AI om diverse redenen:
-*   **Efficiëntie en Automatisering:** Automatisering van repetitieve taken in audit, tax en consulting via Robotic Process Automation (RPA) gedreven door AI/Machine Learning.
-*   **Data-analyse en Inzichten:** Het verwerken van enorme datasets om complexe patronen te identificeren voor risicoanalyse, fraudedetectie, marktvoorspellingen en strategische advisering.
-*   **Verbeterde Besluitvorming:** Het leveren van voorspellende en prescriptieve analyses aan klanten om betere zakelijke beslissingen te ondersteunen.
-*   **Generatieve AI:** Experimenten met generatieve AI voor het genereren van rapportages, code, of het ondersteunen van kennismanagement.
+Gezien de aard van de dienstverlening van EY (audit, consultancy, advies), is het technische landschap naar verwachting zeer divers en omvangrijk. EY richt zich op het leveren van oplossingen aan cliënten en het optimaliseren van hun eigen interne operaties, wat een combinatie van enterprise software, cloud-native development, data-gedreven diensten en cyberbeveiliging vereist. De aanwezigheid van "AI" als een specifiek punt in de HUMINT, bevestigt de strategische focus op opkomende technologieën.
 
-**Implicaties voor tooling en vaardigheden:**
-Dit bevestigt de waarschijnlijkheid van de adoptie van de bredere AI/ML-stack die verderop wordt beschreven, en creëert vraag naar specifieke vaardigheden op het gebied van data science, machine learning engineering en MLOps.
+Hieronder volgt een analyse per technologiedomein:
 
-### 2. Overzicht Technisch Landschap (Algemeen toepasbaar voor grote consultancy)
+#### 1. Software Ontwikkeling & Architectuur
 
-Op basis van de brede lijst van technologieën kan EY (net als de meeste grote consultancybedrijven) een heterogeen technisch landschap hebben dat een breed scala aan oplossingen en platforms omvat, afhankelijk van interne behoeften, klantprojecten en strategische partnerschappen. Hieronder volgt een gestructureerd overzicht:
+*   **Talen & Frameworks:**
+    *   **Java:** Zeer waarschijnlijk een kerntechnologie voor robuuste, schaalbare enterprise applicaties en backend-systemen. Gezien de omvang van EY, zijn legacy Java-systemen en moderne Spring Boot microservices beide waarschijnlijk.
+    *   **Python:** Cruciaal voor data science, machine learning, automatisering en scripting. De veelzijdigheid maakt het onmisbaar voor veel van EY's data-gedreven en consultancyprojecten.
+    *   **C# / .NET:** Gezien de sterke adoptie van Microsoft-producten in de enterprise sector, is .NET waarschijnlijk in gebruik voor diverse applicaties, met name voor systemen die integreren met de Microsoft-stack (Azure, Dynamics 365, etc.).
+    *   **JavaScript / TypeScript:** Standaard voor frontend ontwikkeling (webapplicaties) en mogelijk ook voor NodeJS-gebaseerde backend-services. Frameworks zoals React, Angular of Vue.js zijn waarschijnlijk in gebruik.
+    *   **Go en Scala:** Minder breed, maar mogelijk in specifieke niches voor high-performance microservices (Go) of Big Data/streaming (Scala, vaak in combinatie met Apache Spark).
+    *   **R:** Minder voor productiesystemen, maar zeer waarschijnlijk voor statistische analyse en onderzoek, vooral in de context van data science en kwantitatieve modellen.
+*   **Rollen:** Backend Developer, Frontend Developer, Fullstack Engineer (cruciaal voor het snel leveren van functionele prototypes en oplossingen), Software Engineer, Solution Architect, Cloud Native Architect.
 
-#### 2.1 Programmeertalen
+#### 2. Cloud & Infrastructuur
 
-EY's behoefte aan veelzijdigheid weerspiegelt zich in de adoptie van diverse programmeertalen:
-*   **Java & Scala:** Waarschijnlijk gebruikt voor enterprise-applicaties, robuuste back-end systemen, en - met name Scala - in big data en financiële applicaties.
-    *   *Belangrijkste frameworks:* Spring, Spring Boot (voor microservices en snelle ontwikkeling).
-*   **Python:** Cruciaal voor data science, machine learning, data-analyse, scripting, automatisering en web development (middels Django/Flask). De bevestiging van AI-gebruik versterkt de noodzaak voor Python expertise.
-    *   *Belangrijkste libraries:* Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch voor ML/data science.
-*   **JavaScript & TypeScript:** Essentieel voor de ontwikkeling van interactieve webapplicaties en user interfaces (front-end). Node.js voor back-end services. TypeScript voor grootschalige, onderhoudbare JavaScript-codebases.
-    *   *Belangrijkste frameworks:* React, Angular, Vue.js.
-*   **C# & .NET:** Gebruikt voor Microsoft-georiënteerde projecten, enterprise-applicaties, en integratie binnen het Microsoft-ecosysteem (Azure). ASP.NET Core voor moderne webtoepassingen.
-*   **Go:** Potentieel voor high-performance microservices, API's, en netwerktoepassingen waar efficiëntie en snelheid cruciaal zijn.
-*   **R:** Specifiek voor statistische analyse, data-modellering en complexere data science projecten.
-*   **C++:** Mogelijk voor performance-kritische componenten, numerieke berekeningen, of legacy-systemen die hoge rekenkracht vereisen.
-
-#### 2.2 Cloudplatforms
-
-EY zal waarschijnlijk een multi-cloud strategie hanteren, of diepgaande expertise hebben in de belangrijkste cloudproviders, gezien de diverse klantbehoeften en interne projecten:
-*   **Microsoft Azure:** Een sterke focus, gezien de mogelijke inzet van C#/.NET en de diepe integratie met Microsoft enterprise-oplossingen. Cruciaal voor cloud-native applicatieontwikkeling en data-oplossingen.
-*   **Amazon Web Services (AWS):** Een toonaangevende cloudprovider die uitgebreide diensten biedt voor data, AI/ML, infrastructuur en applicaties.
-*   **Google Cloud Platform (GCP):** Met name relevant voor big data en geavanceerde AI/ML-mogelijkheden, inclusief TensorFlow en BigQuery.
-
-#### 2.3 Databases & Data Warehousing
-
-Een uitgebreid scala aan databases is noodzakelijk voor verschillende data-behoeften:
-*   **Relationele Databases:**
-    *   **SQL Server, PostgreSQL, MySQL, Oracle Database:** Afhankelijk van klantvoorkeuren, legacy-systemen en specifieke projectvereisten. SQL is overal een kernvaardigheid.
-*   **NoSQL Databases:**
-    *   **MongoDB, Cassandra, DynamoDB, Cosmos DB:** Voor flexibele schema's, hoge schaalbaarheid en specifieke use-cases zoals real-time data, IoT of contentbeheer.
-*   **Data Warehouses & Analytics Platforms:**
-    *   **Snowflake, Azure Synapse, AWS Redshift, Google BigQuery:** Essentieel voor grootschalige data-analyse, business intelligence en het leveren van inzichten uit diverse databronnen. Deze platforms zijn cruciaal voor de data-gerichte dienstverlening van EY.
-    *   **Data Lake & Lakehouse (Databricks, Apache Spark, Hadoop):** Voor het opslaan en verwerken van ongestructureerde en semi-gestructureerde data, en het combineren van de voordelen van data lakes en data warehouses. Apache Spark is hierin een centrale technologie voor big data verwerking.
-*   **Streaming & Messaging:**
-    *   **Apache Kafka:** Waarschijnlijk ingezet voor real-time data-integratie, event-driven architecturen en het verwerken van hoge volumes datastromen.
-
-#### 2.4 Front-end en Back-end Frameworks
-
-Gekoppeld aan de programmeertalen, specificeren deze de architecturale keuzes:
-*   **Front-end:** React, Angular, Vue.js (voor moderne, responsieve web-apps).
-*   **Back-end:** Spring Boot (Java), Node.js (JavaScript), ASP.NET Core (C#), Django, Flask (Python). Dit toont flexibiliteit in de voorkeur voor back-end ontwikkeling, afhankelijk van de projectvereisten en de bestaande tech-stack van de klant.
-
-#### 2.5 DevOps & Infrastructuur als Code (IaC)
-
-Efficiënte softwarelevering is essentieel voor een consultancybedrijf.
+*   **Cloud Platforms:** EY werkt met diverse cliënten en heeft waarschijnlijk een multi-cloud strategie:
+    *   **Microsoft Azure:** Zeer sterke aanwezigheid, gezien de adoptie van Microsoft-producten in enterprise-omgevingen en de diepte van hun dienstenaanbod voor bedrijfsoplossingen.
+    *   **Amazon Web Services (AWS):** Toonaangevend in cloud computing, waarschijnlijk gebruikt voor diverse projecten en innovatieve diensten.
+    *   **Google Cloud Platform (GCP):** Mogelijk in opkomst, vooral voor AI/ML Workloads en geavanceerde data-analyse.
 *   **Containerisatie & Orchestratie:**
-    *   **Docker:** Standaard voor het containeriseren van applicaties.
-    *   **Kubernetes:** Voor het beheren en schalen van containerized workloads, vaak via managed services zoals AKS, EKS, GKE.
-*   **CI/CD:**
-    *   **Azure DevOps, Jenkins, GitLab, GitHub Actions:** Voor geautomatiseerde build-, test-, en deploymentpijplijnen.
-*   **Versiebeheer:**
-    *   **Git, GitHub, GitLab:** Cruciaal voor samenwerking, codebeheer en CI/CD-integratie.
-*   **Infrastructuur als Code (IaC):**
-    *   **Terraform, Ansible:** Voor het geautomatiseerd provisioneren en beheren van infrastructuur over verschillende cloudplatforms.
+    *   **Docker:** Standaard voor het verpakken van applicaties en diensten.
+    *   **Kubernetes:** Essentieel voor het orkestreren, schalen en beheren van containerized applicaties in een cloud-native omgeving.
+*   **Infrastructure as Code (IaC):**
+    *   **Terraform:** Een populaire keuze voor het beheren van multi-cloud infrastructuren via code.
+    *   **Ansible, Chef, Puppet:** Voor configuratiemanagement en automatisering van servers (zowel on-premise als in de cloud).
+*   **Rollen:** Cloud Engineer, DevOps Engineer, DevOps Specialist, Cloud Architect, Cloud Native Architect.
 
-#### 2.6 Data Visualisatie & Business Intelligence
+#### 3. Data & Analytics
 
-Voor het omzetten van ruwe data in bruikbare inzichten:
-*   **Power BI, Tableau:** Populaire tools voor het creëren van interactieve dashboards en rapportages.
-*   **Alteryx:** Voor geavanceerde data-analyse, -voorbereiding en -blending, vaak gebruikt door data-analisten en -wetenschappers.
+*   **Databases:**
+    *   **Microsoft SQL Server, Oracle, PostgreSQL:** Traditionele relationele databases die gebruikt worden voor diverse enterprise applicaties en datawarehouses, inclusief support voor legacy systemen.
+    *   **Open Source databases (algemeen):** Sterke focus op kostenefficiëntie en flexibiliteit drijft de adoptie van open-source oplossingen.
+    *   **MongoDB, Cosmos DB, andere NoSQL databases:** Voor specifieke use cases die flexibele schema's of hoge schaalbaarheid en real-time toegang vereisen.
+*   **Big Data & Data Warehousing:**
+    *   **Databricks Platform:** Zeer waarschijnlijk gezien de focus op AI en Big Data Analytics, biedt een unified platform voor data engineering en ML.
+    *   **Snowflake:** Cloud-native data warehousing platform, populair voor schaalbare data-analyse.
+    *   **Azure Synapse Analytics:** Geïntegreerde analytics service op Azure.
+    *   **Apache Spark:** Essentieel voor Big Data Processing en Machine Learning.
+*   **Business Intelligence & Visualisatie:**
+    *   **Power BI, Tableau:** Toonaangevende BI-tools voor interactieve dashboards en rapportage.
+*   **Rollen:** Data Engineer, Data Scientist, Machine Learning Engineer, Statistical Analyst, Database Administrator, Business Intelligence Consultant, Data Visualization Specialist.
 
-#### 2.7 Artificial Intelligence & Machine Learning (AI/ML)
+#### 4. Artificial Intelligence & Machine Learning
 
-Hier ligt een zwaartepunt, gezien de HUMINT-bevestiging:
-*   **Machine Learning Libraries:**
-    *   **TensorFlow, PyTorch:** Kernbibliotheken voor deep learning en complexe ML-modellen.
-    *   **Scikit-learn:** Voor klassieke machine learning algoritmes.
-*   **Cloud ML Platforms:**
-    *   **Azure ML, AWS SageMaker, Google AI Platform (Vertex AI):** Volledig beheerde diensten voor de gehele ML-workflow, van training tot deployment en monitoring.
-*   **MLOps tools & practices:** Cruciaal voor het operationaliseren en beheren van machine learning modellen in productie. Dit omvat CI/CD voor ML, model monitoring, versiebeheer en experiment tracking.
+*   **Focus:** De HUMINT bevestigt het gebruik van AI, wat suggereert dat EY actief investeert in deze ruimte, zowel voor interne efficiëntie als voor cliëntoplossingen.
+*   **Frameworks & Libraries:**
+    *   **Python Libraries (Pandas, NumPy, Scikit-learn):** Standaard voor data manipulatie, statistische analyse en traditionele ML-modellen.
+    *   **TensorFlow, PyTorch:** Kern-frameworks voor Deep Learning, waarschijnlijk gebruikt voor geavanceerde AI-toepassingen.
+*   **MLOps:** De operationele aspecten van ML-modellen (deployment, monitoring, versiebeheer) zijn cruciaal.
+*   **Rollen:** Data Scientist, Machine Learning Engineer, Solution Architect (met ML-kennis).
 
-#### 2.8 Enterprise Software & Procesautomatisering
+#### 5. Cyber Security
 
-Naast de custom-build oplossingen werkt EY ook met standaard enterprise software.
-*   **ServiceNow:** Voor IT Service Management (ITSM) en workflowautomatisering.
-*   **SAP:** Kern voor Enterprise Resource Planning (ERP) bij veel grote klanten.
-*   **Salesforce:** Voor Customer Relationship Management (CRM) en gerelateerde sales, service en marketing processen.
-*   **Robotic Process Automation (RPA):**
-    *   **UiPath, Automation Anywhere:** Voor het automatiseren van repetitieve, regelgebaseerde bedrijfsprocessen. De synergie met AI/ML is hierbij groot (Intelligent Automation).
+*   **Strategie:** Cruciaal voor een consultancyfirma die gevoelige cliëntendata beheert. Een meerlagige security strategie is te verwachten.
+*   **Platformen & Tools:**
+    *   **Microsoft Azure Security Center / Defender for Cloud:** Voor de beveiliging van hun Azure-omgevingen.
+    *   **SIEM-oplossingen (bijv. Splunk, Microsoft Sentinel):** Voor gecentraliseerde log-analyse en dreigingsdetectie.
+    *   **EDR-oplossingen (bijv. SentinelOne, CrowdStrike):** Voor endpoint beveiliging en respons.
+*   **Rollen:** Cyber Security Analyst (voor monitoring en incident response).
 
-### 3. Gezochte Tools en Skills bij Ernst & Young
+#### 6. Enterprise Applicaties & Integratie
 
-Op basis van het geïdentificeerde technische landschap en de focus op AI, zijn de volgende tools en vaardigheden van groot belang voor technische professionals die bij EY willen werken:
+*   **ERP & CRM:** EY adviseert en implementeert deze systemen voor cliënten, wat expertise in deze domeinen vereist. Mogelijk gebruiken ze deze ook intern.
+    *   **SAP S/4HANA, Salesforce, Microsoft Dynamics 365:** Belangrijke enterprise suites.
+*   **Integratie:** Het verbinden van diverse systemen (legacy en modern) is een constante uitdaging.
+*   **Rollen:** Enterprise Architect, SAP Consultant, Dynamics Consultant, Salesforce Consultant.
+
+#### 7. Development Operations & Project Management
+
+*   **CI/CD & Version Control:** Essentieel voor moderne softwareontwikkeling en snelle levering.
+    *   **GitHub, GitLab:** Populaire platforms for version control en CI/CD.
+    *   **Azure DevOps:** Als onderdeel van de Microsoft-stack, biedt dit geïntegreerde tools voor het gehele ontwikkelproces.
+*   **Project Management:**
+    *   **Jira, Confluence:** Veelgebruikte tools voor issue tracking, projectmanagement en kennisdeling.
+*   **Methodologieën:** Agile, Scrum, Kanban zijn standaard.
+*   **Kwaliteitsborging:** Automated Testing, Selenium.
+*   **Rollen:** DevOps Engineer, DevOps Specialist, QA Engineer, Project Management (met focus op Agile Coach).
+
+### Overzicht van Gezochte Tools en Vaardigheden
+
+Op basis van bovenstaande analyse zijn de volgende tools en vaardigheden waarschijnlijk cruciaal en gewild bij EY:
 
 **Kernvaardigheden (Algemeen):**
-*   **Probleemoplossend vermogen:** Analytisch denken en het vermogen om complexe zakelijke problemen te vertalen naar technische oplossingen.
-*   **Communicatieve vaardigheden:** Helder communiceren met zowel technische als niet-technische stakeholders.
-*   **Teamwork & Samenwerking:** Efficiënt kunnen werken in multidisciplinaire teams.
-*   **Agile/Scrum Methodologieën:** Bekendheid met de agile werkwijze.
-*   **Continuous Learning:** Bereidheid om constant nieuwe technologieën en methodologieën te leren, gezien de snelle evolutie van de tech-sector.
 
-**Technische Tools & Skills (Specifiek):**
+*   **Probleemoplossend vermogen:** Analytisch denken en het vermogen om complexe technische uitdagingen structureel aan te pakken.
+*   **Communicatievaardigheden:** Het uitleggen van complexe technische concepten aan zowel technische als niet-technische stakeholders (cliënten, management).
+*   **Samenwerking:** Werken in multidisciplinaire teams (developers, data scientists, business consultants, security specialisten).
+*   **Aanpassingsvermogen:** Snel kunnen inspelen op nieuwe technologieën en veranderende cliëntbehoeften.
+*   **Agile & DevOps Mindset:** Ervaring met en promotie van flexibele ontwikkelmethoden en het automatiseren van ontwikkel- en beheerprocessen.
 
-1.  **Cloud Expertise (diepgaand in minstens één, bekendheid met meerdere):**
-    *   **Azure, AWS, GCP:** Kennis van IaaS (VM's, opslag), PaaS (databases, serverless functions), en SaaS-integratie. Certificeringen (Associate, Professional) zijn zeer waardevol.
-    *   **Cloud Security, Cost Management, Governance.**
+**Technische Tools & Vaardigheden (Specifiek):**
 
-2.  **Programmeervaardigheden (sterk in minstens één, bekendheid met meerdere):**
-    *   **Python:** Essentieel voor Data Science, ML, scripting.
-    *   **Java (Spring Boot):** Voor enterprise back-end ontwikkeling.
-    *   **JavaScript/TypeScript (React/Angular/Vue.js):** Voor moderne front-end ontwikkeling.
-    *   **C# (.NET Core):** Voor Microsoft-specifieke projecten.
-    *   **SQL:** Diepgaande kennis van relationele databases en querying.
+**Programmeer- en Scripttalen:**
+*   **Python:** (incl. libraries zoals Pandas, NumPy, Scikit-learn, TensorFlow/PyTorch)
+*   **Java:** (incl. Spring Boot, microservices)
+*   **C# / .NET:** (incl. .NET Core/5+, ASP.NET)
+*   **JavaScript / TypeScript:** (incl. React, Angular of ander modern framework)
+*   Go (als specialisatie)
+*   Scala (als specialisatie, vaak met Spark)
+*   R (voor statistische analyse)
 
-3.  **Data Engineering & Big Data:**
-    *   **Data Lake/Lakehouse concepten:** Kennis van Hadoop, Spark.
-    *   **Data Warehousing:** Snowflake, Azure Synapse, AWS Redshift, Google BigQuery.
-    *   **ETL/ELT tools & principes:** Data Factory, Glue, DBT.
-    *   **Data Streaming:** Apache Kafka.
+**Cloud Technologieën:**
+*   **Microsoft Azure:** Diepgaande kennis van Azure IaaS, PaaS (App Services, Functions, SQL Database, Synapse Analytics, Machine Learning), en Security services.
+*   **Amazon Web Services (AWS):** (EC2, S3, RDS, Lambda, SageMaker)
+*   **Google Cloud Platform (GCP):** (met focus op Data & AI services)
+*   **Containerisatie:** Docker
+*   **Container Orchestratie:** Kubernetes (AKS, EKS, GKE)
 
-4.  **Artificial Intelligence & Machine Learning:**
-    *   **Machine Learning Theory & Algorithms:** Supervised, Unsupervised Learning, Deep Learning.
-    *   **ML Frameworks:** TensorFlow, PyTorch, Scikit-learn.
-    *   **Cloud ML Platforms:** Azure ML, AWS SageMaker, Google AI Platform.
-    *   **MLOps tools & practices:** Model deployment, monitoring, versioning, CI/CD for ML.
-    *   **Data Science Skills:** Statistische analyse, datamodellering, data exploratie.
+**Data & Analytics:**
+*   **SQL:** (Microsoft SQL Server, PostgreSQL, Oracle)
+*   **NoSQL-databases:** (MongoDB, Cosmos DB)
+*   **Data Warehousing:** Snowflake, Azure Synapse Analytics
+*   **Big Data Processing:** Apache Spark, Databricks Platform
+*   **ETL/ELT tools**
+*   **BI-tools:** Power BI, Tableau
+*   **Data Lakes & Lakehouses**
 
-5.  **DevOps & Automatisering:**
-    *   **Containerisatie:** Docker.
-    *   **Container Orchestratie:** Kubernetes (AKS, EKS, GKE).
-    *   **CI/CD Tools:** Jenkins, Azure DevOps Pipelines, GitLab CI, GitHub Actions.
-    *   **Versiebeheer:** Git (met platforms zoals GitHub/GitLab).
-    *   **Infrastructuur als Code (IaC):** Terraform, Ansible.
+**DevOps & Infrastructuur:**
+*   **Version Control:** Git (GitHub, GitLab)
+*   **CI/CD:** Azure DevOps, GitHub Actions, GitLab CI/CD
+*   **Infrastructure as Code:** Terraform
+*   **Configuratiemanagement:** Ansible
+*   Kennis van monitoring & logging tools
 
-6.  **Enterprise Application Expertise:**
-    *   **SAP, Salesforce, ServiceNow:** Implementatie, configuratie, integratie en development van deze platforms.
-    *   **RPA Tools:** UiPath, Automation Anywhere (voor procesautomatisering met een focus op efficiëntie).
+**Cyber Security:**
+*   **Cloud Security:** Microsoft Defender for Cloud (voorheen Azure Security Center)
+*   **SIEM:** Splunk, Microsoft Sentinel
+*   **EDR:** SentinelOne, CrowdStrike
+*   Algemene kennis van cybersecurity principes en frameworks.
 
-7.  **Data Visualisatie & Business Intelligence:**
-    *   **Power BI, Tableau:** Het vermogen om inzichten visueel te presenteren.
-    *   **Alteryx:** Voor geavanceerde data-voorbereiding en analyse.
+**Enterprise Applicaties:**
+*   **ERP:** SAP S/4HANA (en gerelateerde modules), Microsoft Dynamics 365
+*   **CRM:** Salesforce, Microsoft Dynamics 365
+
+**Project & Process Tools:**
+*   Jira, Confluence
+*   Selenium (voor geautomatiseerd testen)
 
 ### Conclusie
 
-Ernst & Young hanteert, zoals verwacht van een toonaangevend consultancybedrijf, een zeer breed en dynamisch technisch landschap. De bevestiging van het gebruik van AI onderstreept een strategische focus op geavanceerde data-analyse, automatisering en innovatieve oplossingen. Professionals die een carrière bij EY overwegen, moeten zich richten op een sterke basis in cloud computing (met name Azure, AWS), expertise in programmeertalen zoals Python en Java, en diepgaande kennis van data engineering, AI/ML en DevOps-praktijken. De multidisciplinaire aard van de projecten bij EY vereist ook uitstekende soft skills en een continue drang naar kennisverbreding.
+Ernst & Young hanteert een modern en breed technologisch landschap, gedreven door de behoefte om innovatieve oplossingen te leveren aan cliënten en hun eigen efficiëntie te verhogen. De duidelijke focus op AI, cloud-native development en data-driven decision making, gecombineerd met een sterke basis in traditionele enterprise-technologieën en robuuste cyberbeveiliging, kenmerkt de technische richting van het bedrijf. Professionals met cross-functionele vaardigheden, expertise in cloud-platforms en diepgaande kennis van data science en AI zullen zeer gewild zijn.

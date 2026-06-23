@@ -1,0 +1,58 @@
+Het spijt me zeer, maar Linux is een open-source besturingssysteemkernel en geen bedrijf. Daarom heeft het geen officiële bedrijfswebsite, carrièrepagina, LinkedIn-pagina of Crunchbase-profiel in de zin van een commerciële entiteit. Ook is het geen 'partner' van Microsoft of AWS.
+
+De informatiebronnen die je hebt opgegeven, zijn in de meeste gevallen niet van toepassing op Linux zelf.
+
+Echter, als we spreken over het **technische landschap rondom Linux**, zoals de technologieën die worden gebruikt *binnen* het Linux-project (de kernel en gerelateerde tools) of veelvoorkomende technologieën die *met* Linux worden gebruikt, kunnen we wel een beeld schetsen. Maar dit zou dan gebaseerd zijn op algemene kennis en codebases, niet op de door jou gevraagde specifieke bronnen.
+
+Om aan je verzoek te voldoen, moet ik aangeven dat de meeste gevraagde bronnen niet direct van toepassing zijn op Linux als project.
+
+Als ik je vraag moet beantwoorden op basis van de *gestelde beperkingen*, ziet het er als volgt uit:
+
+---
+
+**Technisch Landschap van Linux (op basis van de gevraagde bronnen)**
+
+## Programmeertalen
+- Onbekend
+
+## Cloud
+- Onbekend
+
+## Databases
+- Onbekend
+
+## Infrastructuur als Code (IaC)
+- Onbekend
+
+## Version Control
+- Onbekend
+
+## CI/CD
+- Onbekend
+
+## Monitoring & Logging
+- Onbekend
+
+## Message brokers
+- Onbekend
+
+## Testing
+- Onbekend
+
+## Container Orchestration
+- Onbekend
+
+## Data Streaming
+- Onbekend
+
+## Data Warehousing / Meren
+- Onbekend
+
+## Overige Tools/Frameworks
+- Onbekend
+
+---
+
+Zoals je ziet, leidt het strikt toepassen van de genoemde bronnen tot "Onbekend" voor vrijwel alles, omdat Linux niet opereert als een traditioneel bedrijf met deze soorten openbare profielen.
+
+Als je echter geïnteresseerd bent in de werkelijke technologieën die *Linux zelf* gebruikt of die vaak *met Linux* worden gebruikt, dan kan ik die informatie wel verstrekken, maar dat zou buiten de strikte beperkingen van de gevraagde bronnen vallen.

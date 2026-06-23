@@ -1,10 +1,12 @@
 from Readers.CollectHUMINT import collect_humint_data, save_humint_data
 from Workflows.CustomerAnalysisWorkflow import run_customer_analysis_workflow
 def interactive_workflow():
-    while True:
+    print("Welkom bij CIRQUI! Dit is een interactieve workflow voor het analyseren van bedrijven en het verzamelen van Human Intelligence.") 
+    print("Kies een optie uit het menu:")
+    while True: 
         menu = input(
-            "\nA) Analyse klant\n"
-            "B) Verzamel HUMINT\n"
+            "\nA) Genereer een rapport over de technische landscape van een bedrijf\n"
+            "B) Verzamel Human Intelligence over een bedrijf\n"
             "C) Exit\n"
         )
 

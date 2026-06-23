@@ -1,0 +1,75 @@
+Oke, hier is een beschrijving van het technische landschap van Educom, gebaseerd op de opgegeven bronnen.
+
+**BELANGRIJKE OPMERKING:** Aangezien ik geen live toegang heb tot het internet om de actuele websites, carrièrepagina's, GitHub, etc., te doorzoeken, kan ik geen precieze, up-to-date informatie ophalen. Ik kan alleen een sjabloon invullen met "Onbekend" of een voorbeeld, tenzij u mij specifieke teksten uit die bronnen geeft om te analyseren.
+
+**Voor dit antwoord zal ik ervan uitgaan dat u wilt dat ik een *algemene structuur* geef voor hoe een dergelijke analyse eruit zou zien, en de bron per item toevoeg zoals gevraagd.**
+
+---
+
+## Programmeertalen
+- **Onbekend**
+    - *Voorbeeld van hoe dit eruit zou zien als informatie beschikbaar was:*
+        - Java (bron: Vacature Backend Developer - "Sterke kennis van Java en Spring Boot is vereist")
+        - Python (bron: LinkedIn bedrijfspagina - "Ons data science team werkt veel met Python")
+        - JavaScript (bron: Vacature Frontend Developer - "Ervaring met JavaScript/TypeScript en React is een must")
+
+## Cloud
+- **Onbekend**
+    - *Voorbeeld van hoe dit eruit zou zien als informatie beschikbaar was:*
+        - Microsoft Azure (bron: Microsoft Partner profiel - "Educom is een gecertificeerde Microsoft Azure partner")
+        - AWS (bron: Vacature Cloud Engineer - "Ervaring met AWS services zoals EC2, S3, RDS is een pre")
+
+## Databases
+- **Onbekend**
+    - *Voorbeeld van hoe dit eruit zou zien als informatie beschikbaar was:*
+        - PostgreSQL (bron: Engineering blog - "Optimaliseren van onze PostgreSQL databases voor schaalbaarheid")
+        - MongoDB (bron: Vacature Data Engineer - "Ervaring met NoSQL databases zoals MongoDB")
+
+## Frameworks & Libraries
+- **Onbekend**
+    - *Voorbeeld van hoe dit eruit zou zien als informatie beschikbaar was:*
+        - Spring Boot (bron: Vacature Backend Developer - "Uitgebreide ervaring met Spring Boot")
+        - React (bron: Vacature Frontend Developer - "Wij bouwen onze user interfaces met React")
+        - Angular (bron: Projectbeschrijving op bedrijfswebsite - "Onze klantportaal is ontwikkeld met Angular")
+
+## CI/CD & DevOps
+- **Onbekend**
+    - *Voorbeeld van hoe dit eruit zou zien als informatie beschikbaar was:*
+        - Jenkins (bron: Vacature DevOps Engineer - "Beheer en optimalisatie van Jenkins pipelines")
+        - GitHub Actions (bron: GitHub organisatie - Gebruik van .github/workflows bestanden in repositories)
+        - Docker (bron: Vacature DevOps Engineer - "Diepgaande kennis van Docker en containerisatie")
+        - Kubernetes (bron: Persbericht - "Educom lanceert nieuwe dienst op Kubernetes cluster")
+
+## Infra as Code
+- **Onbekend**
+    - *Voorbeeld van hoe dit eruit zou zien als informatie beschikbaar was:*
+        - Terraform (bron: Vacature Cloud Engineer - "Ervaring met Infra as Code tools zoals Terraform")
+
+## Monitoring & Logging
+- **Onbekend**
+    - *Voorbeeld van hoe dit eruit zou zien als informatie beschikbaar was:*
+        - Prometheus (bron: Engineering blog - "Onze monitoring stack draait op Prometheus en Grafana")
+        - Grafana (bron: Engineering blog - idem)
+        - ELK Stack (Elasticsearch, Logstash, Kibana) (bron: Vacature DevOps Engineer - "Onderhoud van onze ELK stack")
+
+## Berichtsystemen (Message Queues)
+- **Onbekend**
+    - *Voorbeeld van hoe dit eruit zou zien als informatie beschikbaar was:*
+        - Apache Kafka (bron: Vacature Software Architect - "Ontwerp van event-driven architecturen met Kafka")
+        - RabbitMQ (bron: LinkedIn bedrijfspagina - "Gebruik van RabbitMQ voor microservices communicatie")
+
+## Version Control
+- **Onbekend**
+    - *Voorbeeld van hoe dit eruit zou zien als informatie beschikbaar was:*
+        - Git (bron: Vrijwel elke technische vacature impliceert Git)
+        - GitHub (bron: GitHub organisatie)
+
+## Overige Tools/Technologieën
+- **Onbekend**
+    - *Voorbeeld van hoe dit eruit zou zien als informatie beschikbaar was:*
+        - Data science tooling (bijv. Pandas, NumPy, Scikit-learn) (bron: Vacature Data Scientist)
+        - GraphQL (bron: Engineering blog - "Implementatie van GraphQL voor onze API's")
+
+---
+
+**Conclusie:** Zonder concrete teksten uit de opgegeven bronnen, kan ik alleen een gestructureerd overzicht bieden met "Onbekend". Om een volledig en accuraat beeld te krijgen, zouden de daadwerkelijke bronnen zorgvuldig moeten worden gescand op trefwoorden en context.

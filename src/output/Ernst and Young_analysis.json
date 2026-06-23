@@ -2,443 +2,683 @@
   "company": "Ernst and Young",
   "results": [
     {
+      "term": "GitHub",
+      "followup_prompts": [
+        "Welke specifieke GitHub workflows of features (bijv. Actions, Packages) zijn cruciaal voor de ontwikkelprocessen van de klant en welke verbeterpunten zien zij hierin?",
+        "Hoe waarborgt de klant codekwaliteit en security binnen hun GitHub repositories, en welke tools of best practices gebruiken zij hiervoor?",
+        "Welke mate van integratie heeft GitHub met andere development tools (CI/CD, project management) binnen de organisatie van de klant, en wat zijn hierin de pijnpunten of ambities?"
+      ]
+    },
+    {
+      "term": "AI",
+      "followup_prompts": [
+        "Welke concrete businessproblemen of processen tracht de klant momenteel met AI op te lossen, en hoe meten zij het succes van deze initiatieven?",
+        "Welke data is beschikbaar voor potentiële AI-toepassingen bij de klant, en hoe is de kwaliteit, toegankelijkheid en governance van deze data geregeld?",
+        "Hoe schat de klant hun volwassenheid op het gebied van AI in, zowel technisch als organisatorisch, en welke stappen overwegen zij voor verdere adoptie?"
+      ]
+    },
+    {
+      "term": "Blockchain",
+      "followup_prompts": [
+        "In welke sectoren of specifieke use cases ziet de klant potentieel voor blockchain-technologie, en welke uitdagingen hopen zij hiermee te adresseren?",
+        "Welke wet- en regelgeving of compliance-eisen zijn relevant voor de klant bij het overwegen van blockchain-oplossingen, en hoe gaan zij hiermee om?",
+        "Welke ervaring heeft de klant al met het verkennen of implementeren van blockchain-concepten (bijv. PoC's, DLT) en wat waren de belangrijkste learnings?"
+      ]
+    },
+    {
       "term": "Java",
       "followup_prompts": [
-        "Welke specifieke Java-versies en frameworks (bijv. Spring, Hibernate) zijn momenteel in gebruik binnen de organisatie van de klant? Geef hierbij aan welke functionaliteiten hiermee ondersteund worden.",
-        "Identificeer de kritieke bedrijfsprocessen of applicaties van de klant die afhankelijk zijn van Java-technologie. Hoe is de performance en schaalbaarheid hiervan, en zijn er bekende knelpunten?",
-        "Welke plannen heeft de klant voor de toekomst met betrekking tot hun Java-landschap? Denk aan migratie naar nieuwere versies, cloudificatie of eventuele modernisering van architectuur."
+        "Voor welke specifieke bedrijfskritische applicaties of systemen maakt de klant hoofdzakelijk gebruik van Java, en welke versies van Java worden hierbij gebruikt?",
+        "Welke frameworks en libraries in het Java-ecosysteem zijn essentieel voor de ontwikkelteams van de klant (bijv. Spring, Hibernate), en welke uitdagingen ervaren zij hierbij?",
+        "Hoe beheer en monitort de klant de performance en stabiliteit van hun Java-applicaties, en welke tools of processen zijn hiervoor ingericht?"
+      ]
+    },
+    {
+      "term": "Backend Developer",
+      "followup_prompts": [
+        "Welke belangrijkste backend-systemen of API's ontwikkelt en onderhoudt de klant, en met welke technologieën (taal, database, framework) werken hun backend developers primair?",
+        "Hoe is de samenwerking georganiseerd tussen backend developers, frontend developers en DevOps teams binnen de klantorganisatie, en welke pijnpunten ervaren zij daarin?",
+        "Welke kennis en ervaring verwacht de klant van hun backend developers op het gebied van cloud-native development, microservices en/of serverless architecturen?"
+      ]
+    },
+    {
+      "term": "Solution Architect",
+      "followup_prompts": [
+        "Welke concrete businessuitdagingen of strategische doelen van de klant vragen om een architecturale oplossing, en welke knelpunten liggen hieraan ten grondslag?",
+        "Hoe wordt het architectuurproces binnen de klantorganisatie ingebed (governance, tooling), en hoe wordt de afstemming met business stakeholders en development teams geborgd?",
+        "Welke complexe integratievraagstukken of technische schaalbaarheidsproblemen heeft de klant recent aangepakt, en welke rol heeft Solution Architectuur hierin gespeeld?"
       ]
     },
     {
       "term": "Python",
       "followup_prompts": [
-        "Voor welke specifieke taken of domeinen (bijv. data science, web development, automatisering) maakt de klant gebruik van Python? Welke libraries/frameworks (bijv. Django, Flask, Pandas, NumPy, FastAPI) worden hierbij ingezet?",
-        "Hoe is de expertise en beschikbaarheid van Python-ontwikkelaars binnen de organisatie van de klant? Worden er specifieke trainingen of certificeringen nagestreefd?",
-        "Zijn er plannen om het gebruik van Python binnen de organisatie van de klant uit te breiden naar nieuwe gebieden, of zijn er juist consolidatie-initiatieven voor bestaande Python-applicaties?"
+        "Voor welke specifieke toepassingsgebieden (bijv. data-analyse, web development, automatisering, MLOps) zet de klant Python in, en welke projecten zijn hierin het meest strategisch?",
+        "Welke Python-frameworks of libraries zijn standaard binnen de klantorganisatie, en hoe wordt kennisdeling en best practices rondom Python development gefaciliteerd?",
+        "Welke uitdagingen ervaart de klant bij het schalen van Python-applicaties in productie, met name op het gebied van performance, deployment of onderhoud?"
       ]
     },
     {
-      "term": "JavaScript",
+      "term": "Data Scientist",
       "followup_prompts": [
-        "Welke JavaScript-frameworks of -libraries (bijv. React, Angular, Vue.js, Node.js) zijn van cruciaal belang voor de front-end en/of back-end applicaties van de klant?",
-        "Hoe wordt de kwaliteit en herbruikbaarheid van de JavaScript-codebasis van de klant gewaarborgd? Worden er specifieke tooling (bijv. linters, testframeworks) of richtlijnen gebruikt?",
-        "Zijn er uitdagingen ervaren met betrekking tot de prestaties, beveiliging of onderhoudbaarheid van de JavaScript-applicaties van de klant? Welke maatregelen zijn genomen of worden overwogen?"
+        "Welke concrete businessvraagstukken probeert de klant op te lossen met behulp van data science, en welke impact heeft dit tot nu toe op de organisatie?",
+        "Welke databronnen zijn beschikbaar voor de Data Scientist bij de klant, en hoe is de kwaliteit, ontsluiting en governance van deze data geregeld?",
+        "Hoe is de samenwerking georganiseerd tussen Data Scientists, Data Engineers en business stakeholders binnen de klantorganisatie, en welke pijnpunten ervaren zij daarin?"
+      ]
+    },
+    {
+      "term": "Machine Learning Engineer",
+      "followup_prompts": [
+        "Welke Machine Learning modellen ontwikkelt en implementeert de klant, en welke platforms of tools (bijv. MLOps tools, cloud ML services) worden hiervoor gebruikt?",
+        "Hoe waarborgt de klant de reproduceerbaarheid en het versiebeheer van Machine Learning modellen, en hoe wordt het deployment- en monitoringproces ingericht?",
+        "Welke specifieke uitdagingen ervaart de klant bij het opschalen van Machine Learning modellen in productie, met name op het gebied van infrastructuur, performance of security?"
+      ]
+    },
+    {
+      "term": "Cloud Engineer",
+      "followup_prompts": [
+        "Welke cloudplatformen (bijv. AWS, Azure, GCP) gebruikt de klant momenteel, en welke specifieke diensten binnen deze platformen zijn cruciaal voor hun infrastructuur?",
+        "Hoe beheert en automatiseert de klant hun cloud-infrastructuur (bijv. Infrastructure as Code), en welke tooling wordt hiervoor ingezet?",
+        "Welke uitdagingen ervaart de klant bij het optimaliseren van kosten, security en compliance binnen hun cloud-omgeving, en welke oplossingen overwegen zij hiervoor?"
       ]
     },
     {
       "term": "C#",
       "followup_prompts": [
-        "Voor welke soorten applicaties (bijv. webapplicaties, desktopapplicaties, microservices) wordt C# ingezet bij de klant, en welke .NET-versies worden daarbij gebruikt?",
-        "Is de klant van plan om bestaande C#-applicaties te moderniseren, bijvoorbeeld door over te stappen naar .NET Core/.NET 6+ of cloud-native architectuur? Welke overwegingen spelen daarbij een rol?",
-        "Hoe worden de C#-applicaties van de klant getest, gedeployed en gemonitord? Zijn er specifieke CI/CD-pipelines of monitoringtools die hierbij gebruikt worden?"
+        "Voor welke bedrijfskritische applicaties en systemen maakt de klant hoofdzakelijk gebruik van C#, en welke .NET versies zijn hierbij in gebruik (bijv. .NET Core, .NET Framework)?",
+        "Welke frameworks en libraries in het C#/.NET ecosysteem zijn essentieel voor de ontwikkelteams van de klant, en welke uitdagingen ervaren zij hierbij (bijv. microservices, ASP.NET)?",
+        "Hoe beheer en monitort de klant de performance en stabiliteit van hun C#-applicaties, en welke tools of processen zijn hiervoor ingericht?"
       ]
     },
     {
       "term": ".NET",
       "followup_prompts": [
-        "Welke specifieke .NET-frameworks en -technologieën (bijv. ASP.NET Core, Windows Forms, WPF, Entity Framework) zijn van strategisch belang voor de bedrijfsvoering van de klant?",
-        "Hoe is de roadmap voor het .NET-landschap van de klant voor de komende 1-3 jaar? Denk aan versie-upgrades, platformmigraties of de introductie van nieuwe .NET-gebaseerde services.",
-        "Welke uitdagingen ervaart de klant met het beheer, de beveiliging of de schaalbaarheid van hun .NET-applicaties, en welke oplossingen worden daarvoor overwogen?"
+        "Welke .NET-technologieën (bijv. ASP.NET Core, Xamarin, Entity Framework) zijn dominant binnen de klantorganisatie, en welke strategische ontwikkelingen zien zij hierin?",
+        "Hoe is de migratie van legacy .NET Framework applicaties naar modernere .NET Core/.NET 5+ architecturen georganiseerd bij de klant, en welke uitdagingen zijn daarbij ondervonden?",
+        "Welke kennis en ervaring verwacht de klant van .NET developers op het gebied van cloud-native development, DevOps practices en/of API-design?"
+      ]
+    },
+    {
+      "term": "Software Engineer",
+      "followup_prompts": [
+        "Welke type software ontwikkelt de klant primair (bijv. webapplicaties, mobiel, embedded, enterprise) en welke impact heeft dit op de gevraagde skillsets van hun Software Engineers?",
+        "Hoe is het ontwikkelproces (methodologie, tooling, code review) ingericht voor Software Engineers bij de klant, en waar zien zij kansen voor verbetering of automatisering?",
+        "Welke complexe technische uitdagingen op het gebied van schaalbaarheid, performance, of security zijn recent aangepakt door de Software Engineers van de klant?"
+      ]
+    },
+    {
+      "term": "JavaScript",
+      "followup_prompts": [
+        "Voor welke specifieke (frontend) applicaties en componenten maakt de klant hoofdzakelijk gebruik van JavaScript, en welke frameworks (bijv. React, Angular, Vue) worden hiervoor ingezet?",
+        "Hoe waarborgt de klant de codekwaliteit, performance en security van hun JavaScript-applicaties, en welke testmethodologieën en tooling gebruiken zij hiervoor?",
+        "Welke uitdagingen ervaart de klant bij het beheren van de complexiteit van grote JavaScript-codebases, met name op het gebied van afhankelijkheidsbeheer en state management?"
+      ]
+    },
+    {
+      "term": "Frontend Developer",
+      "followup_prompts": [
+        "Welke primaire frontend-frameworks en bibliotheken gebruikt de klant (bijv. React, Angular, Vue), en welke specifieke projecten zijn momenteel leidend op de frontend?",
+        "Hoe is de samenwerking georganiseerd tussen frontend developers, UX/UI designers en backend developers binnen de klantorganisatie, en welke pijnpunten ervaren zij daarin?",
+        "Welke kennis en ervaring verwacht de klant van hun frontend developers op het gebied van accessibility (WCAG), performance optimalisatie en/of mobile-first development?"
+      ]
+    },
+    {
+      "term": "Fullstack Engineer",
+      "followup_prompts": [
+        "Welke type applicaties of systemen ontwikkelt de klant waarvoor een fullstack benadering essentieel is, en welke technologie-stacks zijn hierin leidend?",
+        "Hoe faciliteert de klant de brede kennisontwikkeling van hun fullstack engineers, en welke uitdagingen ervaren zij bij het bijhouden van zowel frontend als backend technologieën?",
+        "Welke kennis en ervaring op het gebied van DevOps practices, cloud-native development of architectuur heeft de klant van hun fullstack engineers?"
       ]
     },
     {
       "term": "Go",
       "followup_prompts": [
-        "Voor welke specifieke use-cases (bijv. microservices, CLI tools, network services) heeft de klant Go geïmplementeerd of overwegen ze dit? Zijn er concrete projecten gepland?",
-        "Hoe is de adoptie van Go binnen de technische teams van de klant? Zijn er al voldoende Go-ontwikkelaars beschikbaar of is er een opleidingsbehoefte?",
-        "Welke voordelen verwacht de klant te behalen met de inzet van Go (bijv. prestaties, concurrency, eenvoud van beheer) en zijn deze reeds gerealiseerd in bestaande implementaties?"
+        "Voor welke specifieke toepassingsgebieden (bijv. microservices, netwerkservices, CLI-tools) zet de klant Go in, en welke voordelen verwachten zij hiervan?",
+        "Welke ervaring heeft de klant met het opschalen van Go-applicaties en het beheren van de complexiteit van Go-projecten, met name op het gebied van concurrency en error handling?",
+        "Hoe wordt de kennismaking en adoptie van Go binnen de klantorganisatie gestimuleerd, en welke trainingen of best practices zijn hiervoor beschikbaar?"
       ]
     },
     {
       "term": "Scala",
       "followup_prompts": [
-        "In welke domeinen (bijv. big data verwerking, financiële applicaties, high-performance systemen) heeft de klant Scala geïmplementeerd en met welke frameworks (bijv. Akka, Spark)?",
-        "Hoe wordt de complexiteit van Scala-projecten beheerd binnen de organisatie van de klant, en zijn er specifieke best practices of tooling voor development en testing?",
-        "Werkt de klant met een monolitische Scala-applicatie of maken ze gebruik van microservices? Hoe is de architectuur hiervan opgezet en beheerd?"
+        "Voor welke specifieke dataintensieve of schaalbare applicaties gebruikt de klant Scala, en combinaties met welke frameworks (bijv. Akka, Spark) zijn prominent?",
+        "Welke uitdagingen ervaart de klant bij het werven van Scala-experts en het onderhouden van Scala-applicaties, met name rondom de complexiteit van de taal of het ecosysteem?",
+        "Hoe is de integratie van Scala-applicaties met andere systemen en databronnen geregeld bij de klant, en welke oplossingen zijn hiervoor architecturaal gekozen?"
       ]
     },
     {
       "term": "R",
       "followup_prompts": [
-        "Voor welke specifieke data-analyse, statistische modellering of machine learning vraagstukken gebruikt de klant de programmeertaal R? Welke pakketten/libraries worden hiervoor ingezet?",
-        "Hoe worden R-scripts en -modellen geïntegreerd in de bestaande IT-infrastructuur en businessprocessen van de klant? Worden er API's gebruikt of andere integratiemethoden?",
-        "Is er een behoefte aan schaalbaarheid of operationalisering van R-modellen bij de klant? Wordt er gekeken naar oplossingen zoals RStudio Connect of Docker-containers voor deployment?"
+        "Voor welke specifieke statistische analyses, data-visualisaties of machine learning projecten gebruikt de klant R, en welke pakketten (bijv. Tidyverse, Shiny) zijn hierin leidend?",
+        "Hoe wordt de reproduceerbaarheid van R-scripts en rapporten gewaarborgd binnen de klantorganisatie, en welke tooling (bijv. R Markdown, renv) wordt hiervoor ingezet?",
+        "Welke uitdagingen ervaart de klant bij het in productie nemen van R-modellen of -applicaties, met name op het gebied van schaalbaarheid, performance of integratie?"
       ]
     },
     {
-      "term": "C++",
+      "term": "Statistical Analyst",
       "followup_prompts": [
-        "Voor welke kritieke systemen, embedded software of performance-gevoelige applicaties is de klant afhankelijk van C++? Welke specifieke C++-standaarden worden gebruikt?",
-        "Hoe wordt de complexiteit van C++ development en maintenance beheerd binnen de organisatie van de klant? Zijn er specifieke tools voor geheugenbeheer, debugging of performance-profiling?",
-        "Zijn er plannen om C++-componenten te moderniseren, te migreren naar andere talen, of te integreren met nieuwere technologieën (bijv. via wrappers)? Welke zijn dat?"
-      ]
-    },
-    {
-      "term": "SQL",
-      "followup_prompts": [
-        "Welke specifieke SQL-dialecten (bijv. T-SQL, PL/SQL, PostgreSQL-SQL) zijn het meest prominent aanwezig in de database-landschappen van de klant, en voor welke systemen?",
-        "Hoe worden de SQL-queries en database-schema's beheerd en geoptimaliseerd bij de klant? Worden versiebeheer, code reviews en performance-tuning routinematig toegepast?",
-        "Zijn er uitdagingen met betrekking tot de performance, schaalbaarheid of data-integriteit van de SQL-databases van de klant? Welke concrete voorbeelden zijn er?"
+        "Welke concrete businessvraagstukken probeert de klant op te lossen met behulp van statistische analyse, en welke impact heeft dit tot nu toe op de besluitvorming?",
+        "Welke databronnen zijn beschikbaar voor de Statistical Analysts bij de klant, en hoe is de kwaliteit, ontsluiting en governance van deze data geregeld?",
+        "Hoe is de samenwerking georganiseerd tussen Statistical Analysts, business stakeholders en andere data-professionals binnen de klantorganisatie, en welke behoeften leven er op dit vlak?"
       ]
     },
     {
       "term": "Microsoft Azure",
       "followup_prompts": [
-        "Welke specifieke Azure-services (bijv. Azure Virtual Machines, Azure SQL Database, Azure Functions, Azure Kubernetes Service) worden momenteel door de klant gebruikt, en voor welke applicaties/workloads?",
-        "Hoe is de cloudstrategie van de klant met betrekking tot Microsoft Azure? Zijn er plannen voor verdere adoptie, consolidatie of migratie van on-premise workloads naar Azure?",
-        "Welke aspecten van Azure (bijv. kostenbeheer, beveiliging, compliance, governance) zorgen voor de grootste uitdagingen of onzekerheden voor de klant?"
+        "Welke specifieke Azure-services (bijv. App Services, Azure SQL Database, Azure Functions) zijn essentieel voor de huidige infrastructuur van de klant, en welke strategische migraties zijn gepland?",
+        "Hoe beheert en automatiseert de klant hun Azure-omgeving (bijv. Azure DevOps, Azure Resource Manager templates), en welke uitdagingen ervaren zij hierbij?",
+        "Welke uitdagingen ervaart de klant bij het optimaliseren van kosten, security en compliance binnen hun Azure-omgeving, en welke oplossingen overwegen zij hiervoor?"
       ]
     },
     {
       "term": "Amazon Web Services (AWS)",
       "followup_prompts": [
-        "Welke specifieke AWS-services (bijv. EC2, S3, RDS, Lambda, EKS) worden door de klant ingezet, en voor welke kritieke bedrijfsprocessen of data-uitdagingen?",
-        "Hoe is de cloudstrategie van de klant met betrekking tot AWS? Zijn er initiatieven voor cloud-native ontwikkeling, re-platforming of het uitbreiden van hun AWS-voetafdruk?",
-        "Wat zijn de belangrijkste vragen of zorgen van de klant met betrekking tot hun AWS-infrastructuur (bijv. optimalisatie van kosten, beveiligingscompliance, operationele efficiëntie, vendor lock-in)?"
+        "Welke specifieke AWS-services (bijv. EC2, S3, RDS, Lambda) zijn essentieel voor de huidige infrastructuur van de klant, en welke strategische migraties zijn gepland?",
+        "Hoe beheert en automatiseert de klant hun AWS-omgeving (bijv. CloudFormation, Terraform, AWS CLI), en welke uitdagingen ervaren zij hierbij?",
+        "Welke uitdagingen ervaart de klant bij het optimaliseren van kosten, security en compliance binnen hun AWS-omgeving, en welke oplossingen overwegen zij hiervoor?"
       ]
     },
     {
-      "term": "SQL Server",
+      "term": "Cloud Architect",
       "followup_prompts": [
-        "Welke versies en edities van SQL Server zijn in gebruik bij de klant (bijv. Standard, Enterprise, Express), en voor welke bedrijfskritische applicaties of systemen?",
-        "Hoe wordt de beschikbaarheid en disaster recovery van de SQL Server-databases van de klant gewaarborgd (bijv. AlwaysOn Availability Groups, backups, replicatie)? Wat zijn de RPO/RTO doelstellingen?",
-        "Zijn er plannen voor migratie van on-premise SQL Server-databases naar de cloud (bijv. Azure SQL Database, AWS RDS for SQL Server) of modernisering van de bestaande on-premise infrastructuur?"
+        "Welke strategische cloud-initiatieven of migratietrajecten zijn momenteel gaande bij de klant, en welke architecturale knelpunten zijn hierbij geïdentificeerd?",
+        "Hoe waarborgt de Cloud Architect de alignment tussen de cloud-strategie en de businessdoelen van de klant, en welke processen zijn hiervoor ingericht?",
+        "Welke complexe architecturale uitdagingen op het gebied van multi-cloud, hybrid cloud, of cloud-native development heeft de klant recent aangepakt?"
+      ]
+    },
+    {
+      "term": "Microsoft SQL Server",
+      "followup_prompts": [
+        "Voor welke bedrijfskritische applicaties en datawarehouses maakt de klant gebruik van Microsoft SQL Server, en welke versies zijn hierbij in gebruik?",
+        "Hoe is de high availability, disaster recovery en performance tuning van SQL Server databases geregeld bij de klant, en welke uitdagingen ervaren zij hierbij?",
+        "Welke strategie heeft de klant voor de migratie van on-premise SQL Server naar Azure SQL Database of andere cloud-gebaseerde databases, en welke uitgangspunten zijn hierbij leidend?"
+      ]
+    },
+    {
+      "term": "Database Administrator",
+      "followup_prompts": [
+        "Welke primaire databaseplatformen (relationeel, NoSQL) beheert de Database Administrator bij de klant, en welke specifieke taken (backup, recovery, tuning) zijn prioritair?",
+        "Hoe waarborgt de klant de security, compliance en data governance van hun databases, en welke tooling en processen zijn hiervoor ingericht?",
+        "Welke uitdagingen ervaart de klant bij het opschalen van database-infrastructuren, het beheren van complexe replicatiescenario's of het implementeren van nieuwe database-technologieën?"
       ]
     },
     {
       "term": "PostgreSQL",
       "followup_prompts": [
-        "Voor welke specifieke projecten of nieuwe applicatieontwikkelingen heeft de klant gekozen voor PostgreSQL, en welke functionaliteiten worden hiermee ondersteund?",
-        "Hoe wordt de performance en schaalbaarheid van PostgreSQL-databases beheerd bij de klant? Zijn er specifieke extensies (bijv. PostGIS) of managed services (bijv. Azure Database for PostgreSQL, AWS RDS for PostgreSQL) die gebruikt worden?",
-        "Is de klant van plan om bestaande databases te migreren naar PostgreSQL, of nieuwe workloads op te bouwen met PostgreSQL als primaire datastore? Welke overwegingen spelen daarbij een rol?"
+        "Voor welke specifieke applicaties of microservices maakt de klant gebruik van PostgreSQL, en welke strategische overwegingen liggen hieraan ten grondslag?",
+        "Hoe is de high availability, scalability en replicatie van PostgreSQL-databases geregeld bij de klant, en welke uitdagingen ervaren zij hierbij?",
+        "Welke strategie heeft de klant voor de migratie van andere databases naar PostgreSQL, of voor het inzetten van managed PostgreSQL-services in de cloud?"
       ]
     },
     {
-      "term": "MySQL",
+      "term": "Backend Engineer",
       "followup_prompts": [
-        "Voor welke webapplicaties, content management systemen (CMS) of andere systemen is MySQL de primaire datastore bij de klant, en welke versies worden ingezet?",
-        "Hoe is de back-up en herstelstrategie voor de MySQL-databases van de klant georganiseerd? Zijn er uitdagingen met betrekking tot dataverlies of downtime?",
-        "Overweegt de klant een migratie van MySQL naar een andere database (bijv. PostgreSQL, cloud-native databases) of een upgrade naar nieuwere MySQL-versies? Wat zijn de drijfveren hiervoor?"
+        "Welke belangrijkste backend-systemen of API's ontwikkelt en onderhoudt de klant, en met welke technologieën (taal, database, framework) werken hun backend engineers primair?",
+        "Hoe is de samenwerking georganiseerd tussen backend engineers, frontend teams en DevOps teams binnen de klantorganisatie, en welke pijnpunten ervaren zij daarin?",
+        "Welke kennis en ervaring verwacht de klant van hun backend engineers op het gebied van cloud-native development, microservices en/of serverless architecturen?"
       ]
     },
     {
-      "term": "Oracle Database",
+      "term": "Open Source databases",
       "followup_prompts": [
-        "Welke bedrijfskritische applicaties of enterprise resource planning (ERP) systemen van de klant zijn afhankelijk van Oracle Database, en welke versies/edities worden gebruikt?",
-        "Hoe beheert de klant de licentiekosten en complexiteit van Oracle Database? Zijn er initiatieven om de afhankelijkheid van Oracle te verminderen of te optimaliseren?",
-        "Zijn er plannen voor migratie van Oracle Database naar een alternatieve database (bijv. PostgreSQL, SQL Server, cloud-native databases) of een upgrade naar een nieuwere Oracle-versie? Wat zijn de uitgangspunten hiervoor?"
-      ]
-    },
-    {
-      "term": "NoSQL Databases",
-      "followup_prompts": [
-        "Voor welke specifieke use-cases (bijv. real-time analytics, content management, IoT data) zet de klant NoSQL databases in? Om welke NoSQL-types gaat het (document, key-value, graph, column-family)?",
-        "Hoe zijn de NoSQL-databases geïntegreerd met de bredere data-architectuur van de klant? Worden ze gebruikt als primaire datastore of als aanvulling op relationele databases?",
-        "Welke uitdagingen ervaart de klant met het beheer, de schaalbaarheid of de consistentie van hun NoSQL-databaseomgevingen?"
+        "Welke specifieke Open Source databases (bijv. PostgreSQL, MySQL, MongoDB, Cassandra) worden momenteel door de klant ingezet, en voor welke toepassingsgebieden?",
+        "Hoe beheert en ondersteunt de klant hun Open Source databases, en welke strategieën hebben zij voor patching, upgrades en het borgen van enterprise-grade functionaliteit?",
+        "Welke uitdagingen ervaart de klant bij het implementeren van Open Source databases op schaal, met name op het gebied van tooling, expertise of support?"
       ]
     },
     {
       "term": "MongoDB",
       "followup_prompts": [
-        "Voor welke specifieke applicaties of data-uitdagingen heeft de klant MongoDB gekozen als datastore? Welke voordelen zien zij hierin?",
-        "Hoe wordt de schaalbaarheid en beschikbaarheid van MongoDB-clusters bij de klant gewaarborgd? Wordt gebruik gemaakt van replica sets, sharding of MongoDB Atlas?",
-        "Zijn er plannen om de adoptie van MongoDB binnen de organisatie van de klant uit te breiden, of worden er nieuwe use-cases overwogen die passen bij een document-database?"
+        "Voor welke specifieke applicaties of datamodellen (bijv. document-georiënteerd, real-time data) maakt de klant gebruik van MongoDB, en welke voordelen zien zij hierin?",
+        "Hoe is de schaalbaarheid, replicatie en data sharding van MongoDB-databases geregeld bij de klant, en welke uitdagingen ervaren zij hierbij?",
+        "Welke strategie heeft de klant voor het beheren van MongoDB in de cloud (bijv. MongoDB Atlas), en welke overwegingen zijn hierbij leidend?"
       ]
     },
     {
-      "term": "Cassandra",
+      "term": "NoSQL",
       "followup_prompts": [
-        "Voor welke high-throughput, distributed data-opslagbehoeften heeft de klant Cassandra geïmplementeerd? Welke specifieke use-cases worden hiermee ondersteund?",
-        "Hoe wordt het beheer en de monitoring van Cassandra-clusters geregeld bij de klant? Zijn er uitdagingen met betrekking tot operationele complexiteit of prestatieoptimalisatie?",
-        "Is de klant van plan om de bestaande Cassandra-implementaties te migreren naar een managed service (bijv. Datastax Astra DB, AWS Keyspaces) of de on-premise infrastructuur verder te optimaliseren?"
+        "Welke specifieke NoSQL-databases (bijv. MongoDB, Cassandra, Redis, DynamoDB) worden momenteel door de klant ingezet, en voor welke toepassingsgebieden?",
+        "Hoe is de datamodellering en architectuur van applicaties die NoSQL-databases gebruiken geregeld bij de klant, en welke voordelen dan wel nadelen ervaren zij?",
+        "Welke uitdagingen ervaart de klant bij het beheren van NoSQL-databases op schaal, ten aanzien van consistentie, performance en complexiteit?"
       ]
     },
     {
-      "term": "DynamoDB",
+      "term": "Analytics",
       "followup_prompts": [
-        "Voor welke specifieke serverless applicaties, microservices of real-time datastromen maakt de klant gebruik van AWS DynamoDB?",
-        "Hoe optimaliseert de klant de kosten en prestaties van hun DynamoDB-tabellen? Wordt er gebruik gemaakt van on-demand capaciteit, provisioned capacity of andere optimalisatiestrategieën?",
-        "Zijn er plannen om de adoptie van DynamoDB uit te breiden naar nieuwe projecten binnen de AWS-omgeving van de klant, en zijn er specifieke functies die daarbij van belang zijn (bijv. DynamoDB Streams, Global Tables)?"
+        "Welke type analyses (bijv. descriptief, diagnostisch, predictief, prescriptief) zijn cruciaal voor de klant, en welke impact heeft dit op hun bedrijfsvoering?",
+        "Welke databronnen worden gebruikt voor analyses bij de klant, en hoe is de kwaliteit, integratie en beschikbaarheid van deze data gewaarborgd?",
+        "Welke tooling en platforms (bijv. Power BI, Tableau, Python, R) worden door de klant gebruikt voor data-analyse en rapportage, en wat zijn hierin de groeimogelijkheden?"
       ]
     },
     {
-      "term": "Data Warehouses",
+      "term": "Data Engineer",
       "followup_prompts": [
-        "Welke data warehousing-oplossingen (bijv. on-premise, cloud-based, hybrid) zijn momenteel in gebruik bij de klant, en voor welke zakelijke rapportages of analyses?",
-        "Hoe wordt de data-integratie, transformatie en laadproces (ETL/ELT) naar het data warehouse van de klant beheerd en geoptimaliseerd?",
-        "Welke uitdagingen ervaart de klant met betrekking tot de schaalbaarheid, performance of flexibiliteit van hun bestaande data warehouse-omgeving?"
+        "Welke primaire data-pipelines en ETL/ELT processen bouwt en onderhoudt de Data Engineer bij de klant, en welke technologieën (bijv. Spark, Kafka, Airflow) worden daarvoor gebruikt?",
+        "Hoe waarborgt de klant de datakwaliteit, data governance en dataprivacy binnen hun data-architectuur, en welke processen zijn hiervoor ingericht?",
+        "Welke uitdagingen ervaart de klant bij het schalen van hun data-infrastructuren, het integreren van diverse databronnen, of het implementeren van real-time data-oplossingen?"
       ]
     },
     {
       "term": "Snowflake",
       "followup_prompts": [
-        "Voor welke specifieke data-analyse, business intelligence of data science projecten heeft de klant Snowflake geïmplementeerd of zijn ze van plan dit te doen?",
-        "Hoe wordt de data-integratie en governance rondom Snowflake bij de klant geregeld? Worden er tools zoals Fivetran, DBT of andere datakatalogen gebruikt?",
-        "Welke voordelen verwacht de klant van de overstap naar of het gebruik van Snowflake (bijv. schaalbaarheid, kostenbeheer, performance, data sharing) en zijn deze reeds gerealiseerd?"
+        "Voor welke specifieke datawarehousing, data lake of data sharing use cases gebruikt de klant Snowflake, en welke voordelen zien zij hierin boven hun vorige oplossingen?",
+        "Hoe optimaliseert de klant de kosten en performance van hun Snowflake-omgeving, en welke best practices of tooling worden hiervoor ingezet?",
+        "Welke strategie heeft de klant voor de integratie van Snowflake met hun bestaande data-ecosysteem (ETL/ELT, BI-tools, data science platforms)?"
       ]
     },
     {
-      "term": "Azure Synapse",
+      "term": "Data Warehouse",
       "followup_prompts": [
-        "Voor welke specifieke big data analytics, data warehousing of data science use-cases overweegt of gebruikt de klant Azure Synapse Analytics?",
-        "Hoe is Azure Synapse geïntegreerd in de bredere Azure-architectuur van de klant? Zijn er koppelingen met Azure Data Lake Storage, Azure Data Factory of andere Azure-services?",
-        "Welke aspecten van Azure Synapse (bijv. serverless SQL pools, Spark pools, Data Explorer) zijn het meest relevant voor de huidige of toekomstige data-uitdagingen van de klant?"
+        "Welke datamodelleringsmethoden (bijv. Data Vault, Kimball, Inmon) worden gehanteerd bij het bouwen van het datawarehouse van de klant, en waarom is voor deze aanpak gekozen?",
+        "Hoe is de ETL/ELT-straat ingericht voor het vullen van het datawarehouse van de klant, en welke tooling (bijv. SSIS, Informatica, Data Factory) wordt hiervoor gebruikt?",
+        "Welke uitdagingen ervaart de klant bij het schalen van hun datawarehouse, het beheren van data-governance of het migreren naar een cloud-gebaseerd datawarehouse?"
       ]
     },
     {
-      "term": "AWS Redshift",
+      "term": "Oracle",
       "followup_prompts": [
-        "Voor welke specifieke data warehousing-behoeften, met name in de context van AWS, maakt de klant gebruik van AWS Redshift?",
-        "Hoe wordt de data-integratie en -verwerking naar Redshift geregeld bij de klant? Worden er tools zoals AWS Glue, Kinesis of S3 gebruikt?",
-        "Zijn er plannen om de Redshift-implementatie van de klant te optimaliseren (bijv. door elastic resize, concurrency scaling) of om deze te migreren naar Redshift Serverless?"
+        "Voor welke bedrijfskritische applicaties en systemen maakt de klant hoofdzakelijk gebruik van Oracle databases, en welke versies zijn hierbij in gebruik?",
+        "Hoe is de high availability, disaster recovery en performance tuning van Oracle databases geregeld bij de klant, en welke uitdagingen ervaren zij hierbij?",
+        "Welke strategie heeft de klant voor de migratie van Oracle databases naar andere platforms (bijv. cloud native databases, PostgreSQL) en wat zijn de drijfveren hiervoor?"
       ]
     },
     {
-      "term": "Google BigQuery",
+      "term": "Legacy systems",
       "followup_prompts": [
-        "Voor welke specifieke big data analytics, real-time dashboards of machine learning projecten maakt de klant gebruik van Google BigQuery?",
-        "Hoe wordt de data-integratie en het beheer van datasets in BigQuery geregeld bij de klant? Worden er tools zoals Dataflow, Dataproc of andere GCP-services gebruikt?",
-        "Welke voordelen ziet de klant in BigQuery ten opzichte van andere data warehousing-oplossingen (bijv. prijs-prestatie, serverless architectuur, integratie met andere Google-producten)?"
+        "Welke specifieke legacy systemen zijn momenteel in gebruik bij de klant, en welke impact hebben deze op de businessprocessen en architectuur?",
+        "Welke strategieën (bijv. modernisering, refactoring, re-platforming, vervanging) overweegt de klant voor hun legacy systemen, en wat zijn de prioriteiten hierin?",
+        "Welke uitdagingen ervaart de klant bij het migreren van data, het waarborgen van business continuity en het beheren van de technische schuld van legacy systemen?"
       ]
     },
     {
-      "term": "React",
+      "term": "Enterprise Architect",
       "followup_prompts": [
-        "Welke specifieke applicaties of interfaces bij de klant zijn gebouwd met React? Zijn dit interne tools, klantgerichte websites of mobiele apps (React Native)?",
-        "Hoe wordt de ontwikkelingscyclus voor React-applicaties bij de klant georganiseerd? Worden er state management libraries (bijv. Redux, Context API) of component libraries (bijv. Material-UI, Ant Design) gebruikt?",
-        "Zijn er uitdagingen met betrekking tot de prestaties, schaalbaarheid of maintainability van de React-applicaties van de klant? Welke verbeteringen worden overwogen?"
-      ]
-    },
-    {
-      "term": "Angular",
-      "followup_prompts": [
-        "Voor welke specifieke enterprise-applicaties of complexe single-page applications (SPA's) van de klant is Angular de gekozen front-end framework?",
-        "Hoe wordt de architectuur en de codebase van de Angular-applicaties van de klant beheerd en gestructureerd (bijv. met Nx monorepo's, feature modules)?",
-        "Zijn er plannen voor upgrades van Angular-versies, of zijn er discussies over het moderniseren van oudere Angular (JS) applicaties naar de nieuwere versies?"
-      ]
-    },
-    {
-      "term": "Vue.js",
-      "followup_prompts": [
-        "Voor welke specifieke projecten of kleinere, flexibele front-end applicaties maakt de klant gebruik van Vue.js, en welke voordelen zien zij hierin?",
-        "Hoe wordt de state management (bijv. Vuex), routing (bijv. Vue Router) en build-proces voor Vue.js-applicaties bij de klant afgehandeld?",
-        "Overweegt de klant om Vue.js breder te adopteren binnen de organisatie, of is het gebruik beperkt tot specifieke teams of projecten? Wat is de visie hierop?"
-      ]
-    },
-    {
-      "term": "Spring",
-      "followup_prompts": [
-        "Voor welke specifieke enterprise-applicaties, webservices of Microservices is Java Spring het fundament bij de klant? Welke Spring modules (bijv. Spring MVC, Spring Data, Spring Security) worden gebruikt?",
-        "Hoe wordt de complexiteit van Spring-projecten beheerd binnen de organisatie van de klant? Zijn er specifieke architectuurprincipes of development guidelines?",
-        "Zijn er plannen om het Spring-landschap van de klant te moderniseren, bijvoorbeeld door de overstap naar Spring Boot, cloud-native deployments of Spring Cloud-oplossingen?"
-      ]
-    },
-    {
-      "term": "Spring Boot",
-      "followup_prompts": [
-        "Voor welke specifieke microservices of snel te ontwikkelen applicaties heeft de klant Spring Boot geïmplementeerd? Welke voordelen ervaren zij hiermee?",
-        "Hoe worden de Spring Boot-applicaties van de klant ingezet (deployment)? Wordt er gebruik gemaakt van Docker, Kubernetes of serverless-oplossingen?",
-        "Wat is de adoptiestrategie van de klant voor Spring Boot? Is het de standaard voor nieuwe Java-ontwikkelingen, en zijn er plannen om oudere Spring-applicaties te migreren naar Spring Boot?"
-      ]
-    },
-    {
-      "term": "Node.js",
-      "followup_prompts": [
-        "Voor welke specifieke back-end services, API's of real-time applicaties maakt de klant gebruik van Node.js? Welke frameworks (bijv. Express.js, NestJS) worden hierbij ingezet?",
-        "Hoe wordt de performance en schaalbaarheid van de Node.js-applicaties van de klant beheerd? Worden er clustering, asynchrone patronen of specifiek monitoringtools gebruikt?",
-        "Zijn er uitdagingen met betrekking tot de beveiliging, afhankelijkheidsbeheer of onderhoudbaarheid van de Node.js-codebase van de klant? Welke maatregelen worden er genomen?"
-      ]
-    },
-    {
-      "term": "ASP.NET Core",
-      "followup_prompts": [
-        "Voor welke webapplicaties, API's of microservices van de klant is ASP.NET Core de gekozen technologie? Worden er specifieke patterns (bijv. MVC, Razor Pages, Blazor) gebruikt?",
-        "Hoe wordt de deployment en hosting van ASP.NET Core-applicaties geregeld bij de klant? Wordt er gebruik gemaakt van IIS, Kestrel, Azure App Service of Docker/Kubernetes?",
-        "Wat zijn de plannen van de klant met betrekking tot verdere adoptie van ASP.NET Core, met name in de context van cloud-native ontwikkeling en integratie met Azure-services?"
-      ]
-    },
-    {
-      "term": "Django",
-      "followup_prompts": [
-        "Voor welke webapplicaties of content management systemen maakt de klant gebruik van Django? Zijn dit zowel oudere als nieuwe projecten?",
-        "Hoe wordt de complexe functionaliteit (bijv. ORM, authenticatie, admin-interface) van Django binnen de projecten van de klant benut en beheerd?",
-        "Is de klant van plan om de Django-applicaties te schalen (bijv. met microservices, cloud deployments) of te moderniseren (bijv. met Django REST Framework voor API's)?"
-      ]
-    },
-    {
-      "term": "Flask",
-      "followup_prompts": [
-        "Voor welke specifieke lichtgewicht webapplicaties, API's of MVP-projecten heeft de klant Flask gekozen? Welke voordelen zien zij hierin ten opzichte van andere Python-frameworks?",
-        "Hoe worden de Flask-applicaties van de klant gehost en geschaald in productie-omgevingen? Wordt er gebruik gemaakt van WSGI-servers (bijv. Gunicorn, uWSGI) en reverse proxies (bijv. Nginx)?",
-        "Overweegt de klant om complexere projecten met Flask te bouwen, of blijft het gebruik beperkt tot de huidige scopes? Zijn er specifieke uitdagingen met Flask op grotere schaal?"
+        "Welke strategische bedrijfsdoelen van de klant moeten worden vertaald naar een enterprise architectuur, en welke knelpunten liggen hieraan ten grondslag?",
+        "Hoe wordt het enterprise architectuurproces binnen de klantorganisatie ingebed (governance, tooling), en hoe wordt de afstemming met business- en IT-stakeholders geborgd?",
+        "Welke complexe transformatieprogramma's of integratievraagstukken heeft de klant recent aangepakt, en welke rol heeft Enterprise Architectuur hierin gespeeld?"
       ]
     },
     {
       "term": "Kubernetes",
       "followup_prompts": [
-        "Welke applicaties of services van de klant zijn reeds gedesigned, gedesployed en worden beheerd met Kubernetes? Welke managed Kubernetes services (bijv. AKS, EKS, GKE) worden gebruikt?",
-        "Welke uitdagingen ervaart de klant met de implementatie, beheer en opschaling van Kubernetes-clusters (bijv. kostenbeheer, beveiliging, monitoring, complexe deployments)?",
-        "Wat is de strategische roadmap van de klant met betrekking tot Kubernetes adoptie? Zijn er plannen om meer workloads naar Kubernetes te migreren, of om het platform breder in te zetten voor CI/CD?"
+        "Voor welke specifieke applicaties of microservices gebruikt de klant Kubernetes, en welke cloudprovider (bijv. AKS, EKS, GKE) wordt hiervoor benut?",
+        "Hoe wordt de deployment, scaling en monitoring van applicaties in Kubernetes geregeld bij de klant, en welke tooling (bijv. Helm, Prometheus, Grafana) wordt hiervoor ingezet?",
+        "Welke uitdagingen ervaart de klant bij het beheren van complexe Kubernetes-clusters, het implementeren van security best practices of het optimaliseren van kosten binnen Kubernetes?"
       ]
     },
     {
-      "term": "Jenkins",
+      "term": "Container Orchestration",
       "followup_prompts": [
-        "Voor welke CI/CD processen binnen de organisatie van de klant is Jenkins de primaire tool? Welke soort pipelines (bijv. Freestyle, Pipeline as Code) worden gebruikt?",
-        "Hoe wordt de schaalbaarheid, beveiliging en het onderhoud van de Jenkins-infrastructuur bij de klant gewaarborgd? Wordt er gebruik gemaakt van master-agent architectuur, Kubernetes of cloud-natives oplossingen?",
-        "Zijn er plannen om Jenkins te vervangen door of te integreren met andere CI/CD tools (bijv. GitLab CI, Azure DevOps, GitHub Actions)? Welke redenen liggen hieraan ten grondslag?"
+        "Welke container orchestratieplatforms (bijv. Kubernetes, OpenShift, Docker Swarm) gebruikt de klant, en voor welke specifieke workloadtypen?",
+        "Hoe is de implementatie van CI/CD-pipelines en geautomatiseerde deployments georganiseerd voor hun gecontaineriseerde applicaties, en welke tools worden hiervoor gebruikt?",
+        "Welke uitdagingen ervaart de klant bij het beheren van de complexiteit, security en kosten van hun container orchestratie-omgevingen?"
       ]
     },
     {
-      "term": "Git",
+      "term": "DevOps Engineer",
       "followup_prompts": [
-        "Welke workflows en best practices voor versiebeheer worden gehanteerd bij de klant met Git (bijv. Gitflow, GitHub Flow, Trunk Based Development)?",
-        "Hoe wordt training en ondersteuning voor Git geboden aan ontwikkelaars binnen de organisatie van de klant? Zijn er specifieke uitdagingen met betrekking tot samenwerking of merge conflicten?",
-        "Welke tools worden gebruikt voor het visualiseren van Git-repositories en het beheren van code reviews (bijv. GitHub, GitLab, Bitbucket)?"
+        "Welke primaire DevOps-toolchain en -praktijken worden door de klant gehanteerd (bijv. CI/CD, IaC, monitoring), en welke knelpunten zijn er in de huidige workflows?",
+        "Hoe is de samenwerking georganiseerd tussen development, operations en security teams (DevSecOps) bij de klant, en welke verbeterpunten zijn hierin te realiseren?",
+        "Welke uitdagingen ervaart de klant bij het verder automatiseren van processen, het implementeren van nieuwe tooling of het bevorderen van een DevOps-cultuur binnen de organisatie?"
       ]
     },
     {
-      "term": "GitHub",
+      "term": "Cloud Native Architect",
       "followup_prompts": [
-        "Voor welke specifieke code repositories, projectmanagement of CI/CD-activiteiten maakt de klant gebruik van GitHub? Wordt er gebruik gemaakt van GitHub Enterprise?",
-        "Hoe worden de samenwerking, code reviews en projectplanning binnen GitHub beheerd door de klant? Worden functies zoals Issues, Pull Requests en Projects actief benut?",
-        "Zijn er plannen om de adoptie van GitHub Actions of GitHub Advanced Security uit te breiden binnen de organisatie van de klant? Welke voordelen verwacht men hiervan?"
+        "Welke strategische cloud-native initiatieven of applicatiemoderniseringstrajecten zijn momenteel gaande bij de klant, en welke architecturale knelpunten zijn hierbij geïdentificeerd?",
+        "Hoe waarborgt de Cloud Native Architect de alignment tussen de cloud-native strategie en de businessdoelen van de klant, en welke processen zijn hiervoor ingericht?",
+        "Welke complexe architecturale uitdagingen op het gebied van microservices, serverless architectuur, service mesh of event-driven architecturen heeft de klant recent aangepakt?"
       ]
     },
     {
-      "term": "GitLab",
+      "term": "Containerization",
       "followup_prompts": [
-        "Voor welke specifieke CI/CD pipelines, code repositories, of DevOps-functionaliteiten maakt de klant gebruik van GitLab? Wordt het self-hosted of als SaaS afgenomen?",
-        "Hoe worden de geïntegreerde functies van GitLab (bijv. Issue Tracking, Container Registry, Security Scanning) door de klant benut om de volledige DevOps-lifecycle te ondersteunen?",
-        "Zijn er plannen om de GitLab-implementatie van de klant te schalen, te upgraden naar een hogere tier, of om specifieke GitLab-functies verder te benutten (bijv. Auto DevOps)?"
+        "Welke specifieke applicaties of workloads heeft de klant gecontaineriseerd, en welke voordelen (bijv. portability, efficiency) zien zij hiervan?",
+        "Hoe is het proces voor het bouwen, beheren en beveiligen van container-images (bijv. Docker, Cri-o) georganiseerd bij de klant, en welke tooling wordt hiervoor ingezet?",
+        "Welke uitdagingen ervaart de klant bij het schalen van gecontaineriseerde applicaties, het implementeren van microservices-patronen of het beheren van de container-runtime-omgeving?"
       ]
     },
     {
-      "term": "CI/CD Pipes",
+      "term": "Cloud Engineer",
       "followup_prompts": [
-        "Welke CI/CD platforms (bijv. Azure DevOps Pipelines, Jenkins, GitLab CI, GitHub Actions) worden momenteel door de klant ingezet voor de automatisering van hun software delivery processen?",
-        "Hoe is de automatisering van de build, test, deployment en monitoring fasen in de CI/CD pipelines van de klant georganiseerd? Zijn er knelpunten of handmatige stappen die geautomatiseerd moeten worden?",
-        "Welke Key Performance Indicators (KPI's) gebruikt de klant om de effectiviteit van hun CI/CD pipelines te meten (bijv. deployment frequentie, lead time for changes, change failure rate)?"
+        "Welke cloudplatformen (bijv. AWS, Azure, GCP) gebruikt de klant momenteel, en welke specifieke diensten binnen deze platformen zijn cruciaal voor hun infrastructuur?",
+        "Hoe beheert en automatiseert de klant hun cloud-infrastructuur (bijv. Infrastructure as Code), en welke tooling wordt hiervoor ingezet?",
+        "Welke uitdagingen ervaart de klant bij het optimaliseren van kosten, security en compliance binnen hun cloud-omgeving, en welke oplossingen overwegen zij hiervoor?"
       ]
     },
     {
-      "term": "Lakehouse",
+      "term": "DevOps Specialist",
       "followup_prompts": [
-        "Welke initiatieven voor een 'Lakehouse'-architectuur zijn er bij de klant lopende of worden deze overwogen? Welke drijfveren (bijv. unified data analytics, machine learning) liggen hieraan ten grondslag?",
-        "Welke technologieën (bijv. Delta Lake, Apache Iceberg, Snowflake, Azure Databricks, AWS Lake Formation) worden door de klant onderzocht of ingezet voor de implementatie van een Lakehouse?",
-        "Wat zijn de belangrijkste uitdagingen of onzekerheden voor de klant met betrekking tot het bouwen en beheren van een Lakehouse (bijv. data governance, kostenbeheer, tooling-integratie)?"
+        "Welke primaire DevOps-toolchain en -praktijken worden door de klant gehanteerd (bijv. CI/CD, IaC, monitoring), en welke knelpunten zijn er in de huidige workflows?",
+        "Hoe is de samenwerking georganiseerd tussen development, operations en security teams (DevSecOps) bij de klant, en welke verbeterpunten zijn hierin te realiseren?",
+        "Welke uitdagingen ervaart de klant bij het verder automatiseren van processen, het implementeren van nieuwe tooling of het bevorderen van een DevOps-cultuur binnen de organisatie?"
       ]
     },
     {
-      "term": "Alteryx",
+      "term": "Chef",
       "followup_prompts": [
-        "Voor welke specifieke data-integratie, data preparation of geavanceerde analyse-uitdagingen gebruikt de klant het platform van Alteryx?",
-        "Hoe is de adoptie en de expertise van Alteryx binnen de organisatie van de klant? Wordt het gebruikt door citizen data scientists, business analysts of IT-professionals?",
-        "Zijn er plannen om het gebruik van Alteryx uit te breiden naar nieuwe domeinen of om het te integreren met andere data-platforms (bijv. data warehouses, cloud data lakes)? Zijn er licentieoverwegingen hierbij?"
+        "Voor welke specifieke configuratiemanagement-uitdagingen gebruikt de klant Chef, en welke Chef-componenten (bijv. Cookbooks, Recipes, Supermarket) zijn hierin leidend?",
+        "Hoe is de deployment, beheer en schaalbaarheid van Chef-automatisering bij de klant georganiseerd, en welke integraties met andere systemen zijn er?",
+        "Welke uitdagingen ervaart de klant bij het onderhouden van Chef-code, het beheren van de complexiteit van de configuratie of het migreren naar modernere configuratiemanagement-oplossingen (bijv. Infrastructure as Code)?"
       ]
     },
     {
-      "term": "TensorFlow",
+      "term": "Puppet",
       "followup_prompts": [
-        "Welke specifieke machine learning modellen of deep learning projecten worden door de klant ontwikkeld of geïmplementeerd met TensorFlow?",
-        "Hoe is de infrastructuur voor het trainen en deployen van TensorFlow-modellen bij de klant georganiseerd (bijv. on-premise GPU's, cloud-gebaseerde ML-services, TensorFlow Extended)?",
-        "Zijn er uitdagingen met betrekking tot de schaalbaarheid, prestaties of versiebeheer van de TensorFlow-modellen van de klant? Welke oplossingen worden overwogen?"
+        "Voor welke specifieke configuratiemanagement-uitdagingen gebruikt de klant Puppet, en welke Puppet-componenten (bijv. Manifests, Modules, Forge) zijn hierin leidend?",
+        "Hoe is de deployment, beheer en schaalbaarheid van Puppet-automatisering bij de klant georganiseerd, en welke integraties met andere systemen zijn er?",
+        "Welke uitdagingen ervaart de klant bij het onderhouden van Puppet-code, het beheren van de complexiteit van de configuratie of het migreren naar modernere configuratiemanagement-oplossingen (bijv. Infrastructure as Code)?"
       ]
     },
     {
-      "term": "PyTorch",
+      "term": "Configuratiemanagement",
       "followup_prompts": [
-        "Voor welke specifieke onderzoeksprojecten, prototyping of deep learning-experimenten maakt de klant gebruik van PyTorch?",
-        "Hoe wordt het trainen en deployen van PyTorch-modellen bij de klant afgehandeld? Wordt er gebruik gemaakt van PyTorch Lightning, TorchServe of andere tools?",
-        "Waarom heeft de klant gekozen voor PyTorch boven andere machine learning frameworks (bijv. TensorFlow) voor hun specifieke use-cases? Wat zijn de belangrijkste drijfveren?"
+        "Welke tooling en processen zijn er bij de klant ingericht voor configuratiemanagement (bijv. Ansible, Puppet, Chef, SaltStack), en voor welke specifieke infrastructuren (on-prem, cloud)?",
+        "Hoe waarborgt de klant de consistentie, compliance en security van hun systeemconfiguraties, en welke strategie hebben zij voor het beheren van afwijkingen?",
+        "Welke uitdagingen ervaart de klant bij het automatiseren van configuratiemanagement op schaal, het integreren met CI/CD-pipelines of het beheren van complexe multi-omgevingen?"
+      ]
+    },
+    {
+      "term": "Project Management",
+      "followup_prompts": [
+        "Welke projectmanagement-methodologieën (bijv. Agile, Scrum, Kanban, Waterval) zijn leidend bij de klant, en welke effecten heeft dit op de projectresultaten?",
+        "Welke tooling (bijv. Jira, Azure DevOps, Asana, Monday.com) wordt gebruikt voor projectplanning, tracking en rapportage, en welke knelpunten ervaren projectmanagers hiermee?",
+        "Hoe is de communicatie en stakeholder management geregeld binnen de projecten van de klant, en welke uitdagingen zijn er bij het managen van verwachtingen en scope?"
+      ]
+    },
+    {
+      "term": "Data Engineering",
+      "followup_prompts": [
+        "Welke primaire data-pipelines en ETL/ELT processen bouwt en onderhoudt de Data Engineer bij de klant, en welke technologieën (bijv. Spark, Kafka, Airflow) worden daarvoor gebruikt?",
+        "Hoe waarborgt de klant de datakwaliteit, data governance en dataprivacy binnen hun data-architectuur, en welke processen zijn hiervoor ingericht?",
+        "Welke uitdagingen ervaart de klant bij het schalen van hun data-infrastructuren, het integreren van diverse databronnen, of het implementeren van real-time data-oplossingen?"
+      ]
+    },
+    {
+      "term": "Machine Learning",
+      "followup_prompts": [
+        "Welke concrete businessvraagstukken probeert de klant op te lossen met behulp van Machine Learning, en welke impact heeft dit tot nu toe op de organisatie?",
+        "Welke platforms of frameworks (bijv. TensorFlow, PyTorch, Azure ML, AWS SageMaker) gebruikt de klant voor de ontwikkeling en deployment van Machine Learning modellen?",
+        "Hoe waarborgt de klant de reproduceerbaarheid, verklaarbaarheid en bias van hun Machine Learning modellen, en welke MLOps-praktijken zijn hiervoor geïmplementeerd?"
+      ]
+    },
+    {
+      "term": "Business Intelligence Consultant",
+      "followup_prompts": [
+        "Welke strategische businessvragen probeert de klant te beantwoorden met behulp van Business Intelligence, en welke besluitvorming wordt hierdoor beïnvloed?",
+        "Welke BI-tools en datawarehouse-oplossingen (bijv. Power BI, Tableau, Qlik Sense, Snowflake) worden momenteel door de klant ingezet, en wat zijn de ambities voor de toekomst?",
+        "Hoe wordt de datageletterdheid binnen de klantorganisatie bevorderd, en welke uitdagingen ervaren zij bij het vertalen van inzichten naar actie door business users?"
+      ]
+    },
+    {
+      "term": "Data Visualization Specialist",
+      "followup_prompts": [
+        "Welke specifieke datavisualisaties of dashboards zijn cruciaal voor de besluitvorming bij de klant, en welke impact hebben deze op de business users?",
+        "Welke tooling (bijv. Tableau, Power BI, D3.js) gebruikt de klant voor datavisualisatie, en welke uitdagingen ervaren zij bij het creëren van effectieve en interactieve visualisaties?",
+        "Hoe wordt de bruikbaarheid, interpretatie en toegankelijkheid (accessibility) van datavisualisaties gewaarborgd binnen de klantorganisatie?"
+      ]
+    },
+    {
+      "term": "Big Data Analytics",
+      "followup_prompts": [
+        "Welke specifieke Big Data vraagstukken (bijv. real-time analyse, streaming data, large-scale data processing) probeert de klant op te lossen, en welke impact heeft dit op de business?",
+        "Welke Big Data platforms en technologieën (bijv. Spark, Hadoop, Kafka, Databricks) gebruikt de klant voor hun analyses, en welke uitdagingen ervaren zij hierbij?",
+        "Hoe waarborgt de klant de governance, security en compliance van hun Big Data omgeving, met name ten aanzien van privacy en dataretentie?"
+      ]
+    },
+    {
+      "term": "Big Data Processing",
+      "followup_prompts": [
+        "Welke primaire Big Data verwerkingsworkloads (bijv. batch processing, stream processing, interactieve queries) voert de klant uit, en welke voluma, variëteit en velocity karakteriseren deze data?",
+        "Welke Big Data verwerkingsframeworks en tools (bijv. Apache Spark, Apache Flink, Hadoop MapReduce) gebruikt de klant, en hoe is de schaalbaarheid en performance geregeld?",
+        "Welke uitdagingen ervaart de klant bij het managen van de complexiteit van Big Data pipelines, het garanderen van datakwaliteit en het integreren met andere systemen?"
+      ]
+    },
+    {
+      "term": "Python Libraries",
+      "followup_prompts": [
+        "Welke specifieke Python libraries (bijv. NumPy, SciPy, Matplotlib, Bokeh) zijn cruciaal voor de data-analyse, machine learning of web development projecten van de klant?",
+        "Hoe beheert de klant de afhankelijkheden en omgevingen van Python libraries, en welke tools (bijv. Conda, virtualenv, poetry) worden hiervoor ingezet?",
+        "Welke uitdagingen ervaart de klant bij het waarborgen van compatibiliteit, security en performance bij het gebruik van een breed scala aan Python libraries in productie?"
+      ]
+    },
+    {
+      "term": "Pandas",
+      "followup_prompts": [
+        "Voor welke specifieke data-manipulatie, -analyse en -opschoningstaken gebruikt de klant Pandas, en in welke fase van de data-pipeline wordt dit voornamelijk ingezet?",
+        "Hoe optimaliseert de klant de performance van complexe Pandas-bewerkingen op grote datasets, en welke best practices of alternatieven (bijv. Dask, Polars) overwegen zij?",
+        "Welke trainingen of kennisdelingsinitiatieven zijn er binnen de klantorganisatie om de effectiviteit van Pandas-gebruik te vergroten onder data professionals?"
       ]
     },
     {
       "term": "Scikit-learn",
       "followup_prompts": [
-        "Voor welke specifieke klassieke machine learning taken (bijv. classificatie, regressie, clustering) bij de klant wordt Scikit-learn ingezet?",
-        "Hoe worden de getrainde Scikit-learn-modellen van de klant in productie genomen en gemonitord? Worden er API's gebouwd of model registries gebruikt?",
-        "Is er een behoefte aan geavanceerdere machine learning technieken (bijv. deep learning, tijdreekanalyses) die verder gaan dan de functionaliteit van Scikit-learn, en worden er daarom andere frameworks overwogen?"
+        "Voor welke specifieke Machine Learning taken (bijv. classificatie, regressie, clustering) gebruikt de klant Scikit-learn, en welke algoritmes zijn hierin het meest gangbaar?",
+        "Hoe integreert de klant Scikit-learn modellen in hun bredere Machine Learning pipelines (bijv. feature engineering, deployment, monitoring) en welke tools worden hiervoor gebruikt?",
+        "Welke uitdagingen ervaart de klant bij het opschalen van Scikit-learn modellen naar productie of het vergelijken van Scikit-learn met Deep Learning frameworks?"
       ]
     },
     {
-      "term": "Azure ML",
+      "term": "TensorFlow",
       "followup_prompts": [
-        "Welke specifieke machine learning projecten of MLOps-processen bij de klant worden beheerd en uitgevoerd met Azure Machine Learning?",
-        "Hoe is de integratie van Azure ML met andere Azure-services (bijv. Azure Data Lake Storage, Azure Databricks, Azure DevOps) geregeld voor de machine learning lifecycle van de klant?",
-        "Welke functionaliteiten van Azure ML (bijv. Automated ML, ML pipelines, Model Registry, Managed Endpoints) zijn het meest relevant voor de huidige of toekomstige behoeften van de klant?"
+        "Voor welke specifieke Deep Learning projecten (bijv. computer vision, natural language processing, aanbevelingssystemen) gebruikt de klant TensorFlow, en welke versies zijn hierbij in gebruik?",
+        "Hoe is de training, fine-tuning en deployment van TensorFlow modellen geregeld bij de klant (bijv. cloud TPUs/GPUs, TensorFlow Extended), en welke uitdagingen ervaren zij hierbij?",
+        "Welke strategie heeft de klant voor het beheren van de complexiteit van TensorFlow-codebases, het waarborgen van reproduceerbaarheid en het optimaliseren van performance op schaal?"
       ]
     },
     {
-      "term": "AWS SageMaker",
+      "term": "PyTorch",
       "followup_prompts": [
-        "Voor welke specifieke machine learning use-cases of data science workflows maakt de klant gebruik van AWS SageMaker?",
-        "Hoe wordt de end-to-end machine learning lifecycle (data preparatie, model training, deployment, monitoring) beheerd binnen SageMaker voor de klant?",
-        "Welke specifieke SageMaker-componenten (bijv. SageMaker Studio, Processing Jobs, Training Jobs, Endpoints, SageMaker Pipelines) zijn het meest gebruikt of strategisch voor de klant?"
+        "Voor welke specifieke Deep Learning projecten (bijv. onderzoek, prototyping, specifieke architecturen) gebruikt de klant PyTorch, en welke voordelen zien zij ten opzichte van andere frameworks?",
+        "Hoe is de training, fine-tuning en deployment van PyTorch modellen geregeld bij de klant (bijv. cloud TPUs/GPUs, PyTorch Lightning), en welke uitdagingen ervaren zij hierbij?",
+        "Welke strategie heeft de klant voor het beheren van de complexiteit van PyTorch-codebases, het waarborgen van reproduceerbaarheid en het optimaliseren van performance op schaal?"
       ]
     },
     {
-      "term": "Google AI Platform",
+      "term": "Machine Learning/Data Science",
       "followup_prompts": [
-        "Voor welke specifieke machine learning projecten binnen de Google Cloud-omgeving maakt de klant gebruik van Google AI Platform (of Vertex AI)?",
-        "Hoe wordt de experimenteer-, train- en deployfase van machine learning-modellen beheerd via Google AI Platform voor de klant?",
-        "Welke specifieke functionaliteiten van Google AI Platform/Vertex AI (bijv. Workbench, Training, Prediction, Pipelines) zijn essentieel voor de huidige of toekomstige machine learning-initiatieven van de klant?"
+        "Welke concrete businessvraagstukken probeert de klant op te lossen met behulp van Machine Learning en Data Science, en welke impact heeft dit tot nu toe op de organisatie?",
+        "Welke platforms of frameworks (bijv. TensorFlow, PyTorch, Azure ML, AWS SageMaker) gebruikt de klant voor de ontwikkeling en deployment van Machine Learning en Data Science modellen?",
+        "Hoe waarborgt de klant de reproduceerbaarheid, verklaarbaarheid en bias van hun Machine Learning en Data Science modellen, en welke MLOps-praktijken zijn hiervoor geïmplementeerd?"
       ]
     },
     {
-      "term": "MLOps tools & practices",
+      "term": "Cyber Security",
       "followup_prompts": [
-        "Welke specifieke MLOps-uitdagingen (bijv. modelversiebeheer, modelmonitoring, geautomatiseerde deployment van modellen) ervaart de klant momenteel?",
-        "Welke tooling en processen worden door de klant ingezet om de MLOps-lifecycle te ondersteunen (bijv. MLflow, Kubeflow, DVC, CI/CD platforms)?",
-        "Wat is de volwassenheid van MLOps binnen de organisatie van de klant? Zijn er plannen om een dedicated MLOps-team op te zetten of om de bestaande processen te professionaliseren?"
+        "Welke specifieke cyber security bedreigingen of risico's zijn momenteel prioritair voor de klant, en hoe wordt de effectiviteit van de huidige security-maatregelen gemeten?",
+        "Welke security frameworks en standaarden (bijv. ISO 27001, NIST, AVG) zijn van toepassing op de klant, en hoe wordt compliance gewaarborgd?",
+        "Hoe is de incident response procedure en het threat intelligence proces ingericht bij de klant, en welke uitdagingen ervaren zij bij het detecteren en mitigeren van aanvallen?"
       ]
     },
     {
-      "term": "ServiceNow",
+      "term": "Microsoft Azure Security Center",
       "followup_prompts": [
-        "Voor welke specifieke ITSM (IT Service Management), ITOM (IT Operations Management) of andere workflow automation behoeften gebruikt de klant ServiceNow?",
-        "Hoe is de implementatie en configuratie van ServiceNow bij de klant gestructureerd? Worden er specifieke modules (bijv. CSM, HRSD, SecOps) gebruikt en hoe is de integratie met andere systemen?",
-        "Wat is de strategische roadmap van de klant met ServiceNow? Zijn er plannen voor verdere uitbreiding van functionaliteiten, migratie naar nieuwere versies of optimalisatie van bestaande processen?"
+        "Hoe gebruikt de klant Azure Security Center (nu Defender for Cloud) om hun Azure-workloads en -resources te beveiligen, en welke functionaliteiten zijn hierin het meest waardevol?",
+        "Welke specifieke beveiligingsaanbevelingen of alerts uit Azure Security Center zijn leidend voor de klant, en hoe worden deze opgevolgd en geprioriteerd?",
+        "Welke integraties heeft de klant met Azure Security Center naar andere security tools (bijv. SIEM, SOAR) en hoe draagt dit bij aan hun algehele security posture?"
       ]
     },
     {
-      "term": "SAP",
+      "term": "Defender for Cloud",
       "followup_prompts": [
-        "Welke specifieke SAP-modules of -oplossingen (bijv. S/4HANA, ECC, SuccessFactors, Ariba) zijn van cruciaal belang voor de bedrijfsvoering van de klant?",
-        "Hoe is de implementatie en het beheer van de SAP-systemen bij de klant georganiseerd? Zijn er plannen voor migratie naar S/4HANA, cloud-adoptie of integratie met andere enterprise-systemen?",
-        "Welke uitdagingen ervaart de klant met betrekking tot de performance, onderhoudbaarheid of de Total Cost of Ownership (TCO) van hun SAP-landschap?"
+        "Hoe gebruikt de klant Defender for Cloud om hun multi-cloud en hybride workloads te beveiligen, en welke functionaliteiten (bijv. CSPM, CWP, KSPM) zijn hierin het meest waardevol?",
+        "Welke specifieke beveiligingsaanbevelingen of alerts uit Defender for Cloud zijn leidend voor de klant, en hoe worden deze opgevolgd en geprioriteerd?",
+        "Welke integraties heeft de klant met Defender for Cloud naar andere security tools (bijv. SIEM, SOAR) en hoe draagt dit bij aan hun algehele security posture?"
+      ]
+    },
+    {
+      "term": "SIEM",
+      "followup_prompts": [
+        "Welke SIEM-oplossing (bijv. Splunk, Microsoft Sentinel, IBM QRadar) gebruikt de klant voor centralized logging en security event management, en welke data bronnen worden hiermee geïntegreerd?",
+        "Hoe is de alert-generatie, incident response en threat hunting georganiseerd binnen de SIEM-omgeving van de klant, en welke uitdagingen ervaren zij hierbij?",
+        "Welke concrete security use cases of compliance-vereisten drijven de implementatie en optimalisatie van de SIEM-oplossing bij de klant?"
+      ]
+    },
+    {
+      "term": "Cyber Security Analyst",
+      "followup_prompts": [
+        "Welke specifieke security-incidenten of bedreigingen analyseren de Cyber Security Analysts bij de klant het meest frequent, en welke impact hebben deze op de organisatie?",
+        "Welke tooling en platforms (bijv. SIEM, EDR, Vulnerability Scanners) gebruikt de Cyber Security Analyst voor detectie, analyse en response, en welke knelpunten ervaren zij hiermee?",
+        "Hoe is de samenwerking georganiseerd tussen Cyber Security Analysts, SOC teams en andere IT-teams binnen de klantorganisatie, en welke pijnpunten zijn hierin te verbeteren?"
+      ]
+    },
+    {
+      "term": "SentinelOne",
+      "followup_prompts": [
+        "Hoe gebruikt de klant SentinelOne voor Endpoint Detection & Response (EDR) en Preventie, en welke functionaliteiten (bijv. Active EDR, Storyline) zijn hierin het meest waardevol?",
+        "Welke specifieke security-incidenten of bedreigingen detecteert SentinelOne frequent bij de klant, en hoe worden deze alerts opgevolgd en geautomatiseerd?",
+        "Welke integraties heeft de klant met SentinelOne naar andere security tools (bijv. SIEM, SOC) en hoe draagt dit bij aan hun algehele security posture?"
+      ]
+    },
+    {
+      "term": "CrowdStrike",
+      "followup_prompts": [
+        "Hoe gebruikt de klant CrowdStrike voor Endpoint Detection & Response (EDR), Threat Intelligence en Cloud Security, en welke modules (bijv. Falcon Insight, Falcon Prevent) zijn hierin het meest waardevol?",
+        "Welke specifieke security-incidenten of bedreigingen detecteert CrowdStrike frequent bij de klant, en hoe worden deze alerts opgevolgd en geautomatiseerd?",
+        "Welke integraties heeft de klant met CrowdStrike naar andere security tools (bijv. SIEM, SOC) en hoe draagt dit bij aan hun algehele security posture?"
+      ]
+    },
+    {
+      "term": "Endpoint Detection & Response",
+      "followup_prompts": [
+        "Welke specifieke EDR-oplossing (bijv. SentinelOne, CrowdStrike, Microsoft Defender for Endpoint) gebruikt de klant, en welke functionaliteiten zijn cruciaal voor hun beveiligingsstrategie?",
+        "Hoe is de detectie, analyse en respons op security-incidenten op endpoints georganiseerd bij de klant, en welke processen zijn hiervoor ingericht?",
+        "Welke uitdagingen ervaart de klant bij het bewaken van de gezondheid en beveiliging van hun endpoints, het omgaan met false positives of het integreren van EDR met andere security tools?"
+      ]
+    },
+    {
+      "term": "Git",
+      "followup_prompts": [
+        "Welke specifieke Git workflows (bijv. Gitflow, GitHub Flow, GitLab Flow) zijn leidend bij de klant, en welke voordelen dan wel nadelen ervaren zij hiermee?",
+        "Hoe waarborgt de klant de integriteit en veiligheid van hun Git repositories, en welke regels of tools (bijv. pull requests, code reviews) worden hiervoor gebruikt?",
+        "Welke trainingen of best practices zijn er binnen de klantorganisatie om de effectiviteit van Git-gebruik te vergroten onder developers?"
+      ]
+    },
+    {
+      "term": "GitLab",
+      "followup_prompts": [
+        "Welke specifieke GitLab functionaliteiten (bijv. CI/CD, Issues, Registries, Security Scans) gebruikt de klant, en welke impact heeft dit op hun ontwikkelproces?",
+        "Hoe waarborgt de klant de codekwaliteit en security binnen hun GitLab repositories, en welke tools of best practices gebruiken zij hiervoor?",
+        "Welke mate van integratie heeft GitLab met andere development tools (bijv. project management, monitoring) binnen de organisatie van de klant, en wat zijn hierin de pijnpunten of ambities?"
+      ]
+    },
+    {
+      "term": "Version Control",
+      "followup_prompts": [
+        "Welke specifieke Version Control Systemen (bijv. Git, SVN) zijn leidend bij de klant, en voor welke type bestanden (code, documenten, assets) worden deze gebruikt?",
+        "Hoe waarborgt de klant de integriteit en reproduceerbaarheid van hun wijzigingen, en welke processen (bijv. branching, merging, code review) zijn hiervoor ingericht?",
+        "Welke uitdagingen ervaart de klant bij het beheren van grote codebases, het omgaan met complexe merges of het implementeren van geautomatiseerde version control checks?"
+      ]
+    },
+    {
+      "term": "Jira",
+      "followup_prompts": [
+        "Welke specifieke Jira Workflows en issue types gebruikt de klant voor hun projectmanagement en development processes, en welke aanpassingen zijn hierin gedaan?",
+        "Hoe is Jira geïntegreerd met andere development tools (bijv. Git, CI/CD, Confluence) binnen de klantorganisatie, en welke voordelen dan wel pijnpunten ervaren zij hiervan?",
+        "Welke uitdagingen ervaart de klant bij het optimaliseren van Jira Boards, het genereren van rapportages of het beheren van de complexiteit van de Jira-configuratie?"
+      ]
+    },
+    {
+      "term": "Confluence",
+      "followup_prompts": [
+        "Voor welke specifieke kennisbeheer, documentatie en samenwerkingsbehoeften gebruikt de klant Confluence, en welke pagina's of spaces zijn hierin het meest cruciaal?",
+        "Hoe is Confluence geïntegreerd met Jira en andere tools binnen de klantorganisatie, en welke voordelen dan wel pijnpunten ervaren zij door deze integratie?",
+        "Welke uitdagingen ervaart de klant bij het beheren van de content in Confluence, het waarborgen van de actualiteit van documentatie of het bevorderen van een actieve kenniscultuur?"
+      ]
+    },
+    {
+      "term": "Agile Coach",
+      "followup_prompts": [
+        "Welke specifieke Agile vraagstukken (bijv. schaling van Agile, implementatie van nieuwe frameworks, team performance) zijn momenteel prioritair voor de klant, en welke impact heeft dit op hun teams?",
+        "Hoe wordt de volwassenheid van Agile implementaties gemeten bij de klant, en welke metrics of feedback-mechanismen worden hiervoor gebruikt?",
+        "Welke uitdagingen ervaart de klant bij het implementeren van een duurzame Agile transformatie, het cultureel verankeren van Agile principes of het omgaan met weerstand tegen verandering?"
+      ]
+    },
+    {
+      "term": "Selenium",
+      "followup_prompts": [
+        "Voor welke specifieke geautomatiseerde testgevallen (bijv. regressie, functioneel, UI) gebruikt de klant Selenium, en welke browsers en omgevingen worden hierbij ondersteund?",
+        "Hoe is de testautomatisering met Selenium geïntegreerd in de CI/CD-pipelines van de klant, en hoe wordt de snelheid en stabiliteit van de tests gewaarborgd?",
+        "Welke uitdagingen ervaart de klant bij het onderhouden van Selenium testscripts, het omgaan met dynamische UI-elementen of het opschalen van testuitvoeringen?"
+      ]
+    },
+    {
+      "term": "Automated Testing",
+      "followup_prompts": [
+        "Welke specifieke soorten geautomatiseerde tests (bijv. unit, integratie, end-to-end, performance) zijn cruciaal voor de klant, en welke coverage streven zij na?",
+        "Welke tooling en frameworks (bijv. Cypress, Playwright, Jest, xUnit) worden door de klant gebruikt voor geautomatiseerd testen, en welke knelpunten ervaren zij hiermee?",
+        "Hoe is de integratie van geautomatiseerde tests in de CI/CD-pipelines geregeld bij de klant, en hoe wordt de feedback loop tussen testen en ontwikkelen gewaarborgd?"
+      ]
+    },
+    {
+      "term": "QA Engineer",
+      "followup_prompts": [
+        "Welke specifieke QA-processen en -activiteiten (bijv. testplanning, testuitvoering, defect management) zijn leidend bij de klant, en welke impact heeft dit op de productkwaliteit?",
+        "Welke tooling (bijv. Jira, TestRail, Azure Test Plans) wordt door de QA Engineers gebruikt, en welke uitdagingen ervaren zij bij het beheer van testcases en defecten?",
+        "Hoe is de samenwerking georganiseerd tussen QA Engineers, developers en business stakeholders binnen de klantorganisatie, en welke pijnpunten zijn hierin te verbeteren?"
+      ]
+    },
+    {
+      "term": "Enterprise Software",
+      "followup_prompts": [
+        "Welke bedrijfskritische enterprise software-oplossingen (bijv. ERP, CRM, SCM) zijn momenteel in gebruik bij de klant, en welke impact hebben deze op de bedrijfsvoering?",
+        "Welke strategie heeft de klant voor het moderniseren, migreren of vervangen van enterprise software, en wat zijn de drijfveren hiervoor (bijv. cloud adoptie, technische schuld)?",
+        "Welke uitdagingen ervaart de klant bij de integratie, implementatie en het beheer van complexe enterprise software-oplossingen, met name op het gebied van aanpassing en training?"
+      ]
+    },
+    {
+      "term": "ERP",
+      "followup_prompts": [
+        "Welke specifieke ERP-systemen (bijv. SAP, Oracle, Microsoft Dynamics) zijn in gebruik bij de klant, en voor welke kernprocessen (bijv. financiën, logistiek, productie) worden deze gebruikt?",
+        "Welke strategie heeft de klant voor de upgrade, modernisering of migratie van hun ERP-systeem, en wat zijn de belangrijkste business drivers hiervoor?",
+        "Welke uitdagingen ervaart de klant bij de implementatie van nieuwe ERP-functionaliteiten, het beheren van customisaties of het integreren van ERP met andere bedrijfssystemen?"
+      ]
+    },
+    {
+      "term": "CRM",
+      "followup_prompts": [
+        "Welke specifieke CRM-systemen (bijv. Salesforce, Microsoft Dynamics 365, HubSpot) zijn in gebruik bij de klant, en voor welke klantgerichte processen (bijv. sales, service, marketing) worden deze gebruikt?",
+        "Welke strategie heeft de klant voor de optimalisatie, uitbreiding of vervanging van hun CRM-systeem, en wat zijn de belangrijkste business drivers hiervoor?",
+        "Welke uitdagingen ervaart de klant bij de implementatie van nieuwe CRM-functionaliteiten, het beheren van datakwaliteit of het integreren van CRM met andere bedrijfssystemen?"
+      ]
+    },
+    {
+      "term": "SAP S/4HANA",
+      "followup_prompts": [
+        "Welke specifieke modules en functionaliteiten van SAP S/4HANA zijn momenteel in gebruik bij de klant, en welke impact heeft dit op hun bedrijfsprocessen?",
+        "Welke uitdagingen ervaart de klant bij de implementatie of migratie naar SAP S/4HANA (bijv. Greenfield, Brownfield, Selective Data Transition), en welke lessons learned zijn er?",
+        "Hoe is de integratie van SAP S/4HANA met andere enterprise-systemen en cloud-applicaties geregeld bij de klant, en welke technologieën (bijv. SAP CPI, APIs) worden hiervoor gebruikt?"
+      ]
+    },
+    {
+      "term": "SAP Consultant",
+      "followup_prompts": [
+        "Welke specifieke SAP-modules of -oplossingen (bijv. S/4HANA, Fiori, BW/4HANA, Ariba) zijn leidend in projecten bij de klant, en welke businessvraagstukken worden hiermee aangepakt?",
+        "Hoe is het implementatie-, upgrade- en supportproces voor SAP-systemen georganiseerd bij de klant, en welke knelpunten ervaren zij hierbij?",
+        "Welke kennis en ervaring verwacht de klant van SAP Consultants op het gebied van cloud-integratie, data-migratie en/of Agile SAP-implementaties?"
+      ]
+    },
+    {
+      "term": "Dynamics Consultant",
+      "followup_prompts": [
+        "Welke specifieke Microsoft Dynamics 365 applicaties (bijv. Sales, Finance, Supply Chain Management) zijn leidend in projecten bij de klant, en welke businessvraagstukken worden hiermee aangepakt?",
+        "Hoe is het implementatie-, upgrade- en supportproces voor Dynamics 365-systemen georganiseerd bij de klant, en welke knelpunten ervaren zij hierbij?",
+        "Welke kennis en ervaring verwacht de klant van Dynamics Consultants op het gebied van Power Platform integratie, data-migratie en/of Agile Dynamics 365-implementaties?"
       ]
     },
     {
       "term": "Salesforce",
       "followup_prompts": [
-        "Voor welke specifieke Customer Relationship Management (CRM), sales, service of marketing automation behoeften gebruikt de klant Salesforce?",
-        "Hoe is de configuratie en aanpassing van Salesforce bij de klant gestructureerd (bijv. standaard functionaliteit, custom development met Apex, Visualforce, Lightning Web Components)?",
-        "Wat is de strategische roadmap van de klant met Salesforce? Zijn er plannen voor verdere uitbreiding van functionaliteiten (bijv. Marketing Cloud, Experience Cloud), integratie met andere systemen of optimalisatie van de gebruikersadoptie?"
+        "Welke specifieke Salesforce Clouds (bijv. Sales Cloud, Service Cloud, Marketing Cloud, Experience Cloud) zijn in gebruik bij de klant, en welke bedrijfsbehoeften worden hiermee ingevuld?",
+        "Welke strategie heeft de klant voor de verdere adoptie, aanpassing en uitbreiding van hun Salesforce-omgeving, en wat zijn de belangrijkste business drivers hiervoor?",
+        "Welke uitdagingen ervaart de klant bij de integratie van Salesforce met andere bedrijfssystemen (bijv. ERP, marketing automation), het beheren van customisaties of het waarborgen van datakwaliteit?"
       ]
     },
     {
-      "term": "Robotic Process Automation (RPA) tools",
+      "term": "Salesforce Consultant",
       "followup_prompts": [
-        "Welke specifieke bedrijfsprocessen of taken heeft de klant geïdentificeerd als geschikt voor automatisering met RPA? Welke RPA-tools worden hiervoor ingezet (bijv. UiPath, Automation Anywhere, Blue Prism)?",
-        "Hoe wordt de governance, beheer en opschaling van RPA-robots bij de klant georganiseerd? Zijn er uitdagingen met betrekking tot het onderhoud van de bots of de integratie met bestaande systemen?",
-        "Wat is de strategische visie van de klant op RPA? Wordt het gezien als een ad-hoc oplossing of als een integraal onderdeel van hun digitale transformatie strategie?"
-      ]
-    },
-    {
-      "term": "UiPath",
-      "followup_prompts": [
-        "Voor welke specifieke procesautomatisering use-cases heeft de klant gekozen voor UiPath? Welke onderdelen van het UiPath-platform (bijv. Studio, Orchestrator, Robots) worden gebruikt?",
-        "Hoe is de implementatie en het beheer van UiPath-robots bij de klant georganiseerd? Wordt er gewerkt met een Center of Excellence (CoE) voor RPA?",
-        "Zijn er plannen om de adoptie van UiPath uit te breiden naar nieuwe afdelingen of complexere processen, of om gebruik te maken van geavanceerde AI-functionaliteiten (bijv. Document Understanding, AI Center)?"
-      ]
-    },
-    {
-      "term": "Automation Anywhere",
-      "followup_prompts": [
-        "Voor welke specifieke repetitieve taken of administratieve processen heeft de klant Automation Anywhere geïmplementeerd?",
-        "Hoe wordt de ontwikkeling, deployment en monitoring van bots in Automation Anywhere bij de klant afgehandeld? Wordt gebruik gemaakt van de Control Room en Bot Creators?",
-        "Wat is de ervaring van de klant met Automation Anywhere met betrekking tot schaalbaarheid, beheerbaarheid en de functionaliteiten voor Intelligent Automation (bijv. IQ Bot, Bot Insight)?"
+        "Welke specifieke Salesforce Clouds of functionaliteiten (bijv. Sales Cloud implementatie, Service Cloud optimalisatie, Apex Development) zijn leidend in projecten bij de klant, en welke businessvraagstukken worden hiermee aangepakt?",
+        "Hoe is het adoptie-, implementatie- en supportproces voor Salesforce-oplossingen georganiseerd bij de klant, en welke knelpunten ervaren zij hierbij?",
+        "Welke kennis en ervaring verwacht de klant van Salesforce Consultants op het gebied van datamigratie, integraties met andere systemen en/of compliance-vereisten binnen Salesforce?"
       ]
     }
   ]
