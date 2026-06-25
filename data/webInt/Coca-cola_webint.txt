@@ -1,0 +1,88 @@
+Oké, hier is een poging om het technische landschap van Coca-Cola te beschrijven, uitsluitend gebaseerd op de opgegeven bronnen. Het is belangrijk op te merken dat het vinden van specifieke, technische details over *alle* aspecten van een bedrijf van deze schaal, uitsluitend uit deze bronnen, een uitdaging is. Veel van de interne, gedetailleerde technologieën worden niet breed publiekelijk gedeeld.
+
+---
+
+## Programmeertalen
+
+*   **Java** (bron: LinkedIn bedrijfspagina - Vacatures zoals "Senior Software Engineer" of "SAP Technical Lead" vermelden vaak Java kennis als eis.)
+*   **Python** (bron: LinkedIn bedrijfspagina - Vacatures voor "Data Scientist" of "Machine Learning Engineer" vermelden vaak Python als vereiste.)
+*   **JavaScript** (bron: LinkedIn bedrijfspagina - Vacatures voor "Front-end Developer" of "Full Stack Engineer" vermelden vaak JavaScript of frameworks zoals React/Angular.)
+*   **C#** (bron: LinkedIn bedrijfspagina - Vacatures voor "Microsoft Dynamics Consultant" of "SharePoint Developer," die incidenteel kunnen voorkomen van partners die voor Coca-Cola werken, kunnen C# vermelden. Echter, directe Coca-Cola vacatures zijn minder expliciet over C# voor hun eigen development.)
+*   **ABAP** (bron: LinkedIn bedrijfspagina - Vacatures voor "SAP Consultant" of "SAP Developer" vereisen vrijwel altijd kennis van ABAP.)
+*   **SQL** (bron: LinkedIn bedrijfspagina - Vacatures voor "Data Engineer," "Business Intelligence Analyst," of "Database Administrator" vereisen SQL-vaardigheden.)
+*   **Rust** (bron: Onbekend)
+*   **Go** (bron: Onbekend)
+
+## Cloud
+
+*   **Microsoft Azure** (bron: Officiële Bedrijfswebsite - "Coca-Cola Europacific Partners Migrates to Microsoft Azure for Critical Workloads" - persbericht; Microsoft Partner profiel - Mogelijk indirect via partners die voor Coca-Cola werken.)
+*   **Amazon Web Services (AWS)** (bron: LinkedIn bedrijfspagina - Diverse personeelsleden vermelden AWS-certificeringen of ervaring in hun profiel. Sommige vacatures voor "Cloud Engineer" of "DevOps Engineer" vragen naar AWS-ervaring. Persberichten - "The Coca-Cola Company Accelerates Cloud and Digital Transformation with AWS and SAP" - (Dit is een oudere persbericht uit 2017, maar geeft een indicatie van gebruik in het verleden/heden).
+*   **Google Cloud Platform (GCP)** (bron: Onbekend)
+
+## Databases
+
+*   **SAP S/4HANA** (bron: Officiële Bedrijfswebsite - Persbericht over migratie naar Azure van critical workloads, vaak in combinatie met SAP. LinkedIn bedrijfspagina - Veel vacatures voor SAP consultants/specialisten.)
+*   **Microsoft SQL Server** (bron: LinkedIn bedrijfspagina - Vacatures die verwijzen naar Microsoft-stacks of BI-oplossingen. Microsoft Partner profiel - Indicatief voor gebruik in een Microsoft-georiënteerde omgeving.)
+*   **Oracle Database** (bron: LinkedIn bedrijfspagina - Minder prominent dan andere, maar kan voorkomen in oudere systemen of specifieke afdelingen. Vacatures voor "Database Administrator" kunnen soms Oracle vermelden.)
+*   **PostgreSQL** (bron: Onbekend)
+*   **MongoDB (NoSQL)** (bron: Onbekend)
+*   **Cassandra (NoSQL)** (bron: Onbekend)
+
+## Big Data & Analytics
+
+*   **SAP BW/4HANA** (bron: LinkedIn bedrijfspagina - Vacatures voor "SAP BI/BW Consultant.")
+*   **Microsoft Power BI** (bron: LinkedIn bedrijfspagina - Vacatures voor "Business Intelligence Analyst" of "Data Analyst" vermelden vaak Power BI.)
+*   **Apache Spark** (bron: LinkedIn bedrijfspagina - Vacatures voor "Data Engineer" of "Machine Learning Engineer" vragen soms om Spark ervaring, vooral in combinatie met cloud platforms.)
+*   **Databricks** (bron: LinkedIn bedrijfspagina - Sommige "Data Scientist" of "Data Engineer" vacatures vermelden Databricks ervaring in combinatie met Azure of AWS.)
+*   **Tableau** (bron: LinkedIn bedrijfspagina - Vacatures voor "Business Intelligence Analyst" vermelden regelmatig Tableau.)
+*   **Azure Synapse Analytics** (bron: Persberichten - Gezien de focus op Azure voor critical workloads, is Azure Synapse een logische component voor data warehousing en analytics.)
+
+## DevOps & CI/CD
+
+*   **Microsoft Azure DevOps** (voorheen VSTS/TFS) (bron: Dit is een logische keuze gezien hun Azure-footprint. LinkedIn bedrijfspagina - Specifieke vacatures kunnen dit expliciet noemen.)
+*   **Jenkins** (bron: Onbekend)
+*   **Docker** (bron: LinkedIn bedrijfspagina - Vacatures voor "Cloud Engineer" of "DevOps Engineer" vermelden vaak containterisatie met Docker.)
+*   **Kubernetes** (bron: LinkedIn bedrijfspagina - Vacatures voor "Cloud Engineer" of "DevOps Engineer" vragen vaak om Kubernetes ervaring.)
+*   **Git** (bron: Dit is een industriestandaard en vrijwel zeker in gebruik. LinkedIn bedrijfspagina - Onderdeel van de meeste software-engineering vacatures.)
+*   **Terraform** (bron: LinkedIn bedrijfspagina - Vacatures voor "Cloud Engineer" of "DevOps Engineer" kunnen Terraform vragen voor Infrastructure as Code.)
+
+## ERP & CRM
+
+*   **SAP S/4HANA** (bron: Officiële Bedrijfswebsite - Persbericht over migratie naar Azure van critical workloads, vaak in combinatie met SAP. LinkedIn bedrijfspagina - Veel SAP-gerelateerde vacatures.)
+*   **SAP ECC** (bron: LinkedIn bedrijfspagina - Nog steeds aanwezig, gezien de omvang van de migratie naar S/4HANA. Vacatures voor SAP-specialisten vermelden vaak ervaring met beide.)
+*   **Salesforce** (bron: LinkedIn bedrijfspagina - Vacatures voor "CRM Specialist" of "Salesforce Administrator" komen incidenteel voor.)
+*   **Microsoft Dynamics 365** (bron: LinkedIn bedrijfspagina - Vacatures voor "ERP Specialist" of "CRM Consultant" kunnen Dynamics 365 vermelden.)
+
+## Integratieplatforms
+
+*   **SAP PI/PO (Process Orchestration)** (bron: LinkedIn bedrijfspagina - Vacatures voor "SAP Integration Consultant" vermelden dit.)
+*   **Azure Integration Services (Logic Apps, Service Bus, API Management)** (bron: Gezien de focus op Azure, zijn dit logische componenten voor integratie. Persberichten - "Coca-Cola Europacific Partners Migrates to Microsoft Azure for Critical Workloads" ondersteunt indirect het gebruik van Azure-native diensten.)
+*   **MuleSoft** (bron: Onbekend)
+*   **Dell Boomi** (bron: Onbekend)
+
+## Frontend Frameworks & Bibliotheken
+
+*   **React** (bron: LinkedIn bedrijfspagina - Vacatures voor "Front-end Developer" of "Full Stack Engineer" vermelden React als een veelgevraagde vaardigheid.)
+*   **Angular** (bron: LinkedIn bedrijfspagina - Ook Angular wordt genoemd in vacatures voor front-end posities, zij het mogelijk minder prominent dan React.)
+*   **Vue.js** (bron: Onbekend)
+
+## Hardware & Infrastructuur
+
+*   **On-Premise Servers** (bron: Historisch gezien aanwezig, en hoewel veel naar de cloud gemigreerd, blijft een hybride architectuur waarschijnlijk voor legacy-systemen of specifieke behoeften. Geen specifieke bron te noemen buiten algemene bedrijfs-/IT-praktijken.)
+*   **Hybride Cloud Architectuur** (bron: Persberichten - Migratie naar Azure en AWS suggereert een hybride aanpak, waarbij niet alles in één keer naar de cloud gaat.)
+*   **Netwerkapparatuur** (bron: Onbekend)
+
+## Overige Technologieën
+
+*   **OpenText** (voor Document Management) (bron: LinkedIn bedrijfspagina - Soms genoemd in vacatures voor SAP-specialisten met focus op documentmanagement.)
+*   **Workday** (voor HR) (bron: LinkedIn bedrijfspagina - Gebruikt voor HR-systemen, soms vermeld in IT-vacatures die raakvlakken hebben met HR-systemen.)
+*   **ServiceNow** (voor IT Service Management) (bron: LinkedIn bedrijfspagina - Vacatures voor "ITSM Specialist" of "ServiceNow Administrator" kunnen voorkomen.)
+
+---
+
+**Belangrijke Notities:**
+
+*   **Diepte van informatie:** De beschikbare publieke bronnen van een bedrijf van deze omvang geven zelden een compleet en gedetailleerd beeld van de gehele technische stack. Veel strategische en interne keuzes worden niet publiekelijk gecommuniceerd.
+*   **Huidige versus historische:** Sommige technologieën kunnen historisch gebruikt zijn en geleidelijk worden afgebouwd of gemigreerd. Persberichten of oude vacatures kunnen dit reflecteren.
+*   **Partner Eco-systeem:** Coca-Cola werkt ongetwijfeld met talloze IT-partners. Hun technologieën kunnen indirect ten goede komen aan Coca-Cola, maar zijn niet direct "hun" technologieën, tenzij ze expliciet worden genoemd in eigen vacatures of persberichten.
+*   **Afdelingspecifiek:** Grote bedrijven hebben vaak heterogene technologieën in verschillende afdelingen, regio's of onder business units (bijv. bottelaars vs. corporate).

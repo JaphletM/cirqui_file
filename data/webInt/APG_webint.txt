@@ -1,68 +1,55 @@
-Hier is een beschrijving van het technische landschap van APG, uitsluitend gebaseerd op de opgegeven bronnen:
+Het technische landschap van APG, gebaseerd op de opgegeven bronnen, kan als volgt worden beschreven:
 
 ## Programmeertalen
-*   **Java** (bron: Vacature Principal Back-End Engineer op LinkedIn, Vacature Senior Front-End Developer op LinkedIn)
-*   **Python** (bron: Vacature Data Scientist op LinkedIn, Vacature Principal Data Engineer op LinkedIn)
-*   **Scala** (bron: Vacature Principal Data Engineer op LinkedIn)
-*   **SQL** (bron: Vacature Principal Data Engineer op LinkedIn)
-*   **TypeScript** (bron: Vacature Senior Front-End Developer op LinkedIn)
-*   **JavaScript** (bron: Vacature Senior Front-End Developer op LinkedIn)
-*   **Groovy** (bron: Vacature Software Developer op LinkedIn)
+*   **Java** (bron: vacature Backend Engineer via de carrièrepagina)
+*   **Python** (bron: vacature Data Engineer via de carrièrepagina, vacature Data Scientist via de carrièrepagina)
+*   **Scala** (bron: vacature Data Engineer via de carrièrepagina)
+*   **Kotlin** (bron: vacature Backend Engineer via de carrièrepagina)
+*   **JavaScript / TypeScript** (bron: vacature Frontend Engineer via de carrièrepagina)
+*   **C#** (bron: vacature .NET Developer via de carrièrepagina)
+*   **SQL** (bron: vacature Data Engineer via de carrièrepagina, vacature BI Developer via de carrièrepagina)
 
 ## Cloud
-*   **Azure** (bron: Vacature Principal Back-End Engineer op LinkedIn, Vacature Principal Cloud Engineer op LinkedIn, vacature Enterprise Architect Cloud & Infra op LinkedIn)
-*   **AWS** (bron: Vacature Principal Cloud Engineer op LinkedIn) - *Noot: Ondanks dat AWS Cloud Engineer wordt genoemd, is er geen direct bewijs van een AWS Partner profiel.*
+*   **Microsoft Azure** (bron: LinkedIn bedrijfspagina – "Als Microsoft partner streven we ernaar onze klanten optimaal te ondersteunen met Azure-oplossingen.", vacature Cloud Engineer via de carrièrepagina)
+*   **Google Cloud Platform (GCP)** (bron: vacature Cloud Engineer via de carrièrepagina)
 
 ## Databases
-*   **PostgreSQL** (bron: Vacature Principal Back-End Engineer op LinkedIn)
-*   **MongoDB** (bron: Vacature Principal Back-End Engineer op LinkedIn)
-*   **Kafka** (bron: Vacature Principal Back-End Engineer op LinkedIn, vacature Enterprise Architect Cloud & Infra op LinkedIn) - *Noot: Hoewel vaak als streaming platform beschouwd, wordt het in deze context genoemd bij databasegerelateerde vaardigheden.*
-*   **Databricks** (bron: Vacature Principal Data Engineer op LinkedIn)
-*   **Snowflake** (bron: Vacature Principal Data Engineer op LinkedIn)
-*   **Elasticsearch** (bron: Vacature Principal Data Engineer op LinkedIn)
-*   **SQL Server** (bron: Vacature Software Developer op LinkedIn)
-*   **Oracle** (bron: Vacature Software Developer op LinkedIn)
+*   **SQL Server** (bron: vacature BI Developer via de carrièrepagina)
+*   **PostgreSQL** (bron: vacature Backend Engineer via de carrièrepagina)
+*   **MongoDB** (bron: vacature Backend Engineer via de carrièrepagina)
+*   **Cassandra** (bron: vacature Data Engineer via de carrièrepagina)
+*   **Databricks Lakehouse Platform** (bron: vacature Data Scientist via de carrièrepagina)
+
+## Big Data/Analytics
+*   **Apache Spark** (bron: vacature Data Engineer via de carrièrepagina, vacature Data Scientist via de carrièrepagina)
+*   **Apache Kafka** (bron: vacature Data Engineer via de carrièrepagina, vacature Backend Engineer via de carrièrepagina)
+*   **Databricks** (bron: vacature Data Scientist via de carrièrepagina, vacature Data Engineer via de carrièrepagina)
+*   **Azure Data Factory** (bron: vacature Data Engineer via de carrièrepagina)
+*   **Azure Synapse Analytics** (bron: vacature Data Engineer via de carrièrepagina, vacature BI Developer via de carrièrepagina)
+*   **Power BI** (bron: vacature BI Developer via de carrièrepagina)
+*   **SAS** (bron: vacature Data Scientist via de carrièrepagina)
+
+## CI/CD & DevOps
+*   **Azure DevOps** (bron: vacature Cloud Engineer via de carrièrepagina, vacature DevOps Engineer via de carrièrepagina)
+*   **Kubernetes** (bron: vacature Cloud Engineer via de carrièrepagina, vacature DevOps Engineer via de carrièrepagina)
+*   **Docker** (bron: vacature Cloud Engineer via de carrièrepagina, vacature DevOps Engineer via de carrièrepagina)
+*   **Git** (bron: vacature Software Developer via de carrièrepagina)
 
 ## Frameworks & Libraries
-*   **Spring Boot** (bron: Vacature Principal Back-End Engineer op LinkedIn, Vacature Software Developer op LinkedIn)
-*   **React** (bron: Vacature Senior Front-End Developer op LinkedIn)
-*   **Angular** (bron: Vacature Senior Front-End Developer op LinkedIn)
-*   **Next.js** (bron: Vacature Senior Front-End Developer op LinkedIn)
-*   **Node.js** (bron: Vacature Senior Front-End Developer op LinkedIn)
-*   **Kubernetes** (bron: Vacature Principal Cloud Engineer op LinkedIn, vacature Enterprise Architect Cloud & Infra op LinkedIn)
-*   **Docker** (bron: Vacature Principal Cloud Engineer op LinkedIn, vacature Enterprise Architect Cloud & Infra op LinkedIn)
-*   **Terraform** (bron: Vacature Principal Cloud Engineer op LinkedIn)
-*   **Azure DevOps** (bron: Vacature Principal Cloud Engineer op LinkedIn)
-*   **Azure CLI/Powershell** (bron: Vacature Principal Cloud Engineer op LinkedIn)
-*   **Apache Airflow** (bron: Vacature Principal Data Engineer op LinkedIn)
-*   **REST API's** (bron: Vacature Principal Back-End Engineer op LinkedIn, Vacature Senior Front-End Developer op LinkedIn)
+*   **Spring Boot** (bron: vacature Backend Engineer via de carrièrepagina)
+*   **React** (bron: vacature Frontend Engineer via de carrièrepagina)
+*   **.NET Core / .NET (voorheen .NET Framework)** (bron: vacature .NET Developer via de carrièrepagina)
 
-## Business Intelligence (BI) & Data Visualisatie
-*   **Tableau** (bron: Vacature Data Scientist op LinkedIn)
+## Infrastructuur als code (IaC)
+*   **Terraform** (bron: vacature Cloud Engineer via de carrièrepagina)
 
-## Ontwikkelingsmethodologieën & Tools
-*   **Agile** (bron: Vacature Principal Back-End Engineer op LinkedIn, Vacature Software Developer op LinkedIn)
-*   **Scrum** (bron: Vacature Software Developer op LinkedIn)
-*   **DevOps** (bron: Vacature Principal Cloud Engineer op LinkedIn, vacature Enterprise Architect Cloud & Infra op LinkedIn)
-*   **Git** (bron: Vacature Principal Back-End Engineer op LinkedIn)
+## Overige Tools & Technologieën
+*   **MuleSoft** (bron: vacature Integration Specialist via de carrièrepagina)
+*   **Salesforce** (bron: vacature Salesforce Developer via de carrièrepagina)
+*   **Snowflake** (bron: vacature Data Engineer via de carrièrepagina)
 
-## Besturingssystemen
-*   **Linux** (bron: Vacature Principal Cloud Engineer op LinkedIn)
+## Onbekend
+*   Geen specifieke informatie over besturingssystemen in detail, maar Linux en Windows omgevingen zijn impliciet vanuit de genoemde cloud platformen en tooling.
+*   Geen specifieke architectuurpatronen (bijv. microservices, event-driven) direct benoemd in de publieke bronnen, hoewel de tools (Kafka, Spring Boot) hier wel naar kunnen verwijzen.
 
-## Overige
-*   **Microservices** (bron: Vacature Principal Back-End Engineer op LinkedIn, vacature Enterprise Architect Cloud & Infra op LinkedIn)
-*   **APIM** (Azure API Management) (bron: vacature Enterprise Architect Cloud & Infra op LinkedIn)
-*   **Service Bus** (Azure Service Bus) (bron: vacature Enterprise Architect Cloud & Infra op LinkedIn)
-*   **Logic Apps** (Azure Logic Apps) (bron: vacature Enterprise Architect Cloud & Infra op LinkedIn)
-*   **ADLS (Azure Data Lake Storage)** (bron: vacature Enterprise Architect Cloud & Infra op LinkedIn)
-
-**Onbekend:**
-
-*   Er is geen publieke GitHub organisatie gevonden.
-*   Er is geen specifieke "Engineering blog" gevonden.
-*   Er zijn geen Microsoft Partner of AWS Partner profielen gevonden die details tonen. De vermelding van "Microsoft Partner" in de LinkedIn overzichtspagina van APG is zeer algemeen.
-*   Geen specifieke "Tech conferentie presentaties" gevonden.
-*   Crunchbase biedt geen technische details op dit niveau.
-*   De officiële bedrijfswebsite en persberichten bieden geen gedetailleerde technische inzichten.
-
-**Belangrijke opmerking:** Deze lijst is gebaseerd op de beperkte publieke informatie die beschikbaar is. De daadwerkelijke tech stack van APG kan veel uitgebreider zijn. Vacatures vertegenwoordigen vaak de technologieën die op dat moment relevant zijn voor specifieke teams of projecten, en zijn geen complete weergave van het hele technische landschap van een organisatie.
+**Belangrijke opmerking:** Deze lijst is gebaseerd op direct beschikbare en verifieerbare informatie uit de opgegeven bronnen. Het is mogelijk dat APG nog andere technologieën inzet die niet expliciet in deze publieke bronnen worden vermeld.

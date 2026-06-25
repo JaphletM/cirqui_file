@@ -15,8 +15,9 @@ from Savers.JsonSaver import save_to_json, save_webint
 from Savers.MarkdownSaver import save_to_markdown
 
 
-def run_customer_analysis_workflow():
-    customer_name = input("Voer de naam van de klant in: ")
+def run_customer_analysis_workflow(customer_name: str= None):
+    if not customer_name:
+        customer_name = input("Voer de naam van de klant in: ")
 
     model = load_config()
     llm_client = LLMClient(model)
@@ -66,8 +67,19 @@ def run_customer_analysis_workflow():
     clean_prompts = followup_prompts.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
     clean_answers = answer_response.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
 
-    parsed_prompts = json.loads(clean_prompts)
-    parsed_answers = json.loads(clean_answers)
+    try:
+        parsed_prompts = json.loads(clean_prompts) if clean_prompts else []
+    except json.JSONDecodeError:
+        print("Followup prompts JSON incomplete, skipping.")
+        parsed_prompts = []
+
+    try:
+        parsed_answers = json.loads(clean_answers) if clean_answers else []
+    except json.JSONDecodeError:
+        print("Followup answers JSON incomplete, skipping.")
+        parsed_answers = []
+    print("Parsed Prompts:", repr(clean_prompts))
+    print("Parsed Answers:", repr(clean_answers))
 
     # Build lookups
     definitions_by_term = {result["term"]: result.get("definition", "") for result in comparison_results}

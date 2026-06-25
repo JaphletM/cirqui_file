@@ -1,0 +1,365 @@
+{
+  "company": "Coca-cola",
+  "results": [
+    {
+      "term": "Java",
+      "definition": "A high-level, class-based, object-oriented programming language designed to have as few implementation dependencies as possible.",
+      "followup_prompts": [
+        "Welke specifieke Java-frameworks (bijv. Spring, Hibernate) zijn momenteel in gebruik binnen jullie bestaande applicaties, en welke versies worden hiervan gebruikt?",
+        "Wat zijn de belangrijkste pijnpunten of uitdagingen die jullie ervaren met jullie huidige Java-gebaseerde systemen, bijvoorbeeld op het gebied van performance, onderhoudbaarheid of schaalbaarheid?",
+        "Zijn er plannen om nieuwe functionaliteiten te ontwikkelen in Java, en zo ja, welke specifieke bedrijfsbehoeften zouden hiermee worden opgelost?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Python",
+      "definition": "An interpreted, high-level, general-purpose programming language.",
+      "followup_prompts": [
+        "Op welke specifieke gebieden (bijv. data science, automatisering, webdevelopment) zetten jullie Python momenteel in, en welke bibliotheken of frameworks worden hiervoor gebruikt?",
+        "Welke ambities heeft jullie organisatie op het gebied van data-analyse, machine learning of AI, en in hoeverre kan Python hierin een rol spelen?",
+        "Zijn er knelpunten in jullie huidige Python-workflows die geoptimaliseerd kunnen worden, bijvoorbeeld op het gebied van codekwaliteit, uitvoeringstijd of beheer van afhankelijkheden?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "JavaScript",
+      "definition": "A high-level, often just-in-time compiled language that conforms to the ECMAScript standard.",
+      "followup_prompts": [
+        "Welke front-end frameworks (bijv. React, Angular, Vue.js) worden momenteel gebruikt voor jullie webapplicaties, en wat zijn de afwegingen geweest voor deze keuzes?",
+        "Zijn er plannen om de gebruikerservaring van jullie bestaande webapplicaties te verbeteren, en welke rol speelt JavaScript hierin?",
+        "Hoe wordt het beheer van JavaScript-afhankelijkheden en -pakketten momenteel georganiseerd binnen jullie ontwikkelteams?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "C#",
+      "definition": "A general-purpose, multi-paradigm programming language encompassing strong typing, lexical scoping, imperative, declarative, functional, generic, object-oriented (class-based), and component-oriented programming disciplines.",
+      "followup_prompts": [
+        "Welke versies van .NET Framework of .NET Core worden momenteel gebruikt voor jullie C#-applicaties, en wat is de roadmap voor toekomstige upgrades?",
+        "In hoeverre zijn jullie C#-applicaties geïntegreerd met andere Microsoft-technologieën, zoals Azure-services of SQL Server?",
+        "Welke uitdagingen ervaren jullie bij de ontwikkeling of het onderhoud van grootschalige C#-applicaties, bijvoorbeeld op het gebied van deployment of debugging?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "ABAP",
+      "definition": "A high-level programming language created by SAP for developing business applications within the SAP environment.",
+      "followup_prompts": [
+        "Welke specifieke SAP-modules (bijv. FI, CO, SD) zijn afhankelijk van ABAP-ontwikkelingen binnen jullie organisatie, en wat is de complexiteit hiervan?",
+        "Zijn er plannen om jullie ABAP-code te moderniseren, bijvoorbeeld door over te stappen naar ABAP in de Cloud of door het gebruik van Fiori-apps?",
+        "Welke uitdagingen ervaren jullie bij het aantrekken of behouden van ABAP-ontwikkelaars, en hoe wordt hierop geanticipeerd?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "SQL",
+      "definition": "A domain-specific language used in programming and designed for managing data held in a relational database management system.",
+      "followup_prompts": [
+        "In welke mate zijn jullie bedrijfsprocessen afhankelijk van data die is opgeslagen in relationele databases, en welke kritieke rapportages of applicaties maken gebruik van complexe SQL-queries?",
+        "Zijn er knelpunten in de performance van jullie SQL-databases, en welke impact heeft dit op de operationele efficiëntie of de gebruikerservaring?",
+        "Welke strategieën hanteren jullie voor databasebeheer, back-up en herstel, en zijn er wensen voor verbetering op dit vlak?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Rust",
+      "definition": "A multi-paradigm, general-purpose programming language designed for performance and safety, especially safe concurrency.",
+      "followup_prompts": [
+        "Zijn er specifieke use cases of projecten binnen jullie organisatie waar jullie de voordelen van Rust (bijv. geheugenveiligheid, prestaties) zouden willen benutten?",
+        "Welke afwegingen zouden jullie maken bij de introductie van een nieuwe taal zoals Rust in jullie bestaande technologie-stack?",
+        "Zijn er interne competenties of interesse in het opbouwen van kennis rondom Rust development?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Go",
+      "definition": "A statically typed, compiled programming language designed at Google.",
+      "followup_prompts": [
+        "Zijn er projecten met hoge performance eisen of behoefte aan efficiënte concurrentie waar Go overwogen zou kunnen worden?",
+        "Welke potentiële voordelen zien jullie in Go ten opzichte van jullie huidige programmeertalen voor specifieke applicaties, bijvoorbeeld bij microservices?",
+        "Zijn er bestaande tools of systemen die in Go zijn geschreven en waar jullie al ervaring mee hebben?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Microsoft Azure",
+      "definition": "A cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers.",
+      "followup_prompts": [
+        "Welke specifieke Microsoft Azure-services (bijv. Virtual Machines, Azure Functions, Azure SQL Database) zijn momenteel in gebruik, en voor welke doeleinden?",
+        "Wat zijn de drijfveren achter jullie huidige of geplande adoptie van Azure, bijvoorbeeld op het gebied van schaalbaarheid, kostenbesparing of innovatie?",
+        "Welke uitdagingen ervaren jullie bij het beheer, de beveiliging of de kostenoptimalisatie van jullie Azure-infrastructuur?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Amazon Web Services (AWS)",
+      "definition": "A comprehensive, broadly adopted, and widely used cloud platform, offering over 200 fully featured services from data centers globally.",
+      "followup_prompts": [
+        "Welke specifieke AWS-services (bijv. EC2, S3, RDS) zijn momenteel in gebruik binnen jullie organisatie, en voor welke workloads?",
+        "Wat zijn de strategische beweegredenen voor jullie keuze voor AWS, en welke voordelen worden hiermee behaald?",
+        "Zijn er uitdagingen op het gebied van cloud governance, compliance of operationeel beheer van jullie AWS-omgeving?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Microsoft SQL Server",
+      "definition": "A relational database management system developed by Microsoft.",
+      "followup_prompts": [
+        "Welke versies van Microsoft SQL Server zijn in gebruik, en wat zijn de plannen voor updates of migraties naar Azure SQL Database of SQL Managed Instance?",
+        "Welke kritieke bedrijfsapplicaties zijn afhankelijk van Microsoft SQL Server, en hoe wordt de beschikbaarheid en performance gegarandeerd?",
+        "Zijn er wensen voor het toepassen van geavanceerde SQL Server-functionaliteiten, zoals Always On Availability Groups, of voor het optimaliseren van databaserechtenbeheer?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Oracle Database",
+      "definition": "A multi-model database management system produced and marketed by Oracle Corporation.",
+      "followup_prompts": [
+        "Welke versies van Oracle Database zijn momenteel in gebruik, en wat zijn de plannen voor toekomstige upgrades of migraties (bijv. naar Oracle Cloud Infrastructure)?",
+        "Welke bedrijfskritische applicaties draaien op Oracle Database, en wat zijn de eisen ten aanzien van performance, schaalbaarheid en beschikbaarheid?",
+        "Zijn er overwegingen om over te stappen van Oracle naar een open-source database, en welke argumenten spelen hierbij een rol?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "PostgreSQL",
+      "definition": "A powerful, open-source object-relational database system.",
+      "followup_prompts": [
+        "Voor welke specifieke toepassingen of projecten overwegen jullie het gebruik van PostgreSQL, en wat zijn de belangrijkste drijfveren hiervoor?",
+        "Zijn er reeds bestaande implementaties van PostgreSQL binnen jullie organisatie, en wat zijn de ervaringen hiermee?",
+        "Welke eisen stellen jullie aan de schaalbaarheid, performance en functionaliteit van een relationele database, en hoe past PostgreSQL hierin?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "MongoDB",
+      "definition": "A document-oriented NoSQL database program, using JSON-like documents with optional schemas.",
+      "followup_prompts": [
+        "Voor welke soorten data of applicaties zien jullie potentieel voor MongoDB, gezien de flexibele documentstructuur?",
+        "Zijn er bestaande projecten waarbij jullie de voordelen van een NoSQL-database zoals MongoDB zouden willen benutten?",
+        "Welke afwegingen zouden jullie maken bij het introduceren van een NoSQL-database als MongoDB in jullie datalandschap, bijvoorbeeld ten aanzien van datamodelering of beheer?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Cassandra",
+      "definition": "A free and open-source, distributed, wide-column store, NoSQL database management system designed to handle large amounts of data across many commodity servers.",
+      "followup_prompts": [
+        "Zijn er applicaties met zeer hoge schrijfvolumes en een behoefte aan hoge beschikbaarheid waar Cassandra een oplossing zou kunnen bieden?",
+        "Welke afwegingen spelen een rol bij de keuze voor een gedistribueerde database als Cassandra, bijvoorbeeld ten aanzien van operatie of consistentie?",
+        "Zijn er specifieke use cases waar lage latentie en een grote hoeveelheid data centraal staan, en waar Cassandra een overweging is?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "SAP BW/4HANA",
+      "definition": "A next-generation data warehouse solution designed for real-time analytics with simplified data modeling.",
+      "followup_prompts": [
+        "Welke specifieke bedrijfsrapportages en -analyses zijn afhankelijk van data uit SAP BW/4HANA, en wat zijn de prestatie-eisen hiervoor?",
+        "Zijn er plannen om de functionaliteit van jullie datawarehousing-oplossing te uit te breiden of te moderniseren met SAP BW/4HANA?",
+        "Welke uitdagingen ervaren jullie bij het ontsluiten, verwerken en analyseren van grote hoeveelheden bedrijfsdata, en hoe kan BW/4HANA hierbij helpen?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Microsoft Power BI",
+      "definition": "A business intelligence and data visualization tool that converts data from various data sources to interactive dashboards and reports.",
+      "followup_prompts": [
+        "Voor welke afdelingen of business units wordt Microsoft Power BI momenteel ingezet, en welke soorten dashboards en rapportages worden hiermee gecreëerd?",
+        "Zijn er wensen om de data-analyse en rapportagecapaciteiten binnen jullie organisatie uit te breiden of te verbeteren met Power BI?",
+        "Hoe wordt de governance en beveiliging van Power BI-rapportages en -data binnen jullie organisatie geregeld?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Microsoft Azure DevOps",
+      "definition": "A suite of developer services to support teams in planning work, collaborating on code development, and building and deploying applications.",
+      "followup_prompts": [
+        "Welke onderdelen van Azure DevOps (bijv. Pipelines, Boards, Repos) zijn momenteel in gebruik, en voor welke type projecten?",
+        "Zijn er uitdagingen bij jullie huidige ontwikkel- en deployment processen die opgelost zouden kunnen worden met Azure DevOps?",
+        "Welke maturiteit graad hebben jullie op het gebied van CI/CD en hoe kan Azure DevOps hierin een verdere professionalisering bewerkstelligen?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Jenkins",
+      "definition": "An open-source automation server that facilitates continuous integration and continuous delivery.",
+      "followup_prompts": [
+        "Voor welke specifieke ontwikkeltrajecten wordt Jenkins momenteel ingezet, en wat zijn de belangrijkste functionaliteiten die jullie hiervan benutten?",
+        "Zijn er uitdagingen met jullie huidige Jenkins-implementatie, bijvoorbeeld op het gebied van schaalbaarheid, beheer of security?",
+        "Wat zijn de wensen voor automatisering van jullie CI/CD-processen, en hoe kan Jenkins hierin een rol spelen?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Kubernetes",
+      "definition": "An open-source container orchestration system for automating deployment, scaling, and management of containerized applications.",
+      "followup_prompts": [
+        "Welke applicaties of workloads draaien momenteel op Kubernetes, en wat zijn de belangrijkste drijfveren geweest voor containerisatie en orkestratie?",
+        "Zijn er plannen om meer applicaties te migreren naar Kubernetes, en welke voordelen verwachten jullie hiervan?",
+        "Welke uitdagingen ervaren jullie bij het beheer, de beveiliging of de monitoring van jullie Kubernetes-clusters?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Git",
+      "definition": "A distributed version control system for tracking changes in source code during software development.",
+      "followup_prompts": [
+        "Welke Git-platforms (bijv. GitHub, GitLab, Azure Repos) worden momenteel gebruikt voor jullie versiebeheer, en hoe is de workflow ingericht?",
+        "Zijn er uitdagingen met betrekking tot samenwerking tussen ontwikkelaars, code reviews of het beheer van verschillende branches in Git?",
+        "Hoe wordt de security van jullie Git-repositories gewaarborgd en wat zijn de richtlijnen voor codecommit en -integratie?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "SAP ECC",
+      "definition": "SAP ERP Central Component, a former generation of SAP's enterprise resource planning software.",
+      "followup_prompts": [
+        "Welke modules van SAP ECC zijn cruciaal voor jullie bedrijfsprocessen, en welke afdelingen zijn hiervan afhankelijk?",
+        "Wat zijn de strategische overwegingen met betrekking tot de toekomst van jullie SAP ECC-systeem, bijvoorbeeld een migratie naar SAP S/4HANA?",
+        "Welke integraties zijn er tussen SAP ECC en andere systemen, en zijn hierbij knelpunten of wensen voor verbetering?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Salesforce",
+      "definition": "A cloud-based software company that provides CRM services and also sells a complementary suite of enterprise applications.",
+      "followup_prompts": [
+        "Welke Salesforce Clouds (bijv. Sales Cloud, Service Cloud, Marketing Cloud) zijn in gebruik, en welke specifieke functionaliteiten worden benut?",
+        "Zijn er plannen om de Salesforce-functionaliteit uit te breiden of te integreren met andere bedrijfssystemen?",
+        "Welke uitdagingen ervaren jullie bij het beheer, de aanpassing of het optimaliseren van jullie Salesforce-omgeving?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "SAP PI/PO (Process Orchestration)",
+      "definition": "A middleware platform for enterprise application integration (EAI) and service-oriented architecture (SOA) in the SAP landscape.",
+      "followup_prompts": [
+        "Welke bedrijfskritieke integraties verlopen momenteel via SAP PI/PO, en welke systemen worden hierdoor gekoppeld?",
+        "Zijn er plannen om jullie integratielandschap te moderniseren, en overwegen jullie een transitie van SAP PI/PO naar een ander integratieplatform?",
+        "Welke uitdagingen ervaren jullie bij het beheer, de monitoring of de schaalbaarheid van jullie SAP PI/PO-integraties?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Logic Apps",
+      "definition": "A cloud service for building and running automated workflows that integrate apps, data, services, and systems.",
+      "followup_prompts": [
+        "Voor welke specifieke integratieworkflows overwegen jullie de inzet van Azure Logic Apps, en welke systemen zouden hiermee worden gekoppeld?",
+        "Zijn er reeds bestaande integraties die efficiënter of flexibeler kunnen worden met behulp van Logic Apps?",
+        "Welke afwegingen maken jullie bij de keuze tussen code-based integraties en low-code/no-code platforms zoals Logic Apps?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Service Bus",
+      "definition": "A fully managed enterprise integration message broker that enables decoupled applications to reliably exchange messages.",
+      "followup_prompts": [
+        "Voor welke asynchrone communicatiepatronen en berichtafhandeling overwegen jullie de inzet van een Message Broker als Service Bus?",
+        "Zijn er bestaande systemen die baat zouden hebben bij een meer ontkoppelde architectuur met behulp van een Service Bus?",
+        "Welke eisen stellen jullie aan de betrouwbaarheid, schaalbaarheid en beveiliging van een berichtenservice?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Dell Boomi",
+      "definition": "A cloud-based integration platform as a service (iPaaS) for connecting applications, data, and devices.",
+      "followup_prompts": [
+        "Welke applicaties of systemen worden momenteel geïntegreerd met Dell Boomi, en wat zijn de voordelen die jullie hiermee behalen?",
+        "Zijn er plannen om het aantal integraties met Dell Boomi uit te breiden, en welke nieuwe bedrijfsprocessen of systemen zouden hiermee worden gekoppeld?",
+        "Welke uitdagingen ervaren jullie bij het beheer, de monitoring of de customisatie van jullie Dell Boomi-integraties?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "React",
+      "definition": "A free and open-source front-end JavaScript library for building user interfaces based on UI components.",
+      "followup_prompts": [
+        "Welke specifieke frontend-applicaties of componenten zijn gebouwd met React, en wat zijn de belangrijkste functionaliteiten die hier geboden worden?",
+        "Zijn er plannen om de gebruikerservaring van jullie webapplicaties te moderniseren, en speelt React hierin een rol?",
+        "Welke uitdagingen ervaren jullie bij de adoptie, ontwikkeling of het onderhoud van React-gebaseerde applicaties?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Angular",
+      "definition": "A TypeScript-based, free and open-source web application framework led by the Angular Team at Google.",
+      "followup_prompts": [
+        "Welke bedrijfskritische webapplicaties zijn gebouwd met Angular, en wat zijn de afwegingen geweest voor deze keuze?",
+        "Zijn er plannen om bestaande applicaties te migreren naar Angular, of om nieuwe projecten met Angular op te starten?",
+        "Welke kennis en ervaring is aanwezig binnen jullie teams met betrekking tot Angular development en onderhoud?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Vue.js",
+      "definition": "An open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications.",
+      "followup_prompts": [
+        "Zijn er specifieke use cases of kleinere, flexibele projecten waar Vue.js overwogen wordt voor de frontend development?",
+        "Welke voordelen zien jullie in Vue.js ten opzichte van andere front-end frameworks, en hoe past dit bij jullie ontwikkelcultuur?",
+        "Zijn er interne competenties of interesse in het werken met Vue.js voor toekomstige webapplicaties?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "On-Premise Servers",
+      "definition": "Servers physically located within a company's own facilities and managed by their IT staff.",
+      "followup_prompts": [
+        "Welke kritieke bedrijfsapplicaties draaien momenteel op jullie on-premise servers, en wat zijn de prestatie- en beschikbaarheidseisen hiervan?",
+        "Zijn er plannen voor de modernisering of migratie van jullie on-premise infrastructuur richting de cloud of een hybride aanpak?",
+        "Welke uitdagingen ervaren jullie bij het beheer, de beveiliging en de schaalbaarheid van jullie on-premise serverlandschap?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Hybride Cloud Architectuur",
+      "definition": "A computing environment that connects a company’s on-premises private cloud and third-party public cloud into a single, flexible infrastructure.",
+      "followup_prompts": [
+        "Welke workloads of data bevinden zich momenteel on-premise en welke in de cloud, en wat zijn de strategische overwegingen voor deze verdeling?",
+        "Zijn er uitdagingen bij de integratie, het beheer of de beveiliging van jullie hybride cloudomgeving?",
+        "Welke voordelen verwachten jullie van een optimale hybride cloud architectuur op het gebied van flexibiliteit, kosten en compliance?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Netwerkapparatuur",
+      "definition": "Physical devices that allow hardware to communicate over a computer network, such as routers, switches, and firewalls.",
+      "followup_prompts": [
+        "Welke soorten netwerkapparatuur (bijv. routers, switches, firewalls) zijn momenteel in gebruik, en welke leveranciers worden hiervoor ingeschakeld?",
+        "Zijn er knelpunten in de performance of de beveiliging van jullie huidige netwerkinfrastructuur?",
+        "Welke toekomstige behoeften verwachten jullie op het gebied van netwerkcapaciteit, beveiliging en connectiviteit, bijvoorbeeld door groei of nieuwe applicaties?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "OpenText",
+      "definition": "An enterprise information management (EIM) software and services company, specializing in content management.",
+      "followup_prompts": [
+        "Welke specifieke OpenText-producten (bijv. Documentum, Content Server, Exstream) zijn in gebruik, en voor welke content management doeleinden?",
+        "Zijn er plannen om de functionaliteit van jullie Enterprise Information Management (EIM) met OpenText uit te breiden of te optimaliseren?",
+        "Welke uitdagingen ervaren jullie bij het beheer, de integratie of de compliance van jullie content met OpenText-oplossingen?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Workday",
+      "definition": "A cloud-based software vendor that specializes in human capital management (HCM) and financial management applications.",
+      "followup_prompts": [
+        "Welke modules van Workday (bijv. HCM, Financial Management) zijn momenteel in gebruik, en welke bedrijfsprocessen worden hiermee ondersteund?",
+        "Zijn er plannen om de Workday-functionaliteit uit te breiden of te integreren met andere HR- of financiële systemen?",
+        "Welke uitdagingen ervaren jullie bij het optimaliseren van jullie Workday-implementatie of het benutten van alle mogelijkheden?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "ServiceNow",
+      "definition": "A cloud-based platform that provides a suite of ITSM applications to automate IT workflows.",
+      "followup_prompts": [
+        "Welke ServiceNow-modules (bijv. ITSM, ITOM, CSM) zijn in gebruik, en welke bedrijfsprocessen worden hiermee geautomatiseerd?",
+        "Zijn er plannen om de ServiceNow-functionaliteit uit te breiden of te integreren met andere IT- of bedrijfssystemen?",
+        "Welke uitdagingen ervaren jullie bij het maximaliseren van de waarde van jullie ServiceNow-platform, bijvoorbeeld met betrekking tot adoptie of customisatie?"
+      ],
+      "followup_answers": []
+    }
+  ]
+}
