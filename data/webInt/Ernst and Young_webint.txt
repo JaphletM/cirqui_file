@@ -1,0 +1,89 @@
+Aangezien ik geen live toegang heb tot het internet om de actuele websites, carrièrepagina's, blogs, GitHub-profielen, etc. van Ernst & Young te doorzoeken, kan ik geen volledig accuraat en up-to-date technisch landschap van Ernst & Young samenstellen op basis van de gevraagde bronnen.
+
+Ik kan echter wel een *voorbeeldstructuur* geven en aangeven hoe je dit zelf zou moeten invullen als je toegang hebt tot deze bronnen, op basis van wat algemeen bekend is over dit soort consultancybedrijven en hun IT-gebruik.
+
+**Belangrijke notities voor het zelf invullen:**
+
+*   **Vacatures:** Dit is een van de rijkste bronnen. Zoek naar trefwoorden in de functie-eisen en 'must-haves'.
+*   **Partnerschappen:** Microsoft Partner / AWS Partner profielen geven direct inzicht in de primaire cloudproviders.
+*   **Persberichten/Tech Conferentie Presentaties:** Deze kunnen strategische keuzes in technologieën onthullen, of focusgebieden zoals AI, blockchain.
+*   **LinkedIn/Crunchbase:** Kunnen soms meldingen bevatten van specifieke projecten of acquisities die technologieën omvatten.
+*   **Engineering Blog/GitHub:** Dit zijn de meest directe bronnen voor specifieke tools, frameworks en programmeertalen die daadwerkelijk worden gebruikt, maar EY is mogelijk minder open dan pure tech bedrijven.
+
+---
+
+Hieronder volgt een voorbeeldstructuur met *hypothetische* invullingen zoals je die zou kunnen vinden, met "Onbekend" waar ik geen algemene aanname kan doen zonder externe data.
+
+---
+
+## Technisch Landschap van Ernst & Young
+
+*Let op: Onderstaande informatie is veelal hypothetisch en dient als voorbeeld van hoe het ingevuld zou kunnen worden op basis van de gevraagde bronnen. Zonder realtime toegang tot de bronnen kan een accurate beschrijving niet worden gegeven.*
+
+---
+
+## Programmeertalen
+
+*   **Java** (bron: Hypothetische vacature voor "Backend Developer", "Solution Architect")
+*   **Python** (bron: Hypothetische vacature voor "Data Scientist", "Machine Learning Engineer", "Cloud Engineer")
+*   **C# / .NET** (bron: Hypothetische Microsoft Partner Project Beschrijving, "Software Engineer" vacature)
+*   **JavaScript / TypeScript** (bron: Hypothetische vacature voor "Frontend Developer", "Fullstack Engineer")
+*   **Go** (bron: Onbekend)
+*   **Scala** (bron: Onbekend)
+*   **R** (bron: Hypothetische vacature voor "Data Scientist", "Statistical Analyst")
+
+## Cloud
+
+*   **Microsoft Azure** (bron: Hypothetisch Microsoft Partner Profiel van EY, persbericht over strategische cloud partnership)
+*   **Amazon Web Services (AWS)** (bron: Hypothetisch AWS Partner Profiel van EY, vacature voor "Cloud Architect AWS")
+*   **Google Cloud Platform (GCP)** (bron: Hypothetisch persbericht over specifieke data-analyse projecten met GCP, vacature "Cloud Engineer GCP")
+
+## Databases
+
+*   **Microsoft SQL Server** (bron: Hypothetische Microsoft Partner Project Beschrijving, vacature "Database Administrator")
+*   **PostgreSQL** (bron: Hypothetische vacature "Backend Engineer" met ervaring in Open Source databases)
+*   **MongoDB** (NoSQL) (bron: Onbekend)
+*   **Cosmos DB** (NoSQL) (bron: Hypothetische Azure gerelateerde projectbeschrijving)
+*   **Databricks** (voor Data Lake en Analytics) (bron: Hypothetische vacature "Data Engineer", persbericht over AI/Data initiatieven)
+*   **Snowflake** (Data Warehouse) (bron: Onbekend, maar veel gebruikt in consultancy)
+*   **Oracle** (bron: Legacy systemen vacature, Enterprise Architect vacature)
+
+## Infrastructuur & Platformen
+
+*   **Kubernetes** (Container Orchestration) (bron: Hypothetische vacature "DevOps Engineer", "Cloud Native Architect")
+*   **Docker** (Containerization) (bron: Hypothetische vacature "DevOps Engineer")
+*   **Terraform** (Infrastructure as Code) (bron: Hypothetische vacature "Cloud Engineer", "DevOps Specialist")
+*   **Ansible / Chef / Puppet** (Configuratiemanagement) (bron: Onbekend, mogelijk vermeld in oudere DevOps vacatures)
+*   **Azure DevOps** (CI/CD, Project Management) (bron: Hypothetisch Microsoft Partner implementatievoorbeeld)
+*   **Databricks Platform** (Data Engineering, Machine Learning) (bron: Hypothetische vacature "Data Scientist", "Machine Learning Engineer")
+*   **ServiceNow** (IT Service Management) (bron: Onbekend, maar veel gebruikt in adviescontext)
+
+## Data & Analytics
+
+*   **Power BI** (Business Intelligence) (bron: Hypothetische vacature "Business Intelligence Consultant")
+*   **Tableau** (Business Intelligence) (bron: Hypothetische vacature "Data Visualization Specialist")
+*   **Azure Synapse Analytics** (Data Warehousing & Big Data Analytics) (bron: Hypothetisch Microsoft Partner Project Beschrijving)
+*   **Apache Spark** (Big Data Processing) (bron: Hypothetische vacature "Data Engineer")
+*   **Python Libraries (Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch)** (Machine Learning/Data Science) (bron: Hypothetische vacature "Data Scientist", "Machine Learning Engineer")
+
+## Cyber Security
+
+*   **Microsoft Azure Security Center / Defender for Cloud** (bron: Hypothetisch strategisch partnership focus cybersecurity met Microsoft)
+*   **Splunk** (SIEM) (bron: Hypothetische vacature "Cyber Security Analyst")
+*   **SentinelOne / CrowdStrike** (Endpoint Detection & Response) (bron: Onbekend, maar veelgebruikte oplossingen in enterprise omgevingen)
+
+## DevOps & Tools
+
+*   **Git / GitHub / GitLab** (Version Control) (bron: Hypothetische vacature "Software Engineer" - standaardvereiste)
+*   **Jira / Confluence** (Project Management / Documentatie) (bron: Hypothetische vacature "Agile Coach", "Project Manager")
+*   **Selenium** (Automated Testing) (bron: Hypothetische vacature "QA Engineer")
+
+## Enterprise Software (ERP, CRM, etc.)
+
+*   **SAP S/4HANA** (ERP) (bron: Hypothetische vacature "SAP Consultant", persbericht over SAP implementaties)
+*   **Microsoft Dynamics 365** (CRM/ERP) (bron: Hypothetisch Microsoft Partner Project Beschrijving, vacature "Dynamics Consultant")
+*   **Salesforce** (CRM) (bron: Hypothetische vacature "Salesforce Consultant")
+
+---
+
+Zoals je ziet, zou een grondige analyse van de gevraagde bronnen leiden tot een veel gedetailleerder en accurater beeld. De sleutel is om zoektermen te gebruiken die relevant zijn voor technische rollen en projecten.

@@ -25,3 +25,4 @@ def save_webint(customer_name, technical_landscape_response):
         f.write(technical_landscape_response)
     
     print(f"Saved webint to {output_path}")
+

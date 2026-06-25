@@ -1,0 +1,118 @@
+Oké, hier is een overzicht van het technische landschap van Google, gebaseerd op de opgegeven bronnen. Het is belangrijk op te merken dat Google een zeer breed en diep technologisch bedrijf is, en dit overzicht zal geenszins uitputtend zijn, maar zal focussen op de technologieën die expliciet vermeld worden in de beschikbare openbare bronnen.
+
+---
+
+# Technisch Landschap van Google
+
+## Programmeertalen
+-   **Java** (bron: Careers / Vacatures pagina, bijv. voor Senior Software Engineer, Backend Engineer, Android Engineer)
+-   **Python** (bron: Careers / Vacatures pagina, bijv. voor Software Engineer, Data Scientist, Site Reliability Engineer; Engineering blog - diverse projecten en tools)
+-   **C++** (bron: Careers / Vacatures pagina, bijv. voor Software Engineer, Performance Engineer; Engineering blog - kernel ontwikkeling, low-level systemen)
+-   **Go** (Golang) (bron: Careers / Vacatures pagina, bijv. voor Software Engineer, Site Reliability Engineer; Engineering blog - ontwikkeling van Go zelf, interne tools en services; GitHub organisatie - veel Go-projecten en repositories)
+-   **JavaScript** (bron: Careers / Vacatures pagina, bijv. voor Frontend Engineer, Full Stack Engineer; Engineering blog - webdevelopment frameworks; GitHub organisatie - diverse frontend libraries en tools)
+-   **TypeScript** (bron: Careers / Vacatures pagina, bijv. voor Frontend Engineer; GitHub organisatie - diverse projecten, waaronder Angular)
+-   **Rust** (bron: Engineering blog - vermelding in context van veiligheid en prestaties in besturingssystemen/critical infrastructure; GitHub organisatie - enkele projecten)
+-   **Kotlin** (bron: Careers / Vacatures pagina, bijv. voor Android Engineer; Engineering blog - primaire taal voor Android app-ontwikkeling)
+-   **Scala** (bron: Careers / Vacatures pagina, bijv. voor Data Engineer, Big Data Engineer)
+-   **Dart** (bron: Engineering blog - Flutter framework; GitHub organisatie - Dart repositories)
+-   **SQL** (bron: Careers / Vacatures pagina, bijv. voor Data Analyst, Data Engineer)
+-   **Shell Scripting (Bash)** (bron: Careers / Vacatures pagina, bijv. voor Site Reliability Engineer)
+
+## Cloud
+-   **Google Cloud Platform (GCP)** (bron: Officiële bedrijfswebsite - primaire cloud-aanbod; Engineering blog - diepgaande artikelen over GCP services; Tech conferentie presentaties - GCP Next, Google Cloud Summits)
+    -   **Compute Engine** (bron: Officiële bedrijfswebsite, Engineering blog)
+    -   **Kubernetes Engine (GKE)** (bron: Officiële bedrijfswebsite, Engineering blog, GitHub organisatie - Kubernetes zelf is open source, Google is een grote contributor)
+    -   **App Engine** (bron: Officiële bedrijfswebsite, Engineering blog)
+    -   **Cloud Functions** (bron: Officiële bedrijfswebsite, Engineering blog)
+    -   **Cloud Run** (bron: Officiële bedrijfswebsite, Engineering blog)
+    -   **BigQuery** (bron: Officiële bedrijfswebsite, Engineering blog, Careers / Vacatures pagina - Data Scientist, Data Engineer)
+    -   **Cloud Spanner** (bron: Officiële bedrijfswebsite, Engineering blog)
+    -   **Cloud Datastore / Firestore** (bron: Officiële bedrijfswebsite, Engineering blog)
+    -   **Cloud Storage** (bron: Officiële bedrijfswebsite, Engineering blog)
+    -   **Pub/Sub** (bron: Officiële bedrijfswebsite, Engineering blog)
+    -   **Dataflow** (Apache Beam) (bron: Officiële bedrijfswebsite, Engineering blog, GitHub organisatie - Apache Beam)
+    -   **Bigtable** (bron: Officiële bedrijfswebsite, Engineering blog)
+    -   **Cloud SQL (managed MySQL, PostgreSQL, SQL Server)** (bron: Officiële bedrijfswebsite, Engineering blog)
+    -   **Looker** (bron: Officiële bedrijfswebsite - onderdeel van Google Cloud)
+-   **Onbekend** (Geen directe vermelding van het gebruik van Azure of AWS als primaire interne infrastructuur op de eigen Google-bronnen, hoewel GCP interoperabiliteitspartnerships kan hebben.)
+
+## Databases
+-   **Spanner** (distributed relational database) (bron: Engineering blog - introductie en updates; Officiële bedrijfswebsite - Google Cloud Spanner)
+-   **Bigtable** (NoSQL wide-column store) (bron: Engineering blog - introductie en updates; Officiële bedrijfswebsite - Google Cloud Bigtable)
+-   **Firestore / Datastore** (NoSQL document database) (bron: Officiële bedrijfswebsite - Google Cloud Firestore/Datastore; Engineering blog)
+-   **BigQuery** (serverless data warehouse) (bron: Officiële bedrijfswebsite - Google Cloud BigQuery; Engineering blog)
+-   **Cloud SQL** (managed relational databases: MySQL, PostgreSQL, SQL Server) (bron: Officiële bedrijfswebsite - Google Cloud SQL)
+-   **LevelDB** (embedded key-value store) (bron: GitHub organisatie - LevelDB repository)
+-   **Onbekend** (Specifieke interne proprietary databases naast Spanner en Bigtable zijn niet gedetailleerd publiekelijk beschikbaar.)
+
+## Data Processing & Big Data
+-   **Apache Beam** (unified programming model for batch and stream processing, implementatie van Google's Dataflow) (bron: Engineering blog - "Dataflow and Apache Beam"; GitHub organisatie - Apache Beam)
+-   **MapReduce** (historische/interne framework voor parallelle verwerking van grote datasets) (bron: Engineering blog - historische artikelen, conceptual underpinning van BigQuery/Dataflow)
+-   **Flume** (interne high-throughput distributed messaging system) (bron: Engineering blog - conceptual underpinning van Pub/Sub)
+-   **BigQuery** (cloud data warehouse voor analytische queries) (bron: Officiële bedrijfswebsite - Google Cloud BigQuery; Engineering blog)
+-   **TensorFlow Extended (TFX)** (end-to-end platform voor machine learning in productie) (bron: Engineering blog, GitHub organisatie - TensorFlow Extended)
+-   **Onbekend** (Veel interne tools voor data-extractie, transformatie, en laden (ETL) zijn niet openbaar gespecificeerd.)
+
+## Besturingssystemen
+-   **Linux** (Kernel, veel interne services en Google's cloudinfrastructuur draaien op Linux-gebaseerde systemen) (bron: Careers / Vacatures pagina - SRE, Software Engineer met Linux expertise; Engineering blog - artikelen over kernel-ontwikkeling, containers op Linux)
+-   **Android** (mobiel besturingssysteem) (bron: Officiële bedrijfswebsite - Android Developer; Engineering blog - Android ontwikkeling; Careers / Vacatures pagina - Android Engineer)
+-   **Chrome OS** (desktop besturingssysteem) (bron: Officiële bedrijfswebsite; Engineering blog)
+-   **Fuchsia OS** (experimenteel open-source besturingssysteem) (bron: GitHub organisatie - Fuchsia repository; Engineering blog - aankondigingen, updates)
+-   **Onbekend** (Specifieke interne serverdistributies of eigen besturingssystemen anders dan bovengenoemde zijn niet gedetailleerd publiekelijk bekend.)
+
+## Infrastructuur & Virtualisatie
+-   **Kubernetes** (container-orkestratie) (bron: Engineering blog - diepgaande bijdragen aan Kubernetes; GitHub organisatie - Kubernetes; Officiële bedrijfswebsite - Google Kubernetes Engine)
+-   **Docker** (containerisatie) (bron: Engineering blog - gebruik van containers; Careers / Vacatures pagina - vereisten voor SRE, Software Engineers)
+-   **Borg** (interne voorloper van Kubernetes, nog steeds in gebruik voor sommige workloads) (bron: Engineering blog - historische artikelen over Borg en de overgang naar Kubernetes)
+-   **gVisor** (sandbox runtime for containers) (bron: Engineering blog, GitHub organisatie - gVisor)
+-   **Onbekend** (Aangepaste hardware, netwerken en virtualisatielagen zijn zelden volledig openbaar gemaakt.)
+
+## Versiebeheer
+-   **Git** (bron: GitHub organisatie - Google's open-source repositories; Careers / Vacatures pagina - algemeen vereiste vaardigheid)
+-   **Perforce / Depot Tools** (interne monorepo-achtige systemen, voorbeelden hiervan zijn te zien in openbaar beschikbare projecten zoals Chromium) (bron: GitHub organisatie - instructies voor bijv. Chromium development wijzen naar depot_tools)
+
+## CI/CD (Continuous Integration/Continuous Deployment)
+-   **Onbekend** (Google heeft een zeer geavanceerde interne CI/CD-infrastructuur, maar de specifieke namen en details van hun interne tools zoals "Blaze" (voorloper van Bazel) en hun deployment pipelines zijn niet openbaar gespecificeerd. Wel wordt de *filosofie* van CI/CD breed besproken in de Engineering blog.)
+-   **Bazel** (open-source build-tool, intern ontwikkeld als Blaze) (bron: GitHub organisatie - Bazel; Engineering blog - artikelen over Bazel)
+-   **Jenkins** (mogelijk voor specifieke projecten of als algemene vaardigheid, maar niet als primair intern systeem) (bron: Careers / Vacatures pagina - incidenteel vermeld als vaardigheid)
+
+## Monitoring & Logging
+-   **Prometheus** (open-source monitoring solution, geïnspireerd door Google's Borgmon) (bron: Engineering blog - historische invloed van Google op monitoring, SRE practices; GitHub organisatie - Prometheus is een Cloud Native Computing Foundation (CNCF) project waar Google bijdraagt)
+-   **Stackdriver** (nu onderdeel van Google Cloud Monitoring, Logging, Trace) (bron: Officiële bedrijfswebsite - Google Cloud Monitoring; Engineering blog)
+-   **Onbekend** (Veel interne tools voor performance monitoring, distributed tracing en logging zijn niet openbaar gespecificeerd, hoewel de concepten (bijv. Bigtable voor logs, Dapper voor tracing) zijn gedeeld.)
+
+## Machine Learning & AI
+-   **TensorFlow** (open-source machine learning framework) (bron: Officiële bedrijfswebsite - TensorFlow; Engineering blog - constant updates en onderzoek; GitHub organisatie - TensorFlow)
+-   **Keras** (high-level API voor neurale netwerken, integreert met TensorFlow) (bron: Officiële bedrijfswebsite - TensorFlow/Keras; Engineering blog)
+-   **PyTorch** (eveneens een veelgebruikt ML framework, alhoewel minder primair dan TensorFlow voor Google) (bron: Careers / Vacatures pagina - Machine Learning Engineer vacatures vragen soms ook PyTorch kennis; Engineering blog - academische publicaties gebruiken soms PyTorch)
+-   **JAX** (high-performance numerical computing) (bron: GitHub organisatie - JAX; Engineering blog - onderzoekspaper implementaties)
+-   **Google Cloud AI Platform** (managed services voor ML workflows) (bron: Officiële bedrijfswebsite - Google Cloud AI Platform; Engineering blog)
+-   **TPUs (Tensor Processing Units)** (specifiek ontworpen hardware voor ML workloads) (bron: Officiële bedrijfswebsite - Google Cloud TPUs; Engineering blog - introductie en performance benchmarks)
+-   **Transformers (modellen en concepten)** (voor natuurlijke taalverwerking, zoals BERT, LaMDA, PaLM) (bron: Engineering blog - diverse artikelen over NLP modellen; Persberichten)
+-   **Onbekend** (Diverse interne ML frameworks, tools en datasets worden niet openbaar gemaakt.)
+
+## Frontend Technologies
+-   **Angular** (webapplicatie framework) (bron: GitHub organisatie - Angular; Engineering blog - ontwikkeling van Angular)
+-   **Material Design** (design system) (bron: Officiële bedrijfswebsite - Material.io; Engineering blog)
+-   **HTML5, CSS3** (standaard webtechnologieën) (bron: Careers / Vacatures pagina - Frontend Engineer, Web Developer)
+-   **React** (eveneens veelgebruikt, hoewel Angular meer Google-specifiek is) (bron: Careers / Vacatures pagina - Soms vermeld als vaardigheid voor Frontend Engineers)
+-   **Flutter** (UI toolkit voor cross-platform native apps) (bron: GitHub organisatie - Flutter; Engineering blog - updates en showcases)
+
+## Netwerken
+-   **SDN (Software-Defined Networking)** (interne implementaties zoals B4 en Jupiter) (bron: Engineering blog - artikelen over B4 en Jupiter datacenter netwerken)
+-   **gRPC** (high-performance RPC framework) (bron: GitHub organisatie - gRPC; Engineering blog - introductie en gebruik binnen Google)
+-   **QUIC** (next generation transport protocol) (bron: Engineering blog - ontwikkeling en implementatie van QUIC)
+-   **Envoy Proxy** (service proxy voor cloud-native applicaties) (bron: GitHub organisatie - Google is een gebruiker/contributor; Engineering blog - besprekingen in context van service mesh)
+
+## Beveiliging
+-   **Golang** (voor security tools en services) (bron: Engineering blog - nadruk op veiligheid, vaak in combinatie met Go)
+-   **Rust** (voor security-kritische componenten) (bron: Engineering blog - discussie over geheugenveiligheid in systemen)
+-   **FIDO U2F / WebAuthn** (standaarden voor sterke authenticatie) (bron: Engineering blog - bijdragen aan FIDO en WebAuthn)
+-   **Titan Security Key** (hardware security sleutel) (bron: Officiële bedrijfswebsite)
+-   **BeyondCorp** (zero-trust security model) (bron: Engineering blog - whitepapers over BeyondCorp)
+-   **OpenSSL / BoringSSL** (cryptografische bibliotheken) (bron: GitHub organisatie - BoringSSL)
+-   **Onbekend** (Een grote hoeveelheid interne beveiligingstools, auditing-systemen en security-best practices zijn niet openbaar gedetailleerd.)
+
+---
+
+Deze lijst probeert zo nauwkeurig mogelijk te zijn door alleen de gevraagde bronnen te gebruiken. Het is een momentopname, en Google's technische landschap evolueert voortdurend.

@@ -1,5 +1,4 @@
 import json
-
 from bleach import clean
 
 from Extractors.TermComparator import compare_terms
@@ -16,22 +15,17 @@ from Savers.JsonSaver import save_to_json, save_webint
 from Savers.MarkdownSaver import save_to_markdown
 
 
-def run_customer_analysis_workflow():
+def run_customer_analysis_workflow(customer_name: str= None):
+    if not customer_name:
+        customer_name = input("Voer de naam van de klant in: ")
 
-    # Read customer-specific settings
-    customer_name, model = load_config()
-
-    # Initialize LLM connection
+    model = load_config()
     llm_client = LLMClient(model)
 
-    # Load workflow prompts
     technical_landscape_prompt, extract_terms_prompt, followup_prompts_prompt, answer_followup_questions_prompt, generate_rapports_prompt = load_prompts()
 
-    # Read HUMINT notes for the customer
     humint_text = load_humint(customer_name)
 
-
-    # Generate an overview of the customer's technical landscape
     technical_landscape_response = generate_technical_landscape(
         technical_landscape_prompt,
         customer_name,
@@ -41,30 +35,24 @@ def run_customer_analysis_workflow():
 
     save_webint(customer_name, technical_landscape_response)
 
-    # Extract relevant technologies and technical concepts
     extracted_terms = extract_terms(
         technical_landscape_response,
         llm_client,
         extract_terms_prompt
     )
 
-    # Check which terms already exist in the knowledge base
-    comparison_results = compare_terms_with_database(
-        extracted_terms
-    )
+    comparison_results = compare_terms_with_database(extracted_terms)
 
-    # Print results to verify term matching
     print_comparison_results(comparison_results)
 
     check_terms_in_vector_store(comparison_results)
 
-    # Only generate follow-up questions for terms without existing semantic knowledge
     new_terms_for_followup = [
         result for result in comparison_results
         if not find_existing_term(result.get("term"))
     ]
 
-    followup_prompts, rapport = generate_followup_prompts(
+    followup_prompts, answer_response, rapport = generate_followup_prompts(
         comparison_results,
         new_terms_for_followup,
         llm_client,
@@ -75,37 +63,50 @@ def run_customer_analysis_workflow():
         customer_name
     )
 
-    # Save analysis to JSON
-    
-    clean = followup_prompts.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
-    print(repr(clean[76800:76950]))
-    parsed = json.loads(clean)
-    save_to_json(customer_name, parsed)
+    # Parse both
+    clean_prompts = followup_prompts.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
+    clean_answers = answer_response.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
+
+    try:
+        parsed_prompts = json.loads(clean_prompts) if clean_prompts else []
+    except json.JSONDecodeError:
+        print("Followup prompts JSON incomplete, skipping.")
+        parsed_prompts = []
+
+    try:
+        parsed_answers = json.loads(clean_answers) if clean_answers else []
+    except json.JSONDecodeError:
+        print("Followup answers JSON incomplete, skipping.")
+        parsed_answers = []
+    print("Parsed Prompts:", repr(clean_prompts))
+    print("Parsed Answers:", repr(clean_answers))
+
+    # Build lookups
+    definitions_by_term = {result["term"]: result.get("definition", "") for result in comparison_results}
+    answers_by_term = {item["term"]: item.get("followup_prompts", []) for item in parsed_answers}
+
+    merged = []
+    for item in parsed_prompts:
+        term = item["term"]
+        merged.append({
+            "term": term,
+            "definition": definitions_by_term.get(term, ""),
+            "followup_prompts": item.get("followup_prompts", []),
+            "followup_answers": answers_by_term.get(term, [])
+        })
+
+    save_to_json(customer_name, merged)
     save_to_markdown(customer_name, rapport)
 
-    # Save analysis to JSON
-
-    clean = followup_prompts.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
-    parsed = json.loads(clean)
-    save_to_json(customer_name, parsed)
-    save_to_markdown(customer_name, rapport)  # Save rapport to Markdown
-
-
-    # Store new terms in MongoDB
     save_terms(comparison_results)
 
-    # Create embeddings and push them to Qdrant
     generate_and_save_embeddings(new_terms_for_followup)
 
 
 def load_config():
     config_reader = ConfigReader("data/config/config.txt")
     config_reader.read_config()
-
-    customer_name = config_reader.get_config("customer_name")
-    model = config_reader.get_config("model")
-
-    return customer_name, model
+    return config_reader.get_config("model")
 
 
 def load_prompts():
@@ -115,7 +116,7 @@ def load_prompts():
     extract_terms_prompt = prompt_templates[1]
     generate_followup_prompts = prompt_templates[2]
     answer_followup_questions_prompt = prompt_templates[3]
-    generate_rapports_prompt=prompt_templates[4]
+    generate_rapports_prompt = prompt_templates[4]
 
     return (
         technical_landscape_prompt,
@@ -127,10 +128,7 @@ def load_prompts():
 
 
 def load_humint(customer_name):
-    humint_reader = HumintReader(
-        f"data/humanInt/{customer_name}.md"
-    )
-
+    humint_reader = HumintReader(f"data/humanInt/{customer_name}.md")
     return humint_reader.read_humint()
 
 
@@ -144,7 +142,6 @@ def generate_technical_landscape(
         CUSTOMER_NAME=customer_name,
         HUMINT_TEXT=humint_text
     )
-
     return llm_client.ask(filled_prompt)
 
 
@@ -162,10 +159,7 @@ def extract_terms(
 
 def compare_terms_with_database(extracted_terms):
     existing_terms = load_existing_terms()
-    return compare_terms(
-        extracted_terms,
-        existing_terms
-    )
+    return compare_terms(extracted_terms, existing_terms)
 
 
 def print_comparison_results(comparison_results):
@@ -182,28 +176,24 @@ def generate_and_save_embeddings(new_terms):
         term = term_doc.get("term")
         if not term:
             continue
-
         embedding = embed_term(term_doc)
         save_term_embedding(term_doc, embedding)
-
         print(f"Saved embedding for: {term}")
+
 
 def check_terms_in_vector_store(comparison_results):
     for result in comparison_results:
         term = result.get("term")
-
         if not term:
             continue
-
         existing_info = find_existing_term(term)
-
         if existing_info:
             print(f"Found existing semantic knowledge for: {term}")
             print(existing_info)
         else:
-            print(f"No semantic knowledge found for: {term}") 
+            print(f"No semantic knowledge found for: {term}")
 
-            
+
 def generate_followup_prompts(
     comparison_results,
     new_terms,
@@ -214,7 +204,6 @@ def generate_followup_prompts(
     humint_text,
     customer_name
 ):
-    # Only generate follow-up questions for new/unknown terms
     technical_terms = []
 
     for result in new_terms:
@@ -222,10 +211,7 @@ def generate_followup_prompts(
         if term:
             technical_terms.append(term)
 
-    terms_text = "\n".join(
-        f"- {term}"
-        for term in technical_terms
-    )
+    terms_text = "\n".join(f"- {term}" for term in technical_terms)
 
     if technical_terms:
         filled_prompt = followup_prompts_prompt.format(
@@ -237,12 +223,11 @@ def generate_followup_prompts(
             TECHNICAL_TERMS=terms_text,
             FOLLOWUP_PROMPTS=prompts_response
         )
-        response = llm_client.ask(filled_answer_prompt)
+        answer_response = llm_client.ask(filled_answer_prompt)
     else:
         prompts_response = ""
-        response = "[]"  # no new terms, empty JSON array
+        answer_response = "[]"
 
-    # Rapport uses the FULL picture — all terms, new and existing
     all_terms_text = "\n".join(
         f"- {result.get('term')}: {result.get('definition', '')}"
         for result in comparison_results
@@ -253,8 +238,8 @@ def generate_followup_prompts(
         HUMINT_TEXT=humint_text,
         TECHNICAL_TERMS=all_terms_text,
         FOLLOWUP_PROMPTS=prompts_response,
-        FOLLOWUP_ANSWERS=response
+        FOLLOWUP_ANSWERS=answer_response
     )
     rapport = llm_client.ask(filled_rapports_prompt)
 
-    return response, rapport
+    return prompts_response, answer_response, rapport

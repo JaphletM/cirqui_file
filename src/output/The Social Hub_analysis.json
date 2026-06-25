@@ -1,0 +1,299 @@
+{
+  "company": "The Social Hub",
+  "results": [
+    {
+      "term": "AWS",
+      "definition": "Amazon Web Services is a comprehensive, broadly adopted, and elastic cloud platform offering over 200 fully featured services from data centers globally.",
+      "followup_prompts": [
+        "Welke specifieke AWS-diensten gebruikt de klant momenteel, of heeft de klant eerder overwogen te gebruiken, en welke problemen probeerde men daarmee op te lossen?",
+        "Zijn er binnen de organisatie van de klant specifieke teams of individuen die expertise hebben in AWS, en zo ja, welke rollen vervullen zij en welke AWS-certificeringen bezitten ze?",
+        "Wat zijn de belangrijkste overwegingen voor de klant bij het adopteren of verder uitbreiden van hun AWS-gebruik, zoals kosten, schaalbaarheid, security, of compliance?"
+      ],
+      "followup_answers": [
+        "Welke specifieke AWS-diensten gebruikt de klant momenteel, of heeft de klant eerder overwogen te gebruiken, en welke problemen probeerde men daarmee op te lossen?",
+        "Zijn er binnen de organisatie van de klant specifieke teams of individuen die expertise hebben in AWS, en zo ja, welke rollen vervullen zij en welke AWS-certificeringen bezitten ze?",
+        "Wat zijn de belangrijkste overwegingen voor de klant bij het adopteren of verder uitbreiden van hun AWS-gebruik, zoals kosten, schaalbaarheid, security, of compliance?"
+      ]
+    },
+    {
+      "term": "Azure",
+      "definition": "Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers.",
+      "followup_prompts": [
+        "Welke Azure-diensten zijn door de klant geïmplementeerd of staan op de planning, en wat zijn de primaire drivers voor deze keuzes (bijv. integratie met bestaande Microsoft-producten, specifieke diensten)?",
+        "Is er intern bij de klant ervaring met Azure DevOps, en zo ja, welke CI/CD-strategieën worden daar toegepast in combinatie met Azure?",
+        "Wat zijn de specifieke uitdagingen die de klant ervaart of verwacht bij de migratie naar of het beheer van hun Azure-omgeving, en hoe kunnen we daarbij helpen?"
+      ],
+      "followup_answers": [
+        "Welke Azure-diensten zijn door de klant geïmplementeerd of staan op de planning, en wat zijn de primaire drivers voor deze keuzes (bijv. integratie met bestaande Microsoft-producten, specifieke diensten)?",
+        "Is er intern bij de klant ervaring met Azure DevOps, en zo ja, welke CI/CD-strategieën worden daar toegepast in combinatie met Azure?",
+        "Wat zijn de specifieke uitdagingen die de klant ervaart of verwacht bij de migratie naar of het beheer van hun Azure-omgeving, en hoe kunnen we daarbij helpen?"
+      ]
+    },
+    {
+      "term": "Google Cloud Platform",
+      "definition": "Google Cloud Platform is a suite of cloud computing services that runs on the same infrastructure that Google uses internally for its end-user products, such as Google Search and YouTube.",
+      "followup_prompts": [
+        "Welke Google Cloud-diensten zijn bij de klant in gebruik, met name op het gebied van data-analyse (BigQuery, Dataflow) of machine learning (AI Platform), en wat zijn de gebruiksscenario's?",
+        "Heeft de klant ervaring met of plannen voor hybride cloud-oplossingen waarbij Google Cloud Platform betrokken is, en zo ja, welke workload(s) worden hiervoor overwogen?",
+        "Wat zijn de belangrijkste overwegingen voor de klant om Google Cloud Platform te verkiezen boven andere cloudproviders, zoals specifieke tooling, prijsmodellen of integratiemogelijkheden?"
+      ],
+      "followup_answers": [
+        "Welke Google Cloud-diensten zijn bij de klant in gebruik, met name op het gebied van data-analyse (BigQuery, Dataflow) of machine learning (AI Platform), en wat zijn de gebruiksscenario's?",
+        "Heeft de klant ervaring met of plannen voor hybride cloud-oplossingen waarbij Google Cloud Platform betrokken is, en zo ja, welke workload(s) worden hiervoor overwogen?",
+        "Wat zijn de belangrijkste overwegingen voor de klant om Google Cloud Platform te verkiezen boven andere cloudproviders, zoals specifieke tooling, prijsmodellen of integratiemogelijkheden?"
+      ]
+    },
+    {
+      "term": "Spring",
+      "definition": "Spring is an open source application framework for Java.",
+      "followup_prompts": [
+        "Welke specifieke Spring-frameworks (Spring Boot, Spring Security, Spring Cloud) worden door de klant gebruikt, en voor welke applicatietypes (microservices, monoliths, batchverwerking)?",
+        "Heeft de klant bestaande applicaties die geschreven zijn in Java zonder Spring, en zijn er plannen om deze te moderniseren of te migreren naar een Spring-gebaseerde architectuur?",
+        "Wat zijn de belangrijkste uitdagingen voor de klant met betrekking tot het ontwikkelen, testen of onderhouden van Spring-applicaties, bijvoorbeeld qua prestaties, deployment of ontwikkelsnelheid?"
+      ],
+      "followup_answers": [
+        "Welke specifieke Spring-frameworks (Spring Boot, Spring Security, Spring Cloud) worden door de klant gebruikt, en voor welke applicatietypes (microservices, monoliths, batchverwerking)?",
+        "Heeft de klant bestaande applicaties die geschreven zijn in Java zonder Spring, en zijn er plannen om deze te moderniseren of te migreren naar een Spring-gebaseerde architectuur?",
+        "Wat zijn de belangrijkste uitdagingen voor de klant met betrekking tot het ontwikkelen, testen of onderhouden van Spring-applicaties, bijvoorbeeld qua prestaties, deployment of ontwikkelsnelheid?"
+      ]
+    },
+    {
+      "term": ".NET",
+      "definition": ".NET is a free, cross-platform, open-source developer platform for building many different types of applications.",
+      "followup_prompts": [
+        "Welke versies van .NET (.NET Framework, .NET Core, .NET 5+) worden door de klant ingezet, en welke soorten applicaties (web, desktop, mobiel) zijn hiermee gebouwd?",
+        "Zijn er bij de klant plannen om bestaande .NET Framework-applicaties te migreren naar modernere .NET-versies, en zo ja, wat zijn de drijfveren en verwachte uitdagingen hierbij?",
+        "Welke externe tools of frameworks worden door de klant gebruikt in combinatie met .NET (bijv. ORM's zoals Entity Framework, UI-frameworks zoals Blazor), en wat zijn de ervaringen hiermee?"
+      ],
+      "followup_answers": [
+        "Welke versies van .NET (.NET Framework, .NET Core, .NET 5+) worden door de klant ingezet, en welke soorten applicaties (web, desktop, mobiel) zijn hiermee gebouwd?",
+        "Zijn er bij de klant plannen om bestaande .NET Framework-applicaties te migreren naar modernere .NET-versies, en zo ja, wat zijn de drijfveren en verwachte uitdagingen hierbij?",
+        "Welke externe tools of frameworks worden door de klant gebruikt in combinatie met .NET (bijv. ORM's zoals Entity Framework, UI-frameworks zoals Blazor), en wat zijn de ervaringen hiermee?"
+      ]
+    },
+    {
+      "term": "Node.js",
+      "definition": "Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside of a web browser.",
+      "followup_prompts": [
+        "Voor welke specifieke use-cases zet de klant Node.js in (bijv. real-time applicaties, API-services, serverless functies) en welke Node.js-frameworks (Express, NestJS) worden daarbij gebruikt?",
+        "Wat is de huidige tooling en de ontwikkelervaring van de klant met Node.js, met inbegrip van build-tools, test-frameworks en deployment-pipelines?",
+        "Welke uitdagingen ondervindt de klant bij het schalen, beveiligen of onderhouden van hun Node.js-applicaties, en hoe worden deze momenteel aangepakt?"
+      ],
+      "followup_answers": [
+        "Voor welke specifieke use-cases zet de klant Node.js in (bijv. real-time applicaties, API-services, serverless functies) en welke Node.js-frameworks (Express, NestJS) worden daarbij gebruikt?",
+        "Wat is de huidige tooling en de ontwikkelervaring van de klant met Node.js, met inbegrip van build-tools, test-frameworks en deployment-pipelines?",
+        "Welke uitdagingen ondervindt de klant bij het schalen, beveiligen of onderhouden van hun Node.js-applicaties, en hoe worden deze momenteel aangepakt?"
+      ]
+    },
+    {
+      "term": "Microservices",
+      "definition": "Microservices is an architectural style that structures an application as a collection of loosely coupled, independently deployable services.",
+      "followup_prompts": [
+        "Welke bestaande applicaties heeft de klant geherstructureerd naar een microservices-architectuur, of welke applicaties staan op de planning voor een dergelijke transitie, en wat zijn de beweegredenen hiervoor?",
+        "Welke tooling en processen gebruikt de klant voor het beheren van microservices (bijv. service discovery, API Gateways, fault tolerance), en wat zijn de ervaringen hiermee?",
+        "Wat zijn de grootste uitdagingen die de klant ervaart bij het ontwerpen, ontwikkelen, implementeren en monitoren van microservices, en welke hulp hierbij nodig mocht zijn?"
+      ],
+      "followup_answers": [
+        "Welke bestaande applicaties heeft de klant geherstructureerd naar een microservices-architectuur, of welke applicaties staan op de planning voor een dergelijke transitie, en wat zijn de beweegredenen hiervoor?",
+        "Welke tooling en processen gebruikt de klant voor het beheren van microservices (bijv. service discovery, API Gateways, fault tolerance), en wat zijn de ervaringen hiermee?",
+        "Wat zijn de grootste uitdagingen die de klant ervaart bij het ontwerpen, ontwikkelen, implementeren en monitoren van microservices, en welke hulp hierbij nodig mocht zijn?"
+      ]
+    },
+    {
+      "term": "Kubernetes",
+      "definition": "Kubernetes is an open-source container-orchestration system for automating computer application deployment, scaling, and management.",
+      "followup_prompts": [
+        "Welke (delen van) de applicatie-infrastructuur van de klant draaien momenteel op Kubernetes, en wordt dit on-premise, in de cloud (managed Kubernetes), of als hybride oplossing ingezet?",
+        "Welke tooling en expertise heeft de klant intern voor het beheer en de automatisering van Kubernetes-clusters (bijv. Helm, Operators, GitOps), en is er behoefte aan ondersteuning of training?",
+        "Wat zijn de belangrijkste overwegingen voor de klant bij het schalen, beveiligen en monitoren van hun Kubernetes-workloads, en welke problemen proberen ze hiermee op te lossen?"
+      ],
+      "followup_answers": [
+        "Welke (delen van) de applicatie-infrastructuur van de klant draaien momenteel op Kubernetes, en wordt dit on-premise, in de cloud (managed Kubernetes), of als hybride oplossing ingezet?",
+        "Welke tooling en expertise heeft de klant intern voor het beheer en de automatisering van Kubernetes-clusters (bijv. Helm, Operators, GitOps), en is er behoefte aan ondersteuning of training?",
+        "Wat zijn de belangrijkste overwegingen voor de klant bij het schalen, beveiligen en monitoren van hun Kubernetes-workloads, en welke problemen proberen ze hiermee op te lossen?"
+      ]
+    },
+    {
+      "term": "CRM",
+      "definition": "Customer relationship management (CRM) is a technology for managing all your company’s relationships and interactions with customers and potential customers.",
+      "followup_prompts": [
+        "Welke specifieke CRM-systemen gebruikt de klant momenteel, en welke afdelingen (sales, marketing, klantenservice) maken hier het meest gebruik van voor welke processen?",
+        "Wat zijn de belangrijkste pijnpunten of onvervulde behoeften van de klant met hun huidige CRM-oplossing, zowel functioneel als technisch (bijv. integratiemogelijkheden, datakwaliteit)?",
+        "Heeft de klant plannen om te migreren naar een ander CRM-systeem, of overweegt men de functionaliteit van het huidige systeem uit te breiden of aan te passen, en welke business drivers liggen hieraan ten grondslag?"
+      ],
+      "followup_answers": [
+        "Welke specifieke CRM-systemen gebruikt de klant momenteel, en welke afdelingen (sales, marketing, klantenservice) maken hier het meest gebruik van voor welke processen?",
+        "Wat zijn de belangrijkste pijnpunten of onvervulde behoeften van de klant met hun huidige CRM-oplossing, zowel functioneel als technisch (bijv. integratiemogelijkheden, datakwaliteit)?",
+        "Heeft de klant plannen om te migreren naar een ander CRM-systeem, of overweegt men de functionaliteit van het huidige systeem uit te breiden of aan te passen, en welke business drivers liggen hieraan ten grondslag?"
+      ]
+    },
+    {
+      "term": "ERP",
+      "definition": "Enterprise resource planning (ERP) is a system that integrates all facets of an operation, including product planning, development, manufacturing processes, sales and marketing.",
+      "followup_prompts": [
+        "Welke ERP-systemen zijn momenteel in gebruik bij de klant (bijv. SAP, Oracle E-Business Suite, Microsoft Dynamics), en welke modules (financiën, inkoop, productie) zijn hiervan actief?",
+        "Welke andere bedrijfssystemen of applicaties moeten geïntegreerd worden met het ERP-systeem van de klant, en welke uitdagingen worden daarbij ervaren op het gebied van data-uitwisseling of procesautomatisering?",
+        "Wat zijn de specifieke behoeften van de klant met betrekking tot rapportage en business intelligence vanuit het ERP-systeem, en worden de huidige mogelijkheden hiervoor als toereikend ervaren?"
+      ],
+      "followup_answers": [
+        "Welke ERP-systemen zijn momenteel in gebruik bij de klant (bijv. SAP, Oracle E-Business Suite, Microsoft Dynamics), en welke modules (financiën, inkoop, productie) zijn hiervan actief?",
+        "Welke andere bedrijfssystemen of applicaties moeten geïntegreerd worden met het ERP-systeem van de klant, en welke uitdagingen worden daarbij ervaren op het gebied van data-uitwisseling of procesautomatisering?",
+        "Wat zijn de specifieke behoeften van de klant met betrekking tot rapportage en business intelligence vanuit het ERP-systeem, en worden de huidige mogelijkheden hiervoor als toereikend ervaren?"
+      ]
+    },
+    {
+      "term": "Salesforce",
+      "definition": "Salesforce is a cloud-based software company that provides CRM services.",
+      "followup_prompts": [
+        "Welke Salesforce-producten en -clouddiensten (Sales Cloud, Service Cloud, Marketing Cloud, Experience Cloud, Einstein Analytics) zijn bij de klant geïmplementeerd of overwogen?",
+        "Heeft de klant specifieke customisaties of integraties met andere systemen voor Salesforce nodig, en welke uitdagingen worden daarbij ondervonden met betrekking tot ontwikkelcapaciteit of expertise?",
+        "Wat zijn de plannen van de klant met betrekking tot de adoptie van nieuwe Salesforce-functionaliteiten of de uitbreiding van het platform, en welke businessdoelstellingen wil men hiermee realiseren?"
+      ],
+      "followup_answers": [
+        "Welke Salesforce-producten en -clouddiensten (Sales Cloud, Service Cloud, Marketing Cloud, Experience Cloud, Einstein Analytics) zijn bij de klant geïmplementeerd of overwogen?",
+        "Heeft de klant specifieke customisaties of integraties met andere systemen voor Salesforce nodig, en welke uitdagingen worden daarbij ondervonden met betrekking tot ontwikkelcapaciteit of expertise?",
+        "Wat zijn de plannen van de klant met betrekking tot de adoptie van nieuwe Salesforce-functionaliteiten of de uitbreiding van het platform, en welke businessdoelstellingen wil men hiermee realiseren?"
+      ]
+    },
+    {
+      "term": "SAP",
+      "definition": "SAP is a German multinational software corporation that makes enterprise software to manage business operations and customer relations.",
+      "followup_prompts": [
+        "Welke SAP-producten en -oplossingen (bijv. SAP ECC, SAP S/4HANA, SAP BW, SAP Commerce Cloud) worden door de klant gebruikt, en is er sprake van een migratie naar S/4HANA of een andere modernisering van het landschap?",
+        "Welke branche-specifieke functionaliteiten of add-ons van SAP zijn relevant voor de klant, en hoe worden deze ingezet om bedrijfsprocessen te optimaliseren?",
+        "Wat zijn de belangrijkste uitdagingen voor de klant met betrekking tot het beheer, de beveiliging of de integratie van hun SAP-systemen, en welke hulp hierbij nodig mocht zijn (bijv. performance tuning, compliance)?"
+      ],
+      "followup_answers": [
+        "Welke SAP-producten en -oplossingen (bijv. SAP ECC, SAP S/4HANA, SAP BW, SAP Commerce Cloud) worden door de klant gebruikt, en is er sprake van een migratie naar S/4HANA of een andere modernisering van het landschap?",
+        "Welke branche-specifieke functionaliteiten of add-ons van SAP zijn relevant voor de klant, en hoe worden deze ingezet om bedrijfsprocessen te optimaliseren?",
+        "Wat zijn de belangrijkste uitdagingen voor de klant met betrekking tot het beheer, de beveiliging of de integratie van hun SAP-systemen, en welke hulp hierbij nodig mocht zijn (bijv. performance tuning, compliance)?"
+      ]
+    },
+    {
+      "term": "Oracle",
+      "definition": "Oracle Corporation is an American multinational computer technology company that provides database software and technology, cloud engineered systems, and enterprise software products.",
+      "followup_prompts": [
+        "Welke Oracle-databases of -applicaties (bijv. Oracle Database, Oracle E-Business Suite, JD Edwards, Fusion Applications) zijn bij de klant in gebruik, en voor welke bedrijfskritische processen?",
+        "Heeft de klant plannen om hun Oracle-databaselandschap te moderniseren (bijv. naar de cloud, Autonomous Database), en welke drijfveren (kosten, prestaties, beheer) liggen hieraan ten grondslag?",
+        "Wat zijn de belangrijkste uitdagingen voor de klant met betrekking tot de licenties, het beheer of de prestaties van hun Oracle-systemen, en hoe worden deze momenteel aangepakt?"
+      ],
+      "followup_answers": [
+        "Welke Oracle-databases of -applicaties (bijv. Oracle Database, Oracle E-Business Suite, JD Edwards, Fusion Applications) zijn bij de klant in gebruik, en voor welke bedrijfskritische processen?",
+        "Heeft de klant plannen om hun Oracle-databaselandschap te moderniseren (bijv. naar de cloud, Autonomous Database), en welke drijfveren (kosten, prestaties, beheer) liggen hieraan ten grondslag?",
+        "Wat zijn de belangrijkste uitdagingen voor de klant met betrekking tot de licenties, het beheer of de prestaties van hun Oracle-systemen, en hoe worden deze momenteel aangepakt?"
+      ]
+    },
+    {
+      "term": "API-gateways",
+      "definition": "An API gateway is a management tool that sits in front of an API and acts as a single entry point for a defined group of microservices.",
+      "followup_prompts": [
+        "Welke specifieke API Gateway-oplossingen (bijv. Apigee, Kong, AWS API Gateway) gebruikt de klant momenteel of overweegt men, en welke functionaliteiten (security, throttling, transformatie) zijn hierbij cruciaal?",
+        "Wat is de huidige architectuur van de klant voor het ontsluiten van API's, en welke problemen probeert men op te lossen met de implementatie of optimalisatie van een API Gateway (bijv. schaalbaarheid, beheer, security)?",
+        "Welke interne processen en tooling heeft de klant voor het ontwerpen, publiceren, documenteren en monitoren van API's via een API Gateway, en zijn er wensen voor verbeteringen hierin?"
+      ],
+      "followup_answers": [
+        "Welke specifieke API Gateway-oplossingen (bijv. Apigee, Kong, AWS API Gateway) gebruikt de klant momenteel of overweegt men, en welke functionaliteiten (security, throttling, transformatie) zijn hierbij cruciaal?",
+        "Wat is de huidige architectuur van de klant voor het ontsluiten van API's, en welke problemen probeert men op te lossen met de implementatie of optimalisatie van een API Gateway (bijv. schaalbaarheid, beheer, security)?",
+        "Welke interne processen en tooling heeft de klant voor het ontwerpen, publiceren, documenteren en monitoren van API's via een API Gateway, en zijn er wensen voor verbeteringen hierin?"
+      ]
+    },
+    {
+      "term": "Message brokers",
+      "definition": "A message broker is an intermediary computer program module that translates messages from the formal messaging protocol of the sender to the formal messaging protocol of the receiver.",
+      "followup_prompts": [
+        "Welke Message Broker-systemen (bijv. Kafka, RabbitMQ, ActiveMQ, Azure Service Bus) worden door de klant gebruikt, en voor welke communicatiepatronen (pub/sub, point-to-point) tussen applicaties?",
+        "Wat zijn de belangrijkste use-cases van de klant voor Message Brokers, bijvoorbeeld voor asynchrone communicatie, event streaming of het koppelen van gedistribueerde systemen?",
+        "Welke uitdagingen ervaart de klant bij het beheer, de schaalbaarheid of de betrouwbaarheid van hun Message Broker-implementaties, en hoe worden deze momenteel aangepakt?"
+      ],
+      "followup_answers": [
+        "Welke Message Broker-systemen (bijv. Kafka, RabbitMQ, ActiveMQ, Azure Service Bus) worden door de klant gebruikt, en voor welke communicatiepatronen (pub/sub, point-to-point) tussen applicaties?",
+        "Wat zijn de belangrijkste use-cases van de klant voor Message Brokers, bijvoorbeeld voor asynchrone communicatie, event streaming of het koppelen van gedistribueerde systemen?",
+        "Welke uitdagingen ervaart de klant bij het beheer, de schaalbaarheid of de betrouwbaarheid van hun Message Broker-implementaties, en hoe worden deze momenteel aangepakt?"
+      ]
+    },
+    {
+      "term": "Queueing-systemen",
+      "definition": "A queueing system is a system where requests are placed in queues and processed according to a specific schedule.",
+      "followup_prompts": [
+        "Welke Queueing-systemen (bijv. SQS, Azure Queues, Redis Streams) worden door de klant gebruikt om berichten te verwerken, en voor welke processen (bijv. batchverwerking, lange-termijntaken, job scheduling)?",
+        "Hoe garandeert de klant de betrouwbaarheid en de 'at-least-once' of 'exactly-once' delivery van berichten in hun queueing-systemen, en welke problemen ondervindt men daarbij?",
+        "Wat zijn de overwegingen van de klant bij het kiezen van een specifiek queueing-systeem, bijvoorbeeld ten aanzien van latency, throughput, persistentie of integratiemogelijkheden?"
+      ],
+      "followup_answers": [
+        "Welke Queueing-systemen (bijv. SQS, Azure Queues, Redis Streams) worden door de klant gebruikt om berichten te verwerken, en voor welke processen (bijv. batchverwerking, lange-termijntaken, job scheduling)?",
+        "Hoe garandeert de klant de betrouwbaarheid en de 'at-least-once' of 'exactly-once' delivery van berichten in hun queueing-systemen, en welke problemen ondervindt men daarbij?",
+        "Wat zijn de overwegingen van de klant bij het kiezen van een specifiek queueing-systeem, bijvoorbeeld ten aanzien van latency, throughput, persistentie of integratiemogelijkheden?"
+      ]
+    },
+    {
+      "term": "Monitoring",
+      "definition": "Monitoring is the act of observing and checking the behavior and output of a system or resource.",
+      "followup_prompts": [
+        "Welke monitoringtools (bijv. Prometheus, Grafana, Dynatrace, New Relic) heeft de klant momenteel in gebruik voor hun infrastructuur en applicaties, en welke metrieken worden hierbij verzameld en gevisualiseerd?",
+        "Welke processen heeft de klant voor het detecteren, alarmeren en oplossen van problemen op basis van monitoringdata, en wat zijn de knelpunten in deze processen?",
+        "Wat zijn de specifieke behoeften van de klant met betrekking tot 'observability' (metrics, logs, traces), en welke gaps zijn er tussen de huidige monitoring en de gewenste diepgaande inzichten?"
+      ],
+      "followup_answers": [
+        "Welke monitoringtools (bijv. Prometheus, Grafana, Dynatrace, New Relic) heeft de klant momenteel in gebruik voor hun infrastructuur en applicaties, en welke metrieken worden hierbij verzameld en gevisualiseerd?",
+        "Welke processen heeft de klant voor het detecteren, alarmeren en oplossen van problemen op basis van monitoringdata, en wat zijn de knelpunten in deze processen?",
+        "Wat zijn de specifieke behoeften van de klant met betrekking tot 'observability' (metrics, logs, traces), en welke gaps zijn er tussen de huidige monitoring en de gewenste diepgaande inzichten?"
+      ]
+    },
+    {
+      "term": "Logging",
+      "definition": "Logging is the process of generating and storing records of events in a computer system.",
+      "followup_prompts": [
+        "Welke logmanagement-systemen (bijv. ELK Stack, Splunk, Datadog) gebruikt de klant voor het verzamelen, opslaan en analyseren van logs, en welke informatie wordt hieruit gehaald voor operations of development?",
+        "Welke uitdagingen ervaart de klant bij het centraliseren, uniformeren of aggregeren van logberichten van verschillende applicaties en systemen?",
+        "Wat zijn de specifieke vereisten van de klant met betrekking tot compliance en retentie van logdata, en hoe worden deze momenteel ingevuld door de logging-oplossing?"
+      ],
+      "followup_answers": [
+        "Welke logmanagement-systemen (bijv. ELK Stack, Splunk, Datadog) gebruikt de klant voor het verzamelen, opslaan en analyseren van logs, en welke informatie wordt hieruit gehaald voor operations of development?",
+        "Welke uitdagingen ervaart de klant bij het centraliseren, uniformeren of aggregeren van logberichten van verschillende applicaties en systemen?",
+        "Wat zijn de specifieke vereisten van de klant met betrekking tot compliance en retentie van logdata, en hoe worden deze momenteel ingevuld door de logging-oplossing?"
+      ]
+    },
+    {
+      "term": "GitHub",
+      "definition": "GitHub is a provider of Internet hosting for software development and version control using Git.",
+      "followup_prompts": [
+        "Welke GitHub-features worden door de klant ingezet (bijv. GitHub Actions voor CI/CD, GitHub Packages voor artifact-management, project boards) en in hoeverre wordt de GitOps-methodologie toegepast?",
+        "Hoe beheert de klant hun code repositories op GitHub, inclusief zaken als branch protection rules, code reviews en integraties met andere projectmanagementtools?",
+        "Wat zijn de specifieke behoeften van de klant met betrekking tot security en compliance voor hun code op GitHub, en welk gebruik wordt er gemaakt van features zoals Dependabot of secret scanning?"
+      ],
+      "followup_answers": [
+        "Welke GitHub-features worden door de klant ingezet (bijv. GitHub Actions voor CI/CD, GitHub Packages voor artifact-management, project boards) en in hoeverre wordt de GitOps-methodologie toegepast?",
+        "Hoe beheert de klant hun code repositories op GitHub, inclusief zaken als branch protection rules, code reviews en integraties met andere projectmanagementtools?",
+        "Wat zijn de specifieke behoeften van de klant met betrekking tot security en compliance voor hun code op GitHub, en welk gebruik wordt er gemaakt van features zoals Dependabot of secret scanning?"
+      ]
+    },
+    {
+      "term": "GitLab",
+      "definition": "GitLab is a web-based Git repository manager that provides open and closed source software.",
+      "followup_prompts": [
+        "Welke GitLab-functionaliteiten worden door de klant gebruikt, met name op het gebied van CI/CD (GitLab CI/CD), container registry of ingebouwde security-scans (SAST, DAST)?",
+        "Wordt GitLab door de klant on-premise gehost, in de cloud (GitLab.com), of als een hybride oplossing, en welke redenen liggen hieraan ten grondslag?",
+        "Wat zijn de pijnpunten van de klant met betrekking tot hun huidige GitLab-implementatie, bijvoorbeeld qua prestaties, schaalbaarheid, of de integratie met andere development-tools?"
+      ],
+      "followup_answers": [
+        "Welke GitLab-functionaliteiten worden door de klant gebruikt, met name op het gebied van CI/CD (GitLab CI/CD), container registry of ingebouwde security-scans (SAST, DAST)?",
+        "Wordt GitLab door de klant on-premise gehost, in de cloud (GitLab.com), of als een hybride oplossing, en welke redenen liggen hieraan ten grondslag?",
+        "Wat zijn de pijnpunten van de klant met betrekking tot hun huidige GitLab-implementatie, bijvoorbeeld qua prestaties, schaalbaarheid, of de integratie met andere development-tools?"
+      ]
+    },
+    {
+      "term": "Bitbucket",
+      "definition": "Bitbucket is a web-based version control repository hosting service owned by Atlassian.",
+      "followup_prompts": [
+        "Welke Bitbucket-producten (Bitbucket Cloud, Bitbucket Server/Data Center) worden door de klant gebruikt, en welke integraties met andere Atlassian-tools (Jira, Confluence) zijn daarbij essentieel?",
+        "Hoe beheert de klant hun source code en ontwikkelprocessen binnen Bitbucket, inclusief het gebruik van pull requests, code reviews en het beheer van permissies?",
+        "Zijn er binnen de organisatie van de klant specifieke behoeften aan automatisering of aanpassing van workflows binnen Bitbucket (bijv. met behulp van Bitbucket Pipelines), en wat zijn de huidige mogelijkheden en uitdagingen?"
+      ],
+      "followup_answers": [
+        "Welke Bitbucket-producten (Bitbucket Cloud, Bitbucket Server/Data Center) worden door de klant gebruikt, en welke integraties met andere Atlassian-tools (Jira, Confluence) zijn daarbij essentieel?",
+        "Hoe beheert de klant hun source code en ontwikkelprocessen binnen Bitbucket, inclusief het gebruik van pull requests, code reviews en het beheer van permissies?",
+        "Zijn er binnen de organisatie van de klant specifieke behoeften aan automatisering of aanpassing van workflows binnen Bitbucket (bijv. met behulp van Bitbucket Pipelines), en wat zijn de huidige mogelijkheden en uitdagingen?"
+      ]
+    }
+  ]
+}

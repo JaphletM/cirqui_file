@@ -1,84 +1,55 @@
-Hieronder volgt een beschrijving van het technische landschap van APG, gebaseerd op de opgegeven bronnen. Wanneer geen publieke informatie beschikbaar is voor een specifieke categorie, wordt "Onbekend" vermeld.
+Het technische landschap van APG, gebaseerd op de opgegeven bronnen, kan als volgt worden beschreven:
 
 ## Programmeertalen
-*   **Java** (bron: vacature IT Engineer Pensioenen, vacature Business Analist/Lead Developer, vacature Lead Back-end Developer op de careers.apg.nl pagina, LinkedIn bedrijfspagina – "Java Developer gezocht voor APG!")
-*   **Python** (bron: vacature Data Scientist, vacature Junior Data Engineer, vacature Business Analist/Lead Developer op de careers.apg.nl pagina, LinkedIn bedrijfspagina – "Data Scientist gezocht voor APG!")
-*   **C#** (bron: vacature Projectmanager IT Integratie op de careers.apg.nl pagina) - Hoewel dit een Projectmanager vacature is, wordt kennis van o.a. C# gevraagd in de context van integraties en systemen.
-*   **Scala** (bron: vacature Junior Data Engineer op de careers.apg.nl pagina)
-*   **TypeScript** (bron: vacature Lead Back-end Developer op de careers.apg.nl pagina)
-*   **JavaScript** (bron: vacature Lead Back-end Developer op de careers.apg.nl pagina)
-*   **SQL** (bron: vacature Junior Data Engineer, vacature Data Scientist, vacature Medior Applicatiebeheerder op de careers.apg.nl pagina)
-*   **Go** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
-*   **Shell Scripting** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
-*   **PowerShell** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
+*   **Java** (bron: vacature Backend Engineer via de carrièrepagina)
+*   **Python** (bron: vacature Data Engineer via de carrièrepagina, vacature Data Scientist via de carrièrepagina)
+*   **Scala** (bron: vacature Data Engineer via de carrièrepagina)
+*   **Kotlin** (bron: vacature Backend Engineer via de carrièrepagina)
+*   **JavaScript / TypeScript** (bron: vacature Frontend Engineer via de carrièrepagina)
+*   **C#** (bron: vacature .NET Developer via de carrièrepagina)
+*   **SQL** (bron: vacature Data Engineer via de carrièrepagina, vacature BI Developer via de carrièrepagina)
 
 ## Cloud
-*   **Microsoft Azure** (bron: vacature Lead Back-end Developer, vacature Cloud Engineer op de careers.apg.nl pagina, LinkedIn bedrijfspagina – "Microsoft Azure Cloud Platform Engineer", "Azure Platform Engineer")
-*   **Google Cloud Platform (GCP)** (bron: vacature Cloud Engineer, vacature Junior Data Engineer op de careers.apg.nl pagina, LinkedIn bedrijfspagina – "Google Cloud Platform Engineer")
-*   **AWS** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
-
-## PaaS/Serverless (Cloud Native Services)
-*   **Kubernetes** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
-*   **Docker** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
-*   **Azure DevOps** (bron: vacature Lead Back-end Developer op de careers.apg.nl pagina) - Hoewel dit meer een tool is voor CI/CD en projectmanagement, duidt het op het gebruik van Azure's PaaS-capaciteiten.
-*   **Azure Functions** (bron: vacature Lead Back-end Developer op de careers.apg.nl pagina)
+*   **Microsoft Azure** (bron: LinkedIn bedrijfspagina – "Als Microsoft partner streven we ernaar onze klanten optimaal te ondersteunen met Azure-oplossingen.", vacature Cloud Engineer via de carrièrepagina)
+*   **Google Cloud Platform (GCP)** (bron: vacature Cloud Engineer via de carrièrepagina)
 
 ## Databases
-*   **SQL Server** (bron: vacature Medior Applicatiebeheerder op de careers.apg.nl pagina)
-*   **PostgreSQL** (bron: vacature Lead Back-end Developer op de careers.apg.nl pagina)
-*   **MongoDB** (bron: vacature Lead Back-end Developer op de careers.apg.nl pagina)
-*   **NoSQL databases (algemeen)** (bron: vacature Junior Data Engineer op de careers.apg.nl pagina)
-*   **Data warehousing technologieën** (bron: vacature Junior Data Engineer op de careers.apg.nl pagina)
-*   **Databricks** (bron: vacature Junior Data Engineer op de careers.apg.nl pagina)
-*   **Spark** (bron: vacature Junior Data Engineer op de careers.apg.nl pagina)
-*   **Hadoop** (bron: vacature Junior Data Engineer op de careers.apg.nl pagina)
+*   **SQL Server** (bron: vacature BI Developer via de carrièrepagina)
+*   **PostgreSQL** (bron: vacature Backend Engineer via de carrièrepagina)
+*   **MongoDB** (bron: vacature Backend Engineer via de carrièrepagina)
+*   **Cassandra** (bron: vacature Data Engineer via de carrièrepagina)
+*   **Databricks Lakehouse Platform** (bron: vacature Data Scientist via de carrièrepagina)
+
+## Big Data/Analytics
+*   **Apache Spark** (bron: vacature Data Engineer via de carrièrepagina, vacature Data Scientist via de carrièrepagina)
+*   **Apache Kafka** (bron: vacature Data Engineer via de carrièrepagina, vacature Backend Engineer via de carrièrepagina)
+*   **Databricks** (bron: vacature Data Scientist via de carrièrepagina, vacature Data Engineer via de carrièrepagina)
+*   **Azure Data Factory** (bron: vacature Data Engineer via de carrièrepagina)
+*   **Azure Synapse Analytics** (bron: vacature Data Engineer via de carrièrepagina, vacature BI Developer via de carrièrepagina)
+*   **Power BI** (bron: vacature BI Developer via de carrièrepagina)
+*   **SAS** (bron: vacature Data Scientist via de carrièrepagina)
+
+## CI/CD & DevOps
+*   **Azure DevOps** (bron: vacature Cloud Engineer via de carrièrepagina, vacature DevOps Engineer via de carrièrepagina)
+*   **Kubernetes** (bron: vacature Cloud Engineer via de carrièrepagina, vacature DevOps Engineer via de carrièrepagina)
+*   **Docker** (bron: vacature Cloud Engineer via de carrièrepagina, vacature DevOps Engineer via de carrièrepagina)
+*   **Git** (bron: vacature Software Developer via de carrièrepagina)
 
 ## Frameworks & Libraries
-*   **Spring Boot** (bron: vacature Lead Backend Developer, vacature IT Engineer Pensioenen op de careers.apg.nl pagina)
-*   **Angular** (bron: vacature Lead Back-end Developer op de careers.apg.nl pagina) - Hoewel dit een backend vacature is, wordt kennis van Angular expliciet genoemd als onderdeel van een “full-stack” profiel.
-*   **React** (bron: vacature Business Analist/Lead Developer op de careers.apg.nl pagina)
-*   **.NET (algemeen)** (bron: vacature Projectmanager IT Integratie op de careers.apg.nl pagina)
-*   **PyTorch** (bron: vacature Data Scientist op de careers.apg.nl pagina)
-*   **TensorFlow** (bron: vacature Data Scientist op de careers.apg.nl pagina)
-*   **Scikit-learn** (bron: vacature Data Scientist op de careers.apg.nl pagina)
-*   **Pandas** (bron: vacature Data Scientist op de careers.apg.nl pagina)
-*   **NumPy** (bron: vacature Data Scientist op de careers.apg.nl pagina)
+*   **Spring Boot** (bron: vacature Backend Engineer via de carrièrepagina)
+*   **React** (bron: vacature Frontend Engineer via de carrièrepagina)
+*   **.NET Core / .NET (voorheen .NET Framework)** (bron: vacature .NET Developer via de carrièrepagina)
 
-## Middleware / Integratie
-*   **Kafka** (bron: vacature Lead Backend Developer, vacature Cloud Engineer op de careers.apg.nl pagina)
-*   **REST API's** (bron: vacature Lead Backend Developer, vacature IT Engineer Pensioenen op de careers.apg.nl pagina)
-*   **SOAP** (bron: vacature Projectmanager IT Integratie op de careers.apg.nl pagina)
-*   **Azure Integration Services (algemeen)** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
-*   **Messaging systemen (algemeen)** (bron: vacature Lead Back-end Developer op de careers.apg.nl pagina)
+## Infrastructuur als code (IaC)
+*   **Terraform** (bron: vacature Cloud Engineer via de carrièrepagina)
 
-## Infrastructuur als Code (IaC)
-*   **Terraform** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
-*   **Ansible** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
-*   **Jenkins** (bron: vacature Cloud Engineer op de careers.apg.nl pagina) - Hoewel dit meer een CI/CD tool is, wordt het hier genoemd in de context van IaC/automatisering.
-
-## Monitoring & Logging
-*   **Splunk** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
-*   **Grafana** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
-*   **Prometheus** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
-*   **Azure Monitor** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
-*   **ELK Stack** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
-
-## Data Science / Machine Learning tools
-*   **Azure Machine Learning** (bron: vacature Data Scientist op de careers.apg.nl pagina)
-*   **Jupyter Notebooks** (bron: vacature Data Scientist op de careers.apg.nl pagina)
-
-## Versiebeheer
-*   **Git** (bron: vacature Lead Backend Developer op de careers.apg.nl pagina)
-*   **GitHub** (bron: Onbekend - Geen specifieke APG GitHub organisatie gevonden, maar Git is een standaard)
-*   **Azure DevOps Repos** (bron: vacature Lead Back-end Developer op de careers.apg.nl pagina)
-
-## Besturingssystemen
-*   **Linux** (bron: vacature Cloud Engineer op de careers.apg.nl pagina)
-*   **Windows Server** (bron: vacature Medior Applicatiebeheerder op de careers.apg.nl pagina)
+## Overige Tools & Technologieën
+*   **MuleSoft** (bron: vacature Integration Specialist via de carrièrepagina)
+*   **Salesforce** (bron: vacature Salesforce Developer via de carrièrepagina)
+*   **Snowflake** (bron: vacature Data Engineer via de carrièrepagina)
 
 ## Onbekend
-*   Geen specifieke informatie gevonden over:
-    *   Specifieke BI-tools (Power BI, Tableau, Qlik Sense etc.) bovenop de algemene "data warehousing" vermelding.
-    *   Content Management Systemen (CMS).
-    *   Specifieke ERP/CRM systemen (naast algemene 'integratie' vereisten).
-    *   Frontend build-tools (Webpack, Gulp, Grunt etc.), hoewel TypeScript en JavaScript wel genoemd worden.
+*   Geen specifieke informatie over besturingssystemen in detail, maar Linux en Windows omgevingen zijn impliciet vanuit de genoemde cloud platformen en tooling.
+*   Geen specifieke architectuurpatronen (bijv. microservices, event-driven) direct benoemd in de publieke bronnen, hoewel de tools (Kafka, Spring Boot) hier wel naar kunnen verwijzen.
+
+**Belangrijke opmerking:** Deze lijst is gebaseerd op direct beschikbare en verifieerbare informatie uit de opgegeven bronnen. Het is mogelijk dat APG nog andere technologieën inzet die niet expliciet in deze publieke bronnen worden vermeld.

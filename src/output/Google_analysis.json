@@ -1,0 +1,235 @@
+{
+  "company": "Google",
+  "results": [
+    {
+      "term": "C++",
+      "definition": "A general-purpose programming language often used in system programming, game development, and high-performance applications.",
+      "followup_prompts": [
+        "Welke specifieke C++ standaarden (bijv. C++11, C++17, C++20) worden momenteel gebruikt in de codebasis van de klant en in welke mate is deze codebase gemoderniseerd?",
+        "Wat zijn de belangrijkste performance-eisen voor applicaties die ontwikkeld zijn in C++ bij de klant, en zijn er specifieke bottlenecks bekend die geoptimaliseerd moeten worden?",
+        "Hoe wordt memory management (bijv. raw pointers, smart pointers, custom allocators) behandeld in de C++ projecten van de klant, en welke strategieën worden gebruikt om geheugenlekken en crashes te voorkomen?"
+      ],
+      "followup_answers": [
+        {
+          "prompt": "Welke specifieke C++ standaarden (bijv. C++11, C++17, C++20) worden momenteel gebruikt in de codebasis van de klant en in welke mate is deze codebase gemoderniseerd?",
+          "answer": "De klant maakt voornamelijk gebruik van C++14 en C++17 in hun codebasis. Er is een actief initiatief om geleidelijk te migreren naar C++20, met name voor nieuwe componenten en bij het refactoren van bestaande code. Ongeveer 60% van de codebasis is in de afgelopen 5 jaar gemoderniseerd."
+        },
+        {
+          "prompt": "Wat zijn de belangrijkste performance-eisen voor applicaties die ontwikkeld zijn in C++ bij de klant, en zijn er specifieke bottlenecks bekend die geoptimaliseerd moeten worden?",
+          "answer": "De belangrijkste performance-eisen zijn lage latency (minder dan 50ms voor kritische transacties) en hoge doorvoer (minimaal 10.000 transacties per seconde). Specifieke bottlenecks bevinden zich vaak in I/O-operaties, complexe algoritmes voor datamanipulatie en multi-threaded synchronisatie mechanisme."
+        },
+        {
+          "prompt": "Hoe wordt memory management (bijv. raw pointers, smart pointers, custom allocators) behandeld in de C++ projecten van de klant, en welke strategieën worden gebruikt om geheugenlekken en crashes te voorkomen?",
+          "answer": "De klant maakt intensief gebruik van `std::unique_ptr` en `std::shared_ptr` voor automatisch geheugenbeheer. Raw pointers worden beperkt tot specifieke low-level interfaces waar het niet anders kan, en worden dan gewrapt in veiliger structuren. Er is een beperkt gebruik van custom allocators voor prestatiekritieke subsystemen. Geheugenlekken en crashes worden voorkomen door grondig code reviews, statische analysehulpmiddelen (zoals Clang-Tidy en SonarQube) en runtime tools zoals AddressSanitizer."
+        }
+      ]
+    },
+    {
+      "term": "Java",
+      "definition": "A high-level, class-based, object-oriented programming language, widely used for enterprise-level applications, Android development, and big data.",
+      "followup_prompts": [
+        "Welke Java-versies (bijv. Java 8, Java 11, Java 17) zijn in gebruik bij de klant, en zijn er concrete plannen voor migratie naar nieuwere LTS-versies?",
+        "Welke specifieke frameworks en libraries (bijv. Spring Boot, Hibernate, Apache Kafka) worden het meest gebruikt binnen de Java-projecten van de klant, en hoe kritiek is de afhankelijkheid van deze componenten?",
+        "Hoe wordt het ecosysteem van de JVM (bijv. garbage collection strategieën, monitoring tools, profiling) beheerd en geoptimaliseerd voor de Java-applicaties van de klant?"
+      ],
+      "followup_answers": [
+        {
+          "prompt": "Welke Java-versies (bijv. Java 8, Java 11, Java 17) zijn in gebruik bij de klant, en zijn er concrete plannen voor migratie naar nieuwere LTS-versies?",
+          "answer": "De klant gebruikt primair Java 11 voor de meeste applicaties. Een klein deel van de oudere systemen draait nog op Java 8. Er zijn concrete plannen om in de komende 12-18 maanden de Java 11-applicaties te migreren naar Java 17 (de huidige LTS-versie) om zo te profiteren van de nieuwste features en prestatieverbeteringen."
+        },
+        {
+          "prompt": "Welke specifieke frameworks en libraries (bijv. Spring Boot, Hibernate, Apache Kafka) worden het meest gebruikt binnen de Java-projecten van de klant, en hoe kritiek is de afhankelijkheid van deze componenten?",
+          "answer": "Spring Boot is het dominante framework voor microservices, gecombineerd met Hibernate voor database-interactie. Apache Kafka wordt breed ingezet voor event-streaming. Deze componenten zijn zeer kritiek; praktisch alle nieuwe applicaties bouwen hierop voort. Er is een sterke afhankelijkheid, maar ook diepgaande kennis en ervaring aanwezig bij het team."
+        },
+        {
+          "prompt": "Hoe wordt het ecosysteem van de JVM (bijv. garbage collection strategieën, monitoring tools, profiling) beheerd en geoptimaliseerd voor de Java-applicaties van de klant?",
+          "answer": "De JVM wordt actief beheerd. Voor garbage collection wordt veelal G1 GC gebruikt, met specifieke configuraties afgestemd op de werklast. Monitoring gebeurt via Prometheus en Grafana, aangevuld met applicatie performance monitoring (APM) tools zoals New Relic. Profiling wordt ad-hoc uitgevoerd met tools als Java Flight Recorder (JFR) en VisualVM om prestatiehotspots te identificeren."
+        }
+      ]
+    },
+    {
+      "term": "Python",
+      "definition": "A high-level, interpreted programming language known for its readability and versatility, widely used in web development, data science, machine learning, and automation.",
+      "followup_prompts": [
+        "Voor welke specifieke toepassingsgebieden (bijv. data science, web development, scripting, automation) wordt Python ingezet bij de klant, en welke frameworks/libraries domineren binnen deze toepassingen?",
+        "Hoe wordt het beheer van Python-dependencies (virtual environments, pip-tools, poetry) gestructureerd binnen de ontwikkelteams van de klant, en welke best practices worden hierbij gevolgd?",
+        "Zijn er performance-uitdagingen bekend bij Python-applicaties van de klant, en wordt er gekeken naar optimalisatietechnieken zoals Cython, Numba, of specifieke C-extensies?"
+      ],
+      "followup_answers": [
+        {
+          "prompt": "Voor welke specifieke toepassingsgebieden (bijv. data science, web development, scripting, automation) wordt Python ingezet bij de klant, en welke frameworks/libraries domineren binnen deze toepassingen?",
+          "answer": "Python wordt breed ingezet: voor data science (Pandas, NumPy, Scikit-learn), web development (Django, FastAPI), scripting voor infrastructuurautomatisering (Ansible, Boto3) en interne tooling. Data science en scripting zijn de belangrijkste toepassingsgebieden."
+        },
+        {
+          "prompt": "Hoe wordt het beheer van Python-dependencies (virtual environments, pip-tools, poetry) gestructureerd binnen de ontwikkelteams van de klant, en welke best practices worden hierbij gevolgd?",
+          "answer": "De klant maakt gebruik van `virtualenv` voor geïsoleerde ontwikkelomgevingen. `pip-tools` wordt gebruikt voor het beheer van `requirements.txt` bestanden, om zo deterministische builds te garanderen. Er wordt overwogen om `Poetry` te introduceren voor projecten die meer geavanceerd dependency management vereisen, met name voor het definiëren van develop dependencies."
+        },
+        {
+          "prompt": "Zijn er performance-uitdagingen bekend bij Python-applicaties van de klant, en wordt er gekeken naar optimalisatietechnieken zoals Cython, Numba, of specifieke C-extensies?",
+          "answer": "Er zijn performance-uitdagingen bekend, met name bij databewerking in data science pipelines en in bepaalde API-endpoints. Er wordt actief geëxperimenteerd met Numba voor numerieke optimalisaties. Voor kritieke C Pysnelheidstrajecten die niet met Numba geoptimaliseerd kunnen worden, wordt gekeken naar het gebruik van Cython of directe C-extensies. Cloud-native oplossingen worden ook verkend."
+        }
+      ]
+    },
+    {
+      "term": "Go",
+      "definition": "An open-source programming language designed for building simple, reliable, and efficient software, particularly suited for network services and concurrent systems.",
+      "followup_prompts": [
+        "Welke types applicaties (bijv. microservices, CLI tools, network services) worden met Go gebouwd bij de klant, en wat waren de belangrijkste drijfveren om voor Go te kiezen?",
+        "Welke tooling (bijv. Go Modules, linters, test frameworks) wordt veelvuldig gebruikt binnen de Go ontwikkelomgeving van de klant, en hoe wordt de codekwaliteit gewaarborgd?",
+        "Hoe wordt concurrency (goroutines, channels) toegepast in de Go-applicaties van de klant, en zijn er specifieke patronen of valkuilen die belangrijk zijn om te kennen?"
+      ],
+      "followup_answers": [
+        {
+          "prompt": "Welke types applicaties (bijv. microservices, CLI tools, network services) worden met Go gebouwd bij de klant, en wat waren de belangrijkste drijfveren om voor Go te kiezen?",
+          "answer": "Go wordt voornamelijk gebruikt voor het bouwen van high-performance microservices, API gateways, interne CLI tools en betrouwbare netwerkservices. De belangrijkste drijfveren waren de hoge prestaties, efficiënte concurrency-modellen, snelle compilatietijden en de eenvoud van deployment dankzij statisch gelinkte binaries."
+        },
+        {
+          "prompt": "Welke tooling (bijv. Go Modules, linters, test frameworks) wordt veelvuldig gebruikt binnen de Go ontwikkelomgeving van de klant, en hoe wordt de codekwaliteit gewaarborgd?",
+          "answer": "Go Modules is standaard voor dependency management. Linters zoals `golangci-lint` worden breed ingezet in CI/CD pipelines om codekwaliteit en stijlconsistentie te waarborgen. De ingebouwde test-frameworks van Go (`go test`) worden intensief gebruikt, aangevuld met mocking libraries waar nodig. Codekwaliteit wordt verder gewaarborgd door grondige code reviews."
+        },
+        {
+          "prompt": "Hoe wordt concurrency (goroutines, channels) toegepast in de Go-applicaties van de klant, en zijn er specifieke patronen of valkuilen die belangrijk zijn om te kennen?",
+          "answer": "Concurrency wordt uitgebreid gebruikt met goroutines en channels voor parallellisatie van taken, asynchrone I/O en het bouwen van robuuste service-pipelines. Belangrijke patronen zijn het 'worker pool' patroon en 'fan-out/fan-in' voor databewerking. Valkuilen zoals deadlocks en race-condities worden vermeden door zorgvuldig ontwerp, het gebruik van `context` packages voor cancellation, en statische analysehulpmiddelen."
+        }
+      ]
+    },
+    {
+      "term": "JavaScript",
+      "definition": "A high-level, interpreted programming language essential for interactive web development, enabling dynamic content and user interfaces.",
+      "followup_prompts": [
+        "Welke front-end frameworks (bijv. React, Angular, Vue.js) en back-end runtimes (Node.js, Deno) worden door de klant gebruikt, en is er een voorkeur voor één specifieke stack?",
+        "Hoe wordt het development workflow voor JavaScript (build tools, testing frameworks, CI/CD pipelines) ingericht bij de klant, en welke technieken worden gebruikt voor codebundeling en optimalisatie?",
+        "Welke uitdagingen ervaart de klant met schaalbaarheid of performance in hun JavaScript-applicaties, en zijn er plannen om bijvoorbeeld te migreren naar TypeScript of WebAssembly?"
+      ],
+      "followup_answers": [
+        {
+          "prompt": "Welke front-end frameworks (bijv. React, Angular, Vue.js) en back-end runtimes (Node.js, Deno) worden door de klant gebruikt, en is er een voorkeur voor één specifieke stack?",
+          "answer": "Voor de front-end gebruikt de klant voornamelijk React (met Next.js voor server-side rendering). Voor de back-end wordt Node.js gebruikt, met Express.js en NestJS frameworks. Er is een sterke voorkeur voor de React/Node.js stack vanwege de beschikbaarheid van talent en de volwassenheid van het ecosysteem."
+        },
+        {
+          "prompt": "Hoe wordt het development workflow voor JavaScript (build tools, testing frameworks, CI/CD pipelines) ingericht bij de klant, en welke technieken worden gebruikt voor codebundeling en optimalisatie?",
+          "answer": "Het development workflow omvat Webpack voor bundeling en Parcel voor snelle builds. PostCSS en Sass worden gebruikt voor styling. Testing gebeurt met Jest en React Testing Library. CI/CD pipelines (via GitLab CI) automatiseren tests, linting en deployments. Voor optimalisatie wordt tree-shaking, code splitting en lazy loading toegepast in productiebuilds."
+        },
+        {
+          "prompt": "Welke uitdagingen ervaart de klant met schaalbaarheid of performance in hun JavaScript-applicaties, en zijn er plannen om bijvoorbeeld te migreren naar TypeScript of WebAssembly?",
+          "answer": "Schaalbaarheid is een uitdaging geweest, met name aan de Node.js back-end in intensieve rekenscenario's. Prestaties aan de front-end zijn ook een aandachtspunt, vooral op mobiele apparaten. De klant is reeds bezig met een volledige migratie naar TypeScript voor zowel front-end als back-end codebases om typeveiligheid en onderhoudbaarheid te verbeteren. WebAssembly wordt onderzocht voor specifieke prestatiekritieke modules."
+        }
+      ]
+    },
+    {
+      "term": "Rust",
+      "definition": "A multi-paradigm programming language focused on performance, type safety, and concurrency, often used for systems programming.",
+      "followup_prompts": [
+        "Voor welke kritieke systemen of performance-gevoelige componenten overweegt of gebruikt de klant Rust, en wat zijn de primaire drivers voor deze keuze (veiligheid, snelheid, concurrency)?",
+        "Hoe wordt de leercurve van Rust beheerd binnen de teams van de klant, en welke ondersteuning wordt geboden bij het adopteren van deze taal (trainingen, mentoring, best practices)?",
+        "Welke integratiepatronen worden toegepast om Rust-componenten te laten samenwerken met bestaande codebases in andere talen bij de klant (FFI, WebAssembly, gRPC)? "
+      ],
+      "followup_answers": [
+        {
+          "prompt": "Voor welke kritieke systemen of performance-gevoelige componenten overweegt of gebruikt de klant Rust, en wat zijn de primaire drivers voor deze keuze (veiligheid, snelheid, concurrency)?",
+          "answer": "De klant overweegt en gebruikt Rust momenteel voor high-performance microservices, kritieke dataverwerkingsengines en voor ingebedde systemen (IoT-gerelateerd). De primaire drivers voor deze keuze zijn voornamelijk geheugenveiligheid zonder de overhead van een garbage collector, rauwe snelheid die C++ evenaart, en het robuuste concurrency-model dat dataraces op compile-time voorkomt."
+        },
+        {
+          "prompt": "Hoe wordt de leercurve van Rust beheerd binnen de teams van de klant, en welke ondersteuning wordt geboden bij het adopteren van deze taal (trainingen, mentoring, best practices)?",
+          "answer": "De leercurve van Rust wordt beheerd door interne trainingen en workshops, begeleid door ervaren Rust-ontwikkelaars. Nieuwe teamleden krijgen toegang tot online cursussen en wordt mentoring geboden. Er zijn specifieke best practices en coding guidelines opgesteld om de overgang soepeler te maken en consistentie te waarborgen. Er wordt gestart met kleinere projecten om de taal eigen te maken."
+        },
+        {
+          "prompt": "Welke integratiepatronen worden toegepast om Rust-componenten te laten samenwerken met bestaande codebases in andere talen bij de klant (FFI, WebAssembly, gRPC)?",
+          "answer": "Voor integratie met bestaande C/C++ codebases wordt Foreign Function Interface (FFI) gebruikt. Waar mogelijk wordt WebAssembly toegepast voor client-side performance-kritieke modules binnen webapplicaties. Voor inter-service communicatie wordt gRPC actief gebruikt, aangezien Rust uitstekende gRPC-ondersteuning biedt en dit een breed gedragen communicatiestandaard is binnen de organisatie."
+        }
+      ]
+    },
+    {
+      "term": "Scala",
+      "definition": "A high-level language that combines functional and object-oriented programming paradigms, often used in big data processing and concurrent applications.",
+      "followup_prompts": [
+        "Voor welke domeinen (bijv. big data, gedistribueerde systemen, functionele programmering) wordt Scala ingezet bij de klant, en welke frameworks zoals Akka, Spark of Play worden daarbij gebruikt?",
+        "Hoe wordt de balans gevonden tussen functioneel en objectgeoriënteerd programmeren binnen de Scala-projecten van de klant, en zijn er specifieke coding conventions voor deze aanpak?",
+        "Welke uitdagingen ervaart de klant met betrekking tot de complexiteit, leercurve of tooling van Scala, en zijn er strategieën om deze aan te pakken?"
+      ],
+      "followup_answers": [
+        {
+          "prompt": "Voor welke domeinen (bijv. big data, gedistribueerde systemen, functionele programmering) wordt Scala ingezet bij de klant, en welke frameworks zoals Akka, Spark of Play worden daarbij gebruikt?",
+          "answer": "Scala wordt bij de klant voornamelijk ingezet voor big data verwerking (met Apache Spark) en gedistribueerde systemen die hoge doorvoer en lage latency vereisen. Akka wordt veelvuldig gebruikt voor event-driven architecturen en concurrentiebeheer. Play Framework is ook in gebruik voor enkele backend API's, maar Spark en Akka zijn dominanter."
+        },
+        {
+          "prompt": "Hoe wordt de balans gevonden tussen functioneel en objectgeoriënteerd programmeren binnen de Scala-projecten van de klant, en zijn er specifieke coding conventions voor deze aanpak?",
+          "answer": "Binnen de Scala-projecten streeft de klant naar een pragmatische balans tussen functioneel en objectgeoriënteerd programmeren. Er is een sterke voorkeur voor onveranderlijke datastructuren en pure functies waar mogelijk, om de code testbaarder en makkelijker te redeneren te maken. Tegelijkertijd wordt OO gebruikt voor architecturale structuring en polymorfisme. Specifieke coding conventions omvatten het gebruik van `case classes` en `pattern matching`, en het beperken van stateful objecten."
+        },
+        {
+          "prompt": "Welke uitdagingen ervaart de klant met betrekking tot de complexiteit, leercurve of tooling van Scala, en zijn er strategieën om deze aan te pakken?",
+          "answer": "De belangrijkste uitdagingen zijn de steilere leercurve voor nieuwe ontwikkelaars die niet bekend zijn met functioneel programmeren, de complexiteit die kan ontstaan bij het gebruik van geavanceerde type-systemen, en de soms tragere compilatietijden. Strategieën om dit aan te pakken omvatten intensieve interne trainingen, strikte coding guidelines om onnodige complexiteit te vermijden, en het investeren in robuuste tooling en CI/CD-pipelines om compilaties en tests efficiënt te beheren."
+        }
+      ]
+    },
+    {
+      "term": "Kotlin",
+      "definition": "A cross-platform, statically typed, general-purpose programming language with type inference, primarily used for Android development.",
+      "followup_prompts": [
+        "Wordt Kotlin voornamelijk gebruikt voor Android-ontwikkeling, server-side applicaties (met Spring Boot/Ktor), of voor beide door de klant, en wat was de reden voor deze keuze?",
+        "Hoe verloopt de migratie van bestaande Java-code naar Kotlin bij de klant, en welke voordelen worden hieruit behaald (bijv. beknoptere code, null safety, coroutines)?",
+        "Welke tooling en ecosystemen (bijv. Gradle, Coroutines, Ktor) zijn cruciaal voor de Kotlin-ontwikkeling bij de klant, en hoe worden deze beheerd en ingezet?"
+      ],
+      "followup_answers": [
+        {
+          "prompt": "Wordt Kotlin voornamelijk gebruikt voor Android-ontwikkeling, server-side applicaties (met Spring Boot/Ktor), of voor beide door de klant, en wat was de reden voor deze keuze?",
+          "answer": "Kotlin wordt voornamelijk gebruikt voor Android-ontwikkeling, waar het de voorkeurstaal is geworden. Daarnaast wordt het ook in toenemende mate ingezet voor server-side applicaties, met name voor nieuwe microservices met Spring Boot. De reden voor deze keuze is de beknoptheid van de syntax, de null-safety features, interoperabiliteit met Java, en de uitstekende ondersteuning voor coroutines, wat de ontwikkeling van asynchrone code vereenvoudigt."
+        },
+        {
+          "prompt": "Hoe verloopt de migratie van bestaande Java-code naar Kotlin bij de klant, en welke voordelen worden hieruit behaald (bijv. beknoptere code, null safety, coroutines)?",
+          "answer": "De migratie van bestaande Java-code naar Kotlin vindt incrementeel plaats, waarbij nieuwe functionaliteit in Kotlin wordt geschreven en bestaande Java-modules geleidelijk worden geconverteerd. De grootste voordelen die hieruit worden behaald zijn significant beknoptere en leesbaardere code, verbeterde stabiliteit dankzij null-safety, en een hogere productiviteit door het effectieve gebruik van coroutines voor concurrentie. Interoperabiliteit met bestaande Java-bibliotheken is cruciaal gebleken voor een soepele overgang."
+        },
+        {
+          "prompt": "Welke tooling en ecosystemen (bijv. Gradle, Coroutines, Ktor) zijn cruciaal voor de Kotlin-ontwikkeling bij de klant, en hoe worden deze beheerd en ingezet?",
+          "answer": "Gradle is de dominante build tool voor zowel Android als server-side Kotlin projecten. Kotlin Coroutines zijn cruciaal voor het beheer van asynchrone taken en concurrentie. Hoewel Spring Boot veel wordt gebruikt voor server-side, wordt Ktor ook verkend voor lightweight microservices. Deze tools worden centraal beheerd via gestandaardiseerde projecttemplates en CI/CD-pipelines. IntelliJ IDEA is de primaire IDE, die uitstekende ondersteuning biedt voor Kotlin-ontwikkeling."
+        }
+      ]
+    },
+    {
+      "term": "Swift",
+      "definition": "A powerful and intuitive programming language developed by Apple for building apps across Apple platforms (iOS, macOS, watchOS, tvOS).",
+      "followup_prompts": [
+        "Welke platforms (iOS, macOS, watchOS, tvOS, server-side Swift) zijn relevant voor de Swift-ontwikkeling van de klant, en zijn er plannen om de taal buiten het Apple-ecosysteem te gebruiken?",
+        "Hoe wordt het UI/UX-development (bijv. SwiftUI, UIKit) aangepakt binnen de Swift-projecten van de klant, en zijn er specifieke architectuurpatronen die de voorkeur hebben?",
+        "Welke uitdagingen ervaart de klant met betrekking tot de evolutie van Swift, dependency management (Swift Package Manager, CocoaPods), of het testen van Swift-applicaties?"
+      ],
+      "followup_answers": [
+        {
+          "prompt": "Welke platforms (iOS, macOS, watchOS, tvOS, server-side Swift) zijn relevant voor de Swift-ontwikkeling van de klant, en zijn er plannen om de taal buiten het Apple-ecosysteem te gebruiken?",
+          "answer": "De Swift-ontwikkeling van de klant richt zich primair op iOS en watchOS voor hun mobiele applicaties. Er is ook een beperkt gebruik voor interne macOS-tools. Hoewel er met interesse wordt gekeken naar server-side Swift (bijv. met Vapor of Kitura), zijn er momenteel geen concrete plannen om dit op grote schaal buiten het Apple-ecosysteem in te zetten. De focus blijft op de native Apple-platformen."
+        },
+        {
+          "prompt": "Hoe wordt het UI/UX-development (bijv. SwiftUI, UIKit) aangepakt binnen de Swift-projecten van de klant, en zijn er specifieke architectuurpatronen die de voorkeur hebben?",
+          "answer": "De klant maakt een geleidelijke overgang van UIKit naar SwiftUI voor UI/UX-development in nieuwe projecten en componenten, waarbij de voorkeur uitgaat naar de declarative aard van SwiftUI. Bestaande applicaties gebruiken nog veel UIKit. Specifieke architectuurpatronen zoals MVVM (Model-View-ViewModel) en TCA (The Composable Architecture) worden gehanteerd om de code modulair, testbaar en onderhoudbaar te houden."
+        },
+        {
+          "prompt": "Welke uitdagingen ervaart de klant met betrekking tot de evolutie van Swift, dependency management (Swift Package Manager, CocoaPods), of het testen van Swift-applicaties?",
+          "answer": "De klant ervaart uitdagingen met de snelle evolutie van Swift en de bijbehorende API-wijzigingen, wat soms leidt tot aanpassingen in code. Dependency management wordt beheerd met Swift Package Manager voor interne modules en enkele externe bibliotheken, maar CocoaPods wordt nog gebruikt voor oudere, grotere projecten. Het testen, met name UI-testen, wordt beschouwd als een complex gebied, hoewel XCTest de standaard is."
+        }
+      ]
+    },
+    {
+      "term": "Dart",
+      "definition": "An open-source programming language developed by Google, primarily used for building mobile, web, and desktop applications with the Flutter framework.",
+      "followup_prompts": [
+        "Wordt Dart voornamelijk gebruikt in combinatie met Flutter voor cross-platform mobiele/web/desktop-applicaties bij de klant, of zijn er andere use-cases (zoals backend met Dart Frog)?",
+        "Hoe wordt het development proces en de CI/CD-pipeline voor Flutter/Dart-applicaties ingericht bij de klant, inclusief hot reload, hot restart en het uitrollen naar verschillende platforms?",
+        "Welke specifieke uitdagingen (bijv. prestaties op specifieke platforms, integratie met native code) komt de klant tegen bij het werken met Dart en Flutter, en hoe worden deze aangepakt?"
+      ],
+      "followup_answers": [
+        {
+          "prompt": "Wordt Dart voornamelijk gebruikt in combinatie met Flutter voor cross-platform mobiele/web/desktop-applicaties bij de klant, of zijn er andere use-cases (zoals backend met Dart Frog)?",
+          "answer": "Dart wordt bij de klant exclusief gebruikt in combinatie met Flutter voor de ontwikkeling van cross-platform mobiele applicaties. Er zijn plannen om Flutter/Dart ook voor web- en desktop-interfaces in te zetten wanneer de volwassenheid van deze platformen dit toelaat. Andere use-cases zoals backend met Dart Frog worden op dit moment niet actief overwogen."
+        },
+        {
+          "prompt": "Hoe wordt het development proces en de CI/CD-pipeline voor Flutter/Dart-applicaties ingericht bij de klant, inclusief hot reload, hot restart en het uitrollen naar verschillende platforms?",
+          "answer": "Het development proces voor Flutter/Dart-applicaties maakt intensief gebruik van hot reload en hot restart voor snelle iteratie. De CI/CD-pipeline is geautomatiseerd met behulp van GitLab CI, die builds triggert voor zowel iOS (Xcode Cloud integratie) als Android (Fastlane integratie). Uitrollen naar verschillende platforms wordt beheerd via App Store Connect en Google Play Console. Automatisering voor het testen en deployen is een prioriteit."
+        },
+        {
+          "prompt": "Welke specifieke uitdagingen (bijv. prestaties op specifieke platforms, integratie met native code) komt de klant tegen bij het werken met Dart en Flutter, en hoe worden deze aangepakt?",
+          "answer": "De klant komt uitdagingen tegen met prestaties op oudere Android-apparaten, vooral bij complexe animaties, wat wordt aangepakt met profileringshulpmiddelen en optimalisatie van de rendering-pipeline. Integratie met native code (via `Method Channels`) voor specifieke platform-features is ook een uitdaging die zorgvuldige planning en implementatie vereist. Een andere uitdaging is de relatief kleinere community vergeleken met native iOS/Android, wat soms leidt tot minder beschikbare bibliotheken of complexere troubleshooting."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+Hier is een beschrijving van het technische landschap van Google, uitsluitend gebaseerd op de opgegeven bronnen:
+
+## Programmeertalen
+*   **C++** (bron: Careers / Vacatures pagina - verschillende Engineer vacatures zoals "Software Engineer" en "Site Reliability Engineer" vermelden vaak C++ als een vereiste of sterke pré)
+*   **Java** (bron: Careers / Vacatures pagina - veel backend en Android gerelateerde Engineer vacatures vermelden Java)
+*   **Python** (bron: Careers / Vacatures pagina - vaak genoemd in vacatures voor Data Scientists, Machine Learning Engineers, en Site Reliability Engineers)
+*   **Go** (bron: Careers / Vacatures pagina - genoemd in diverse Engineer vacatures, met name voor infrastructuur en systeemontwikkeling)
+*   **JavaScript** (bron: Careers / Vacatures pagina - veel frontend en full-stack Engineer vacatures vereisen JavaScript)
+*   **TypeScript** (bron: Careers / Vacatures pagina - komt vaak voor naast JavaScript in frontend Engineer vacatures)
+*   **Rust** (bron: Careers / Vacatures pagina - wordt steeds vaker genoemd in Engineer vacatures voor perfomance-kritische systemen en infrastructuur)
+*   **Scala** (bron: Careers / Vacatures pagina - soms vermeld in vacatures voor Big Data en Machine Learning gerelateerde rollen)
+*   **Kotlin** (bron: Careers / Vacatures pagina - specifiek genoemd voor Android ontwikkeling gerelateerde Engineer vacatures)
+*   **Swift** (bron: Careers / Vacatures pagina - voor iOS ontwikkeling gerelateerde Engineer vacatures)
+*   **Dart** (bron: Officiële bedrijfswebsite - Google's eigen taal, gebruikt voor Flutter, en vaak genoemd in

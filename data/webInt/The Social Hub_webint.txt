@@ -1,0 +1,53 @@
+Hier is de technische landschapsbeschrijving van The Social Hub, gebaseerd op de opgegeven bronnen:
+
+## Programmeertalen
+- **Onbekend**
+  *Toelichting: Er is geen specifieke programmeertaal genoemd in de algemeen beschikbare content van de website, vacatures, of andere bronnen.*
+
+## Cloud
+- **Onbekend**
+  *Toelichting: Hoewel er in sommige bronnen (bijv. LinkedIn) over ‘digitale transformatie’ en ‘technologie’ wordt gesproken, is er geen specifieke cloudprovider zoals AWS, Azure of Google Cloud Platform benoemd.*
+
+## Databases
+- **Onbekend**
+  *Toelichting: Er wordt nergens expliciet melding gemaakt van de gebruikte databasetechnologieën.*
+
+## Frontend of User Interface frameworks
+- **Onbekend**
+  *Toelichting: Er is geen informatie beschikbaar over de specifieke frameworks die voor de gebruikersinterfaces worden gebruikt.*
+
+## Backend frameworks of architecturen
+- **Onbekend**
+  *Toelichting: Er wordt geen melding gemaakt van specifieke backend frameworks zoals Spring, .NET, Node.js, etc., of architectuurprincipes zoals microservices.*
+
+## DevOps, CI/CD, Containerization
+- **Onbekend**
+  *Toelichting: Er wordt nergens gerefereerd aan tools voor CI/CD, containerisatietechnologieën zoals Docker of Kubernetes, of specifieke DevOps-praktijken.*
+
+## Data Analytics / Business Intelligence
+- **Onbekend**
+  *Toelichting: Hoewel de aard van de organisatie veel data genereert, zijn er geen tools of platforms voor data-analyse of BI genoemd in de publieke bronnen.*
+
+## CRM / ERP Systemen
+- **Onbekend**
+  *Toelichting: Er wordt wel gesproken over ‘reserveringssystemen’ en ‘operationele systemen’ (bron: LinkedIn bedrijfspagina - over The Social Hub's digitale transformatie), maar specifieke merknamen zoals Salesforce, SAP, Oracle, etc., zijn niet genoemd.*
+
+## Integraties / API Management
+- **Onbekend**
+  *Toelichting: Er wordt geen melding gemaakt van API-gateways, integratieplatforms of specifieke API-standaarden.*
+
+## Messaging / Queueing
+- **Onbekend**
+  *Toelichting: Er is geen informatie beschikbaar over het gebruik van message brokers of queueing-systemen.*
+
+## Monitoring / Logging
+- **Onbekend**
+  *Toelichting: Specifieke tools voor monitoring of logging zijn niet genoemd.*
+
+## Version Control
+- **Onbekend**
+  *Toelichting: Er is geen GitHub-organisatie gevonden, en er wordt niet expliciet melding gemaakt van andere versiebeheersystemen zoals GitLab of Bitbucket.*
+
+## Project Management / Collaboration
+- **Onbekend**
+  *Toelichting: Er zijn geen specifieke tools voor projectmanagement of samenwerking genoemd.*

@@ -3,354 +3,268 @@
   "results": [
     {
       "term": "Java",
+      "definition": "Een objectgeoriënteerde programmeertaal die veel wordt gebruikt voor de ontwikkeling van bedrijfsapplicaties, Android-apps en meer.",
       "followup_prompts": [
-        "Welke specifieke Java frameworks, zoals Spring Boot of Quarkus, worden momenteel gebruikt in jullie productieomgevingen en waarom is hiervoor gekozen boven andere alternatieven?",
-        "In hoeverre is er ervaring met het migreren van oudere Java-applicaties (bijv. Java 8) naar recentere versies, en welke uitdagingen zijn daarbij ondervonden (bijvoorbeeld met afhankelijkheden of prestaties)?",
-        "Kunt u voorbeelden geven van jullie meest complexe Java-applicaties; wat zijn de belangrijkste functionele eisen en niet-functionele eisen (zoals schaalbaarheid of beschikbaarheid) waar deze applicaties aan moeten voldoen?"
+        "Welke specifieke Java-versies en frameworks (bijv. Spring, Hibernate) zijn momenteel in gebruik binnen de architectuur van de klant, en voor welke applicatietypes (bijv. backend services, desktop apps)?",
+        "Hoe ervaart de klant de huidige performance en maintainability van hun Java-codebases, en zijn er specifieke uitdagingen of knelpunten die zij hierbij ondervinden?",
+        "Zijn er plannen bij de klant om Java-applicaties te migreren naar nieuwere versies, cloudomgevingen, of microservices-architecturen, en welke specifieke drivers of obstakels spelen hierbij een rol?"
+      ],
+      "followup_answers": [
+        "Welke specifieke Java-versies en frameworks (bijv. Spring, Hibernate) zijn momenteel in gebruik binnen de architectuur van de klant, en voor welke applicatietypes (bijv. backend services, desktop apps)?",
+        "Hoe ervaart de klant de huidige performance en maintainability van hun Java-codebases, en zijn er specifieke uitdagingen of knelpunten die zij hierbij ondervinden?",
+        "Zijn er plannen bij de klant om Java-applicaties te migreren naar nieuwere versies, cloudomgevingen, of microservices-architecturen, en welke specifieke drivers of obstakels spelen hierbij een rol?"
       ]
     },
     {
       "term": "Python",
+      "definition": "Een veelzijdige, high-level programmeertaal die bekend staat om zijn leesbaarheid en wordt gebruikt in datascientie, webontwikkeling en automatisering.",
       "followup_prompts": [
-        "Op welke gebieden (bijv. data science, webdevelopment, automatisering) wordt Python het meest ingezet binnen jullie organisatie en welke specifieke libraries (bijv. Pandas, Django, Flask) zijn hierbij essentieel?",
-        "Hoe wordt het beheer van Python-afhankelijkheden (dependency management) en de deployment van Python-applicaties geregeld, en zijn er specifieke tooling of CI/CD-pijplijnen hiervoor ingericht?",
-        "Zijn er plannen om het gebruik van Python uit te breiden naar nieuwe domeinen of projecten, en welke interne kennis of training is daarvoor nodig om dit succesvol te implementeren?"
-      ]
-    },
-    {
-      "term": "C#",
-      "followup_prompts": [
-        "Welke versies van .NET Framework of .NET Core/.NET worden gebruikt voor C#-applicaties, en welke afwegingen zijn hierbij gemaakt voor het kiezen van een specifieke versie?",
-        "Kunt u de architectuur van jullie meest bedrijfskritische C#-applicaties beschrijven, en welke design patterns (bijv. MVVM, MVC, Repository) worden hierin toegepast?",
-        "Hoe wordt de kwaliteit van C#-code gewaarborgd (bijv. door middel van code reviews, unit tests, statische code-analyse), en welke tooling wordt hiervoor ingezet (bijv. SonarQube, NUnit)?"
+        "Voor welke specifieke toepassingen wordt Python momenteel gebruikt binnen de klantorganisatie (bijv. data science, scripting, web development met Django/Flask), en met welke belangrijke bibliotheken of frameworks?",
+        "Hoe evalueert de klant de productiviteit en flexibiliteit die Python hen biedt, en zijn er gebieden waar zij een verbetering of uitbreiding van het Python-gebruik zien?",
+        "Welke uitdagingen ervaart de klant bij het managen van Python-omgevingen, afhankelijkheden en deployments, en zijn er overwegingen voor het opschalen van Python-applicaties?"
+      ],
+      "followup_answers": [
+        "Voor welke specifieke toepassingen wordt Python momenteel gebruikt binnen de klantorganisatie (bijv. data science, scripting, web development met Django/Flask), en met welke belangrijke bibliotheken of frameworks?",
+        "Hoe evalueert de klant de productiviteit en flexibiliteit die Python hen biedt, en zijn er gebieden waar zij een verbetering of uitbreiding van het Python-gebruik zien?",
+        "Welke uitdagingen ervaart de klant bij het managen van Python-omgevingen, afhankelijkheden en deployments, en zijn er overwegingen voor het opschalen van Python-applicaties?"
       ]
     },
     {
       "term": "Scala",
+      "definition": "Een programmeertaal die functionele en objectgeoriënteerde paradigma's combineert, vaak gebruikt voor big data-verwerking met frameworks als Apache Spark.",
       "followup_prompts": [
-        "Voor welke specifieke use-cases wordt Scala ingezet binnen jullie organisatie, en welke voordelen biedt Scala ten opzichte van andere talen voor deze toepassingen (bijv. voor distributed computing met Spark)?",
-        "Welke frameworks of libraries worden actief gebruikt binnen jullie Scala-projecten (bijv. Akka, Play Framework, Cats), en hoe is de interne expertise opgebouwd rondom deze technologieën?",
-        "Zijn er uitdagingen ervaren met de leercurve, het vinden van talent, of het compileren/deployen van Scala-applicaties, en hoe worden deze momenteel aangepakt?"
+        "Welke specifieke use-cases worden momenteel geïmplementeerd met Scala binnen de klant-omgeving (bijv. big data verwerking met Spark, high-performance backends), en welke functionele programmeerprincipes worden hierbij toegepast?",
+        "Hoe ervaart de klant de leercurve en de beschikbaarheid van Scala-developers, en zijn er specifieke afwegingen gemaakt bij de keuze voor Scala ten opzichte van andere talen?",
+        "Zijn er plannen om het gebruik van Scala uit te breiden of te consolideren, en welke overwegingen (zoals integratie met bestaande Java-systemen of data pipelines) spelen hierbij een rol?"
+      ],
+      "followup_answers": [
+        "Welke specifieke use-cases worden momenteel geïmplementeerd met Scala binnen de klant-omgeving (bijv. big data verwerking met Spark, high-performance backends), en welke functionele programmeerprincipes worden hierbij toegepast?",
+        "Hoe ervaart de klant de leercurve en de beschikbaarheid van Scala-developers, en zijn er specifieke afwegingen gemaakt bij de keuze voor Scala ten opzichte van andere talen?",
+        "Zijn er plannen om het gebruik van Scala uit te breiden of te consolideren, en welke overwegingen (zoals integratie met bestaande Java-systemen of data pipelines) spelen hierbij een rol?"
       ]
     },
     {
-      "term": "TypeScript",
+      "term": "Kotlin",
+      "definition": "Een moderne, statisch getypeerde programmeertaal die door Google wordt ondersteund voor Android-ontwikkeling en ook voor backend- en webtoepassingen wordt gebruikt.",
       "followup_prompts": [
-        "Welke front-end frameworks (Angular, React, Vue) worden gecombineerd met TypeScript, en wat zijn de belangrijkste redenen voor de inzet van TypeScript in jullie front-end ontwikkeling?",
-        "Hoe wordt de integratie van TypeScript met back-end services (bijv. REST API's) beheerd, en welke tooling wordt gebruikt voor het genereren van typings of het synchroniseren van interfaces?",
-        "Zijn er overwegingen geweest om TypeScript ook voor server-side Node.js-applicaties te gebruiken, en zo ja, welke factoren waren doorslaggevend voor de besluitvorming?"
+        "Voor welke specifieke platformen en applicaties (bijv. Android-apps, server-side met Spring Boot, multiplatform-projecten) wordt Kotlin ingezet binnen de klant, en welke voordelen worden hieruit behaald ten opzichte van alternatieven?",
+        "Hoe ervaart de klant de interoperabiliteit van Kotlin met bestaande Java-codebases, en heeft dit geleid tot een versnelling in ontwikkeling of een verbetering van de codekwaliteit?",
+        "Zijn er specifieke uitdagingen of overwegingen bij de adoptie of uitbreiding van Kotlin binnen de organisatie van de klant, bijvoorbeeld met betrekking tot tooling of expertise?"
+      ],
+      "followup_answers": [
+        "Voor welke specifieke platformen en applicaties (bijv. Android-apps, server-side met Spring Boot, multiplatform-projecten) wordt Kotlin ingezet binnen de klant, en welke voordelen worden hieruit behaald ten opzichte van alternatieven?",
+        "Hoe ervaart de klant de interoperabiliteit van Kotlin met bestaande Java-codebases, en heeft dit geleid tot een versnelling in ontwikkeling of een verbetering van de codekwaliteit?",
+        "Zijn er specifieke uitdagingen of overwegingen bij de adoptie of uitbreiding van Kotlin binnen de organisatie van de klant, bijvoorbeeld met betrekking tot tooling of expertise?"
       ]
     },
     {
       "term": "JavaScript",
+      "definition": "Een scripttaal die voornamelijk wordt gebruikt voor interactieve webpagina's aan de clientzijde, maar ook aan de serverzijde met Node.js.",
       "followup_prompts": [
-        "Welke versies van ECMAScript worden minimaal ondersteund in jullie JavaScript-projecten, en hoe wordt cross-browser compatibiliteit en polyfilling beheerd?",
-        "Naast de frameworks die met TypeScript zijn genoemd, zijn er specifieke JavaScript libraries of frameworks (bijv. jQuery, Lodash, D3.js) die een cruciale rol spelen in jullie applicaties?",
-        "Hoe wordt de performance en optimalisatie van JavaScript-code gemeten en verbeterd, en worden technieken zoals code splitting of lazy loading toegepast in jullie (grotere) projecten?"
+        "Welke specifieke frameworks en bibliotheken (bijv. React, Angular, Vue, Node.js) worden gebruikt voor JavaScript-ontwikkeling bij de klant, en voor welke frontend- of backend-applicaties?",
+        "Hoe ervaart de klant de onderhoudbaarheid en schaalbaarheid van hun JavaScript-codebases, en zijn er uitdagingen met betrekking tot dependency management, bundling of performance-optimalisatie?",
+        "Zijn er plannen om bestaande JavaScript-applicaties te moderniseren, te migreren naar nieuwe frameworks of om Typescript te introduceren, en wat zijn de drijfveren hiervoor?"
+      ],
+      "followup_answers": [
+        "Welke specifieke frameworks en bibliotheken (bijv. React, Angular, Vue, Node.js) worden gebruikt voor JavaScript-ontwikkeling bij de klant, en voor welke frontend- of backend-applicaties?",
+        "Hoe ervaart de klant de onderhoudbaarheid en schaalbaarheid van hun JavaScript-codebases, en zijn er uitdagingen met betrekking tot dependency management, bundling of performance-optimalisatie?",
+        "Zijn er plannen om bestaande JavaScript-applicaties te moderniseren, te migreren naar nieuwe frameworks of om Typescript te introduceren, en wat zijn de drijfveren hiervoor?"
+      ]
+    },
+    {
+      "term": "C#",
+      "definition": "Een objectgeoriënteerde programmeertaal ontwikkeld door Microsoft als onderdeel van het .NET-platform, gebruikt voor Windows-applicaties, webontwikkeling en games.",
+      "followup_prompts": [
+        "Voor welke bedrijfsapplicaties en platforms (bijv. .NET Core webapplicaties, WPF desktop tools, Azure Functions) wordt C# momenteel ingezet bij de klant, en met welke specifieke .NET-versie en -frameworks?",
+        "Hoe beoordeelt de klant de productiviteit van hun C#-development teams, en zijn er specifieke functionaliteiten of tools (zoals LINQ, Async/Await) die als bijzonder waardevol worden ervaren?",
+        "Zijn er overwegingen om C#-applicaties te migreren naar cloud-native architecturen of microservices, en welke uitdagingen (bijv. legacy code, database-integratie) worden hierbij voorzien?"
+      ],
+      "followup_answers": [
+        "Voor welke bedrijfsapplicaties en platforms (bijv. .NET Core webapplicaties, WPF desktop tools, Azure Functions) wordt C# momenteel ingezet bij de klant, en met welke specifieke .NET-versie en -frameworks?",
+        "Hoe beoordeelt de klant de productiviteit van hun C#-development teams, en zijn er specifieke functionaliteiten of tools (zoals LINQ, Async/Await) die als bijzonder waardevol worden ervaren?",
+        "Zijn er overwegingen om C#-aplicaties te migreren naar cloud-native architecturen of microservices, en welke uitdagingen (bijv. legacy code, database-integratie) worden hierbij voorzien?"
       ]
     },
     {
       "term": "SQL",
+      "definition": "Structured Query Language, een taakspecifieke taal voor het bevragen en beheren van gegevens in relationele databases.",
       "followup_prompts": [
-        "Welke specifieke relationele databasesystemen (SQL Server, PostgreSQL, MySQL, Oracle) worden voornamelijk gebruikt, en op welke schaal (aantal databases, omvang data)?",
-        "Hoe worden databasewijzigingen (schema migrations) beheerd en uitgerold in jullie ontwikkelings- en productieomgevingen, en welke tooling (bijv. Flyway, Liquidbase, Entity Framework Migrations) wordt hiervoor ingezet?",
-        "Kunt u voorbeelden geven van complexe SQL-queries, stored procedures, of database-optimalisaties die van cruciaal belang zijn voor de prestaties van jullie applicaties?"
-      ]
-    },
-    {
-      "term": "Go",
-      "followup_prompts": [
-        "Voor welke specifieke doeleinden (bijv. microservices, CLI tools, network services) wordt Go ingezet binnen jullie organisatie, en welke voordelen biedt het ten opzichte van andere talen hiervoor?",
-        "Hoe is de ontwikkeling, testing en deployment van Go-applicaties gestructureerd, en welke CI/CD-tools of frameworks worden hierin geïntegreerd?",
-        "Zijn er specifieke uitdagingen ervaren met Go op het gebied van library ecosysteem, error handling patronen, of het managen van concurrency, en hoe zijn deze aangepakt?"
-      ]
-    },
-    {
-      "term": "PowerShell",
-      "followup_prompts": [
-        "Voor welke automatiseringstaken binnen Windows Server, Azure of Microsoft 365 wordt PowerShell primair gebruikt, en welke specifieke modules zijn hierbij van vitaal belang?",
-        "Hoe wordt het beheer en de versiecontrole van PowerShell-scripts geregeld, en zijn er standaarden voor scriptstructuur, foutafhandeling en logging?",
-        "Zijn er plannen om PowerShell-scripts te integreren in bredere infrastructuur als code (IaC)-praktijken, en zo ja, welke tooling (bijv. DSC, Azure Automation) wordt overwogen?"
+        "Welke relationele databasesystemen (naast de al genoemde SQL Server en PostgreSQL) zijn in gebruik bij de klant voor het opslaan en bevragen van gestructureerde data, en voor welke kernsystemen?",
+        "Hoe wordt de performance en optimalisatie van SQL-queries momenteel beheerd en gemonitord, en zijn er specifieke knelpunten in de database-performance die de klant ervaart?",
+        "Welke processen en tools worden gebruikt voor database-change management (bijv. migraties, schema-updates) en data-integratie (ETL) met SQL-databases binnen de organisatie van de klant?"
+      ],
+      "followup_answers": [
+        "Welke relationele databasesystemen (naast de al genoemde SQL Server en PostgreSQL) zijn in gebruik bij de klant voor het opslaan en bevragen van gestructureerde data, en voor welke kernsystemen?",
+        "Hoe wordt de performance en optimalisatie van SQL-queries momenteel beheerd en gemonitord, en zijn er specifieke knelpunten in de database-performance die de klant ervaart?",
+        "Welke processen en tools worden gebruikt voor database-change management (bijv. migraties, schema-updates) en data-integratie (ETL) met SQL-databases binnen de organisatie van de klant?"
       ]
     },
     {
       "term": "Microsoft Azure",
+      "definition": "Een cloudcomputingplatform van Microsoft dat een breed scala aan clouddiensten biedt, waaronder compute, storage, databases en machine learning.",
       "followup_prompts": [
-        "Welke Azure-diensten (compute, storage, databases, networking, identity) worden het meest intensief gebruikt, en welke van jullie bedrijfskritische applicaties draaien volledig of gedeeltelijk op Azure?",
-        "Hoe wordt het kostenbeheer en de optimalisatie van Azure-resources aangepakt, en welke tools of processen zijn hiervoor ingericht?",
-        "Kunt u voorbeelden geven van complexe Azure-architecturen binnen jullie organisatie, inclusief het gebruik van VNETs, ExpressRoute, AAD, en security best practices?"
-      ]
-    },
-    {
-      "term": "AWS",
-      "followup_prompts": [
-        "Welke AWS-diensten (EC2, S3, RDS, Lambda, VPC) zijn jullie primaire bouwstenen, en welke van jullie applicaties zijn cruciaal afhankelijk van de AWS-infrastructuur?",
-        "Hoe wordt de AWS-security beheerd, inclusief IAM-rollen, security groups en compliance-eisen, en welke externe tools worden hiervoor ingezet?",
-        "Zijn er specifieke uitdagingen ervaren met AWS op het gebied van multi-account strategieën, kostenbeheer, of het implementeren van disaster recovery in de cloud?"
-      ]
-    },
-    {
-      "term": "Kubernetes",
-      "followup_prompts": [
-        "Welke Kubernetes-distributie (AKS, EKS, GKE, OpenShift of on-prem) wordt gebruikt, en welke afwegingen hebben geleid tot deze keuze?",
-        "Hoe wordt de deployment, monitoring en scaling van applicaties op Kubernetes beheerd, en welke tooling (bijv. Helm, Argo CD, Prometheus, Grafana) speelt hierbij een rol?",
-        "Zijn er uitdagingen ervaren met Kubernetes op het gebied van persistent storage, netwerken, security beleid (bijv. Network Policies, RBAC), of het integreren met bestaande CI/CD-pijplijnen?"
-      ]
-    },
-    {
-      "term": "Azure Functions",
-      "followup_prompts": [
-        "Voor welke specifieke use-cases (bijv. event-driven verwerking, microservices, cron jobs) worden Azure Functions ingezet, en welke trigger-typen (HttpTrigger, TimerTrigger, ServiceBusTrigger) zijn het meest voorkomend?",
-        "Hoe wordt de ontwikkeling, testing en deployment van Azure Functions geregeld, en welke talen (C#, Python, JavaScript) worden hiervoor primair gebruikt?",
-        "Zijn er uitdagingen ervaren met Azure Functions op het gebied van koude starts, monitoring, foutafhandeling, of integratie met andere Azure-diensten, en hoe zijn deze aangepakt?"
+        "Welke specifieke Azure-diensten (bijv. App Services, Azure Functions, Azure SQL Database, AKS, Data Lake) worden momenteel gebruikt door de klant, en welke bedrijfsprocessen of applicaties ondersteunen deze?",
+        "Hoe ervaart de klant de kostenbeheer, beveiliging en compliance binnen hun Azure-omgeving, en zijn er specifieke zorgen of optimalisatiekansen op deze gebieden?",
+        "Zijn er plannen om de adoptie van Azure uit te breiden, om cloud-native architecturen te implementeren, of om services te migreren van on-premise naar Azure, en wat zijn de drijfveren hiervoor?"
+      ],
+      "followup_answers": [
+        "Welke specifieke Azure-diensten (bijv. App Services, Azure Functions, Azure SQL Database, AKS, Data Lake) worden momenteel gebruikt door de klant, en welke bedrijfsprocessen of applicaties ondersteunen deze?",
+        "Hoe ervaart de klant de kostenbeheer, beveiliging en compliance binnen hun Azure-omgeving, en zijn er specifieke zorgen of optimalisatiekansen op deze gebieden?",
+        "Zijn er plannen om de adoptie van Azure uit te breiden, om cloud-native architecturen te implementeren, of om services te migreren van on-premise naar Azure, en wat zijn de drijfveren hiervoor?"
       ]
     },
     {
       "term": "SQL Server",
+      "definition": "Een relationeel databasemanagementsysteem (RDBMS) ontwikkeld door Microsoft.",
       "followup_prompts": [
-        "Welke versies van SQL Server worden momenteel gebruikt in jullie productieomgevingen, en zijn er plannen voor upgrades of migraties naar nieuwere versies of naar Azure SQL Database?",
-        "Kunt u de configuratie van jullie meest bedrijfskritische SQL Server-instanties beschrijven, inclusief High Availability (bijv. AlwaysOn Availability Groups) en Disaster Recovery strategieën?",
-        "Hoe wordt de optimalisatie van SQL Server-prestaties aangepakt (bijv. indexing, query tuning, resource monitoring), en welke tools worden hiervoor ingezet?"
+        "Welke versies van SQL Server zijn momenteel in gebruik bij de klant, voor welke kritieke applicaties, en hoe wordt de high availability en disaster recovery gegarandeerd (bijv. Always On Availability Groups)?",
+        "Hoe wordt de performance van SQL Server-databases gemonitord en geoptimaliseerd, en zijn er specifieke uitdagingen met betrekking tot query-performance, indexen of database-tuning?",
+        "Zijn er plannen om SQL Server-databases te migreren naar de cloud (bijv. Azure SQL Database, Azure SQL Managed Instance) of om de bestaande on-premise implementaties te moderniseren, en wat zijn de overwegingen?"
+      ],
+      "followup_answers": [
+        "Welke versies van SQL Server zijn momenteel in gebruik bij de klant, voor welke kritieke applicaties, en hoe wordt de high availability en disaster recovery gegarandeerd (bijv. Always On Availability Groups)?",
+        "Hoe wordt de performance van SQL Server-databases gemonitord en geoptimaliseerd, en zijn er specifieke uitdagingen met betrekking tot query-performance, indexen of database-tuning?",
+        "Zijn er plannen om SQL Server-databases te migreren naar de cloud (bijv. Azure SQL Database, Azure SQL Managed Instance) of om de bestaande on-premise implementaties te moderniseren, en wat zijn de overwegingen?"
       ]
     },
     {
       "term": "PostgreSQL",
+      "definition": "Een krachtig, open-source object-relationeel databasemanagementsysteem dat bekend staat om zijn betrouwbaarheid en geavanceerde functies.",
       "followup_prompts": [
-        "Voor welke soorten applicaties of data is PostgreSQL de voorkeursdatabase binnen jullie organisatie, en welke specifieke features van PostgreSQL (bijv. JSONB, PostGIS, extensies) worden actief gebruikt?",
-        "Hoe wordt de schaalbaarheid en beschikbaarheid van PostgreSQL-databases gewaarborgd, en maken jullie gebruik van replicatie, sharding of cloud-managed services (bijv. Azure Database for PostgreSQL, AWS RDS for PostgreSQL)?",
-        "Kunt u voorbeelden geven van uitdagingen bij de ontwikkeling met PostgreSQL, zoals complex query-optimalisatie, extensiebeheer of het beheren van grote datasets?"
+        "Voor welke specifieke applicaties of microservices wordt PostgreSQL ingezet bij de klant, en welke functionaliteiten (bijv. JSONB, PostGIS, extensies) worden daarbij benut?",
+        "Hoe ervaart de klant de schaalbaarheid en de robuustheid van hun PostgreSQL-implementaties, en zijn er specifieke behoeften op het gebied van database-replicatie, clustering of cloud hosting?",
+        "Zijn er plannen om meer applicaties te baseren op PostgreSQL, of om bestaande databases te migreren naar PostgreSQL, en welke argumenten (open source, licentiekosten, features) spelen hierbij een rol?"
+      ],
+      "followup_answers": [
+        "Voor welke specifieke applicaties of microservices wordt PostgreSQL ingezet bij de klant, en welke functionaliteiten (bijv. JSONB, PostGIS, extensies) worden daarbij benut?",
+        "Hoe ervaart de klant de schaalbaarheid en de robuustheid van hun PostgreSQL-implementaties, en zijn er specifieke behoeften op het gebied van database-replicatie, clustering of cloud hosting?",
+        "Zijn er plannen om meer applicaties te baseren op PostgreSQL, of om bestaande databases te migreren naar PostgreSQL, en welke argumenten (open source, licentiekosten, features) spelen hierbij een rol?"
       ]
     },
     {
       "term": "MongoDB",
+      "definition": "Een open-source, documentgeoriënteerde NoSQL-database die gegevens opslaat in flexibele, JSON-achtige documenten.",
       "followup_prompts": [
-        "Voor welke specifieke soorten data of applicaties wordt MongoDB ingezet, en welke overwegingen hebben geleid tot de keuze voor een document database boven een relationele database?",
-        "Hoe wordt de schaalbaarheid, beschikbaarheid en consistentie van MongoDB-deployments beheerd (bijv. replica sets, sharding), en welke cloud-oplossingen (Azure Cosmos DB, AWS DocumentDB, MongoDB Atlas) worden hiervoor gebruikt?",
-        "Zijn er uitdagingen ondervonden met het queries van complexe documentstructuren, het beheren van de schema flexibiliteit, of het waarborgen van data-integriteit binnen MongoDB?"
+        "Voor welke specifieke use-cases (bijv. content management, IoT data, real-time analytics, mobiele backends) wordt MongoDB gebruikt bij de klant, en welke data-schema's worden hierbij toegepast?",
+        "Hoe ervaart de klant de flexibiliteit en schaalbaarheid van MongoDB voor hun ontwikkelprocessen, en zijn er uitdagingen met betrekking tot data-modellering, query-optimalisatie of schaling?",
+        "Zijn er overwegingen om MongoDB Atlas (cloudservice) te gebruiken, of om on-premise MongoDB-clusters te optimaliseren, en welke factoren (beheerlast, kosten, functionaliteit) zijn hierbij van belang?"
+      ],
+      "followup_answers": [
+        "Voor welke specifieke use-cases (bijv. content management, IoT data, real-time analytics, mobiele backends) wordt MongoDB gebruikt bij de klant, en welke data-schema's worden hierbij toegepast?",
+        "Hoe ervaart de klant de flexibiliteit en schaalbaarheid van MongoDB voor hun ontwikkelprocessen, en zijn er uitdagingen met betrekking tot data-modellering, query-optimalisatie of schaling?",
+        "Zijn er overwegingen om MongoDB Atlas (cloudservice) te gebruiken, of om on-premise MongoDB-clusters te optimaliseren, en welke factoren (beheerlast, kosten, functionaliteit) zijn hierbij van belang?"
       ]
     },
     {
-      "term": "NoSQL databases",
+      "term": "Cassandra",
+      "definition": "Een open-source, gedistribueerd NoSQL-databasesysteem dat is ontworpen om grote hoeveelheden gegevens te verwerken over veel commodity-servers.",
       "followup_prompts": [
-        "Welke andere NoSQL databases naast MongoDB (bijv. Cassandra, Redis, Neo4j, Couchbase) worden momenteel in gebruik, en voor welke specifieke use-cases zijn deze gekozen?",
-        "Kunt u de belangrijkste afwegingen en besluitvormingscriteria schetsen bij de keuze voor een specifieke NoSQL database voor een nieuw project (bijv. op basis van datamodel, schaalbaarheid, consistentiemodel)?",
-        "Hoe wordt de data-migratie en integratie tussen verschillende NoSQL databases of tussen SQL en NoSQL-databases beheerd binnen jullie architectuur?"
+        "Voor welke specifieke Big Data-toepassingen (bijv. tijdreeksdata, event logging, high-volume transacties) wordt Cassandra ingezet bij de klant, en hoe is de cluster-architectuur opgezet?",
+        "Hoe wordt de data-modellering, consistentie en beschikbaarheid beheerd binnen de Cassandra-omgeving van de klant, en zijn er specifieke uitdagingen met betrekking tot latency of throughput?",
+        "Zijn er plannen om de Cassandra-omgeving te schalen, te migreren naar een cloud-solution of om integraties te bewerkstelligen met andere data-opslagtechnologieën, en welke drivers zijn hiervoor?"
+      ],
+      "followup_answers": [
+        "Voor welke specifieke Big Data-toepassingen (bijv. tijdreeksdata, event logging, high-volume transacties) wordt Cassandra ingezet bij de klant, en hoe is de cluster-architectuur opgezet?",
+        "Hoe wordt de data-modellering, consistentie en beschikbaarheid beheerd binnen de Cassandra-omgeving van de klant, en zijn er specifieke uitdagingen met betrekking tot latency of throughput?",
+        "Zijn er plannen om de Cassandra-omgeving te schalen, te migreren naar een cloud-solution of om integraties te bewerkstelligen met andere data-opslagtechnologieën, en welke drivers zijn hiervoor?"
       ]
     },
     {
-      "term": "Data warehousing technologieën",
+      "term": "SAS",
+      "definition": "Een software suite die wordt gebruikt voor geavanceerde analyses, multivariate analyses, business intelligence, data management en voorspellende analyses.",
       "followup_prompts": [
-        "Welke specifieke data warehousing-oplossingen (bijv. Azure Synapse Analytics, Snowflake, Databricks, Redshift) worden gebruikt voor het opslaan en analyseren van historische data?",
-        "Hoe worden de ETL/ELT-processen (Extract, Transform, Load) voor het vullen van het datawarehouse beheerd, en welke tools (bijv. Azure Data Factory, SSIS, Spark) worden hiervoor ingezet?",
-        "Wat zijn de belangrijkste bronnen van data die in het datawarehouse worden opgenomen, en hoe worden datakwaliteit en datagovernance gewaarborgd bij de integratie van deze bronnen?"
+        "Welke specifieke SAS-producten en -oplossingen (bijv. SAS Base, SAS Enterprise Guide, SAS Viya) worden momenteel gebruikt door de klant, en voor welke analytische processen of rapportages?",
+        "Hoe ervaart de klant de effectiviteit van SAS voor data-analyse, statistische modellering en business intelligence, en zijn er behoeften aan integratie met modernere data-science tools?",
+        "Zijn er overwegingen om SAS-workloads te migreren naar open-source alternatieven (zoals Python/R) of naar cloudgebaseerde data-platforms, en welke factoren (kosten, flexibiliteit, expertise) spelen hierbij een rol?"
+      ],
+      "followup_answers": [
+        "Welke specifieke SAS-producten en -oplossingen (bijv. SAS Base, SAS Enterprise Guide, SAS Viya) worden momenteel gebruikt door de klant, en voor welke analytische processen of rapportages?",
+        "Hoe ervaart de klant de effectiviteit van SAS voor data-analyse, statistische modellering en business intelligence, en zijn er behoeften aan integratie met modernere data-science tools?",
+        "Zijn er overwegingen om SAS-workloads te migreren naar open-source alternatieven (zoals Python/R) of naar cloudgebaseerde data-platforms, en welke factoren (kosten, flexibiliteit, expertise) spelen hierbij een rol?"
       ]
     },
     {
-      "term": "Spark",
+      "term": "Kubernetes",
+      "definition": "Een open-source container-orkestratieplatform voor het automatiseren van de implementatie, schaling en het beheer van containerized applicaties.",
       "followup_prompts": [
-        "Voor welke specifieke dataverwerkings- en analyse-taken (bijv. big data ETL, machine learning pipelines, streaming data) wordt Apache Spark ingezet in jullie organisatie?",
-        "Welke versies van Spark worden gebruikt, en welke deployment modes (bijv. Standalone, YARN, Kubernetes) zijn actief; wordt gebruik gemaakt van cloud-managed Spark-diensten (bijv. Azure Databricks, AWS EMR)?",
-        "Kunt u voorbeelden geven van complexe Spark-jobs, inclusief details over de gebruikte talen (Scala, Python, Java), data sources en performance-optimalisaties?"
-      ]
-    },
-    {
-      "term": "Spring Boot",
-      "followup_prompts": [
-        "Welke versies van Spring Boot worden gebruikt, en zijn er plannen voor upgrades naar nieuwere versies of overstap naar Reactive Spring (WebFlux)?",
-        "Kunt u de architectuur van jullie meest bedrijfskritische Spring Boot-applicaties beschrijven, inclusief de integratie met databases, message brokers en cloud-diensten?",
-        "Hoe wordt de configuratie, monitoring (via Spring Actuator) en deployment van Spring Boot-applicaties beheerd, en welke tooling wordt hiervoor ingezet in de CI/CD-pijplijn?"
-      ]
-    },
-    {
-      "term": "Angular",
-      "followup_prompts": [
-        "Welke versies van Angular zijn in gebruik voor jullie front-end applicaties, en zijn er specifieke uitdagingen ervaren met upgrades tussen major versies?",
-        "Hoe is de structuur van jullie Angular-projecten opgezet, inclusief het beheer van state (bijv. NgRx, Akita), routing en componentbibliotheken (bijv. Angular Material)?",
-        "Kunt u voorbeelden geven van de meest complexe Angular-componenten of modules, en hoe worden prestaties en schaalbaarheid gewaarborgd voor grote Angular-applicaties?"
-      ]
-    },
-    {
-      "term": "React",
-      "followup_prompts": [
-        "Welke versies van React worden gebruikt, en welke specifieke libraries en frameworks (bijv. Redux, React Router, Next.js, Material-UI) worden hierbij ingezet?",
-        "Hoe wordt het state management binnen jullie React-applicaties beheerd, en zijn er overwegingen geweest voor de keuze tussen lokale component state, Context API, Redux of andere oplossingen?",
-        "Kunt u de performance-optimalisatiestrategieën voor jullie React-applicaties beschrijven, inclusief het gebruik van memoization, virtualisatie van lijsten of code splitting?"
-      ]
-    },
-    {
-      "term": ".NET",
-      "followup_prompts": [
-        "Naast C#, welke andere talen (bijv. F#, VB.NET) worden gebruikt binnen jullie .NET-ecosysteem, en voor welke specifieke doeleinden?",
-        "Kunt u de architectuur van jullie meest bedrijfskritische .NET-applicaties beschrijven, inclusief het gebruik van microservices, monoliths, of serverless patronen?",
-        "Hoe wordt het beheer van .NET-afhankelijkheden (NuGet) en de deployment van .NET-applicaties geregeld, en zijn er specifieke tooling of CI/CD-pijplijnen hiervoor ingericht (bijv. Azure DevOps, Octopus Deploy)?"
-      ]
-    },
-    {
-      "term": "PyTorch",
-      "followup_prompts": [
-        "Voor welke specifieke machine learning use-cases (bijv. computer vision, natural language processing, recommenders) wordt PyTorch ingezet binnen jullie organisatie?",
-        "Hoe wordt de ontwikkeling, training en deployment van PyTorch-modellen beheerd, inclusief het gebruik van GPUs, distributed training en model-serving frameworks (bijv. TorchServe)?",
-        "Zijn er uitdagingen ervaren met PyTorch op het gebied van performancetuning, interoperabiliteit met andere ML-frameworks, of het managen van modelversies?"
-      ]
-    },
-    {
-      "term": "TensorFlow",
-      "followup_prompts": [
-        "Voor welke specifieke machine learning use-cases (bijv. deep learning, recommendation systems, reinforcement learning) wordt TensorFlow ingezet binnen jullie organisatie?",
-        "Hoe wordt de ontwikkeling, training en deployment van TensorFlow-modellen beheerd, inclusief het gebruik van TensorFlow Extended (TFX), TensorFlow Serving, en cloud-diensten (bijv. Google AI Platform)?",
-        "Zijn er uitdagingen ervaren met TensorFlow op het gebied van performancetuning, debugging, of het beheren van complexe modelarchitecturen?"
-      ]
-    },
-    {
-      "term": "Scikit-learn",
-      "followup_prompts": [
-        "Voor welke soorten machine learning taken (bijv. classificatie, regressie, clustering) wordt Scikit-learn ingezet, en op welke schaal van data size en model complexiteit?",
-        "Hoe wordt de integratie van Scikit-learn modellen in productie-applicaties gerealiseerd, en worden ze gecombineerd met andere Python-libraries voor data preprocessing (Pandas, NumPy)?",
-        "Zijn er overwegingen geweest om over te stappen van Scikit-learn naar deep learning frameworks voor specifieke use-cases, en zo ja, welke factoren waren hierin doorslaggevend?"
-      ]
-    },
-    {
-      "term": "Pandas",
-      "followup_prompts": [
-        "Voor welke specifieke data manipulatie en analyse taken wordt Pandas het meest gebruikt binnen jullie data science en engineering teams?",
-        "Hoe wordt de performance van Pandas-operaties op grote datasets geoptimaliseerd, en worden alternatieven zoals Dask of Spark overwogen voor schaalbaarheidsproblemen?",
-        "Kunt u voorbeelden geven van complexe data cleaning, transformatie of aggregatie scripts die essentieel zijn voor jullie data pipelines en die Pandas intensief gebruiken?"
-      ]
-    },
-    {
-      "term": "NumPy",
-      "followup_prompts": [
-        "Voor welke numerieke berekeningen en array-operaties is NumPy een fundamentele library in jullie Python-projecten, met name in combinatie met andere data science tooling?",
-        "Hoe wordt de performance van NumPy-code kritiek geëvalueerd en geoptimaliseerd, en zijn er uitdagingen met large-scale array-verwerking die leiden tot het overwegen van andere oplossingen?",
-        "Kunt u voorbeelden geven van complexe wiskundige of statistische algoritmen die in-house zijn geïmplementeerd met behulp van NumPy, en hoe deze bijdragen aan jullie core business functionaliteit?"
-      ]
-    },
-    {
-      "term": "Kafka",
-      "followup_prompts": [
-        "Voor welke specifieke use-cases (bijv. event streaming, message queueing, log aggregation) wordt Apache Kafka ingezet, en welke topologie (single cluster, multi-cluster) wordt gebruikt?",
-        "Hoe wordt de schaalbaarheid, betrouwbaarheid en data retentie van Kafka-clusters beheerd, en maken jullie gebruik van managed Kafka-diensten (bijv. Confluent Cloud, AWS MSK, Azure Event Hubs) of zelf-gehoste clusters?",
-        "Kunt u voorbeelden geven van Kafka-producenten en -consumenten binnen jullie architectuur, inclusief de verwerking van messages (bijv. met Kafka Streams, Spark Streaming) en foutafhandeling?"
-      ]
-    },
-    {
-      "term": "REST API's",
-      "followup_prompts": [
-        "Welke versies van REST API's worden gebruikt voor interne en externe integraties, en welke best practices (bijv. versiebeheer, authenticatie, autorisatie, hypermedia) worden hierbij gevolgd?",
-        "Hoe wordt de ontwikkeling, testing en documentatie van REST API's beheerd, en welke tooling (bijv. OpenAPI/Swagger, Postman, SoapUI) wordt hiervoor ingezet?",
-        "Zijn er uitdagingen ervaren met de schaalbaarheid, prestaties of beveiliging van REST API's, en hoe worden deze aangepakt (bijv. caching, rate limiting, DDoS-protectie)?"
-      ]
-    },
-    {
-      "term": "SOAP",
-      "followup_prompts": [
-        "Voor welke legacy-integraties of specifieke externe systemen zijn jullie nog afhankelijk van SOAP-webservices, en zijn er plannen voor modernisering of migratie naar REST-gebaseerde API's?",
-        "Welke tooling of frameworks worden gebruikt voor het consumeren en produceren van SOAP-services, en hoe wordt de complexiteit van XML-schema's en WSDL-definities beheerd?",
-        "Kunt u voorbeelden geven van kritische bedrijfsprocessen die afhankelijk zijn van SOAP-integraties, en welke uitdagingen worden ervaren met betrekking tot performance, foutafhandeling of compatibiliteit?"
-      ]
-    },
-    {
-      "term": "Azure Integration Services",
-      "followup_prompts": [
-        "Welke specifieke Azure Integration Services (bijv. Logic Apps, Service Bus, API Management, Event Grid) worden ingezet voor jullie integratiestromen, en hoe dragen ze bij aan de bedrijfsdoelstellingen?",
-        "Kunt u de architectuur van jullie meest complexe integratiestromen beschrijven, inclusief het orkestreren van services, transformeren van data en afhandelen van uitzonderingen?",
-        "Hoe wordt de monitoring en het beheer van Azure Integration Services geregeld, en zijn er uitdagingen ervaren met betrekking tot schaalbaarheid, kostenoptimalisatie of het debuggen van flows?"
-      ]
-    },
-    {
-      "term": "Messaging systemen",
-      "followup_prompts": [
-        "Naast Kafka en Azure Service Bus, welke andere messaging systemen (bijv. RabbitMQ, ActiveMQ, SQS, Azure Event Hubs) worden gebruikt binnen jullie architectuur, en voor welke specifieke doeleinden?",
-        "Hoe wordt de betrouwbaarheid, schaalbaarheid en ordered delivery van berichten gewaarborgd in jullie messaging-architectuur, en welke patronen (bijv. pub/sub, point-to-point, transactional outbox) worden toegepast?",
-        "Kunt u voorbeelden geven van complexe berichtenpatronen of event-driven architecturen die cruciaal zijn voor jullie systemen, en welke uitdagingen zijn er met foutafhandeling of idempotentie?"
-      ]
-    },
-    {
-      "term": "Ansible",
-      "followup_prompts": [
-        "Voor welke specifieke infrastructuurautomatiseringstaken (bijv. provisioning, configuratiebeheer, applicatiedeployment) wordt Ansible gebruikt, en welke operating systems (Linux, Windows Server) worden hierbij geconfigureerd?",
-        "Hoe wordt het beheer van Ansible playbooks, rollen en inventarisatie bestanden geregeld, en zijn er standaarden voor modularisatie, foutafhandeling en secrets management (bijv. Ansible Vault)?",
-        "Zijn er uitdagingen ervaren met het opschalen van Ansible-implementaties naar grote infrastructuren, of het integreren met CI/CD-pijplijnen en cloud-providers?"
-      ]
-    },
-    {
-      "term": "Jenkins",
-      "followup_prompts": [
-        "Voor welke specifieke CI/CD-doelstellingen (continuous integration, continuous delivery, continuous deployment) wordt Jenkins ingezet, en welke programmeertalen en build tools worden hierin geïntegreerd?",
-        "Hoe is de Jenkins-infrastructuur opgezet (bijv. master-agent architectuur, Kubernetes-gehoste agents), en hoe wordt de schaalbaarheid, betrouwbaarheid en beveiliging van Jenkins gewaarborgd?",
-        "Kunt u voorbeelden geven van complexe Jenkins pipelines, inclusief het gebruik van shared libraries, verschillende stages en integraties met testen, kwaliteitscontrole en deployment tools?"
-      ]
-    },
-    {
-      "term": "Prometheus",
-      "followup_prompts": [
-        "Welke specifieke metrics (bijv. applicatieprestaties, systeemresources, network latency) worden verzameld en gemonitord met Prometheus, en welke exporters worden hiervoor gebruikt?",
-        "Hoe is de Prometheus-opzet gestructureerd, inclusief Alertmanager voor meldingen en Grafana voor visualisatie; wordt gebruik gemaakt van federatie of Thanos voor langetermijnopslag van metrics?",
-        "Zijn er uitdagingen ervaren met Prometheus op het gebied van schaalbaarheid, het beheren van de levenscyclus van metrics, of het configureren van complexe alertregels?"
-      ]
-    },
-    {
-      "term": "Azure Monitor",
-      "followup_prompts": [
-        "Welke Azure-resources en applicaties worden gemonitord met Azure Monitor, inclusief het verzamelen van logs, metrics en distributed traces via Application Insights?",
-        "Hoe worden alerting-regels en actiegroepen geconfigureerd in Azure Monitor om proactief te reageren op incidenten, en welke integraties zijn er met andere melding- of incidentbeheersystemen?",
-        "Kunt u voorbeelden geven van custom log-analyse queries (KQL) en dashboards in Azure Monitor die essentieel zijn voor het operationele inzicht in jullie systemen?"
-      ]
-    },
-    {
-      "term": "ELK Stack",
-      "followup_prompts": [
-        "Welke logs en events worden verzameld en geanalyseerd met de ELK Stack (Elasticsearch, Logstash, Kibana), en welke bronnen (applicatielogs, systeemlogs, netwerklogs) worden hierin opgenomen?",
-        "Hoe is de ELK Stack-infrastructuur opgezet (bijv. clustering, sharding), en hoe wordt de schaalbaarheid, betrouwbaarheid en beveiliging van de stack gewaarborgd?",
-        "Kunt u voorbeelden geven van complexe Kibana-dashboards, visualisaties of alerting-regels die essentieel zijn voor het operationele inzicht, security monitoring of business intelligence?"
-      ]
-    },
-    {
-      "term": "Jupyter Notebooks",
-      "followup_prompts": [
-        "Voor welke specifieke data science use-cases (bijv. data exploratie, model ontwikkeling, rapportage) worden Jupyter Notebooks gebruikt binnen jullie data teams?",
-        "Hoe wordt het beheer, de versiecontrole en het delen van Jupyter Notebooks geregeld, en welke tooling (bijv. Git, Nbviewer, JupyterHub, Azure Machine Learning Notebooks) wordt hiervoor ingezet?",
-        "Zijn er uitdagingen ervaren met Jupyter Notebooks op het gebied van reproduceerbaarheid, collaboration of het integreren van notebooks in geautomatiseerde pipelines?"
+        "Welke specifieke applicaties of microservices worden momenteel georkestreerd met Kubernetes binnen de klantorganisatie, en op welk platform (bijv. AKS, EKS, GKE, on-premise K8s)?",
+        "Hoe wordt het beheer van Kubernetes-clusters, de monitoring, logging en security momenteel ingericht, en zijn er specifieke uitdagingen met betrekking tot operational overhead of resource-optimalisatie?",
+        "Zijn er plannen om de adoptie van Kubernetes verder uit te breiden, om CI/CD-pipelines te integreren met Kubernetes, of om service meshes te implementeren, en wat zijn de business drivers hiervoor?"
+      ],
+      "followup_answers": [
+        "Welke specifieke applicaties of microservices worden momenteel georkestreerd met Kubernetes binnen de klantorganisatie, en op welk platform (bijv. AKS, EKS, GKE, on-premise K8s)?",
+        "Hoe wordt het beheer van Kubernetes-clusters, de monitoring, logging en security momenteel ingericht, en zijn er specifieke uitdagingen met betrekking tot operational overhead of resource-optimalisatie?",
+        "Zijn er plannen om de adoptie van Kubernetes verder uit te breiden, om CI/CD-pipelines te integreren met Kubernetes, of om service meshes te implementeren, en wat zijn de business drivers hiervoor?"
       ]
     },
     {
       "term": "Git",
+      "definition": "Een gedistribueerd versiebeheersysteem voor het bijhouden van wijzigingen in broncode tijdens softwareontwikkeling.",
       "followup_prompts": [
-        "Welke Git-workflow (bijv. Git Flow, GitHub Flow, GitLab Flow, Trunk-Based Development) wordt momenteel toegepast binnen jullie ontwikkelteams, en welke aanpassingen zijn hierbij gemaakt?",
-        "Hoe wordt het beheer van branches, merges, rebases en conflicten geregeld binnen grote projecten, en welke tooling (bijv. IDE-integraties, command-line tools) ondersteunt dit proces?",
-        "Zijn er specifieke policy's of best practices ingericht voor Git-gebruik, zoals code review-eisen, commit message-standaarden of het omgaan met grote binaire bestanden (bijv. Git LFS)?"
+        "Welke Git-hosting providers (bijv. GitHub, GitLab, Azure DevOps Repos, Bitbucket) worden gebruikt door de klant, en hoe wordt de samenwerking, code reviews en branch-strategie ingericht?",
+        "Hoe ervaart de klant de versiebeheer-processen met Git, en zijn er uitdagingen met betrekking tot conflict-oplossing, grote repositories of de integratie met CI/CD-systemen?",
+        "Zijn er plannen om de Git-workflows te standaardiseren, om GitOps-principes te introduceren, of om geavanceerde functionaliteiten zoals monorepo's te implementeren, en wat zijn de verwachte voordelen?"
+      ],
+      "followup_answers": [
+        "Welke Git-hosting providers (bijv. GitHub, GitLab, Azure DevOps Repos, Bitbucket) worden gebruikt door de klant, en hoe wordt de samenwerking, code reviews en branch-strategie ingericht?",
+        "Hoe ervaart de klant de versiebeheer-processen met Git, en zijn er uitdagingen met betrekking tot conflict-oplossing, grote repositories of de integratie met CI/CD-systemen?",
+        "Zijn er plannen om de Git-workflows te standaardiseren, om GitOps-principes te introduceren, of om geavanceerde functionaliteiten zoals monorepo's te implementeren, en wat zijn de verwachte voordelen?"
       ]
     },
     {
-      "term": "GitHub",
+      "term": "Spring Boot",
+      "definition": "Een framework dat voortbouwt op het Spring Framework om snel en eenvoudig zelfstandige, productieklare Spring-applicaties te maken.",
       "followup_prompts": [
-        "Welke GitHub-features (bijv. Pull Requests, Issues, Actions, Projects, Packages) worden het meest intensief gebruikt voor samenwerking, codebeheer en CI/CD-pijplijnen?",
-        "Hoe wordt het beheer van GitHub-repositories, teams en permissies geregeld, en zijn er specifieke GitHub Apps of integraties die cruciaal zijn voor jullie ontwikkelproces?",
-        "Zijn er plannen om GitHub Enterprise te overwegen voor on-premise deployments of om af te studeren van GitHub naar een alternatief, en welke factoren zouden hierbij een rol spelen?"
+        "Voor welke specifieke backend-services en microservices wordt Spring Boot ingezet bij de klant, en welke Spring-ecosysteem modules (bijv. Spring Data, Spring Security, Spring Cloud) worden daarbij gebruikt?",
+        "Hoe ervaart de klant de snelheid van ontwikkeling en de onderhoudbaarheid van hun Spring Boot-applicaties, en zijn er specifieke uitdagingen met betrekking tot configuratiebeheer of opstarttijden?",
+        "Zijn er plannen om meer applicaties te moderniseren met Spring Boot, om reactive programming-principes toe te passen, of om Spring Boot-applicaties naar cloud-native architecturen te migreren, en wat is de reden hiervoor?"
+      ],
+      "followup_answers": [
+        "Voor welke specifieke backend-services en microservices wordt Spring Boot ingezet bij de klant, en welke Spring-ecosysteem modules (bijv. Spring Data, Spring Security, Spring Cloud) worden daarbij gebruikt?",
+        "Hoe ervaart de klant de snelheid van ontwikkeling en de onderhoudbaarheid van hun Spring Boot-applicaties, en zijn er specifieke uitdagingen met betrekking tot configuratiebeheer of opstarttijden?",
+        "Zijn er plannen om meer applicaties te moderniseren met Spring Boot, om reactive programming-principes toe te passen, of om Spring Boot-applicaties naar cloud-native architecturen te migreren, en wat is de reden hiervoor?"
       ]
     },
     {
-      "term": "Azure DevOps Repos",
+      "term": "React",
+      "definition": "Een JavaScript-bibliotheek voor het bouwen van gebruikersinterfaces, met name single-page applicaties.",
       "followup_prompts": [
-        "Welke features van Azure DevOps Repos (bijv. Git-repositories, TFVC, Pull Requests, Branch Policies) worden primair gebruikt, en welke voordelen biedt het ten opzichte van andere Source Code Management (SCM) systemen?",
-        "Hoe wordt het beheer van code repositories, teams en beveiligingspermissies geregeld binnen Azure DevOps Repos, inclusief integraties met Azure Active Directory?",
-        "Zijn er uitdagingen ervaren met het schalen, offlinen, of synchroniseren van grote repositories binnen Azure DevOps Repos, en welke oplossingen zijn hiervoor geïmplementeerd?"
+        "Voor welke specifieke frontend-applicaties en gebruikersinterfaces wordt React ingezet bij de klant, en welke aanvullende bibliotheken of frameworks (bijv. Redux, Next.js) worden daarbij gebruikt?",
+        "Hoe ervaart de klant de ontwikkelingsefficiëntie en de performance van hun React-applicaties, en zijn er uitdagingen met betrekking tot state management, componentarchitectuur of testing?",
+        "Zijn er plannen om bestaande frontends naar React te migreren, om React Native te introduceren voor mobiele ontwikkeling, of om de toegankelijkheid (accessibility) van React-applicaties te verbeteren, en wat zijn de drijfveren?"
+      ],
+      "followup_answers": [
+        "Voor welke specifieke frontend-applicaties en gebruikersinterfaces wordt React ingezet bij de klant, en welke aanvullende bibliotheken of frameworks (bijv. Redux, Next.js) worden daarbij gebruikt?",
+        "Hoe ervaart de klant de ontwikkelingsefficiëntie en de performance van hun React-applicaties, en zijn er uitdagingen met betrekking tot state management, componentarchitectuur of testing?",
+        "Zijn er plannen om bestaande frontends naar React te migreren, om React Native te introduceren voor mobiele ontwikkeling, of om de toegankelijkheid (accessibility) van React-applicaties te verbeteren, en wat zijn de drijfveren?"
       ]
     },
     {
-      "term": "Linux",
+      "term": "Salesforce",
+      "definition": "Een cloudgebaseerd softwarebedrijf dat Customer Relationship Management (CRM)-services en een suite van enterprise applicaties levert.",
       "followup_prompts": [
-        "Welke specifieke Linux-distributies (bijv. Ubuntu, Red Hat, CentOS, Alpine) worden gebruikt voor het hosten van applicaties, databases of infrastructuurdiensten, en waarom is voor deze distributies gekozen?",
-        "Hoe wordt het configuratiebeheer, patchen en beveiliging van Linux-servers beheerd, en welke automatiseringstools (bijv. Ansible, Puppet, Chef) worden hiervoor gebruikt?",
-        "Kunt u voorbeelden geven van complexe Linux-serverconfiguraties (bijv. voor high-performance computing, security hardening, of specifieke netwerkconfiguraties) die cruciaal zijn voor jullie operaties?"
+        "Welke specifieke Salesforce-clouds (bijv. Sales Cloud, Service Cloud, Experience Cloud) en producten worden ingezet door de klant, en voor welke bedrijfsprocessen (CRM, klantenservice, marketing) zijn deze cruciaal?",
+        "Hoe wordt de customizing, configuratie en ontwikkeling van Salesforce-oplossingen (bijv. Apex, Lightning Web Components) beheerd, en zijn er uitdagingen met integraties met externe systemen?",
+        "Zijn er plannen om de Salesforce-implementatie uit te breiden, om te migreren naar nieuwere Salesforce-functionaliteiten of om de user adoption te optimaliseren, en welke business value wordt hiervan verwacht?"
+      ],
+      "followup_answers": [
+        "Welke specifieke Salesforce-clouds (bijv. Sales Cloud, Service Cloud, Experience Cloud) en producten worden ingezet door de klant, en voor welke bedrijfsprocessen (CRM, klantenservice, marketing) zijn deze cruciaal?",
+        "Hoe wordt de customizing, configuratie en ontwikkeling van Salesforce-oplossingen (bijv. Apex, Lightning Web Components) beheerd, en zijn er uitdagingen met integraties met externe systemen?",
+        "Zijn er plannen om de Salesforce-implementatie uit te breiden, om te migreren naar nieuwere Salesforce-functionaliteiten of om de user adoption te optimaliseren, en welke business value wordt hiervan verwacht?"
       ]
     },
     {
-      "term": "Windows Server",
+      "term": "Snowflake",
+      "definition": "Een cloudgebaseerd data warehousing platform dat data storage, verwerking en analytische oplossingen biedt als een service.",
       "followup_prompts": [
-        "Welke versies van Windows Server zijn in gebruik voor het hosten van applicaties (bijv. .NET, IIS), databases (bijv. SQL Server) of infrastructuurdiensten (bijv. Active Directory, DNS)?",
-        "Hoe wordt het patchbeheer, beveiliging en auditing van Windows Server-omgevingen beheerd, en welke automatiseringstools (bijv. PowerShell DSC, Group Policy) worden hiervoor gebruikt?",
-        "Kunt u voorbeelden geven van complexe Windows Server-configuraties (bijv. voor Active Directory Federation Services, terminal servers, of high-availability clustering) die essentieel zijn voor jullie operaties?"
+        "Voor welke specifieke datawarehousing-, data-engineering- of data-analytics-use-cases wordt Snowflake ingezet bij de klant, en welke data-bronnen worden hierin geladen?",
+        "Hoe ervaart de klant de schaalbaarheid, performance en kosteneffectiviteit van Snowflake, en zijn er uitdagingen met betrekking tot data-governance, beveiliging of integraties met BI-tools?",
+        "Zijn er plannen om de adoptie van Snowflake uit te breiden naar meer afdelingen of use-cases, om databricks of andere data-processing tools te integreren, en welke strategische doelen worden hiermee nagestreefd?"
+      ],
+      "followup_answers": [
+        "Voor welke specifieke datawarehousing-, data-engineering- of data-analytics-use-cases wordt Snowflake ingezet bij de klant, en welke data-bronnen worden hierin geladen?",
+        "Hoe ervaart de klant de schaalbaarheid, performance en kosteneffectiviteit van Snowflake, en zijn er uitdagingen met betrekking tot data-governance, beveiliging of integraties met BI-tools?",
+        "Zijn er plannen om de adoptie van Snowflake uit te breiden naar meer afdelingen of use-cases, om databricks of andere data-processing tools te integreren, en welke strategische doelen worden hiermee nagestreefd?"
       ]
     }
   ]
