@@ -15,43 +15,52 @@ from Savers.JsonSaver import save_to_json, save_webint
 from Savers.MarkdownSaver import save_to_markdown
 
 
-def run_customer_analysis_workflow(customer_name: str= None):
+def run_customer_analysis_workflow(customer_name: str = None, llm_client=None):
     if not customer_name:
         customer_name = input("Voer de naam van de klant in: ")
 
-    model = load_config()
-    llm_client = LLMClient(model)
+    if not llm_client:
+        model = load_config()
+        llm_client = LLMClient(model)
+
+    print(f"\nCIRQUI start analyse voor: {customer_name}")
+    print("─" * 40)
 
     technical_landscape_prompt, extract_terms_prompt, followup_prompts_prompt, answer_followup_questions_prompt, generate_rapports_prompt = load_prompts()
 
+    print("📄 HUMINT wordt ingeladen...")
     humint_text = load_humint(customer_name)
 
+    print("🌐 Technisch landschap wordt gegenereerd via Gemini...")
     technical_landscape_response = generate_technical_landscape(
         technical_landscape_prompt,
         customer_name,
         humint_text,
         llm_client
     )
-
     save_webint(customer_name, technical_landscape_response)
+    print("✓ Technisch landschap opgeslagen.")
 
+    print("\n🔍 Technische termen worden geëxtraheerd...")
     extracted_terms = extract_terms(
         technical_landscape_response,
         llm_client,
         extract_terms_prompt
     )
+    print(f"✓ {len(extracted_terms)} termen gevonden.")
 
+    print("\n🗄️  Termen worden vergeleken met database...")
     comparison_results = compare_terms_with_database(extracted_terms)
-
-    print_comparison_results(comparison_results)
 
     check_terms_in_vector_store(comparison_results)
 
     new_terms_for_followup = [
         result for result in comparison_results
-        if not find_existing_term(result.get("term"))
+        if not find_existing_term(result.get("term"), result.get("definition", ""))
     ]
+    print(f"✓ {len(new_terms_for_followup)} nieuwe termen gevonden.")
 
+    print("\n💬 Vervolgvragen worden gegenereerd en beantwoord...")
     followup_prompts, answer_response, rapport = generate_followup_prompts(
         comparison_results,
         new_terms_for_followup,
@@ -63,7 +72,6 @@ def run_customer_analysis_workflow(customer_name: str= None):
         customer_name
     )
 
-    # Parse both
     clean_prompts = followup_prompts.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
     clean_answers = answer_response.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
 
@@ -78,12 +86,17 @@ def run_customer_analysis_workflow(customer_name: str= None):
     except json.JSONDecodeError:
         print("Followup answers JSON incomplete, skipping.")
         parsed_answers = []
-    print("Parsed Prompts:", repr(clean_prompts))
-    print("Parsed Answers:", repr(clean_answers))
+ 
 
-    # Build lookups
     definitions_by_term = {result["term"]: result.get("definition", "") for result in comparison_results}
-    answers_by_term = {item["term"]: item.get("followup_prompts", []) for item in parsed_answers}
+    answers_by_term = {
+        item["term"]: [
+            qa.get("answer", "") if isinstance(qa, dict) else qa
+            for qa in item.get("followup_prompts", [])
+        ]
+        for item in parsed_answers
+    }
+
 
     merged = []
     for item in parsed_prompts:
@@ -95,12 +108,22 @@ def run_customer_analysis_workflow(customer_name: str= None):
             "followup_answers": answers_by_term.get(term, [])
         })
 
+    print("\n📊 Analyse wordt opgeslagen...")
     save_to_json(customer_name, merged)
-    save_to_markdown(customer_name, rapport)
+    print("✓ Analyse opgeslagen.")
 
+    print("\n📝 Rapport wordt opgesteld...")
+    save_to_markdown(customer_name, rapport)
+    print("✓ Rapport opgeslagen.")
+
+    print("\n💾 Nieuwe termen worden opgeslagen in database...")
     save_terms(comparison_results)
 
+    print("\n🧠 Embeddings worden gegenereerd en opgeslagen...")
     generate_and_save_embeddings(new_terms_for_followup)
+
+    print("\n" + "─" * 40)
+    print(f"✅ Analyse voor {customer_name} voltooid!")
 
 
 def load_config():
@@ -162,11 +185,6 @@ def compare_terms_with_database(extracted_terms):
     return compare_terms(extracted_terms, existing_terms)
 
 
-def print_comparison_results(comparison_results):
-    for result in comparison_results:
-        print(result)
-
-
 def save_terms(comparison_results):
     save_new_terms(comparison_results)
 
@@ -178,7 +196,7 @@ def generate_and_save_embeddings(new_terms):
             continue
         embedding = embed_term(term_doc)
         save_term_embedding(term_doc, embedding)
-        print(f"Saved embedding for: {term}")
+        print(f"  Embedding opgeslagen voor: {term}")
 
 
 def check_terms_in_vector_store(comparison_results):
@@ -186,12 +204,11 @@ def check_terms_in_vector_store(comparison_results):
         term = result.get("term")
         if not term:
             continue
-        existing_info = find_existing_term(term)
+        existing_info = find_existing_term(term, result.get("definition", ""))
         if existing_info:
-            print(f"Found existing semantic knowledge for: {term}")
-            print(existing_info)
+            print(f"  ✓ Bestaande kennis gevonden voor: {term}")
         else:
-            print(f"No semantic knowledge found for: {term}")
+            print(f"  + Nieuwe term: {term}")
 
 
 def generate_followup_prompts(

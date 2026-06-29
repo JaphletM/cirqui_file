@@ -1,19 +1,21 @@
-Extract technical terms from the following text.
+Extraheer technische termen uit de volgende tekst.
+Extraheer alleen concrete tools, platformen, software, frameworks en technologieën.
+Extraheer GEEN categorienamen zoals "Cloud", "Databases", "Infrastructuur" of "Programmeertalen".
 
-Return ONLY valid JSON.
-Do not include explanations.
-Do not include markdown.
-Do not wrap the JSON in ```.
+Geef het resultaat ALLEEN als geldige JSON terug.
+Geen uitleg.
+Geen markdown.
+Geen ``` om de JSON heen.
 
-Use this exact format:
+Gebruik exact dit formaat:
 
 [
     {{
         "term": "Docker",
-        "definition": "A platform for building and running containerized applications.",
+        "definition": "Een platform voor het bouwen en draaien van gecontaineriseerde applicaties.",
         "category": "DevOps"
     }}
 ]
 
-Text:
+Tekst:
 {TEXT}

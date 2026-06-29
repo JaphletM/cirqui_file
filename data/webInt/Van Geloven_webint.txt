@@ -1,0 +1,86 @@
+Het aanleveren van een accuraat technisch landschap van Van Geloven is uitdagend, aangezien de gevraagde bronnen, afgezien van de LinkedIn-pagina, weinig tot geen specifieke technische details openbaar maken. Bedrijven in de voedingsindustrie, zoals Van Geloven, hebben vaak een meer gesloten benadering van hun interne IT-infrastructuur vergeleken met technologiebedrijven.
+
+Hier is een poging om het technische landschap te beschrijven op basis van de beschikbare (beperkte) informatie, aangevuld met logische aannames die in lijn liggen met vergelijkbare bedrijven in hun sector. **Belangrijk:** veel van de onderstaande secties zullen "Onbekend" bevatten vanwege het gebrek aan openbare informatie.
+
+---
+
+## Programmeertalen
+- Onbekend
+
+## Cloud
+- Onbekend (Zeer waarschijnlijk wordt er wel gebruik gemaakt van cloudoplossingen voor zaken als e-mail, office-applicaties en mogelijk ERP-systemen, maar specifieke providers zoals AWS of Azure worden niet genoemd in de openbare bronnen.)
+
+## Databases
+- Onbekend (Typische databases voor grotere bedrijven zijn SQL Server, Oracle, of PostgreSQL, maar hierover is geen informatie beschikbaar.)
+
+## IoT / Industriële Automatisering
+- Onbekend (Als voedselproducent zijn er hoogstwaarschijnlijk systemen voor productieautomatisering (SCADA, MES) en mogelijk sensoren voor procescontrole, maar de onderliggende technologieën worden niet vermeld.)
+
+## Business Process Management (BPM) / Enterprise Resource Planning (ERP)
+- Onbekend (Gezien de grootte van het bedrijf en de complexiteit van de productie- en logistieke processen, is de aanwezigheid van een ERP-systeem (zoals SAP, Microsoft Dynamics, Infor) zeer waarschijnlijk. Echter, specifieke systemen worden niet genoemd.)
+
+## Data Analytics & Business Intelligence (BI)
+- Onbekend (Gezien de behoefte aan inzicht in productie, verkoop, logistiek en financiën, is het waarschijnlijk dat er BI-tools (zoals Power BI, Tableau, QlikView) en data-warehousing oplossingen in gebruik zijn. Van Geloven is onderdeel van de McCain Food Group, wat kan betekenen dat ze gebruik maken van standaardsystemen binnen die groep. Echter, geen specifieke informatie beschikbaar.)
+
+## Infrastructuur & Virtualisatie
+- Onbekend (Er wordt hoogstwaarschijnlijk gebruik gemaakt van gevirtualiseerde servers (VMware, Hyper-V) in lokale datacenters of een hybride cloudomgeving, maar hierover is geen publieke informatie.)
+
+## Developer Tools & CI/CD
+- Onbekend (Aangezien de ontwikkelcultuur en interne ontwikkelprocessen niet publiekelijk worden gedeeld, is er geen informatie over tools als Git, Jenkins, Azure DevOps, etc.)
+
+## Frontend / Mobile
+- Onbekend (Geen informatie over specifieke frameworks of talen gebruikt voor hun website of eventuele interne/externe apps.)
+
+## Integratieplatforms
+- Onbekend (Gezien de omvang van het bedrijf, is het aannemelijk dat er integratie-oplossingen (ESB, iPaaS) zijn om verschillende systemen met elkaar te verbinden, maar details ontbreken.)
+
+---
+
+**Bronvermelding per type bron:**
+
+*   **Officiële bedrijfswebsite:** Bevat algemene bedrijfsinformatie, producten, geschiedenis en contactgegevens. Geen technische details.
+*   **Careers / Vacatures pagina:** Geen specifieke vacaturepagina die technische rollen of technologieën noemt. De algemene McCain Foods carrièrepagina is meer gericht op generieke functiebeschrijvingen.
+*   **Engineering blog:** Bestaat niet publiekelijk.
+*   **GitHub organisatie:** Bestaat niet publiekelijk.
+*   **LinkedIn bedrijfspagina (Van Geloven):** Bevat bedrijfsinformatie, updates, en toont werknemers. Geen technische details over de IT-stack. Er zijn meldingen van openstaande technische functies binnen de bredere McCain Food Group, maar niet specifiek voor Van Geloven's IT-landschap.
+*   **Microsoft Partner / AWS Partner profiel:** Niet publiekelijk gevonden.
+*   **Crunchbase:** Bevat algemene bedrijfsinformatie en investeringsrondes (indien van toepassing). Geen technische details.
+*   **Persberichten:** Richt zich op productlanceringen, samenwerkingen en bedrijfsresultaten. Geen technische details.
+*   **Tech conferentie presentaties:** Niet publiekelijk gevonden.
+
+**Conclusie:** Op basis van de beschikbare publieke bronnen is het feitelijk onmogelijk om een gedetailleerd technisch landschap van Van Geloven te beschrijven. De informatie is extreem schaars.Op basis van de beschikbare openbare bronnen is het technische landschap van Van Geloven moeilijk in detail te beschrijven. De website en LinkedIn-pagina focussen voornamelijk op producten en bedrijfsprofiel, en er zijn geen specifieke engineering blogs, GitHub-organisaties of tech conferentie presentaties gevonden.
+
+Hieronder een poging om het technische landschap te beschrijven op basis van beperkte aanwijzingen:
+
+## Programmeertalen
+- **Onbekend**
+
+## Cloud
+- **Onbekend**
+
+## Databases
+- **Onbekend**
+
+## Frameworks & Libraries
+- **Onbekend**
+
+## Infrastructuur & Virtualisatie
+- **Onbekend**
+
+## Data Science & Machine Learning
+- **Onbekend**
+
+## CI/CD & DevOps Tools
+- **Onbekend**
+
+## Project Management & Samenwerking
+- **Onbekend**
+
+## ERP & Business Software
+- **Onbekend** (Het is zeer waarschijnlijk dat een bedrijf van deze omvang een ERP-systeem heeft, maar de specifieke leverancier of technologie is niet publiekelijk bekend.)
+
+## Overige technologieën
+- **Onbekend**
+
+**Conclusie:**
+Op basis van de gevraagde openbare bronnen is er geen specifieke informatie te vinden over het technische landschap van Van Geloven. Dit kan komen doordat ICT-activiteiten mogelijk uitbesteed zijn, of dat er intern ontwikkelde systemen zijn waarvan de details niet publiekelijk gedeeld worden. De focus van de openbare communicatie ligt duidelijk op de producten en consumentenmarkt.

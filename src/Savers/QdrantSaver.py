@@ -63,8 +63,9 @@ def search_similar_terms(query_text, limit=5):
     return results.points
 
 
-def find_existing_term(term, threshold=0.80):
-    results = search_similar_terms(term, limit=1)
+def find_existing_term(term, definition="", threshold=0.80):
+    query = f"{term}: {definition}" if definition else term
+    results = search_similar_terms(query, limit=1)
 
     if results and results[0].score >= threshold:
         return results[0].payload

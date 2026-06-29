@@ -1,20 +1,21 @@
-Geef antwoorden op de vervolgprompts
+Je bent een technisch analist. Beantwoord de onderstaande vervolgprompts voor elke technische term.
 
-Geef het resultaat in de volgende JSON format vorm
-
-
-Technische Termen: 
+Technische Termen:
 {TECHNICAL_TERMS}
 
 Vervolgprompts:
 {FOLLOWUP_PROMPTS}
 
+Geef het resultaat in het volgende JSON formaat. Geef ALLEEN de JSON terug, geen uitleg:
+
 [
   {{
     "term": "termnaam",
-    "followups ": [
-      "prompt 1"
-      "answer 1"
+    "followup_prompts": [
+      {{
+        "prompt": "de vraag",
+        "answer": "het antwoord op de vraag"
+      }}
     ]
   }}
 ]
