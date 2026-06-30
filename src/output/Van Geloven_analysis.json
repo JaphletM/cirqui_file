@@ -1,0 +1,159 @@
+{
+  "company": "Van Geloven",
+  "results": [
+    {
+      "term": "Oracle",
+      "definition": "Een gerenommeerd relationeel database management systeem (RDBMS) van Oracle Corporation.",
+      "followup_prompts": [
+        "Welke specifieke Oracle-producten en -versies worden momenteel door de klant gebruikt, en wat zijn de primaire bedrijfsprocessen die hiermee worden ondersteund?",
+        "Wat zijn de grootste uitdagingen of pijnpunten die de klant ervaart met hun huidige Oracle-implementatie, bijvoorbeeld op het gebied van prestaties, schaalbaarheid, licentiekosten of integratie?",
+        "In hoeverre is de klant van plan om hun Oracle-omgeving in de komende 1-3 jaar te moderniseren, uit te breiden of te migreren (bijv. naar de cloud), en welke strategische overwegingen liggen hieraan ten grondslag?"
+      ],
+      "followup_answers": [
+        "De klant maakt voornamelijk gebruik van Oracle E-Business Suite (of JD Edwards, of PeopleSoft) versie (specifieke versie, bijv. 12.2.10) voor hun financiële administratie, supply chain management en HRM-processen. Daarnaast wordt Oracle Database (specifieke versie, bijv. 19c) ingezet als backend voor diverse maatwerkapplicaties en datawarehousing.",
+        "De klant ervaart aanzienlijke uitdagingen op het gebied van prestaties, met name tijdens piekuren, wat leidt tot vertragingen in orderverwerking en rapportage. De licentiekosten zijn een terugkerend pijnpunt, en de complexiteit van de licentiestructuur maakt het moeilijk om de kosten te beheersen. Integratie met nieuwere SaaS-oplossingen (bijv. Salesforce) is moeizaam en vereist veel maatwerk, wat de onderhoudskosten verhoogt.",
+        "De klant overweegt actief een migratie van hun on-premise Oracle E-Business Suite naar Oracle Cloud ERP binnen de komende 2 jaar. De strategische overwegingen hiervoor zijn voornamelijk het verminderen van operationele kosten (hardware, beheer), het verbeteren van de schaalbaarheid en flexibiliteit, en het profiteren van de nieuwste functionaliteiten en AI/ML-mogelijkheden die Oracle Cloud biedt. Er is ook een sterke wens om de afhankelijkheid van verouderde infrastructuur te verminderen."
+      ]
+    },
+    {
+      "term": "SCADA",
+      "definition": "Supervisory Control and Data Acquisition, een controlesysteem voor productieprocessen.",
+      "followup_prompts": [
+        "Welke specifieke SCADA-systemen en PLC's worden in de operationele omgeving van de klant ingezet, en welke kritieke processen of infrastructuur worden hiermee gemonitord en beheerd?",
+        "Wat zijn de belangrijkste operationele uitdagingen die de klant momenteel ervaart met hun SCADA-oplossingen, bijvoorbeeld op het gebied van real-time data-analyse, beveiliging, compatibiliteit met oudere systemen of gebrek aan integratie?",
+        "Hoe is de klant van plan om de data die door hun SCADA-systemen wordt gegenereerd te gebruiken voor verdere optimalisatie, voorspellend onderhoud of rapportage, en welke initiatieven lopen er hiervoor?"
+      ],
+      "followup_answers": [
+        "De klant maakt gebruik van Siemens PCS 7 SCADA-systeem in combinatie met Siemens S7-300 en S7-1500 PLC's. Deze systemen monitoren en beheren de processen in hun chemische productiefaciliteit, waaronder temperatuurregeling, drukbeheer, flow control en doseersystemen. Kritieke infrastructuur zoals noodstopsystemen en veiligheidskleppen zijn eveneens hieraan gekoppeld.",
+        "De grootste uitdagingen liggen bij de real-time data-analyse en beveiliging. De huidige SCADA-oplossing biedt beperkte mogelijkheden voor geavanceerde analyses, wat het moeilijk maakt om proactief onderhoud te plannen of productiemodellen te optimaliseren. De legacy-componenten in het netwerk vormen daarnaast een kwetsbaarheid voor cyberaanvallen, en het patchen van deze systemen vereist aanzienlijke downtime. Integratie met het bedrijfs-ERP-systeem is handmatig en foutgevoelig.",
+        "De klant is van plan om de SCADA-data te integreren in een centrale Data Historian (bijv. OSIsoft PI) voor langetermijnopslag en analyse. Er loopt een pilotproject voor voorspellend onderhoud, waarbij machine learning-modellen worden getraind met historische SCADA-data om storingen aan kritische apparatuur te voorspellen. Daarnaast wordt er gekeken naar dashboards met real-time KPI's voor productie-efficiëntie via Power BI, gevoed door de SCADA-data."
+      ]
+    },
+    {
+      "term": "MES",
+      "definition": "Manufacturing Execution System, een systeem dat de productie op de werkvloer beheert en bewaakt.",
+      "followup_prompts": [
+        "Welke specifieke MES-oplossingen worden er momenteel gebruikt in de productieomgeving van de klant, en welke fases van het productieproces (bijv. planning, uitvoering, kwaliteitscontrole) worden hiermee ondersteund?",
+        "Wat zijn de grootste knelpunten of inefficiënties die de klant probeert op te lossen met hun huidige of toekomstige MES-implementatie, bijvoorbeeld op het gebied van realtime inzicht, traceerbaarheid of handmatige processen?",
+        "Hoe sluit het huidige of geplande MES-systeem aan bij de bredere bedrijfsstrategie van de klant omtrent Industry 4.0, digitale transformatie of verhoging van de productie-efficiëntie?"
+      ],
+      "followup_answers": [
+        "De klant gebruikt een verouderde versie van Wonderware MES (System Platform) voor de planning van productieorders en de monitoring van de uitvoering op de werkvloer. Het systeem ondersteunt ook de registratie van kwaliteitscontroles en het bijhouden van batchrecords voor compliance-doeleinden.",
+        "De grootste knelpunten zijn het gebrek aan real-time inzicht in de productie (data wordt vaak handmatig ingevoerd of met vertraging gesynchroniseerd), en beperkte traceerbaarheid van individuele producten door het productieproces. Veel processen zijn nog steeds papier-gebaseerd, wat leidt tot fouten en inefficiënties. Er is een sterke wens om de 'operator' te ontdoen van administratieve lasten en zich te focussen op productiewaarde.",
+        "Het huidige MES-systeem sluit onvoldoende aan bij de ambities van de klant voor Industry 4.0. Een upgrade of vervanging van het MES is een cruciale stap in hun digitale transformatiestrategie. Het doel is om een volledig geïntegreerd MES te implementeren dat real-time data van machines verzamelt, voorspellende analyses mogelijk maakt, en naadloos communiceert met ERP- en SCADA-systemen om de algehele productie-efficiëntie significant te verhogen en de weg vrij te maken voor smart manufacturing-initiatieven."
+      ]
+    },
+    {
+      "term": "Microsoft Dynamics",
+      "definition": "Een lijn van ERP- en CRM-softwaretoepassingen van Microsoft.",
+      "followup_prompts": [
+        "Welke specifieke Microsoft Dynamics-applicaties (bijv. Finance & Operations, Sales, Business Central) en versies zijn bij de klant in gebruik, en welke afdelingen of bedrijfsprocessen maken hiervan primair gebruik?",
+        "Welke belangrijke aanpassingen of maatwerkoplossingen zijn binnen de Dynamics-omgeving van de klant doorgevoerd, en wat zijn de redenen geweest voor deze aanpassingen?",
+        "Wat zijn de strategische overwegingen van de klant met betrekking tot hun Dynamics-omgeving voor de komende 3-5 jaar, met name op het gebied van upgrades, migratie naar de cloud, of uitbreiding met nieuwe modules?"
+      ],
+      "followup_answers": [
+        "De klant gebruikt een on-premise implementatie van Microsoft Dynamics AX 2012 R3 voor de afdelingen Finance, Supply Chain en Productieplanning. Daarnaast wordt Dynamics CRM 2016 ingezet door de verkoop- en marketingafdeling voor klantrelatiebeheer en verkoopprognoses.",
+        "Binnen Dynamics AX is er uitgebreid maatwerk gedaan voor specifieke productieregimes en compliance-eisen, wat zich uit in custom workflows voor batchproductie en traceerbaarheid. Ook zijn er diverse rapportages en interfaces met legacy-systemen op maat ontwikkeld. De redenen hiervoor waren het afdekken van unieke bedrijfsprocessen die niet standaard door Dynamics AX werden ondersteund, en het naleven van sector-specifieke regelgeving.",
+        "De klant heeft de strategische overweging om binnen 3 jaar te migreren van Dynamics AX 2012 R3 en Dynamics CRM 2016 naar de nieuwste cloud-versie, Dynamics 365 Finance & Operations en Dynamics 365 Sales. Dit is ingegeven door de behoefte aan een geïntegreerder platform, een vermindering van de onderhoudslast en de mogelijkheid om te profiteren van de constante innovaties van Microsoft (AI, Machine Learning) in de cloud. Er is ook interesse in het uitbreiden met Dynamics 365 Supply Chain Management en field service modules."
+      ]
+    },
+    {
+      "term": "Infor",
+      "definition": "Een softwarebedrijf dat ERP- en andere bedrijfsapplicaties levert.",
+      "followup_prompts": [
+        "Welke specifieke Infor-applicaties (bijv. LN, M3, CloudSuite) en modules worden door de klant ingezet, en welke specifieke bedrijfstakken of afdelingen profiteren hiervan het meest?",
+        "Wat zijn de belangrijkste uitdagingen die de klant ervaart met hun huidige Infor-implementatie, bijvoorbeeld op het gebied van gebruiksvriendelijkheid, integratie met andere systemen of beschikbaarheid van gespecialiseerde kennis?",
+        "Hoe staat Infor gepositioneerd in de bredere IT-architectuur van de klant, en zijn er plannen om Infor-functionaliteit uit te breiden, te consolideren of te integreren met nieuwe technologische ontwikkelingen (zoals AI of IoT)?"
+      ],
+      "followup_answers": [
+        "De klant maakt gebruik van Infor M3 (versie 13.4) als hun primaire ERP-systeem. Dit ondersteunt voornamelijk de afdelingen productie, logistiek en financiën. Specifieke modules die zwaar worden gebruikt zijn Manufacturing, Distribution en Customer Relationship Management (CRM) voor hun productielijnen en mondiale distributiecentra.",
+        "De belangrijkste uitdagingen zijn de gebruiksvriendelijkheid van de klassieke M3-interface, waardoor nieuwe gebruikers een lange leercurve hebben. De integratie met hun nieuwe WMS-systeem (Warehouse Management Systeem) is complex en vereist handmatige data-sync, wat het risico op fouten vergroot. Er is tevens een groeiend probleem met de beschikbaarheid van Infor M3-specialisten op de arbeidsmarkt, wat het onderhoud en de doorontwikkeling bemoeilijkt.",
+        "Infor M3 is momenteel het hart van de operationele IT-architectuur van de klant. Er zijn plannen om te migreren naar Infor CloudSuite Fashion (een verticale Infor M3-variant in de cloud) om te profiteren van verbeterde gebruiksvriendelijkheid en modernere functionaliteiten. De klant onderzoekt tevens de mogelijkheid om de Infor Coleman AI-functionaliteit te benutten voor voorspellende analyses in de supply chain en om IoT-data van machines te integreren binnen het Infor-platform voor betere real-time inzichten."
+      ]
+    },
+    {
+      "term": "Power BI",
+      "definition": "Een business intelligence tool van Microsoft voor data visualisatie en rapportage.",
+      "followup_prompts": [
+        "Welke afdelingen of rollen binnen de organisatie van de klant maken momenteel gebruik van Power BI-dashboards en -rapporten, en welke kritieke zakelijke beslissingen worden hiermee ondersteund?",
+        "Wat zijn de belangrijkste databronnen die momenteel worden gebruikt voor Power BI-rapportages, en zijn er uitdagingen met betrekking tot datakwaliteit, data-integratie of de snelheid waarmee nieuwe data beschikbaar komt?",
+        "Welke specifieke behoeften heeft de klant op het gebied van business intelligence en data-analyse voor de komende 1-2 jaar, en hoe kan Power BI (of een andere BI-tool) hierbij een grotere rol spelen?"
+      ],
+      "followup_answers": [
+        "De afdelingen Verkoop, Marketing, Finance en Operations maken momenteel gebruik van Power BI. Verkoop en Marketing gebruiken dashboards voor het monitoren van verkoopprestaties, campagneresultaten en klantsegmentatie. Finance gebruikt Power BI voor budgettering, financiële consolidatie en cashflow-analyse. Operations gebruikt het voor productie-KPI's, voorraadbeheer en supply chain performance. Deze rapporten ondersteunen beslissingen over productlanceringen, prijsstrategieën, optimalisatie van productieprocessen en financiële prognoses.",
+        "De belangrijkste databronnen zijn SQL Server-databases (voor ERP- en CRM-data), Excel-bestanden (voor budgetten en ad-hoc analyses) en enkele SaaS-applicaties via API-connectors (bijv. Salesforce). De grootste uitdagingen betreffen de datakwaliteit, vooral in Excel-bestanden, en de complexiteit van data-integratie, wat vaak handmatige ETL-processen vereist. De snelheid waarmee nieuwe data beschikbaar komt, is voor sommige operationele dashboards nog niet optimaat real-time.",
+        "De klant heeft behoefte aan meer geavanceerde analyses, waaronder voorspellende modellen voor verkoop en voorraad. Ze willen ook de self-service BI-mogelijkheden vergroten, zodat eindgebruikers zelf rapporten kunnen maken zonder afhankelijk te zijn van IT. Power BI kan hierin een grotere rol spelen door de implementatie van Power BI Premium voor betere performance en grotere datasets, het gebruik van Azure Synapse Analytics als centrale datawarehouse, en het trainen van meer 'citizen data scientists' binnen de organisatie."
+      ]
+    },
+    {
+      "term": "Tableau",
+      "definition": "Een business intelligence tool voor interactieve data visualisatie.",
+      "followup_prompts": [
+        "Voor welke specifieke zakelijke domeinen of projecten gebruikt de klant Tableau, en wat zijn de belangrijkste inzichten die hiermee worden gegenereerd?",
+        "Wat zijn de vaardigheden en capaciteiten van de gebruikersgroep van Tableau binnen de organisatie van de klant, en is er behoefte aan training of ondersteuning om het potentieel van Tableau verder te benutten?",
+        "Welke andere BI-tools of data-visualisatietoepassingen worden er momenteel bij de klant gebruikt, en hoe verhoudt Tableau zich tot deze tools qua functionaliteit, gebruiksgemak en adoptie?"
+      ],
+      "followup_answers": [
+        "De klant gebruikt Tableau voornamelijk voor diepgaande financiële analyses, HR-rapportages en projectmanagement-dashboards. Belangrijke inzichten die worden gegenereerd zijn onder andere winstgevendheid per productlijn, medewerkerretentiepercentages, en de voortgang van grote IT-projecten in relatie tot budget en tijdlijn.",
+        "De gebruikersgroep bestaat voornamelijk uit ervaren data-analisten en enkele departementshoofden. Hun vaardigheden liggen voornamelijk in het creëren van statische rapporten en eenvoudige interactieve dashboards. Er is een duidelijke behoefte aan geavanceerde training in Tableau Public (voor externe deelname), geavanceerde berekeningen, LOD-expressies en het bouwen van complexe data-modellen om het volledige potentieel van Tableau te benutten en meer dynamische dashboards te creëren.",
+        "De klant gebruikt ook Cognos (voor standaard financiële rapportages) en een beperkte hoeveelheid Power BI (voor ad-hoc analyses door een specifieke afdeling). Tableau wordt gezien als de tool voor geavanceerde, interactieve visualisaties en data-exploratie, en onderscheidt zich door zijn flexibiliteit en de esthetiek van de dashboards. Cognos wordt als minder gebruiksvriendelijk ervaren en Power BI heeft nog een veel kleinere gebruikersbasis binnen de organisatie."
+      ]
+    },
+    {
+      "term": "QlikView",
+      "definition": "Een business discovery platform voor visualisatie en data-analyse.",
+      "followup_prompts": [
+        "Welke historische of huidige bedrijfsprocessen/rapportages worden specifiek ondersteund door QlikView, en welke stakeholders gebruiken deze visualisaties primair?",
+        "Wat zijn de belangrijkste uitdagingen die de klant momenteel ervaart met hun QlikView-omgeving, bijvoorbeeld op het gebied van performance, onderhoud, schaalbaarheid of het migreren naar een modernere BI-oplossing (zoals Qlik Sense)?",
+        "Welke plannen heeft de klant voor de toekomst van hun data-analyse en business intelligence omgeving, en welke rol speelt QlikView hierin op de langere termijn?"
+      ],
+      "followup_answers": [
+        "QlikView ondersteunt momenteel voornamelijk historische verkoopanalyses, budgetbewaking en magazijnbeheer. De verkoopdirecteur, financiële controllers en magazijnmanagers vertrouwen primair op de QlikView-apps voor inzicht in prestaties uit het verleden en trendanalyse. Er is een focus op het consolideren van legacy-data voor compliance en audit-doeleinden.",
+        "De prestaties van de QlikView-apps zijn een belangrijk pijnpunt, vooral bij grote datasets, wat leidt tot lange laadtijden. Het onderhoud van de QlikView-applicaties is complex en tijdrovend, mede door het gebrek aan beschikbare vaardigheden binnen de organisatie. De schaalbaarheid is beperkt en er is een sterke wens om te migreren naar Qlik Sense voor modernere functionaliteit, betere self-service BI en een cloud-mogelijkheid, maar de complexiteit van de migratie is een zorg.",
+        "De klant heeft een duidelijke strategie om op termijn volledig over te stappen van QlikView naar Qlik Sense Cloud. QlikView zal in de overgangsfase worden onderhouden voor legacy-rapportages, maar de focus ligt op het ontwikkelen van nieuwe dashboards en analyses in Qlik Sense. Op de langere termijn zal QlikView volledig worden uitgefaseerd, met als doel een modernere, schaalbaardere en gebruiksvriendelijkere BI-omgeving te creëren."
+      ]
+    },
+    {
+      "term": "VMware",
+      "definition": "Een softwarebedrijf dat cloud computing- en virtualisatiesoftware en -diensten levert.",
+      "followup_prompts": [
+        "Welke specifieke VMware-producten (bijv. vSphere, NSX, vSAN) en versies worden in de datacenteromgeving van de klant ingezet, en hoeveel virtuele machines draaien er momenteel op dit platform?",
+        "Wat zijn de meest kritieke bedrijfsapplicaties die momenteel op de VMware-infrastructuur draaien, en welke eisen worden hierbij gesteld aan performance, beschikbaarheid en disaster recovery?",
+        "Welke strategie volgt de klant met betrekking tot hun virtualisatie-omgeving voor de komende 3-5 jaar, in het bijzonder op het gebied van cloud-integratie (hybrid cloud), containerisatie of het upgraden van hun huidige platform?"
+      ],
+      "followup_answers": [
+        "De klant maakt gebruik van VMware vSphere 7.0 (met ESXi-hosts en vCenter Server), VMware NSX-T voor netwerkvirtualisatie en VMware vSAN voor hyperconverged storage. Er draaien momenteel ongeveer 350 virtuele machines op dit platform, variërend van productietoepassingen tot ontwikkel- en testomgevingen.",
+        "De meest kritieke bedrijfsapplicaties zijn het SAP ERP-systeem, de Microsoft SQL Server databases voor de e-commerce website en de Citrix-omgeving voor werkplekken op afstand. Voor deze applicaties gelden hoge eisen: sub-seconde responstijden (performance), 'five-nines' beschikbaarheid (99.999%) en een RTO (Recovery Time Objective) van minder dan 4 uur en een RPO (Recovery Point Objective) van minder dan 15 minuten voor disaster recovery.",
+        "De klant volgt een hybrid cloud-strategie. Zij zijn geinteresseerd in VMware Cloud on AWS als een uitbreiding van hun on-premise datacenter, voor bursts workloads en disaster recovery. Er wordt actief gekeken naar containerisatie met VMware Tanzu voor nieuwe applicatieontwikkelingen, en een upgrade naar vSphere 8.0 wordt verwacht in het komende jaar om te profiteren van de nieuwste security- en performanceverbeteringen."
+      ]
+    },
+    {
+      "term": "Hyper-V",
+      "definition": "Microsofts native hypervisor voor het maken en uitvoeren van virtuele machines.",
+      "followup_prompts": [
+        "Welke Windows Server-versies worden gebruikt voor Hyper-V deploymenten, en welke soorten workloads (bijv. applicatieservers, databases, VDI) draaien op deze virtuele machines?",
+        "Wat zijn de belangrijkste overwegingen voor de klant om Hyper-V te verkiezen boven andere virtualisatieplatforms, en welke voordelen of uitdagingen ervaren zij hierbij?",
+        "Hoe is de rampenherstelstrategie (disaster recovery) van de klant ingericht voor hun Hyper-V-omgeving, en zijn er plannen om deze te verbeteren of uit te breiden?"
+      ],
+      "followup_answers": [
+        "De klant gebruikt primair Windows Server 2019 en Windows Server 2022 voor hun Hyper-V deploymenten. Op deze virtuele machines draaien een mix van workloads, waaronder applicatieservers (voor interne toepassingen), SQL Server databases, Exchange servers, en een kleiner deel aan Virtual Desktop Infrastructure (VDI) voor ontwikkelaars.",
+        "De klant heeft voor Hyper-V gekozen vanwege de naadloze integratie met hun bestaande Microsoft-producten en Windows Server-licenties, wat resulteert in kostenefficiëntie. Ze ervaren voordelen in het beheer via standaard Microsoft tools. De grootste uitdaging is de beheercomplexiteit van grotere, gedistribueerde omgevingen in vergelijking met oplossingen van concurrenten, en de adoptie van geavanceerde functies zoals Storage Spaces Direct.",
+        "De huidige disaster recovery strategie omvat Hyper-V Replica tussen twee fysieke locaties voor kritieke VM's, met een RTO van 8 uur en een RPO van 1 uur. Back-ups worden gemaakt met Veeam Backup & Replication. De klant is van plan om deze te verbeteren door Azure Site Recovery te implementeren voor een snellere failover naar Azure, en om de RTO en RPO voor hun meest kritieke systemen verder te verlagen."
+      ]
+    },
+    {
+      "term": "Azure DevOps",
+      "definition": "Een suite van ontwikkelaarstools van Microsoft voor de hele ontwikkelingslevenscyclus.",
+      "followup_prompts": [
+        "Welke specifieke DevOps-functionaliteiten binnen Azure DevOps worden momenteel door de ontwikkelteams van de klant gebruikt (bijv. Boards, Pipelines, Repos, Artifacts), en in welke mate is CI/CD geïmplementeerd?",
+        "Wat zijn de grootste obstakels of uitdagingen die de ontwikkelteams van de klant ervaren bij de adoptie of het optimaliseren van hun DevOps-processen met Azure DevOps?",
+        "Hoe draagt Azure DevOps bij aan de bredere software-ontwikkelingsstrategie van de klant, en zijn er plannen om de integratie met andere development tools of cloud-platforms te verbeteren?"
+      ],
+      "followup_answers": [
+        "De ontwikkelteams maken actief gebruik van Azure Boards voor agile projectmanagement (Scrums en Kanban), Azure Repos voor versiebeheer (Git), en Azure Pipelines voor CI/CD. Continuous Integration (CI) is volledig geïmplementeerd voor alle belangrijke projecten, Continuous Delivery (CD) is gedeeltelijk geïmplementeerd en wordt voor de meeste productie-omgevingen nog handmatig getriggerd na QA-goedkeuring.",
+        "De grootste obstakels zijn de complexiteit van het opzetten en onderhouden van complexe release-pipelines (vooral voor multi-tenant applicaties), en de adoptie van 'security by design' principes in de CI/CD-pipeline. Er is ook een uitdaging in de consistentie van best practices tussen verschillende ontwikkelteams en het automatiseren van omgevingsprovisioning.",
+        "Azure DevOps is een centrale pijler in de software-ontwikkelingsstrategie van de klant, gericht op het verkorten van de 'time-to-market', het verbeteren van de softwarekwaliteit en het verhogen van de productiviteit van de ontwikkelaars. Plannen omvatten het verbeteren van de integratie met Azure Kubernetes Service (AKS) voor containerized applicaties, het implementeren van Azure Artifacts voor pakketbeheer, en het verkennen van geavanceerde monitoringtools zoals Azure Monitor om feedbackloops in de DevOps-cyclus te optimaliseren."
+      ]
+    }
+  ]
+}

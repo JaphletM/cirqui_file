@@ -18,6 +18,7 @@ class LLMClient:
     def ask(self, prompt: str) -> str:
         response = self.client.chat.completions.create(
             model=self.model,
+            max_tokens=8000,
             messages=[
                 {
                     "role": "user",

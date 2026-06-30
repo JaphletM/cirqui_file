@@ -61,29 +61,52 @@ def load_existing_terms():
         return load_terms_from_json()
 
 
-def save_new_terms(comparison_results):
-    new_terms = [
-        {
-            "term": item["term"],
-            "definition": item["definition"],
-            "category": item["category"]
-        }
-        for item in comparison_results
-        if item["status"] == "new"
-    ]
+#def save_new_terms(comparison_results, company_name):
 
-    if not new_terms:
-        print("No new terms to save.")
-        return
+   # new_terms = [
+       # {
+        #    "term": item["term"],
+       #     "definition": item["definition"],
+       #     "category": item["category"],
+         #   "company": company_name
+       # }
+       # for item in comparison_results
+      #  if item["status"] == "new"
+    
+   # ]
+    
+  #  if not new_terms:
+  #      print("No new terms to save.")
+   #     return
+
+   # try:
+    #    collection = get_terms_collection()
+    #    collection.insert_many(new_terms)
+    #    print(f"Saved {len(new_terms)} new terms to MongoDB.")
+   # except PyMongoError:
+      #  save_terms_to_json(new_terms)
+    #    print(f"MongoDB unavailable. Saved {len(new_terms)} new terms to JSON.")
+
+def save_new_terms(comparison_results, company_name):
 
     try:
-        collection = get_terms_collection()
-        collection.insert_many(new_terms)
-        print(f"Saved {len(new_terms)} new terms to MongoDB.")
+        collection=get_terms_collection()
+        for item in comparison_results:
+                collection.update_one (
+                    {"term":item["term"]},
+                    {
+                        "$set": {
+                        "term": item["term"],
+                        "definition": item["definition"],
+                        "category": item["category"]},
+                        "$addToSet": {"companies":{"$each": [company_name]}}
+                        }
+                    upsert=True,
+                )
+                
     except PyMongoError:
-        save_terms_to_json(new_terms)
-        print(f"MongoDB unavailable. Saved {len(new_terms)} new terms to JSON.")
-
+        save_terms_to_json(comparison_results)
+        print(f"MongoDB unavailable. Saved {len(comparison_results)} new terms to JSON.")
 
 
 

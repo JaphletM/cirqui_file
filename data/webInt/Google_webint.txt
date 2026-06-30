@@ -1,14 +1,86 @@
-Hier is een beschrijving van het technische landschap van Google, uitsluitend gebaseerd op de opgegeven bronnen:
+Het technische landschap van Google is, zoals verwacht, enorm breed en diepgaand. Hieronder volgt een beschrijving, gebaseerd op de gevraagde bronnen.
 
 ## Programmeertalen
-*   **C++** (bron: Careers / Vacatures pagina - verschillende Engineer vacatures zoals "Software Engineer" en "Site Reliability Engineer" vermelden vaak C++ als een vereiste of sterke pré)
-*   **Java** (bron: Careers / Vacatures pagina - veel backend en Android gerelateerde Engineer vacatures vermelden Java)
-*   **Python** (bron: Careers / Vacatures pagina - vaak genoemd in vacatures voor Data Scientists, Machine Learning Engineers, en Site Reliability Engineers)
-*   **Go** (bron: Careers / Vacatures pagina - genoemd in diverse Engineer vacatures, met name voor infrastructuur en systeemontwikkeling)
-*   **JavaScript** (bron: Careers / Vacatures pagina - veel frontend en full-stack Engineer vacatures vereisen JavaScript)
-*   **TypeScript** (bron: Careers / Vacatures pagina - komt vaak voor naast JavaScript in frontend Engineer vacatures)
-*   **Rust** (bron: Careers / Vacatures pagina - wordt steeds vaker genoemd in Engineer vacatures voor perfomance-kritische systemen en infrastructuur)
-*   **Scala** (bron: Careers / Vacatures pagina - soms vermeld in vacatures voor Big Data en Machine Learning gerelateerde rollen)
-*   **Kotlin** (bron: Careers / Vacatures pagina - specifiek genoemd voor Android ontwikkeling gerelateerde Engineer vacatures)
-*   **Swift** (bron: Careers / Vacatures pagina - voor iOS ontwikkeling gerelateerde Engineer vacatures)
-*   **Dart** (bron: Officiële bedrijfswebsite - Google's eigen taal, gebruikt voor Flutter, en vaak genoemd in
+
+*   **C++** (bron: Google Engineering Blog – veel posts refereren aan C++, o.a. voor performante systemen; vacatures voor Software Engineers vermelden vaak C++ als één van de vereiste talen)
+*   **Java** (bron: Google Careers – veel vacatures voor Backend Engineers, Android Developers en Distributed Systems Engineers vermelden Java als vereiste of voorkeurstaal)
+*   **Python** (bron: Google Engineering Blog – veel posts over machine learning, data science en infrastructuur scripting, Google Careers – veel vacatures voor Data Scientists, ML Engineers en Site Reliability Engineers vermelden Python)
+*   **Go (Golang)** (bron: Google Engineering Blog – veel posts over de ontwikkeling en het gebruik van Go binnen Google, Google Careers – veel vacatures voor Backend Engineers en Infrastructure Engineers vermelden Go)
+*   **JavaScript** (bron: Google Careers – veel vacatures voor Frontend Engineers en Web Developers vermelden JavaScript, inclusief frameworks als Angular of React)
+*   **TypeScript** (bron: Google Careers – toenemend aantal vacatures voor Frontend Engineers en Full Stack Engineers vermeldt TypeScript)
+*   **Rust** (bron: Google Engineering Blog – steeds meer posts over het gebruik van Rust voor performante en veilige systemen; vacatures zien we hierover nog niet breed, maar de blogpost duidt op actief onderzoek en implementatie)
+*   **Scala** (bron: Google Careers – enkele vacatures voor Data Engineers of Distributed Systems Engineers vermelden Scala, zij het minder prominent dan Java of Python)
+*   **Kotlin** (bron: Google Careers – veel vacatures voor Android Developers vermelden Kotlin als de voorkeurstaal)
+
+## Cloud
+
+*   **Google Cloud Platform (GCP)** (bron: Officiële bedrijfswebsite – Google's primaire cloud aanbod, Google Engineering Blog – veel posts over de services en technologieën van GCP, Google Careers – veel vacatures voor Cloud Engineers, DevOps Engineers en Site Reliability Engineers richten zich op GCP-expertise)
+*   **Onbekend** (met betrekking tot het structureel gebruik van AWS of Azure voor hun eigen kerninfrastructuur. Hoewel klanten van GCP mogelijk cross-cloud architecturen hanteren, zijn er vanuit Google's officiële kanalen geen aanwijzingen dat zij hun primaire systemen draaien op concurrerende cloudplatforms.)
+
+## Databases
+
+*   **Bigtable** (bron: Google Engineering Blog – posts over de architectuur en schaalbaarheid, Officiële bedrijfswebsite – onderdeel van GCP, Google Careers – vacatures voor Database Engineers of Distributed Systems Engineers verwijzen hiernaar)
+*   **Spanner** (bron: Google Engineering Blog – diepgaande technische artikelen, Officiële bedrijfswebsite – onderdeel van GCP, Google Careers – vacatures voor Database Engineers of Distributed Systems Engineers verwijzen hiernaar)
+*   **BigQuery** (bron: Google Engineering Blog – posts over data-analyse en datawarehousing, Officiële bedrijfswebsite – onderdeel van GCP, Google Careers – vacatures voor Data Engineers of Data Scientists verwijzen hiernaar)
+*   **Cloud SQL** (bron: Officiële bedrijfswebsite – onderdeel van GCP, Google Careers – vacatures waarbij relationele databases vereist zijn, vermelden dit vaak, naast open-source alternatieven)
+*   **Firestore / Datastore** (bron: Officiële bedrijfswebsite – onderdeel van GCP, Google Engineering Blog – posts over NoSQL databases voor applicatieontwikkeling)
+*   **Onbekend** (met betrekking tot het algemeen gebruik van traditionele relationele databases zoals Oracle of SQL Server voor hun *kern*infrastructuur, hoewel ze Open Source relationele databases als PostgreSQL en MySQL aanbieden via Cloud SQL op GCP.)
+
+## Big Data & Analytics
+
+*   **MapReduce** (bron: Google Engineering Blog – historische posts over de fundamenten van big data verwerking bij Google, hoewel inmiddels geëvolueerd naar modernere systemen)
+*   **Apache Flink** (bron: Google Engineering Blog – posts over het gebruik van Flink voor stream processing binnen Google en op GCP)
+*   **Apache Beam** (bron: Google Engineering Blog – posts over de ontwikkeling en het gebruik van Beam voor batch- en streamverwerking, Officiële bedrijfswebsite – als onderdeel van GCP Dataflow)
+*   **TensorFlow** (bron: Officiële bedrijfswebsite – Google's open-source machine learning framework, GitHub organisatie – actieve ontwikkeling, Google Engineering Blog – talloze posts over applicaties en ontwikkeling)
+*   **Apache Spark** (bron: Google Cloud Blog – documentatie en voorbeelden over het draaien van Spark op Dataproc op GCP)
+*   **Dataflow** (bron: Officiële bedrijfswebsite – managed service voor Apache Beam op GCP, Google Engineering Blog – posts over de onderliggende technologie)
+*   **Pub/Sub** (bron: Officiële bedrijfswebsite – GCP service voor real-time messaging, Google Engineering Blog – posts over distributed messaging)
+
+## Messaging & Streaming
+
+*   **Google Pub/Sub** (bron: Officiële bedrijfswebsite – GCP service voor real-time messaging, Google Engineering Blog – posts over message queuing en streamverwerking)
+*   **Kafka** (bron: Google Cloud Blog – documentatie en voorbeelden over het draaien van Kafka op GCP, hoewel dit vaker door klanten dan door Google zelf voor interne systemen wordt gebruikt indien Pub/Sub niet toereikend is)
+
+## Containers & Orchestratie
+
+*   **Docker** (bron: Google Engineering Blog – posts over containerisatie en ontwikkeling, Google Careers – vrijwel alle vacatures voor DevOps, Site Reliability of Cloud Engineers vermelden Docker)
+*   **Kubernetes** (bron: GitHub organisatie – Google is de oorspronkelijke ontwikkelaar en grote bijdrager, Officiële bedrijfswebsite – GCP biedt GKE (Google Kubernetes Engine), Google Engineering Blog – talloze posts over Kubernetes)
+*   **Anthos** (bron: Officiële bedrijfswebsite – Google's hybride en multi-cloud platform gebaseerd op Kubernetes, Google Engineering Blog – posts over enterprise container management)
+
+## Infrastructuur & DevOps
+
+*   **borg** (bron: Google Engineering Blog – historische en diepgaande posts over Google's interne cluster management systeem, voorloper van Kubernetes)
+*   **Ansible** (bron: Google Careers – enkele vacatures voor DevOps of Infrastructure Engineers vermelden Ansible voor configuratiemanagement)
+*   **Terraform** (bron: Google Careers – veel vacatures voor DevOps of Cloud Engineers vermelden Terraform voor Infrastructure as Code op GCP)
+*   **OpenTelemetry** (bron: Google Engineering Blog – posts over het gebruik van OpenTelemetry voor monitoring en tracing)
+*   **Prometheus** (bron: Google Engineering Blog – posts over het monitoren van Kubernetes en andere systemen, Google Cloud Docs – vaak aangeraden voor monitoring op GKE)
+*   **Grafana** (bron: Google Cloud Docs – vaak aangeraden voor visualisatie van monitoringdata, o.a. voor Prometheus en Stackdriver)
+*   **Jenkins** (bron: Google Careers – enkele vacatures voor DevOps Engineers vermelden Jenkins voor CI/CD pipelines)
+*   **Git** (bron: Google Careers – vrijwel alle technische vacatures vermelden Git als versiebeheersysteem, Google Engineering Blog – interne tooling bouwt vaak voort op Git)
+*   **Bazel** (bron: GitHub organisatie – Google's open-source build tool, Google Engineering Blog – posts over het efficiënt bouwen van grote projecten)
+
+## Netwerken
+
+*   **Software-Defined Networking (SDN)** (bron: Google Engineering Blog – veel posts over de interne netwerkarchitectuur, bijvoorbeeld Andromeda, en externe diensten op GCP)
+*   **Global Load Balancing** (bron: Officiële bedrijfswebsite – feature van GCP, Google Engineering Blog – posts over de schaalbaarheid van Google's infrastructuur)
+*   **Fiber Optic Networks** (bron: Officiële bedrijfswebsite – Google's investeringen in eigen glasvezelnetwerken voor datacenters en Google Fiber)
+
+## Besturingssystemen
+
+*   **Linux** (bron: Google Careers – vrijwel alle technische vacatures vermelden ervaring met Linux, Google Engineering Blog – de meeste servers draaien op interne Linux-distributies)
+*   **Android** (bron: Officiële bedrijfswebsite – Google's mobiele besturingssysteem, GitHub organisatie – open-source componenten van Android, Google Careers – veel vacatures voor Android Developers)
+*   **Chrome OS** (bron: Officiële bedrijfswebsite – Google's lichtgewicht besturingssysteem voor Chromebooks)
+
+## Front-end Frameworks
+
+*   **Angular** (bron: GitHub organisatie – Google is de ontwikkelaar en primaire bijdrager, Google Careers – veel vacatures voor Frontend Engineers vermelden Angular)
+*   **React** (bron: Google Careers – enkele vacatures vermelden React, wat aangeeft dat het naast Angular ook binnen Google wordt gebruikt, zij het minder prominent als *eigen* framework)
+*   **Polymer** (bron: GitHub organisatie – Google's web componenten bibliotheek)
+
+## Overig
+
+*   **gRPC** (bron: GitHub organisatie – Google's open-source Remote Procedure Call framework, Google Engineering Blog – posts over efficiënte communicatie tussen microservices)
+*   **Protobuf (Protocol Buffers)** (bron: GitHub organisatie – Google's open-source methode voor het serialiseren van gestructureerde data, Google Engineering Blog – posts over efficiënte data-uitwisseling)
+*   **Flutter** (bron: GitHub organisatie – Google's UI toolkit voor native user interfaces, Google Careers – toenemend aantal vacatures voor mobile developers vermeldt Flutter)
+*   **WebAssembly** (bron: Google Engineering Blog – posts over de adoptie en ontwikkeling van WebAssembly in Chrome en daarbuiten)
+*   **Googel Test / GTest** (bron: GitHub organisatie – Google's open-source unit testing framework voor C++)
