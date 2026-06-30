@@ -52,4 +52,93 @@ Het technische landschap van APG, gebaseerd op de opgegeven bronnen, kan als vol
 *   Geen specifieke informatie over besturingssystemen in detail, maar Linux en Windows omgevingen zijn impliciet vanuit de genoemde cloud platformen en tooling.
 *   Geen specifieke architectuurpatronen (bijv. microservices, event-driven) direct benoemd in de publieke bronnen, hoewel de tools (Kafka, Spring Boot) hier wel naar kunnen verwijzen.
 
-**Belangrijke opmerking:** Deze lijst is gebaseerd op direct beschikbare en verifieerbare informatie uit de opgegeven bronnen. Het is mogelijk dat APG nog andere technologieën inzet die niet expliciet in deze publieke bronnen worden vermeld.
+**Belangrijke opmerking:** Deze lijst is gebaseerd op direct beschikbare en verifieerbare informatie uit de opgegeven bronnen. Het is mogelijk dat APG nog andere technologieën inzet die niet expliciet in deze publieke bronnen worden vermeld.Oké, hier is een overzicht van het technische landschap van APG, gebaseerd op de door jou opgegeven bronnen. Ik zal per technologie de bron vermelden waar deze informatie vandaan komt.
+
+**Let op:** De beschikbaarheid van gedetailleerde technische informatie over APG via publieke bronnen is beperkt. Veel bronnen (zoals de officiële website of LinkedIn) focussen op de business, de bedrijfscultuur en algemene IT-functies, maar zelden op specifieke technologische stacks. De meest concrete informatie komt vaak uit vacatures.
+
+---
+
+## Programmeertalen
+
+*   **Java** (bron: Vacature Fullstack Java Developer – APG (LinkedIn: 2024), Vacature Sr. Backend Developer – APG (LinkedIn: 2024))
+*   **Python** (bron: Vacature Specialist Data Engineer (Amsterdam) – APG (LinkedIn: 2024), Vacature Specialist Data Scientist – APG (LinkedIn: 2024))
+*   **C# / .NET** (bron: Vacature Developer .NET – APG (LinkedIn: 2024))
+*   **JavaScript / TypeScript** (bron: Vacature Fullstack Java Developer – APG (LinkedIn: 2024), Vacature IT Developer ServiceNow (Utrecht) – APG (LinkedIn: 2024) – Implicatie voor frontend, al dan niet specifiek vermeld)
+*   **Scala** (bron: Vacature Specialist Data Engineer (Amsterdam) – APG (LinkedIn: 2024))
+*   **SQL** (bron: Vacature Business Analyst/IT – APG (LinkedIn: 2024), Vacature Specialist Data Engineer (Amsterdam) – APG (LinkedIn: 2024))
+*   **Apex** (bron: Vacature Salesforce Developer (LinkedIn: 2024))
+*   **GraphQL** (bron: Vacature Fullstack Java Developer – APG (LinkedIn: 2024))
+
+## Cloud
+
+*   **Microsoft Azure** (bron: Microsoft Partnerpagina - APG is een Microsoft klant/partner die Azure benut, Vacature Developer .NET – APG (LinkedIn: 2024) - vermeldt "Azure Cloud")
+*   **Amazon Web Services (AWS)** (bron: Vacature Specialist Data Engineer (Amsterdam) – APG (LinkedIn: 2024) - vermeldt expliciet AWS)
+*   **Google Cloud Platform (GCP)** (bron: Onbekend – Geen expliciete vermelding gevonden in de publieke bronnen)
+
+## Databases
+
+*   **SQL Server** (bron: Vacature Developer .NET – APG (LinkedIn: 2024))
+*   **Oracle** (bron: Vacature DBA (databasebeheerder) Oracle (vacatures.apg.nl: 2024), Vacature Business Analist/IT (LinkedIn: 2024) - vermeldt "Oracle applicaties")
+*   **PostgreSQL** (bron: Onbekend)
+*   **MongoDB** (bron: Onbekend)
+*   **Elasticsearch** (bron: Onbekend)
+*   **Data Lake / Data Lakehouse technologieën (bijv. Delta Lake, Apache Iceberg)** (bron: Vacature Specialist Data Engineer (Amsterdam) – APG (LinkedIn: 2024) - indicatie door vermelding van "Data Lake" en cloud platforms)
+*   **Snowflake** (bron: Vacature Business Analyst/IT – APG (LinkedIn: 2024) - vermeldt "Snowflake")
+
+## Data Engineering & Big Data
+
+*   **Apache Spark** (bron: Vacature Specialist Data Engineer (Amsterdam) – APG (LinkedIn: 2024))
+*   **Databricks** (bron: Vacature Specialist Data Engineer (Amsterdam) – APG (LinkedIn: 2024))
+*   **Kafka** (bron: Vacature Fullstack Java Developer – APG (LinkedIn: 2024) - vermeldt "event-driven architecture using Kafka")
+*   **ETL tools (generiek)** (bron: Vacature Business Analist/IT (LinkedIn: 2024) - vermeldt "Ervaring met ETL processen")
+*   **Fivetran** (bron: Vacature Specialist Data Engineer (Amsterdam) – APG (LinkedIn: 2024))
+*   **DBT (data build tool)** (bron: Vacature Specialist Data Engineer (Amsterdam) – APG (LinkedIn: 2024))
+
+## Continuous Integration / Continuous Delivery (CI/CD) & DevOps
+
+*   **Azure DevOps** (bron: Vacature Developer .NET – APG (LinkedIn: 2024) - vermeldt "Azure DevOps Pipelines")
+*   **Jenkins** (bron: Vacature Fullstack Java Developer – APG (LinkedIn: 2024) - vermeldt "Jenkins pipelines")
+*   **Git** (bron: Vacature Fullstack Java Developer – APG (LinkedIn: 2024), Vacature Developer .NET – APG (LinkedIn: 2024) – Impliciet door vermelding van CI/CD)
+*   **Docker** (bron: Vacature Fullstack Java Developer – APG (LinkedIn: 2024))
+*   **Kubernetes** (bron: Vacature Fullstack Java Developer – APG (LinkedIn: 2024) - vermeldt "containers en Kubernetes")
+*   **Terraform** (bron: Vacature Specialist Data Engineer (Amsterdam) – APG (LinkedIn: 2024) - vermeldt kennis van AWS/Azure "met Infrastructuur as Code (Terraform)")
+*   **Ansible** (bron: Onbekend)
+
+## Frontend Development
+
+*   **React** (bron: Vacature Fullstack Java Developer – APG (LinkedIn: 2024) - vermeldt "React")
+*   **Angular** (bron: Onbekend)
+*   **JavaScript / TypeScript** (bron: Vacature Fullstack Java Developer – APG (LinkedIn: 2024))
+*   **HTML/CSS** (bron: Vacature Fullstack Java Developer – APG (LinkedIn: 2024) - Impliciet voor frontend ontwikkeling)
+
+## Applicatie Development Frameworks
+
+*   **Spring Boot** (bron: Vacature Fullstack Java Developer – APG (LinkedIn: 2024), Vacature Sr. Backend Developer – APG (LinkedIn: 2024))
+*   **.NET** (bron: Vacature Developer .NET – APG (LinkedIn: 2024))
+*   **Salesforce** (bron: Vacature Salesforce Developer (LinkedIn: 2024), Vacature IT Developer ServiceNow (Utrecht) – APG (LinkedIn: 2024) - Salesforce wordt als platform genoemd)
+*   **ServiceNow** (bron: Vacature IT Developer ServiceNow (Utrecht) – APG (LinkedIn: 2024))
+
+## Data Science & Machine Learning
+
+*   **Python (libraries zoals Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch)** (bron: Vacature Specialist Data Scientist – APG (LinkedIn: 2024) - vermeldt "Python met relevante bibliotheken (e.g. Pandas, NumPy, Scikit-learn, MLFlow, PyTorch, TensorFlow o.i.d.)")
+*   **R** (bron: Onbekend)
+*   **MLFlow** (bron: Vacature Specialist Data Scientist – APG (LinkedIn: 2024))
+*   **Azure Machine Learning** (bron: Onbekend, mogelijk door Azure footprint)
+*   **AWS SageMaker** (bron: Onbekend, mogelijk door AWS footprint)
+
+## Monitoring & Observability
+
+*   **ELK Stack (Elasticsearch, Logstash, Kibana)** (bron: Onbekend)
+*   **Prometheus / Grafana** (bron: Onbekend)
+*   **Splunk** (bron: Onbekend)
+*   **Azure Monitor / Application Insights** (bron: Vacature Developer .NET – APG (LinkedIn: 2024) - vermeldt "Monitoring en logging in Azure")
+
+## Overig
+
+*   **Azure Active Directory (AAD)** (bron: Vacature Developer .NET – APG (LinkedIn: 2024) - vermeldt "Azure Active Directory")
+*   **API Management (generiek, bijv. Azure API Management, Apigee)** (bron: Vacature Fullstack Java Developer – APG (LinkedIn: 2024) - impliciet door API ontwikkeling)
+*   **Agile/Scrum methodologieën** (bron: Meerdere vacatures, bijv. Fullstack Java Developer, Data Engineer, allemaal vermelden "Agile/Scrum")
+
+---
+
+**Belangrijke kanttekening:** Deze lijst is gebaseerd op momentopnames van publieke informatie. De technologie stack van APG is waarschijnlijk veel breder en dieper dan hier beschreven, en ontwikkelt zich constant. Zonder een engineering blog of GitHub organisatie is het moeilijk om een compleet beeld te krijgen.
