@@ -100,7 +100,7 @@ def save_new_terms(comparison_results, company_name):
                         "definition": item["definition"],
                         "category": item["category"]},
                         "$addToSet": {"companies":{"$each": [company_name]}}
-                        }
+                        },
                     upsert=True,
                 )
                 

@@ -11,6 +11,7 @@ from Savers.MongoSaver import load_existing_terms, save_new_terms
 from Services.EmbeddingService import embed_term
 from Savers.QdrantSaver import save_term_embedding
 from Savers.QdrantSaver import find_existing_term
+from Savers.QdrantSaver import save_rapport_embedding
 from Savers.JsonSaver import save_to_json, save_webint
 from Savers.MarkdownSaver import save_to_markdown
 
@@ -115,9 +116,10 @@ def run_customer_analysis_workflow(customer_name: str = None, llm_client=None):
     print("\n📝 Rapport wordt opgesteld...")
     save_to_markdown(customer_name, rapport)
     print("✓ Rapport opgeslagen.")
+    save_rapport_embedding(customer_name, rapport)
 
     print("\n💾 Nieuwe termen worden opgeslagen in database...")
-    save_terms(comparison_results)
+    save_terms(comparison_results, customer_name)
 
     print("\n🧠 Embeddings worden gegenereerd en opgeslagen...")
     generate_and_save_embeddings(new_terms_for_followup)
@@ -185,8 +187,8 @@ def compare_terms_with_database(extracted_terms):
     return compare_terms(extracted_terms, existing_terms)
 
 
-def save_terms(comparison_results):
-    save_new_terms(comparison_results)
+def save_terms(comparison_results, company_name):
+    save_new_terms(comparison_results, company_name)
 
 
 def generate_and_save_embeddings(new_terms):
