@@ -1,3 +1,5 @@
+import re
+
 from qdrant_client import QdrantClient
 from qdrant_client.models import PointStruct, VectorParams, Distance
 from Services.EmbeddingService import embed_text
@@ -10,6 +12,7 @@ client = QdrantClient(
 )
 
 COLLECTION_NAME = "technical_knowledge"
+RAPPORT_COLLECTION_NAME = "company_rapports"
 
 
 def create_collection_if_not_exists():
@@ -27,6 +30,65 @@ def create_collection_if_not_exists():
                 size=1536,
                 distance=Distance.COSINE
             )
+        )
+
+
+def create_rapport_collection_if_not_exists():
+    collection_names = [
+        collection.name
+        for collection in client.get_collections().collections
+    ]
+
+    if RAPPORT_COLLECTION_NAME not in collection_names:
+        print(f"Creating Qdrant collection: {RAPPORT_COLLECTION_NAME}")
+
+        client.create_collection(
+            collection_name=RAPPORT_COLLECTION_NAME,
+            vectors_config=VectorParams(
+                size=1536,
+                distance=Distance.COSINE
+            )
+        )
+
+
+def split_rapport_into_sections(rapport_text):
+    sections = []
+    matches = list(re.finditer(r"^##\s+(.+)$", rapport_text, flags=re.MULTILINE))
+
+    if not matches:
+        return [("Rapport", rapport_text.strip())]
+
+    for index, match in enumerate(matches):
+        section_title = match.group(1).strip()
+        start = match.end()
+        end = matches[index + 1].start() if index + 1 < len(matches) else len(rapport_text)
+        section_text = rapport_text[start:end].strip()
+        sections.append((section_title, section_text))
+
+    return sections
+
+
+def save_rapport_embedding(company_name, rapport_text):
+    create_rapport_collection_if_not_exists()
+
+    sections = split_rapport_into_sections(rapport_text)
+
+    for section_title, section_text in sections:
+        embedding = embed_text(section_text)
+
+        point = PointStruct(
+            id=str(uuid.uuid4()),
+            vector=embedding,
+            payload={
+                "company": company_name,
+                "section": section_title,
+                "text": section_text
+            }
+        )
+
+        client.upsert(
+            collection_name=RAPPORT_COLLECTION_NAME,
+            points=[point]
         )
 
 

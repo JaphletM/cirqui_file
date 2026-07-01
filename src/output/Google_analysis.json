@@ -56,6 +56,454 @@
         "Ja, absoluut. De klant is bezig met de uitrol van een omvangrijk IoT-project voor facility management, investeert zwaar in AI/ML voor data-analyse en predictive maintenance, en exploreert 5G privénetwerken voor interne communicatie. Deze initiatieven zullen leiden tot een exponentiële groei van dataverkeer. De huidige netwerkinfrastructuur kan deze toename niet accommoderen en een upgrade naar glasvezel is noodzakelijk om de vereiste bandbreedte en latentie te leveren voor de succesvolle adoptie van deze technologieën.",
         "De klant moet connectiviteit overbruggen tussen hun hoofdkantoor en drie bijbehorende campussen (tot 10 km), tussen hun twee primaire datacenters (ongeveer 50 km), en met diverse externe cloudproviders via direct connect-oplossingen. Deze afstanden, gecombineerd met de verwachte datagroei, stellen hoge eisen aan de schaalbaarheid en toekomstige uitbreidbaarheid. Een glasvezelnetwerk is essentieel vanwege zijn vermogen om gegevens over lange afstanden te transporteren met minimale signaalverlies en maximale snelheid, waardoor toekomstige upgrades van bandbreedte (bijv. van 100 Gbps naar 400 Gbps of meer) met relatief minimale aanpassingen mogelijk zijn."
       ]
+    },
+    {
+      "term": "TypeScript",
+      "definition": "Een superset van JavaScript die vaak wordt gevraagd in vacatures voor Frontend Engineers bij Google.",
+      "followup_prompts": [
+        "Welke specifieke pijnpunten of uitdagingen heeft de klant momenteel met hun JavaScript-codebase, die TypeScript zou kunnen oplossen? Denk aan foutenopsporing, onderhoud of samenwerking.",
+        "In hoeverre is de klant bekend met het concept van statisch typen en zijn ze bereid om te investeren in de leercurve die gepaard gaat met de adoptie van TypeScript?",
+        "Zijn er bestaande projecten of teams binnen de organisatie van de klant die al openstaan voor of ervaring hebben met TypeScript, en zo ja, welke lessen kunnen we daaruit trekken?"
+      ],
+      "followup_answers": [
+        "De klant ervaart vaak runtime-fouten door typegerelateerde problemen, wat resulteert in langere debugtijden en verminderde productiviteit. Daarnaast maakt het gebrek aan type-informatie het onderhoud van grotere codebases complexer en bemoeilijkt het de samenwerking tussen ontwikkelaars, vooral bij projecten met meerdere teams.",
+        "De klant heeft een basisbegrip van statisch typen vanuit ervaring met talen als C# of Java, maar de diepte van hun kennis over TypeScript specifiek is beperkt. Ze zijn bereid om te investeren in training en leerresources, mits de voordelen op lange termijn duidelijk aantoonbaar zijn en er een gedegen adoptieplan ligt.",
+        "Ja, er is een klein pilot-team dat met TypeScript experimenteert voor een nieuwe microservice. Zij waarderen de betere codekwaliteit en de snellere refactoring. Belangrijke lessen zijn het belang van goede configuratie, het gebruik van een linter en het geleidelijk introduceren van types, in plaats van alles in één keer om te zetten."
+      ]
+    },
+    {
+      "term": "Bigtable",
+      "definition": "Een gedistribueerd opslagsysteem voor het beheren van gestructureerde gegevens.",
+      "followup_prompts": [
+        "Wat zijn de huidige data-opslagbehoeften van de klant in termen van schaalbaarheid, doorvoer (throughput), en latentie, die Bigtable potentieel beter zou kunnen bedienen dan hun huidige oplossingen?",
+        "Welke bestaande databasesystemen gebruikt de klant momenteel voor hun 'hot data' en welke migratie-uitdagingen of -kansen voorzien ze bij een overstap naar Bigtable?",
+        "Denkt de klant aan use-cases die zeer hoge schrijf- of leesvolumes vereisen, zoals IoT-data, advertentietechnologie of financiële transacties, waar Bigtable zijn meerwaarde kan bewijzen?"
+      ],
+      "followup_answers": [
+        "De klant heeft groeiende datavolumes (petabytes) met hoge schrijf- en leesvereisten (miljoenen requests per seconde) voor hun IoT-platform en advertentiesystemen. Hun huidige relationele databasesystemen schalen onvoldoende en vertonen onacceptabele latentiepieken tijdens piekuren.",
+        "De klant gebruikt voornamelijk Apache Cassandra en PostgreSQL voor hun hot data. De belangrijkste migratie-uitdagingen zijn het herontwerpen van schema's voor een NoSQL-kolom-georiënteerde aanpak en de bestaande applicatielogica aan te passen. Kansen liggen in vereenvoudiging van operationeel beheer en verbeterde prestaties.",
+        "Absoluut. Ze hebben concrete use-cases in gedachten zoals het opslaan van real-time sensordata van miljoenen IoT-apparaten, het bijhouden van gebruikersprofielen en advertentie-impressies, en het verwerken van beursdata met hoge frequentie. Dit zijn precies de scenario's waar Bigtable's schaalbaarheid en lage latentie cruciaal zijn."
+      ]
+    },
+    {
+      "term": "G-Scale",
+      "definition": "Google's interne gedistribueerde besturingssysteem, dat fungeert als de basis voor hun enorme schaal aan toepassingen en diensten.",
+      "followup_prompts": [
+        "Welke specifieke service level objectives (SLO's) of service level indicators (SLI's) hanteert de klant voor hun meest kritieke systemen, en hoe verhoudt dit zich tot de betrouwbaarheidsnormen die Google hanteert (SRE-principes)?",
+        "Heeft de klant te maken met systemen die een 'five nines' (99.999%) beschikbaarheidsvereiste hebben, en welke huidige uitdagingen ervaren ze bij het bereiken en handhaven hiervan?",
+        "Hoe gaat de klant om met 'catastrofale' failover-scenario's of grootschalige incidenten, en welke lessen kunnen getrokken worden uit Google's ervaringen met G-Scale in dergelijke situaties?"
+      ],
+      "followup_answers": [
+        "Voor onze cruciale e-commerce en financiële transactiesystemen streven we naar een beschikbaarheid van 99.99%. De latency moet onder de 200 ms blijven. We zijn bekend met SRE-principes en proberen deze toe te passen, maar de schaal van Google's operaties en de bijbehorende reliability challenges zijn vele malen groter.",
+        "Nog niet direct vijf negens, maar wel systemen die daar dichtbij komen, zoals onze authenticatieservice. De grootste uitdagingen zijn het beheersen van complexe afhankelijkheden, snelle detectie en herstel van incidenten, en het voorkomen van 'cascading failures' die grote delen van onze infrastructuur kunnen beïnvloeden.",
+        "We hebben disaster recovery plannen en multi-regio setups, maar het testen ervan is complex en de resultaten zijn niet altijd bevredigend. We leren graag over Google's benadering van 'chaos engineering', geautomatiseerde failovers op enorme schaal, en de incident response strategieën die zijn ontwikkeld in een omgeving van G-Scale."
+      ]
+    },
+    {
+      "term": "Google Cloud Run",
+      "definition": "Een serverless compute-platform van Google Cloud Platform voor het draaien van stateless containers via volledig beheerde diensten.",
+      "followup_prompts": [
+        "Welke stateless services of microservices heeft de klant momenteel die baat zouden hebben bij automatische schaling naar nul, pay-per-use facturering en minimale operationele overhead?",
+        "Zijn er bij de klant projecten waarbij snelle deployment van containers en het beheersen van piekbelasting zonder handmatige interventie cruciale eisen zijn, en hoe wordt dit nu opgelost?",
+        "Welke programmeertalen of frameworks gebruikt de klant voor hun applicaties, en hoe eenvoudig is het voor hen om deze als container te deployen op een serverless platform zoals Cloud Run?"
+      ],
+      "followup_answers": [
+        "We hebben diverse API-gateways, data processing functies (bijv. image resizing na uploads), en webhooks die vaak kortstondig, maar met sporadische pieken worden gebruikt. Deze zijn ideaal voor schalen naar nul en een pay-per-use model, wat momenteel veel kosten bespaart in vergelijking met draaiende VM's.",
+        "Ja, voor campagnes (bijv. Black Friday) zien we enorme pieken in verkeer naar specifieke services. Nu schalen we handmatig bij of gebruiken we dure, overgeprovisioneerde machines. Snelle deployment en automatische schaling van Cloud Run zou dit probleem oplossen en de operationele last verlichten.",
+        "We gebruiken voornamelijk Python met Flask/Django en Node.js met Express. Beide zijn goed te containeriseren met Docker, wat de overstap naar Cloud Run relatief eenvoudig maakt. Het 'contract' van Cloud Run voor een HTTP-server als container is goed te combineren met onze huidige applicaties."
+      ]
+    },
+    {
+      "term": "Polymer",
+      "definition": "Een JavaScript-bibliotheek van Google voor het maken van webcomponenten, gericht op herbruikbare UI-elementen.",
+      "followup_prompts": [
+        "Welke specifieke uitdagingen ervaart de klant momenteel met de performance van hun front-end applicaties? (Denk aan laadtijd, responsiviteit, etc.)",
+        "In hoeverre is de klant bereid om te investeren in een framework-migratie, gezien de potentiële voordelen van gestandaardiseerde componenten en snellere ontwikkelingstijden? Zijn er specifieke budgetten of tijdslijnen hiervoor?",
+        "Welke bestaande front-end frameworks (bijv. React, Angular, Vue) gebruikt de klant momenteel, en welke specifieke problemen of beperkingen ervaren ze met deze frameworks die Polymer mogelijk kan oplossen?"
+      ],
+      "followup_answers": [
+        "De klant ervaart trage laadtijden op mobiele apparaten (gemiddeld 5-7 seconden) en een merkbare vertraging bij interacties zoals het klikken op knoppen of het invullen van formulieren, wat leidt tot een hoge bounce rate (circa 15% op belangrijke pagina's). Specifiek is de First Contentful Paint (FCP) en Largest Contentful Paint (LCP) suboptimal, en de Total Blocking Time (TBT) is te hoog door een grote hoeveelheid JavaScript en CSS die gebundeld wordt.",
+        "De klant erkent de potentiële voordelen van een migratie en is bereid te investeren. Er is een budget van €70.000 beschikbaar gesteld voor het eerste fase van de migratie, gericht op 'proof-of-concept' en de migratie van één kritieke module. De gewenste tijdslijn is 6-9 maanden voor de 'proof-of-concept' en evaluatie, met een totale migratieperiode van 18-24 maanden voor de gehele applicatie. De focus ligt op het minimaliseren van onderbrekingen tijdens de ontwikkeling en het garanderen van een 'smooth' overgang.",
+        "De klant gebruikt momenteel een mix van jQuery met Vanilla JavaScript voor oudere modules en Angular (versie 9) voor nieuwere onderdelen. De belangrijkste problemen zijn: 1) gebrek aan consistentie en herbruikbaarheid van componenten, wat leidt tot herhaaldelijk werk ('boilerplate code'); 2) de 'learning curve' en complexiteit van Angular voor nieuwere ontwikkelaars; 3) de 'vendor lock-in' bij Angular, wat opties voor toekomstige architectuurkeuzes beperkt. De wens is om een framework te kiezen dat meer 'agnostic' is, web componenten omarmt, en een meer modulaire aanpak mogelijk maakt."
+      ]
+    },
+    {
+      "term": "Vue.js",
+      "definition": "Een open-source progressive JavaScript-framework voor het bouwen van gebruikersinterfaces en single-page applicaties.",
+      "followup_prompts": [
+        "Welke bestaande frontend-frameworks of -libraries gebruikt de klant momenteel, en welke specifieke problemen of beperkingen ervaren zij hiermee die Vue.js mogelijk kan oplossen?",
+        "Heeft de klant behoefte aan een progressief framework met een relatief lage leercurve en goede documentatie, bijvoorbeeld voor kleinere teams of projecten met snelle iteraties?",
+        "Zijn er bij de klant specifieke use-cases voor single-page applications, interactieve dashboards of complexe UI's waar een modern, performant frontend-framework zoals Vue.js van pas zou komen?"
+      ],
+      "followup_answers": [
+        "We gebruiken veel pure JavaScript en jQuery, wat leidt tot spaghetti-code en moeilijk te onderhouden projecten. Voor een recent project hebben we React.js geprobeerd, maar de complexiteit en steile leercurve waren een uitdaging voor sommige teamleden. We zoeken iets eenvoudigers maar toch krachtig.",
+        "Absoluut. We hebben verschillende kleinere teams die snel prototypes moeten kunnen bouwen en itereren. Een lage leercurve en uitgebreide, duidelijke documentatie zijn essentieel om productief te zijn. Vue.js wordt vaak geprezen om zijn toegankelijkheid.",
+        "Ja, we willen een nieuw, interactief analytics dashboard ontwikkelen en onze klantportaal migreren naar een SPA-architectuur. Ook voor mobiele webapplicaties zoeken we een framework dat goede performance en een rijke gebruikerservaring kan bieden. Vue.js lijkt hiervoor een goede kandidaat te zijn."
+      ]
+    },
+    {
+      "term": "CSS3",
+      "definition": "De derde revisie van de Cascading Style Sheets-standaard, gebruikt voor het stijlen en opmaken van webpagina's.",
+      "followup_prompts": [
+        "Welke specifieke uitdagingen ervaart de klant momenteel met de responsive design, animaties of complexe lay-outs op hun websites of webapplicaties?",
+        "Maakt de klant al gebruik van CSS preprocessors (zoals Sass of Less) of CSS-in-JS oplossingen, en welke problemen proberen ze hiermee op te lossen die inherent zijn aan standaard CSS?",
+        "Hoe belangrijk is cross-browser compatibiliteit en optimale performance voor de visuele presentatie van de webapplicaties van de klant, en in hoeverre maken ze effectief gebruik van moderne CSS3 features hiervoor?"
+      ],
+      "followup_answers": [
+        "Onze responsive designs zijn vaak inconsistent over verschillende projecten en het beheren van media queries is soms een uitdaging. Complexe animaties zijn moeilijk te implementeren performant en cross-browser. Vooral CSS Grid lay-outs worden nog niet volledig benut, wat resulteert in veel floats en flexbox hacks.",
+        "We gebruiken momenteel Sass om problemen met schaalbaarheid en onderhoudbaarheid van grote stylesheets te tackelen (variabelen, mixins, nesting). Echter, we merken dat het nog steeds leidt tot grote CSS-bestanden en soms specifieke stijlproblemen oplost (globale lekken). CSS-in-JS overwegen we voor micro frontends.",
+        "Cross-browser compatibiliteit is van cruciaal belang, aangezien onze gebruikers een breed scala aan browsers en apparaten gebruiken. Performance (laadtijd, renderen) is ook een hoge prioriteit. We maken deels gebruik van moderne CSS3 features (flexbox, transitions), maar er is ruimte voor verbetering, bijvoorbeeld met native CSS variabelen en meer geavanceerde animatietechnieken."
+      ]
+    },
+    {
+      "term": "Google Cloud Vision AI",
+      "definition": "Een dienst van Google Cloud Platform die machine learning modellen biedt om afbeeldingen te analyseren, beelden te taggen, en teksten te detecteren.",
+      "followup_prompts": [
+        "Welke visuele content (bijv. afbeeldingen, video's) verwerkt de klant, en zijn er use-cases voor het automatisch identificeren van objecten, gezichten, tekens (OCR) of specifieke kenmerken in deze content?",
+        "Heeft de klant problemen met het handmatig annoteren of categoriseren van grote hoeveelheden afbeeldingen, en zou automatisering via Vision AI hier een efficiëntievoordeel kunnen bieden?",
+        "Zijn er nalevingseisen of zakelijke doelstellingen bij de klant die vereisen dat gevoelige content in afbeeldingen wordt gedetecteerd of gemaskeerd, zoals persoonsgegevens of aanstootgevende inhoud?"
+      ],
+      "followup_answers": [
+        "Wij ontvangen dagelijks miljoenen gebruikers-uploads van foto's (kleding, huisdieren, etc.). We zijn geïnteresseerd in objectdetectie om content te categoriseren. OCR zou ons ook helpen met het automatisch uitlezen van bonnen en ID-kaarten voor onze facturatieservice en KYC-processen.",
+        "Absoluut. Het handmatig taggen van al die gebruikerscontent is een enorme, tijdrovende taak die veel fouten veroorzaakt. Automatisering met Vision AI voor de initiële categorisatie en tagging zou een enorme efficiëntieslag betekenen en onze moderators in staat stellen zich te concentreren op complexere gevallen.",
+        "Ja, compliance met privacyregelgeving (AVG/GDPR) vereist dat we persoonsgegevens (bijv. ID-kaarten, medische informatie) in afbeeldingen herkennen en anonimiseren. Daarnaast is het modereren van aanstootgevende inhoud, zoals expliciete beelden, cruciaal voor onze platformveiligheid. Vision AI's 'Safe Search Detection' kan hierin een rol spelen."
+      ]
+    },
+    {
+      "term": "Google Cloud Natural Language AI",
+      "definition": "Een dienst van Google Cloud Platform die machine learning gebruikt om teksten te analyseren, entiteiten te extraheren, sentiment te bepalen, en meer.",
+      "followup_prompts": [
+        "Welke ongestructureerde tekstdata (bijv. klantrecensies, e-mails, supporttickets) verwerkt de klant, en zijn er use-cases voor sentimentanalyse, entiteitsherkenning of tekstclassificatie?",
+        "Heeft de klant behoefte aan het automatisch samenvatten van lange documenten of het extraheren van kerninformatie uit tekst, om zo efficiëntie in processen te verbeteren?",
+        "Zijn er meertalige tekstimplementaties bij de klant, en in hoeverre is een robuuste oplossing voor talidetectie en -analyse (ongeacht de taal) een vereiste?"
+      ],
+      "followup_answers": [
+        "We verwerken enorme volumes aan klantrecensies, supporttickets en feedbackformulieren. Sentimentanalyse is cruciaal om snel inzicht te krijgen in klanttevredenheid. Entiteitsherkenning kan ons helpen om specifieke producten, problemen of locaties in tekst te identificeren. Tekstclassificatie zou supporttickets automatisch naar de juiste afdeling kunnen routeren.",
+        "Ja, voor onze juridische afdeling en klantenservice is het handmatig doorlezen van lange contracten of uitgebreide supportthreads erg tijdrovend. Automatische samenvatting op basis van extraction of abstraction zou de efficiëntie aanzienlijk kunnen verbeteren, en ervoor zorgen dat belangrijke punten niet gemist worden.",
+        "We opereren wereldwijd, dus klantcommunicatie komt binnen in tientallen talen. Het detecteren van de taal is de eerste stap om de juiste vervolgacties te bepalen. Een robuuste, meertalige oplossing voor talidetectie en daaropvolgende analyse (sentiment, entiteiten) is absoluut een vereiste voor ons, aangezien we nu vaak handmatig moeten categoriseren."
+      ]
+    },
+    {
+      "term": "Google Cloud Speech-to-Text",
+      "definition": "Een dienst van Google Cloud Platform die spraakherkenningsmodellen gebruikt om audio om te zetten naar tekst.",
+      "followup_prompts": [
+        "Welke audiobestanden of live audiostreams (bijv. klantenservicegesprekken, vergaderingen, podcasts) verwerkt de klant, en bestaat er een behoefte aan nauwkeurige transcriptie naar tekst?",
+        "Zijn er compliance-eisen of operationele behoeften bij de klant om gesprekken te archiveren of te analyseren met behulp van tekstuele content, na omzetting van spraak?",
+        "Hoe belangrijk is real-time transcriptie voor de use-cases van de klant, bijvoorbeeld voor live ondertiteling of stemgestuurde bediening van applicaties?"
+      ],
+      "followup_answers": [
+        "Onze klantenservice genereert dagelijks duizenden uren aan gespreksopnames. We hebben een dringende behoefte aan accurate transcriptie van deze gesprekken naar tekst voor analyse- en trainingsdoeleinden. Ook podcasts en interne vergaderingen zijn potentiële use-cases.",
+        "Zeker, voor regelgeving in de financiële sector moeten we gesprekken jarenlang kunnen archiveren en doorzoekbaar maken. Het analyseren van de tekstuele content (bijv. met NLP) is cruciaal om trends te identificeren, problemen te detecteren en compliance te waarborgen. Dit is momenteel een handmatig en zeer inefficiënt proces.",
+        "Real-time transcriptie is van groot belang voor een nieuwe functionaliteit in onze klantenservice: live assistentie voor agenten, waarbij suggesties verschijnen op basis van wat de klant zegt. Ook voor live ondertiteling van webinars en accessibility functies is dit een cruciale vereiste."
+      ]
+    },
+    {
+      "term": "Google Cloud AI Platform Notebooks",
+      "definition": "Een beheerde dienst op Google Cloud Platform die JupyterLab-omgevingen biedt voor data science en machine learning-ontwikkeling.",
+      "followup_prompts": [
+        "Welke tools en omgevingen gebruiken de data scientists en machine learning engineers van de klant momenteel voor hun modelontwikkeling en experimenten, en welke pijnpunten ervaren ze hiermee?",
+        "Heeft de klant behoefte aan een schaalbare, op maat configureerbare ontwikkelomgeving die samenwerking bevordert en toegang biedt tot GPU's voor trainingsdoeleinden?",
+        "Zijn er bij de klant uitdagingen met het beheren van de levenscyclus van machine learning modellen, van experimentatie tot deployment, en hoe kan een geïntegreerd platform zoals AI Platform Notebooks hierbij helpen?"
+      ],
+      "followup_answers": [
+        "Onze data scientists gebruiken een mix van lokale Jupyter environments en enkele zelfbeheerde VM's. De grootste pijnpunten zijn het gebrek aan versiebeheer van notebooks, de uitdagingen met het delen van omgevingen en data sets, en het opschalen naar GPU's of TPU's voor grotere modellen.",
+        "Absoluut. Schaalbaarheid en GPU-toegang zijn cruciale behoeften voor het trainen van onze deep learning modellen. Een omgeving die gestandaardiseerd kan worden en waarin teams makkelijk kunnen samenwerken aan dezelfde experimenten zonder configuratieconflicten, zou een enorme vooruitgang zijn.",
+        "De model lifecycle is een grote uitdaging. Experimenten zijn verspreid, reproduceren is moeilijk, en de stap van een getraind model in een notebook naar een productieservice is omslachtig. Een geïntegreerd platform dat naadloos van notebooks naar training jobs en model deployment kan gaan, zou onze MLOps processen significant stroomlijnen."
+      ]
+    },
+    {
+      "term": "Googler",
+      "definition": "Algemene term voor de diverse interne tooling en frameworks die binnen Google worden gebruikt voor softwareontwikkeling, infrastructuurbeheer en operationele taken.",
+      "followup_prompts": [
+        "Welke specifieke domeinexpertise of 'best practices' van Google zou de klant graag willen aanboren om hun eigen projecten of processen te verbeteren?",
+        "Heeft de klant behoefte aan mentorschap, training of advies van Google-experts op specifieke technische (bijv. SRE, ML engineering) of organisatorische (bijv. innovatiecultuur) gebieden?",
+        "Zijn er specifieke uitdagingen bij de klant waarbij een 'Googler' met directe ervaring relevante inzichten of oplossingen zou kunnen bieden, gebaseerd op interne Google-projecten?"
+      ],
+      "followup_answers": [
+        "We zijn vooral geïnteresseerd in Google's expertise op het gebied van Site Reliability Engineering (SRE), Machine Learning Operations (MLOps), en grootschalige data-architectuur. De 'best practices' voor het bouwen van schaalbare, betrouwbare systemen zijn voor ons van enorme waarde.",
+        "Zeker, zowel technische als organisatorische gebieden hebben onze interesse. Mentorschap op het gebied van SRE-implementatie en ML engineering workflows zou direct impact hebben. Daarnaast zijn we benieuwd naar hoe Google innovatiecultuur stimuleert en teams structureert.",
+        "We worstelen met het schalen van onze data-infra naar petabytes, vergelijkbaar met de uitdagingen die Google al lang geleden heeft opgelost. Een Googler met ervaring in bijvoorbeeld de BigQuery-architectuur of de interne M.L. systemen zou waardevolle inzichten kunnen bieden voor onze specifieke knelpunten in schaalbaarheid en performance."
+      ]
+    },
+    {
+      "term": "Ansible",
+      "definition": "Een open-source softwaretool voor geautomatiseerde software-configuratie, applicatie-implementatie en orkestratie.",
+      "followup_prompts": [
+        "Welke infrastructuur- of applicatieconfiguraties beheert de klant momenteel handmatig, en welke problemen (bijv. inconsistentie, foutgevoeligheid) ervaren ze hierdoor?",
+        "Heeft de klant behoefte aan een agentless automatiseringsoplossing die relatief eenvoudig te leren en te implementeren is voor IT-operaties en 'infrastructure as code'?",
+        "Zijn er bij de klant omgevingen (bijv. on-premise, multi-cloud) waar een consistente en herhaalbare provisioning en configuratie essentieel is, en hoe wordt dit nu gewaarborgd?"
+      ],
+      "followup_answers": [
+        "We configureren momenteel serverinstallaties, applicatied-deployments en netwerkinstellingen vaak handmatig via SSH. Dit leidt tot inconsistentie tussen omgevingen (dev, staging, prod), 'snowflake servers' en een hoge mate van foutgevoeligheid bij routinetaken. Nieuwe deployments zijn tijdrovend en riskant.",
+        "Absoluut. De simpliciteit van Ansible's agentless architectuur en het gebruik van YAML voor playbooks spreken ons erg aan. Onze IT-operators zijn op zoek naar een tool met een lage drempel en snelle resultaten om de eerste stappen te zetten naar 'infrastructure as code' zonder zware leercurves.",
+        "We hebben zowel on-premise servers als workloads in Google Cloud en AWS. Consistente provisioning en configuratie over deze hybride omgevingen is cruciaal voor betrouwbaarheid en compliance. Nu proberen we dat te waarborgen met scripts, maar dit is ineffectief en foutgevoelig. Met Ansible hopen we een uniform platform te creëren."
+      ]
+    },
+    {
+      "term": "Chef",
+      "definition": "Een hulpmiddel voor automatisering waarmee configuratie, implementatie en het beheer van machines en applicaties in een datacentrum kan plaatsvinden.",
+      "followup_prompts": [
+        "Welke infrastructuurbeheeruitdagingen ervaart de klant op het gebied van schaalbaarheid, compliance en de complexiteit van serverconfiguraties?",
+        "Zijn er bij de klant complexe, heterogene serveromgevingen (bijv. Linux, Windows) waar een krachtigere, op Ruby gebaseerde configuratiemanagementtool zoals Chef van pas zou komen?",
+        "Hoe belangrijk is gedetailleerde controle en het testen van infrastructuurcode (test-driven infrastructure) voor de klant, en in hoeverre sluit de benadering van Chef hierbij aan?"
+      ],
+      "followup_answers": [
+        "We hebben een snelgroeiende infrastructuur met honderden servers, die elk een unieke maar complexe configuratie hebben. Het waarborgen van compliance (aanwezigheid van specifieke software, security patches) wordt steeds moeilijker. Handmatige processen zijn niet schaalbaar en leiden tot configuratie drift.",
+        "Ja, we beheren een mix van RHEL, Ubuntu en Windows servers. De expressieve kracht van Ruby in Chef's cookbooks zou ons in staat stellen om complexe configuratielogica te definiëren en te abstraheren, wat nu moeilijk is met eenvoudige scripts. Cross-platform compatibiliteit is ook een grote plus.",
+        "Gedetailleerde controle en testbaarheid zijn extreem belangrijk voor ons, vooral in productieomgevingen waar downtime hoge kosten met zich meebrengt. We willen onze infrastructuurconfiguraties behandelen als applicatiecode, met unit- en integratietests. Chef met zijn 'recipes' en 'cookbooks' sluit hier goed bij aan, en de community-tools (bijv. Test Kitchen) zijn zeer aantrekkelijk."
+      ]
+    },
+    {
+      "term": "Puppet",
+      "definition": "Een software-configuratiebeheer en automatiseringstool ontworpen om de configuratie van computers op basis van een centrale repository te beheren via een declarative benadering.",
+      "followup_prompts": [
+        "Welke configuratiebeheerdoelen heeft de klant op het gebied van automatisering, auditing en het afdwingen van 'desired state' over grote, diverse infrastructuren?",
+        "Heeft de klant behoefte aan een declaratieve configuratiemanagementoplossing die robuuste rapportage en centrale controle biedt over servers en netwerkapparaten?",
+        "Zijn er compliance-eisen of beveiligingsprotocollen bij de klant die een constante handhaving van configuraties vereisen, en hoe wordt dit momenteel geverifieerd en afgedwongen?"
+      ],
+      "followup_answers": [
+        "We willen automatisering van server provisioning, software-installaties en configuratie updates. Auditing van alle wijzigingen is cruciaal voor compliance. Het belangrijkste doel is het afdwingen van een consistente 'desired state' over duizenden servers, van netwerkapparatuur tot applicatieconfiguraties, onafhankelijk van hun initiële staat.",
+        "Ja, een declaratieve aanpak spreekt ons aan, omdat we de eindtoestand van de infrastructuur willen beschrijven in plaats van de stappen ernaartoe. De 'master-agent' architectuur van Puppet voor centrale controle, samen met de uitgebreide rapportagemogelijkheden over alle beheerde knooppunten, zijn belangrijke voordelen voor ons.",
+        "We moeten voldoen aan strenge security standaarden (zoals ISO 27001 en HIPAA in bepaalde afdelingen) die constante configuratievalidatie vereisen. Momenteel gebeurt dit deels handmatig met audits en deels met kwetsbaarheidsscanners, maar dat is reactief. Puppet's vermogen om continu de 'desired state' af te dwingen, zou hier een proactieve oplossing voor bieden."
+      ]
+    },
+    {
+      "term": "F1",
+      "definition": "Google's interne relationele database, vaak genoemd in context van database-innovaties bij Google.",
+      "followup_prompts": [
+        "Welke operationele databasestructuren of workloads heeft de klant die baat zouden hebben bij de gespecialiseerde schaalbaarheid en transactieconsistentie van Google Cloud F1, bijvoorbeeld in vergelijking met relationele SQL-databases?",
+        "Zijn er strikte vereisten voor sterke consistentie over geografisch verspreide datacenters, wat F1's geo-distribueerde transactiemogelijkheden relevant zou maken voor de klant?",
+        "Analyseer de huidige kostenstructuur van de klant voor hun bestaande databasesystemen en onderzoek of F1's schaal op aanvraag en pay-per-use model een economisch voordeel zou kunnen bieden."
+      ],
+      "followup_answers": [
+        "De klant beheert een wereldwijde e-commerceplatform met hoge transactievolumes en een sterke behoefte aan globale consistentie voor voorraadbeheer, orderverwerking en klantgegevens over meerdere geografische regio's. Traditionele relationele databases worstelen met de vereiste schaalbaarheid en consistentie over deze gedistribueerde omgevingen.",
+        "Ja, er zijn zeer strikte vereisten voor sterke consistentie. Bijvoorbeeld, een klant die een product koopt in Europa mag niet tegelijkertijd hetzelfde product zien als beschikbaar in een winkel in Azië als de voorraad op is. F1's geo-gedistribueerde, extern consistente transacties lijken hiervoor een ideale oplossing.",
+        "De klant heeft momenteel aanzienlijke operationele kosten voor het beheren en schalen van hun geclusterde MySQL-installaties en bijbehorende replicatie-oplossingen. De verwachting is dat F1's volledig beheerde service en pay-per-use model, gecombineerd met de eliminatie van operationele overhead, een significant economisch voordeel kan bieden, vooral gezien de dynamische workloadprofielen."
+      ]
+    },
+    {
+      "term": "Pub/Sub",
+      "definition": "Een volledig beheerde real-time messaging service.",
+      "followup_prompts": [
+        "Welke datastromen of communicatiepatronen tussen microservices en applicaties heeft de klant momenteel die baat zouden hebben bij een asynchrone, gebeurtenisgestuurde architectuur met Pub/Sub?",
+        "Welke eisen stelt de klant aan de betrouwbaarheid en gegarandeerde levering van berichten in hun huidige communicatiesystemen, en hoe belangrijk is dit voor hun bedrijfskritische processen?",
+        "Zijn er specifieke use-cases waar de klant real-time dataverwerking of het triggeren van downstream processen op basis van gebeurtenissen nodig heeft, zoals log-aggregatie, IoT-verwerking of notificaties?"
+      ],
+      "followup_answers": [
+        "De klant heeft diverse asynchrone integratiepatronen, waaronder notificaties na orderplaatsing, log-aggregatie van verschillende microservices, data-events voor analytics pipelines, en het aansturen van downstream processen na gebruikersacties op de website. Dit zijn allemaal ideale kandidaten voor een gebeurtenisgestuurde aanpak met Pub/Sub.",
+        "De eisen aan betrouwbaarheid en gegarandeerde levering zijn zeer hoog, vooral voor bedrijfskritische processen zoals orderbevestigingen, betalingsverwerking en updates in klantprofielen. Het verlies van zelfs een enkel bericht kan leiden tot operationele verstoringen en klantontevredenheid.",
+        "Ja, de klant heeft behoefte aan real-time verwerking voor een aantal use-cases: 1) direct reageren op IoT-sensordata voor afwijkingsdetectie, 2) het direct verwerken van clicks en impressies voor hun advertentieplatform, en 3) het direct versturen van pushnotificaties naar gebruikers na een belangrijke gebeurtenis."
+      ]
+    },
+    {
+      "term": "Looker",
+      "definition": "Een business intelligence platform en data analytics tool.",
+      "followup_prompts": [
+        "Welke specifieke uitdagingen ervaart de klant momenteel met hun data-exploratie, rapportage en business intelligence-tools, en waar lopen ze tegenaan bij het verkrijgen van snelle en betrouwbare inzichten?",
+        "In hoeverre is de klant geïnteresseerd in een volledig geïntegreerd data-platform dat direct toegang biedt tot 'schoongemaakte' en gevalideerde data via een centrale semantische laag (LookML)?",
+        "Welke rollen en afdelingen binnen de organisatie van de klant zouden baat hebben bij selfservice BI-mogelijkheden, en hoe belangrijk is de mogelijkheid om dashboards en rapporten snel aan te passen zonder tussenkomst van IT?"
+      ],
+      "followup_answers": [
+        "De klant ervaart een fragmentatie van data-tools, inconsistentie in datadefinities en een lange doorlooptijd voor aanvragen van nieuwe rapporten bij de IT-afdeling. Hierdoor zijn zakelijke gebruikers vaak beperkt in hun vermogen om snel en betrouwbaar inzichten te verkrijgen, wat leidt tot suboptimale beslissingen.",
+        "De klant heeft een sterke interesse in een dergelijk geïntegreerd platform. Ze worstelen met 'data-silo's' en verschillende 'bronnen van de waarheid'. De belofte van een uniforme semantische laag via LookML, die zorgt voor consistentie en betrouwbaarheid van data-definities, spreekt hen bijzonder aan.",
+        "Vooral marketing-, sales-, product- en operationele teams zouden sterk profiteren van selfservice BI. De mogelijkheid om dashboards en rapporten snel en onafhankelijk aan te passen is cruciaal voor hun wendbaarheid. Momenteel zijn ze sterk afhankelijk van de IT-afdeling, wat leidt tot vertragingen en frustratie."
+      ]
+    },
+    {
+      "term": "PyTorch",
+      "definition": "Wordt genoemd in de context van ML-onderzoek en compatibiliteit met Google Cloud AI tools.",
+      "followup_prompts": [
+        "Welke specifieke machine learning- en deep learning-projecten of onderzoeksvragen heeft de klant momenteel waarvoor een flexibel en Python-gericht framework zoals PyTorch een meerwaarde zou kunnen bieden?",
+        "In welke mate heeft de klant bestaande expertise binnen het team met Python en machine learning, en hoe belangrijk is de compatibiliteit met andere Python-bibliotheken en -ecosystemen?",
+        "Welke eisen stelt de klant aan de snelheid van modelontwikkeling en experimenteren, en hoe belangrijk is het om snel prototypes te kunnen bouwen en itereren met nieuwe ML-modellen?"
+      ],
+      "followup_answers": [
+        "De klant werkt aan projecten op het gebied van computer vision (beeldherkenning voor kwaliteitscontrole), natuurlijke taalverwerking (sentimentanalyse van klantrecensies) en aanbevelingssystemen (persoonlijke productaanbevelingen). PyTorch's flexibiliteit is aantrekkelijk voor hun R&D-inspanningen en complexere modelarchitecturen.",
+        "Het data science-team van de klant heeft een sterke achtergrond in Python en gebruikt reeds veel voorkomende ML-bibliotheken zoals scikit-learn, Pandas en NumPy. Compatibiliteit met dit bestaande Python-ecosysteem is zeer belangrijk om de leercurve te minimaliseren en naadloos te kunnen integreren met hun huidige tooling.",
+        "De klant hecht veel waarde aan snelle iteratie en experimentatie, gezien de snel veranderende eisen in hun ML-projecten. Het vermogen om snel prototypes te bouwen en 'on the fly' wijzigingen aan te brengen in modelarchitecturen en hyperparamaters, wat PyTorch's dynamische compute graph ondersteunt, is daarom een groot voordeel."
+      ]
+    },
+    {
+      "term": "Vertex AI",
+      "definition": "Unificeert Google Cloud's machine learning producten in een geïntegreerd platform.",
+      "followup_prompts": [
+        "Welke stappen van de ML-levenscyclus (data-voorbereiding, modeltraining, depolyment, monitoring) ondervindt de klant de meeste frictie of inefficiëntie, en waar kan Vertex AI dit proces stroomlijnen?",
+        "In hoeverre is de klant op zoek naar een geünificeerd platform voor al hun ML-activiteiten, van data-engineering tot MLOps, en welke mate van integratie met andere Google Cloud-services is gewenst?",
+        "Welke governance-, compliance- of beveiligingseisen stelt de klant aan hun ML-workloads, en hoe kan Vertex AI bijdragen aan een robuuste en veilige ML-infrastructuur?"
+      ],
+      "followup_answers": [
+        "De klant ervaart vooral frictie bij het deployment en monitoring van ML-modellen in productie. Modelversiebeheer, A/B-testen, het automatiseren van retraining en het detecteren van modeldrift zijn handmatige, tijdrovende processen. Vertex AI's geïntegreerde MLOps-functionaliteiten kunnen dit proces aanzienlijk stroomlijnen en automatiseren.",
+        "De klant zoekt expliciet een geünificeerd platform om het 'silo-denken' en de fragmentatie van tools binnen hun ML-teams te doorbreken. Een diepe integratie met andere Google Cloud-services zoals BigQuery voor data-opslag, Cloud Storage voor data-pipelines en Dataflow voor data-transformatie is zeer gewenst voor een end-to-end ML-pipeline.",
+        "De klant heeft strikte eisen met betrekking tot data-privacy (GDPR), modeltransparantie en toegangscontrole. Vertex AI's ingebouwde autorisatie- en authenticatiemechanismen, audit-logs en de mogelijkheid om 'Explainable AI' (XAI) te gebruiken, kunnen helpen om aan deze governance- en compliance-eisen te voldoen en een veilige infrastructuur te garanderen."
+      ]
+    },
+    {
+      "term": "Transformers (Hugging Face)",
+      "definition": "Vaak gebruikt in de context van NLP-modellen.",
+      "followup_prompts": [
+        "Welke specifieke natuurlijke taalverwerking (NLP) use-cases heeft de klant die profiteren van geavanceerde taalmodellen, zoals tekstclassificatie, sentimentanalyse, tekstgeneratie of vertaling?",
+        "In hoeverre is de klant geïnteresseerd in het gebruiken van reeds getrainde, state-of-the-art NLP-modellen, en hoe belangrijk is de flexibiliteit om deze modellen te fine-tunen met eigen data?",
+        "Zijn er scenario's waarbij de klant behoefte heeft aan efficiënte deployment en schaalbaarheid van NLP-modellen in productieomgevingen, waarbij de Transformers-bibliotheek uitkomst kan bieden?"
+      ],
+      "followup_answers": [
+        "De klant heeft concrete use-cases voor het analyseren van klantfeedback (sentimentanalyse), het automatisch categoriseren van supporttickets (tekstclassificatie), het genereren van productbeschrijvingen voor e-commerce en het vertalen van interne documenten voor internationale teams. Dit zijn gebieden waar geavanceerde taalmodellen een grote impact kunnen hebben.",
+        "De klant is zeer geïnteresseerd in het benutten van state-of-the-art modellen om sneller resultaten te boeken, maar fine-tuning met hun eigen, domeinspecifieke data is cruciaal voor optimale prestaties en relevantie. Ze willen de flexibiliteit hebben om de modellen aan te passen aan de nuances van hun bedrijfstaal en data.",
+        "Ja, de klant heeft scenario's zoals het real-time verwerken van inkomende chatberichten voor een chatbot en het uitvoeren van dagelijkse sentimentanalyses op grote hoeveelheden social media data. Hierbij zijn efficiënte deployment, lage latentie en schaalbaarheid van de modellen in productie essentieel, waarvoor de Transformers-bibliotheek een degelijke basis biedt."
+      ]
+    },
+    {
+      "term": "Docker",
+      "definition": "Vaak genoemd in samenwerking met Kubernetes voor containerisatie.",
+      "followup_prompts": [
+        "Welke problemen ervaart de klant momenteel met 'it works on my machine' scenario's, omgevingsinconsistentie of het onboardingproces van nieuwe ontwikkelaars, die Docker zou kunnen oplossen?",
+        "In hoeverre is de klant gefrustreerd door de complexiteit van het handmatig beheren van afhankelijkheden en het implementeren van applicaties over verschillende omgevingen (dev, staging, prod)?",
+        "Zijn er specifieke use-cases waarbij de klant behoefte heeft aan schaalbaarheid en efficiëntie in het gebruik van infrastructuur, door applicaties te containeriseren en te laten draaien op een containerorkestratieplatform?"
+      ],
+      "followup_answers": [
+        "De klant worstelt voortdurend met applicaties die lokaal werken maar falen in test- of productieomgevingen, als gevolg van verschillen in geïnstalleerde afhankelijkheden en OS-versies. Het onboardingproces van nieuwe ontwikkelaars is lang en complex door de vele handmatige installatiestappen. Docker kan deze inconsistentie elimineren door applicaties en hun omgeving te containeriseren.",
+        "De frustratie is aanzienlijk. Het handmatig beheren van afhankelijkheden leidt tot lange uren troubleshooting en 'dependency hell'. Het implementeren van applicaties in verschillende omgevingen vereist vaak herschreven scripts en configuraties, wat foutgevoelig is en de deploymentcyclus vertraagt.",
+        "Ja, de klant heeft use-cases zoals een microservice-architectuur met dynamisch schaalbare componenten, burst-workloads voor dataverwerking en het efficiënt benutten van hun serverresources. Hierbij zou het containeriseren van applicaties met Docker, in combinatie met een orkestratieplatform zoals Kubernetes, een grote stap voorwaarts zijn in schaalbaarheid en resource-efficiëntie."
+      ]
+    },
+    {
+      "term": "Google Cloud Anthos",
+      "definition": "Een open applicatieplatform waarmee u uw applicaties overal kunt uitvoeren.",
+      "followup_prompts": [
+        "Welke uitdagingen heeft de klant met het beheren van applicaties en infrastructuur over meerdere cloudomgevingen (multi-cloud) of hybride omgevingen (on-premise en cloud)?",
+        "In hoeverre is de klant op zoek naar een consistente operationele ervaring en een geünificeerd beheerplatform voor hun Kubernetes-clusters, ongeacht waar ze draaien?",
+        "Zijn er strikte compliance- of datasoevereiniteitsvereisten die de klant ertoe aanzetten om sommige workloads on-premise te houden, terwijl ze toch willen profiteren van cloud-native tooling en functionaliteit?"
+      ],
+      "followup_answers": [
+        "De klant beheert momenteel applicaties op een combinatie van hun eigen datacenters, AWS en Azure, wat resulteert in operationele complexiteit, inconsistente tooling en een gebrek aan gecentraliseerd inzicht. Het gebrek aan een uniforme beheerlaag leidt tot hogere operationele kosten en langere deploymentcycli.",
+        "De klant is zeer sterk op zoek naar een consistente operationele ervaring. Ze hebben meerdere Kubernetes-clusters verspreid over verschillende omgevingen, elk met hun eigen configuratie en beheerprocedures. Een geünificeerd platform zoals Anthos, dat een consistente manier biedt om deze clusters te beheren, monitoren en beveiligen, is een topprioriteit.",
+        "Ja, er zijn strikte compliance-eisen (bijv. financiële regelgeving) en datasoevereiniteitsvereisten die de klant verplichten om bepaalde gevoelige workloads en data on-premise te houden. Tegelijkertijd willen ze profiteren van de elasticiteit, ontwikkelingssnelheid en tooling van cloud-native ecosystemen. Anthos biedt hen de mogelijkheid om deze twee werelden te overbruggen."
+      ]
+    },
+    {
+      "term": "React",
+      "definition": "Vaak genoemd in vacatures voor Frontend Engineers als een pluspunt.",
+      "followup_prompts": [
+        "Welke specifieke uitdagingen ervaart de klant momenteel met de ontwikkeling van hun gebruikersinterfaces, zoals performance, onderhoudbaarheid van de code of de productiviteit van hun front-end teams?",
+        "In hoeverre is de klant geïnteresseerd in een componentgebaseerde architectuur voor hun UI's, en hoe belangrijk is de herbruikbaarheid van code en de modulaire opbouw van applicaties?",
+        "Zijn er bestaande front-end frameworks of bibliotheken in gebruik bij de klant, en welke migratiepaden of integratiemogelijkheden zouden relevant zijn bij de overweging om React te adopteren?"
+      ],
+      "followup_answers": [
+        "De klant worstelt met de prestaties van hun bestaande webapplicaties, die gebouwd zijn met oudere technologieën, wat resulteert in een trage gebruikerservaring. De code is 'spaghetti-achtig', moeilijk te onderhouden en te testen, wat de productiviteit van de front-end teams belemmert en nieuwe features langzaam uitrolt.",
+        "De klant heeft een sterke interesse in een componentgebaseerde architectuur. Ze hebben herhaaldelijk code geschreven voor vergelijkbare UI-elementen over verschillende projecten heen. Herbruikbaarheid van componenten en een modulaire opbouw zijn cruciale factoren om de ontwikkelingssnelheid te verhogen en consistentie in de gebruikersinterface te waarborgen.",
+        "De klant gebruikt momenteel een mix van jQuery en AngularJS (oudere versies) voor verschillende applicaties. Een gefaseerde migratie, waarbij React naast bestaande frameworks wordt geïntegreerd, is waarschijnlijk de meest realistische aanpak. Het identificeren van kritieke modules voor migratie en het opstellen van een duidelijke integratiestrategie is essentieel."
+      ]
+    },
+    {
+      "term": "PWA (Progressive Web Apps)",
+      "definition": "Google is een sterke voorstander en ontwikkelaar van PWA-gerelateerde technologieën.",
+      "followup_prompts": [
+        "Welke pijnpunten ervaart de klant met de gebruikerservaring van hun webapplicaties, met name op mobiele apparaten (bijv. offline toegang, laadsnelheid, pushnotificaties)?",
+        "In hoeverre is de klant geïnteresseerd in het bieden van een 'app-achtige' ervaring aan hun gebruikers zonder dat zij een aparte native app hoeven te downloaden vanuit een app store?",
+        "Zijn er specifieke use-cases waarbij offline functionaliteit, snelle laadtijden bij onstabiele netwerken, of de mogelijkheid om de applicatie aan het startscherm toe te voegen van cruciaal belang is voor de klant?"
+      ],
+      "followup_answers": [
+        "De klant merkt dat hun mobiele website een hoge 'bounce rate' heeft en dat gebruikers frustratie ervaren door trage laadtijden, vooral op mobiele netwerken, en het ontbreken van offline functionaliteit. Ze willen ook pushnotificaties kunnen sturen om gebruikers opnieuw te betrekken, een functie die nu ontbreekt.",
+        "De klant heeft veel interesse in een 'app-achtige' ervaring. Ze hebben gekeken naar native apps, maar de kosten en complexiteit van maintainen voor meerdere platforms zijn een barrière. PWA's bieden een aantrekkelijk alternatief om een betere mobiele ervaring te leveren zonder de overhead van native app stores.",
+        "Ja, er zijn meerdere use-cases. Bijvoorbeeld, buitendienstmedewerkers moeten formulieren kunnen invullen, zelfs zonder internetverbinding. Consumenten verwachten snelle laadtijden voor hun e-commercewinkel, zelfs met 3G. En de mogelijkheid om de applicatie aan het startscherm toe te voegen is belangrijk voor frequente gebruikers om de betrokkenheid te vergroten."
+      ]
+    },
+    {
+      "term": "Monorepo (intern)",
+      "definition": "Een concept van een gigantische interne monorepo voor codebeheer bij Google.",
+      "followup_prompts": [
+        "Welke uitdagingen ervaart de klant momenteel met het beheer van meerdere codebases, gedeelde componenten, en het coördineren van releases tussen verschillende teams of projecten?",
+        "In hoeverre is de klant gefrustreerd door inconsistenties in tooling, build-processen, of de moeilijkheid om wijzigingen door te voeren over meerdere repository's heen?",
+        "Zijn er specifieke scenario's waarbij de klant de voordelen van een monorepo ziet, zoals vereenvoudigde code sharing, atomaire commits over projectgrenzen heen, of een uniforme development workflow?"
+      ],
+      "followup_answers": [
+        "De klant heeft tientallen afzonderlijke repositories voor microservices en front-end applicaties. Dit leidt tot versiebeheerproblemen met gedeelde componenten, moeizame 'cross-repo' refactorings en complexe, niet-gesynchroniseerde releasecycli voor gerelateerde projecten. Een coherente blik over het gehele systeem is moeilijk te krijgen.",
+        "De frustratie is groot. Elk team kiest zijn eigen tooling en build-processen, wat inconsistentie genereert en de 'developer experience' bemoeilijkt. Het doorvoeren van een bibliotheek-update of beveiligingspatch over alle relevante repositories is een enorm handmatig en foutgevoelig proces.",
+        "Ja, de klant ziet de voordelen in de vereenvoudiging van interne bibliotheken en gedeelde utility-functies. Atoom-commits die meerdere projecten tegelijk updaten zijn zeer aantrekkelijk, evenals een uniforme development workflow die helpt om consistentie te waarborgen en de onboarding van nieuwe ontwikkelaars te versnellen."
+      ]
+    },
+    {
+      "term": "Kafka",
+      "definition": "Wordt genoemd in de context van integraties met externe systemen of in specifieke data-architecturen.",
+      "followup_prompts": [
+        "Welke datastromen met hoge doorvoer en betrouwbaarheid heeft de klant die baat zouden hebben bij een gedistribueerd streamingplatform zoals Apache Kafka?",
+        "In hoeverre is de klant op zoek naar een schaalbare en fault-tolerante oplossing voor het verzamelen, opslaan en verwerken van real-time data, bijvoorbeeld voor event sourcing of stream processing?",
+        "Zijn er bestaande messaging-systemen of data-integratieoplossingen in gebruik bij de klant, en welke beperkingen ervaren zij daarmee die Kafka zou kunnen oplossen, zoals schaalbaarheid of duurzaamheid?"
+      ],
+      "followup_answers": [
+        "De klant heeft datastromen met hoge doorvoer in hun log-aggregatiesystemen, clickstream-analyse van hun website, financiële transactiedata en real-time monitoring van hun microservice-architectuur. Voor deze stromen is betrouwbaarheid en schaalbaarheid cruciaal, waar Kafka een uitkomst kan bieden.",
+        "De klant is zeer actief op zoek naar een dergelijke oplossing. Ze willen event sourcing implementeren voor hun nieuwe orderbeheersysteem en stream processing toepassen voor real-time fraudedetectie. Hun huidige message brokers missen de benodigde schaalbaarheid en fault-tolerantie voor deze kritieke use-cases.",
+        "De klant gebruikt momenteel RabbitMQ voor ad-hoc messaging en heeft zelfgebouwde scripts voor data-integratie. De beperkingen liggen voornamelijk in de schaalbaarheid van RabbitMQ voor hoge doorvoer en de duurzaamheid van berichten op lange termijn. De zelfgebouwde oplossingen zijn moeilijk te onderhouden en missen functionaliteit voor robuuste stream processing."
+      ]
+    },
+    {
+      "term": "Google Search Algorithms",
+      "definition": "De interne algoritmes die de ruggengraat vormen van Google Search.",
+      "followup_prompts": [
+        "Welke specifieke doelen heeft de klant met betrekking tot hun online zichtbaarheid en vindbaarheid in de zoekresultaten van Google, en welke metrics zijn voor hen het belangrijkst?",
+        "In hoeverre is de klant bekend met en gefrustreerd door de complexiteit en dynamiek van Google's zoekalgoritmes, en hoe belangrijk is het voor hen om 'up-to-date' te blijven met de laatste ontwikkelingen?",
+        "Zijn er specifieke concurrentieanalysevragen of markttrends die de klant wil begrijpen met betrekking tot hun zoekresultaten, en hoe kunnen analyses van Google Search Algorithms hierbij helpen?"
+      ],
+      "followup_answers": [
+        "De klant streeft naar een top 3 positie voor hun kernproductzoekwoorden, een toename van organisch verkeer met 30% binnen 12 maanden en een hogere conversieratio van zoekverkeer. Belangrijke metrics zijn organische rankings, click-through rate (CTR), sessieduur en de conversieratio van de zoekmachine.",
+        "De klant is zich bewust van de complexiteit en de constante veranderingen, en dit leidt tot enige frustratie door onzekerheid over de effectiviteit van hun SEO-strategieën. Het is voor hen van cruciaal belang om op de hoogte te blijven van nieuwe algoritme-updates om hun concurrentievoordeel te behouden en geen daling in rankings te riskeren.",
+        "Ja, de klant wil weten waarom concurrenten beter presteren op bepaalde zoekwoorden, welke inhoudstrategieën succesvol zijn, en hoe ze kunnen inspelen op opkomende zoektrends in hun niche. Analyseren van de Google Search Algorithms kan helpen om 'ranking factors' te identificeren en de strategieën van concurrenten te doorgronden."
+      ]
+    },
+    {
+      "term": "Presto",
+      "definition": "Soms genoemd in de context van interne systemen voor het bevragen van grote datasets.",
+      "followup_prompts": [
+        "Welke specifieke pijnpunten ervaart de klant met het queryen van grote datasets over verschillende data-bronnen heen, en hoe belangrijk is de snelheid van deze ad-hoc queries?",
+        "In hoeverre is de klant op zoek naar een uniform query-interface voor hun diverse data-warehouses, data-lakes en andere databronnen, zonder data te hoeven verplaatsen?",
+        "Zijn er specifieke use-cases waarbij de klant behoefte heeft aan snelle analytische toegang tot data die nog niet in een traditioneel datawarehouse is geconsolideerd, bijvoorbeeld voor verkennende analyses of data science?"
+      ],
+      "followup_answers": [
+        "De klant heeft moeite met het uitvoeren van snelle ad-hoc queries over hun data die verspreid is over Hive, verschillende SQL-databases en object storage (Cloud Storage/S3). Query's duren vaak minuten tot uren, wat hun data-analisten en data scientists belemmert in hun werk. Snelheid is cruciaal voor exploratieve analyses en snelle besluitvorming.",
+        "De klant is sterk op zoek naar een dergelijke uniforme interface. Het verplaatsen en kopiëren van data tussen systemen is tijdrovend, kostbaar en introduceert consistentierisico's. De mogelijkheid om data 'in-place' te query'en over hun heterogene infrastructuur is een groot strategisch voordeel.",
+        "Ja, de data science-teams hebben frequent behoefte aan snelle toegang tot 'ruwe' data in hun data lake voor modeltraining en feature engineering, vaak voordat deze data volledig is gestructureerd of geconsolideerd in een datawarehouse. Ook voor ad-hoc business analyses op nieuwe datasets is snelheid essentieel."
+      ]
+    },
+    {
+      "term": "WebAssembly (Wasm)",
+      "definition": "Google is een actieve bijdrager aan de ontwikkeling en adoptie van WebAssembly.",
+      "followup_prompts": [
+        "Welke specifieke prestatieproblemen ervaart de klant met hun webapplicaties, met name voor compute-intensieve taken zoals video-bewerking, 3D-rendering of wetenschappelijke simulaties?",
+        "In hoeverre is de klant geïnteresseerd in het hergebruiken van bestaande code geschreven in talen zoals C, C++ of Rust in hun webapplicaties, zonder grote refactoring?",
+        "Zijn er use-cases waarbij strikte beveiliging (sandboxing) en een deterministische uitvoeringsomgeving cruciaal zijn voor de klant, zoals bij het draaien van onbetrouwbare code in de browser of op de server?"
+      ],
+      "followup_answers": [
+        "De klant heeft een webgebaseerde video-editor en een 3D-configurator die op Chrome draaien. Deze applicaties kampen met aanzienlijke prestatieproblemen, waaronder laggy UI, trage rendering en een hoog CPU-verbruik, wat leidt tot een slechte gebruikerservaring. Pure JavaScript is onvoldoende om de vereiste rekenkracht te leveren.",
+        "De klant heeft een aanzienlijke codebase in C++ voor hun bestaande desktop video-editor en 3D-rendering engines. Ze zijn zeer geïnteresseerd in het hergebruiken van deze beproefde en geoptimaliseerde code in hun webapplicaties om ontwikkelingskosten te besparen en consistentie te garanderen, zonder dat een volledige herschrijving nodig is.",
+        "Ja, in de 3D-configurator van de klant kunnen gebruikers eigen scripts uploaden of complexe modellen creëren die potentieel onbetrouwbare code bevatten. Een strikte sandboxed omgeving zoals Wasm, die de code isoleert en deterministische uitvoering biedt, is cruciaal om beveiligingsrisico's te minimaliseren en stabiliteit te waarborgen."
+      ]
+    },
+    {
+      "term": "Dataflow",
+      "definition": "Een volledig beheerde service van Google Cloud voor het uitvoeren van batch- en streamverwerkingspijplijnen.",
+      "followup_prompts": [
+        "Welke specifieke databronnen (bijv. databases, API's, IoT-sensoren) wil de klant integreren en analyseren, en welke volumes en frequentie van dataverwerving zijn van toepassing voor elke bron?",
+        "Welke 'business intelligence' of 'rapportage tools' gebruikt de klant momenteel, en welke pijnpunten ervaren ze met de huidige dataverwerking en rapportage, bijvoorbeeld vertragingen, data-inconsistenties of beperkte real-time inzichten?",
+        "Welke compliance-eisen (bijv. AVG/GDPR, HIPAA, financiële regelgeving) zijn van toepassing op de data die de klant wil verwerken, en in hoeverre is real-time dataverwerking kritisch voor hun bedrijfsprocessen?"
+      ],
+      "followup_answers": [
+        "De klant wil data integreren uit de volgende bronnen: 1) relationele databases (PostgreSQL, ongeveer 5 GB aan transactionele data per dag, elke 10 minuten incrementele updates); 2) externe RESTful API's van partners (circa 100.000 'calls' per uur, data in JSON-formaat); 3) IoT-sensoren in productiefaciliteiten (ongeveer 1 TB aan sensordata per dag, elke seconde nieuwe metingen); 4) logbestanden van webservers (circa 200 GB per dag, real-time 'tailing').",
+        "De klant gebruikt Tableau voor 'business intelligence' en interne Excel-rapportages. De belangrijkste pijnpunten zijn: 1) rapporten zijn vaak verouderd (dagelijks of wekelijks, geen real-time inzichten); 2) data-inconsistenties door handmatige data-extractie en consolidatie; 3) de huidige infrastructuur kan de 'bursts' van IoT-data niet aan, wat leidt tot dataverlies; 4) het implementeren van nieuwe data-analyses en rapporten duurt weken tot maanden door de complexe ETL-processen.",
+        "De klant verwerkt persoonsgegevens van klanten, waardoor AVG/GDPR-compliance cruciaal is (data anonimisatie/pseudonimisatie, data retention policies). Ook zijn er ISO 27001-vereisten voor informatiebeveiliging. Real-time dataverwerking is kritisch voor: 1) fraudedetectie in financiële transacties (binnen milliseconden); 2) procesoptimalisatie in de productiefaciliteiten (reacties binnen seconden); 3) gepersonaliseerde aanbiedingen aan klanten (binnen enkele seconden na actie). Vertragingen hierin leiden direct tot operationele en financiële verliezen."
+      ]
+    },
+    {
+      "term": "Android Open Source Project (AOSP)",
+      "definition": "Het open-source project dat de broncode levert voor het Android mobiele besturingssysteem.",
+      "followup_prompts": [
+        "Welke specifieke aanpassingen of 'customizations' (bijv. branding, specifieke functionaliteit, beveiligingsbeleid) heeft de klant nodig die niet standaard beschikbaar zijn in reguliere Android-distributies?",
+        "Welke hardwareplatformen (bijv. chipsets, specifieke sensoren, embedded apparaten) wil de klant ondersteunen met hun aangepaste Android-versie, en zijn er specifieke driver-integraties of optimalisaties vereist?",
+        "Hoe belangrijk is volledige controle over de software-stack voor de klant, inclusief de mogelijkheid om 'security patches' en updates onafhankelijk te beheren, en zijn er specifieke beveiligingsstandaarden of certificeringen die behaald moeten worden?"
+      ],
+      "followup_answers": [
+        "De klant heeft de volgende aanpassingen nodig: 1) Een volledig aangepaste UI/UX met eigen branding en 'launcher' voor zakelijk gebruik (geen toegang tot Play Store, 'kiosk mode'). 2) Specifieke 'device management' functionaliteiten, inclusief 'remote wipe' en 'lockdown' van apparaten. 3) Integratie met 'hardware specific' sensoren die niet standaard worden ondersteund door reguliere Android. 4) Een strikt beveiligingsbeleid dat 'root access' en 'side-loading' blokkeert, en versleuteling op bestandsniveau afdwingt.",
+        "De klant wil hun aangepaste Android-versie draaien op: 1) Qualcomm Snapdragon 8-serie chipsets voor hun high-end apparaten; 2) Rockchip RK3399 voor 'embedded' systemen (bijv. 'digital signage'); 3) specifieke industriële camera's en barcode-scanners via USB/GPIO; 4) een 'custom' NFC-module. Hierdoor zijn 'low-level' driver-integraties en optimalisaties van de 'kernel' noodzakelijk om optimale prestaties en energie-efficiëntie te garanderen, met name voor de camera-interface en de industriële sensoren.",
+        "Volledige controle over de software-stack is van cruciaal belang voor de klant, vooral vanwege 'security and compliance'. Ze willen onafhankelijk 'Over-The-Air' (OTA) updates kunnen uitrollen en 'security patches' beheren zonder afhankelijk te zijn van externe vendors, vaak met een 'patching' cyclus van minder dan 24 uur in geval van kritieke kwetsbaarheden. Er moeten certificeringen behaald worden conform ISO 27001 en 'Common Criteria' (EAL-2/EAL-3) voor de gehele software-oplossing, inclusief de aangepaste Android-versie. Daarnaast is een 'trusted boot' proces en 'hardware-backed security' vereist voor de bescherming van cryptografische sleutels."
+      ]
     }
   ]
 }
