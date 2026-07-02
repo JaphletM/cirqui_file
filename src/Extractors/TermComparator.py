@@ -1,8 +1,11 @@
+from Extractors.TermMatcher import normalize_term
+
+
 def find_existing_term(term_name, existing_terms):
-    term_name = term_name.lower().strip()
+    term_name = normalize_term(term_name)
 
     for existing_term in existing_terms:
-        existing_name = existing_term.get("term", "").lower().strip()
+        existing_name = normalize_term(existing_term.get("term", ""))
 
         if existing_name == term_name:
             return existing_term

@@ -200,3 +200,18 @@ De huidige versie bevat een werkende end-to-end pipeline, maar een aantal onderd
 
 - **Chunking** is nog niet geïmplementeerd. Teksten worden momenteel als geheel ingelezen en opgeslagen. In een volgende versie wil ik teksten automatisch opdelen in kleinere stukken voor betere embeddings en efficiëntere opslag.
 - **Semantic search tijdens analyses** is nog niet actief. Qdrant wordt gebruikt voor opslag van embeddings, maar bij het genereren van analyses wordt er nog niet gezocht in Qdrant voor relevante context. Dit wil ik toevoegen zodat het systeem bestaande kennis hergebruikt tijdens het prompten.
+
+---
+
+## Tests draaien
+
+De tests staan in `tests/`, met dezelfde mapstructuur als `src/`. Er is een `conftest.py` op de repo-root die `src/` op het importpad zet — zonder dat bestand kunnen de tests de modules onder `src/` (bijv. `Extractors`, `Savers`, `Workflows`) niet vinden.
+
+`conftest.py` wordt alleen door **pytest** ingelezen, niet door de gewone Python-interpreter. Draai testbestanden dus altijd via pytest, nooit als los script:
+
+```bash
+# vanuit de repo-root
+python3 -m pytest tests/
+```
+
+Een los testbestand direct uitvoeren met `python3 tests/Extractors/test_term_comparator.py` geeft `ModuleNotFoundError: No module named 'Extractors'`, omdat `conftest.py` dan wordt overgeslagen.
