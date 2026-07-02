@@ -3,6 +3,7 @@ import re
 from qdrant_client import QdrantClient
 from qdrant_client.models import PointStruct, VectorParams, Distance
 from Services.EmbeddingService import embed_text
+from Extractors.TermMatcher import select_confident_matches
 import uuid
 
 
@@ -129,7 +130,18 @@ def find_existing_term(term, definition="", threshold=0.80):
     query = f"{term}: {definition}" if definition else term
     results = search_similar_terms(query, limit=1)
 
-    if results and results[0].score >= threshold:
-        return results[0].payload
+    candidates = [
+        {
+            "term": result.payload["term"],
+            "definition": result.payload.get("definition", ""),
+            "score": result.score
+        }
+        for result in results
+    ]
+
+    matches = select_confident_matches(candidates, threshold)
+
+    if matches:
+        return {"term": matches[0]["term"], "definition": matches[0]["definition"]}
 
     return None
