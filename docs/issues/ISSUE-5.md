@@ -48,11 +48,23 @@ tests/Readers/
 - **Input:** `question: str`, `llm_client`.
 - **Output:** `str` — het definitieve Nederlandse antwoord.
 - **Failures:**
-  - `QueryIntentParseError` of `InvalidQueryIntentError` (uit ISSUE-1)
-    worden hier opgevangen en omgezet naar een vast Nederlands bericht,
+  - `ValueError` uit `extract_query_intent`/`validate_intent` (ISSUE-1
+    gebruikt sinds de "geen classes"-keuze de ingebouwde `ValueError`
+    voor zowel validatie- als parse-fouten, geen eigen exception-types)
+    wordt hier opgevangen en omgezet naar een vast Nederlands bericht,
     bijv. `"Ik kon je vraag niet goed interpreteren. Kun je het anders
     formuleren?"` — dit is de grens waar technische fouten
     gebruikersfeedback worden.
+    **Risico van deze aanpak:** een bare `except ValueError` hier vangt
+    ook een `ValueError` die per ongeluk ergens anders in de pipeline
+    ontstaat (bijv. in `resolve_query_terms` of `gather_query_results`),
+    en zou die dan ook verkeerd als "kon je vraag niet interpreteren"
+    tonen. Zonder eigen exception-classes is dat verschil niet af te
+    dwingen; als dat een probleem wordt, is de enige oplossing binnen
+    "geen classes" om `extract_query_intent`/`validate_intent` als enige
+    plek in de pipeline te laten die faalt vóórdat er iets anders is
+    aangeroepen (dus de `try/except ValueError` strak om alleen die ene
+    aanroep heen zetten, niet om de hele pipeline).
   - overige infrastructuurfouten (Qdrant/Mongo onbereikbaar) propageren
     bewust **niet** stilzwijgend als een leeg antwoord; ze worden
     doorgegeven aan de delivery-laag, die ze op zijn beurt netjes toont

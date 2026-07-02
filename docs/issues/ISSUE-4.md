@@ -11,7 +11,7 @@ niets gevonden is, zodat ik nooit zelf ruwe data hoef te interpreteren.
 
 ## Depends on
 
-ISSUE-3 (levert een `QueryResult`).
+ISSUE-3 (levert een `QueryResult`-dict).
 
 ## Business rules covered
 
@@ -42,27 +42,38 @@ tests/Extractors/
   test_answer_composer.py            # NIEUW
 ```
 
+## Data shapes (geen classes — alleen ter documentatie, niet te implementeren)
+
+> Projectvoorkeur: geen classes. Onderstaande vorm is **geen functie en
+> geen class** — puur een afspraak over welke keys de dict heeft die
+> `gather_query_results` (ISSUE-3) teruggeeft. Niets om apart te
+> implementeren in dit issue.
+
+**`QueryResult`** — keys: `"intent"` (`str`), `"terms"` (`list[str]`),
+`"found"` (`bool`), `"companies_per_term"` (`dict[str, list[str]] | None`),
+`"companies_intersection"` (`list[str] | None`, alleen gevuld bij
+`bedrijven` met 2+ termen — zie ISSUE-3), `"definitions"`
+(`dict[str, str] | None`). Het feit dat deze dict géén keys heeft voor
+aanbevelingen/acties is de structurele afdwinging van "de chatbot
+informeert alleen". Omdat het een gewone dict is (geen class die de vorm
+afdwingt), is dit een afspraak over welke keys `gather_query_results`
+vult — niets voorkomt dat een toekomstige wijziging per ongeluk een
+extra key toevoegt; dat is de prijs van "geen classes".
+
 ## Functions
 
-### `QueryResult` (dataclass, domain) — `src/Extractors/AnswerComposer.py`
+> Deze sectie bevat **alleen echte functies**: `build_answer_context` en
+> `compose_answer`. `QueryResult` hierboven is geen functie-entry.
 
-- **Velden:** `intent: str`, `terms: list[str]`, `found: bool`,
-  `companies_per_term: dict[str, list[str]] | None`,
-  `companies_intersection: list[str] | None` (alleen gevuld bij `bedrijven`
-  met 2+ termen — zie ISSUE-3), `definitions: dict[str, str] | None`.
-- **Business rule of I/O:** business rule — het feit dat dit object géén
-  velden heeft voor aanbevelingen/acties is de structurele afdwinging
-  van "de chatbot informeert alleen".
+### `build_answer_context(result: dict) -> dict` — `src/Extractors/AnswerComposer.py`
 
-### `build_answer_context(result: QueryResult) -> dict` — `src/Extractors/AnswerComposer.py`
-
-- **Verantwoordelijkheid:** `QueryResult` omzetten naar de exacte data die
-  in het antwoord-prompt gaat — puur feiten, geen state buiten wat is
-  meegegeven. Bij meerdere termen krijgt het LLM zowel de lijst per term
-  als de intersectie aangereikt, en beslist zelf welke framing het beste
-  bij de gestelde vraag past (zie ISSUE-1: dat is bewust niet al bij de
-  intent-classificatie vastgelegd).
-- **Input:** `QueryResult`. **Output:** `dict`, bijv.
+- **Verantwoordelijkheid:** de `QueryResult`-dict omzetten naar de exacte
+  data die in het antwoord-prompt gaat — puur feiten, geen state buiten
+  wat is meegegeven. Bij meerdere termen krijgt het LLM zowel de lijst
+  per term als de intersectie aangereikt, en beslist zelf welke framing
+  het beste bij de gestelde vraag past (zie ISSUE-1: dat is bewust niet
+  al bij de intent-classificatie vastgelegd).
+- **Input:** `result: dict` (`QueryResult`-vorm). **Output:** `dict`, bijv.
   ```
   {
     "gevonden": bool,
@@ -76,7 +87,7 @@ tests/Extractors/
 - **Dependencies:** geen.
 - **Business rule of I/O:** business rule, pure en testbaar zonder LLM.
 
-### `compose_answer(result: QueryResult, llm_client, prompt_template: str) -> str` — `src/Extractors/AnswerComposer.py`
+### `compose_answer(result: dict, llm_client, prompt_template: str) -> str` — `src/Extractors/AnswerComposer.py`
 
 - **Verantwoordelijkheid:** het uiteindelijke Nederlandstalige antwoord
   produceren. Volgt het bestaande "vul prompt-template → `llm_client.ask`"
@@ -85,15 +96,15 @@ tests/Extractors/
   nieuwe generieke "prompt-runner"-functie nodig, dit blijft één
   functie-aanroep, dus er is niets om te extraheren of te dupliceren.
 - **Beslissing (business rule, geen LLM-afhankelijkheid voor de
-  belangrijkste garantie):** als `result.found is False`, wordt **geen**
-  LLM-call gedaan. Er wordt een vast, deterministisch Nederlands bericht
-  teruggegeven, bijv.:
-  `f"Geen informatie gevonden over: {', '.join(result.terms)}."`
+  belangrijkste garantie):** als `result["found"] is False`, wordt
+  **geen** LLM-call gedaan. Er wordt een vast, deterministisch Nederlands
+  bericht teruggegeven, bijv.:
+  `f"Geen informatie gevonden over: {', '.join(result['terms'])}."`
   Dit garandeert de "duidelijke melding bij geen resultaten"-regel zonder
   te vertrouwen op het LLM om dat elke keer correct te verwoorden, en
   maakt de regel unit-testbaar zonder een LLM te mocken op tekstniveau.
-- **Input:** `QueryResult`, `llm_client`, `prompt_template` (alleen
-  gebruikt als `result.found is True`).
+- **Input:** `result: dict` (`QueryResult`-vorm), `llm_client`,
+  `prompt_template` (alleen gebruikt als `result["found"] is True`).
 - **Output:** `str`.
 - **Failures:** geen expliciete nieuwe foutklasse nodig; LLM-fouten
   propageren zoals elders in de codebase (`llm_client.ask`).
@@ -127,10 +138,10 @@ Moet expliciet instrueren:
   `bedrijven_intersectie == ["Google"]`
 - `build_answer_context` voor `found=False` → dict signaleert duidelijk
   "niet gevonden" (bijv. `gevonden: False`)
-- `compose_answer` met `result.found=False` → retourneert het vaste
+- `compose_answer` met `result["found"] = False` → retourneert het vaste
   Nederlandse bericht **en** `llm_client.ask` wordt niet aangeroepen
   (assert op de mock)
-- `compose_answer` met `result.found=True` → `llm_client.ask` wordt
+- `compose_answer` met `result["found"] = True` → `llm_client.ask` wordt
   precies één keer aangeroepen met een prompt gebaseerd op
   `build_answer_context(result)`
 - statische promptcheck: `007-answer-formatter.md` bevat de substring

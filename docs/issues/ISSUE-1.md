@@ -83,51 +83,72 @@ tests/Extractors/
 > hoort niet bij de feature-code van dit issue en moet los opgepakt
 > worden.
 
+## Data shapes (geen classes — alleen ter documentatie, niet te implementeren)
+
+> Projectvoorkeur: geen classes, alleen functies. Onderstaande vorm is
+> **geen functie en geen class** — het is puur een afspraak over welke
+> keys een dict heeft die door `validate_intent` wordt teruggegeven.
+> Er is dus niets om apart te implementeren; dit bestaat alleen als
+> documentatie, zodat andere issues (ISSUE-2 t/m ISSUE-5) weten welke
+> keys ze mogen verwachten.
+
+**`QueryIntent`** — `{"intent": str, "terms": list[str]}`, met `intent`
+een van `"bedrijven" | "definitie"`. Geen afgedwongen vorm buiten wat
+`validate_intent` teruggeeft — er is geen class die de vorm garandeert,
+dus elke aanroeper vertrouwt op de output van `validate_intent`.
+
 ## Functions
 
-### `QueryIntent` (dataclass, domain)
+> Python kent geen foutafhandeling zonder classes (`raise`/`except`
+> werken alleen met exception-classes) — daarom wordt hieronder de
+> ingebouwde `ValueError` gebruikt in plaats van eigen exception-classes
+> zoals `InvalidQueryIntentError`/`QueryIntentParseError`. Gevolg: de
+> twee foutgevallen zijn op basis van het exception-type niet meer van
+> elkaar te onderscheiden (beide zijn `ValueError`) — wie dat verschil
+> nodig heeft (zie ISSUE-5) moet op de boodschap-inhoud controleren, of
+> je accepteert dat beide gevallen hetzelfde afgehandeld worden.
+>
+> Deze sectie bevat **alleen echte functies** — twee stuks. Niet meer,
+> niet minder: `validate_intent` bouwt én valideert de `QueryIntent`-dict
+> in één keer, dus er is geen aparte constructor-functie nodig.
 
-- **Verantwoordelijkheid:** valide, afgedwongen representatie van een
-  geclassificeerde vraag.
-- **Velden:** `intent: str` (`"bedrijven" | "definitie"`), `terms: list[str]`.
-- **Bevat geen I/O.**
-
-### `validate_intent(raw: dict) -> QueryIntent`
+### `validate_intent(raw: dict) -> dict`
 
 - **Verantwoordelijkheid:** onvertrouwde LLM-JSON-output valideren en
-  omzetten naar een `QueryIntent`. Business rule / boundary validation.
+  omzetten naar een `QueryIntent`-dict. Business rule / boundary validation.
 - **Input:** `raw: dict` — geparste JSON van het LLM-antwoord.
-- **Output:** `QueryIntent`.
+- **Output:** `dict` in de vorm `{"intent": str, "terms": list[str]}`.
 - **Failures (expliciet, geen silent defaults):**
   - `raw["intent"]` ontbreekt of niet in de toegestane set →
-    `InvalidQueryIntentError("intent", raw.get("intent"))`
+    `ValueError(f"intent moet 'bedrijven' of 'definitie' zijn, kreeg {raw.get('intent')!r}")`
   - `raw["terms"]` ontbreekt, is geen lijst, is leeg, of bevat een
-    lege/whitespace-only string → `InvalidQueryIntentError("terms", ...)`
+    lege/whitespace-only string → `ValueError(f"terms is ongeldig: {raw.get('terms')!r}")`
     (dit geldt voor beide intents — geen aparte cardinaliteitsregel meer
     nodig sinds `definitie` ook meerdere termen toestaat)
 - **Dependencies:** geen (pure functie, geen infrastructuur).
 - **Business rule of I/O:** business rule (domain invariant).
 
-### `extract_query_intent(question: str, llm_client, prompt_template: str) -> QueryIntent`
+### `extract_query_intent(question: str, llm_client, prompt_template: str) -> dict`
 
 - **Verantwoordelijkheid:** de vraag naar het LLM sturen, JSON-respons
   parsen, en via `validate_intent` valideren. Volgt hetzelfde patroon als
   het bestaande `extract_technical_terms` (LLM-call + JSON-parse), maar
   is geen duplicaat: andere prompt, ander doel (intent-classificatie
-  i.p.v. termextractie) en een ander eind-domeinobject (`QueryIntent` vs.
+  i.p.v. termextractie) en een andere eind-vorm (`QueryIntent`-dict vs.
   een lijst termen). Er is geen bestaande functie die hergebruikt kan
   worden voor deze specifieke taak.
 - **Input:** `question: str`, `llm_client` (bestaande `LLMClient`),
   `prompt_template: str` (uit `006-query-intent.md`).
-- **Output:** `QueryIntent`.
+- **Output:** `dict` (`QueryIntent`-vorm).
 - **Failures:**
   - ongeldige/onparsebare JSON van het LLM → raise
-    `QueryIntentParseError(raw_response)` (**niet** stilzwijgend een lege
-    default teruggeven — dit wijkt bewust af van het bestaande patroon in
-    `extract_technical_terms`, dat bij een parse-fout `[]` teruggeeft; dat
-    patroon overtreedt de validation-skill regel "never silently replace
-    invalid values with defaults" en moet hier niet herhaald worden).
-  - validatiefouten van `validate_intent` propageren ongewijzigd.
+    `ValueError(f"kon LLM-antwoord niet als JSON parsen: {raw_response!r}")`
+    (**niet** stilzwijgend een lege default teruggeven — dit wijkt bewust
+    af van het bestaande patroon in `extract_technical_terms`, dat bij
+    een parse-fout `[]` teruggeeft; dat patroon overtreedt de
+    validation-skill regel "never silently replace invalid values with
+    defaults" en moet hier niet herhaald worden).
+  - validatiefouten van `validate_intent` (`ValueError`) propageren ongewijzigd.
 - **Dependencies:** `llm_client.ask`, `validate_intent`.
 - **Business rule of I/O:** I/O boundary (LLM-aanroep), delegeert
   validatie naar de pure functie.
@@ -153,15 +174,15 @@ en de twee toegestane intent-waarden benoemen. Instrueer expliciet dat:
 
 ## Required tests
 
-- geldige input (`bedrijven`, 1 term) → correcte `QueryIntent`
-- geldige input (`bedrijven`, 3 termen) → correcte `QueryIntent` (meerdere
-  termen zijn toegestaan, geen aparte intent nodig)
-- geldige input (`definitie`, 1 term) → correcte `QueryIntent`
+- geldige input (`bedrijven`, 1 term) → correcte `QueryIntent`-dict
+- geldige input (`bedrijven`, 3 termen) → correcte `QueryIntent`-dict
+  (meerdere termen zijn toegestaan, geen aparte intent nodig)
+- geldige input (`definitie`, 1 term) → correcte `QueryIntent`-dict
 - geldige input (`definitie`, 3 termen, bijv. Kubernetes/Java/Linux) →
-  correcte `QueryIntent` (geen cardinaliteitsgrens meer)
-- ontbrekende `terms`-key → `InvalidQueryIntentError` noemt veld `terms`
-- lege `terms`-lijst → raises
-- `terms` bevat een lege string → raises
-- onbekende `intent`-waarde → `InvalidQueryIntentError` noemt veld `intent`
+  correcte `QueryIntent`-dict (geen cardinaliteitsgrens meer)
+- ontbrekende `terms`-key → `ValueError` met "terms" in de boodschap
+- lege `terms`-lijst → raises `ValueError`
+- `terms` bevat een lege string → raises `ValueError`
+- onbekende `intent`-waarde → `ValueError` met "intent" in de boodschap
 - `extract_query_intent` met LLM-mock die niet-JSON teruggeeft →
-  `QueryIntentParseError`, geen stille lege default
+  `ValueError`, geen stille lege default
