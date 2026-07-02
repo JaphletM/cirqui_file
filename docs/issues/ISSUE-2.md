@@ -108,16 +108,17 @@ tests/Workflows/
   testbaar zonder Qdrant — met platte dicts, niet met Qdrant's
   `ScoredPoint`-klasse, zodat de test geen Qdrant-import nodig heeft.
 
-### `resolve_query_terms(intent: QueryIntent) -> dict[str, list[dict]]` — `src/Workflows/ChatbotWorkflow.py`
+### `resolve_query_terms(intent: dict) -> dict[str, list[dict]]` — `src/Workflows/ChatbotWorkflow.py`
 
-- **Verantwoordelijkheid:** orkestratie — voor elke term in `intent.terms`:
-  normaliseren (`normalize_term`) → **bestaande** `search_similar_terms`
-  aanroepen (embedt intern al, geen aparte embed-stap nodig) → de
-  teruggekregen `ScoredPoint`-lijst omzetten naar platte dicts
-  (`{"term": point.payload["term"], "definition":
+- **Verantwoordelijkheid:** orkestratie — voor elke term in
+  `intent["terms"]`: normaliseren (`normalize_term`) → **bestaande**
+  `search_similar_terms` aanroepen (embedt intern al, geen aparte
+  embed-stap nodig) → de teruggekregen `ScoredPoint`-lijst omzetten naar
+  platte dicts (`{"term": point.payload["term"], "definition":
   point.payload.get("definition", ""), "score": point.score}`) →
   `select_confident_matches`.
-- **Input:** `QueryIntent` (uit ISSUE-1).
+- **Input:** `intent: dict` — `QueryIntent`-vorm uit ISSUE-1
+  (`{"intent": str, "terms": list[str]}`).
 - **Output:** `dict[str, list[dict]]` — map van originele term naar zijn
   bevestigde matches (kan leeg zijn per term als niets de drempel haalt).
 - **Failures:** propageert infrastructuurfouten van `search_similar_terms`.

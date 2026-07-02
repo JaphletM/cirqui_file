@@ -15,7 +15,7 @@ mij raadt welke van de twee ik bedoelde.
 ## Depends on
 
 ISSUE-2 (levert `resolve_query_terms` output: bevestigde term-matches per
-opgegeven term) en ISSUE-1 (`QueryIntent.intent` bepaalt welk type
+opgegeven term) en ISSUE-1 (`intent["intent"]` bepaalt welk type
 lookup nodig is; `bedrijven` staat 1 of meer termen toe, zie ISSUE-1).
 
 ## Business rules covered
@@ -89,11 +89,11 @@ tests/Workflows/
 - **Dependencies:** geen.
 - **Business rule of I/O:** business rule, pure en testbaar zonder Mongo.
 
-### `gather_query_results(intent: QueryIntent, resolved_terms: dict[str, list[dict]]) -> QueryResult` — `src/Workflows/ChatbotWorkflow.py`
+### `gather_query_results(intent: dict, resolved_terms: dict[str, list[dict]]) -> dict` — `src/Workflows/ChatbotWorkflow.py`
 
 - **Verantwoordelijkheid:** orkestratie — vertaalt het intent-type naar de
   juiste lookup, met hergebruik van bestaande functies:
-  - `definitie`: pak voor **elke** term in `intent.terms` de definitie
+  - `definitie`: pak voor **elke** term in `intent["terms"]` de definitie
     rechtstreeks uit de bijbehorende bevestigde Qdrant-match in
     `resolved_terms` en bouw `definitions` (`dict[str, str]`) — geen
     Mongo-call nodig. Een term zonder bevestigde match krijgt geen entry
@@ -101,20 +101,22 @@ tests/Workflows/
     lege definitie suggereren, wat niet hetzelfde is als "niet gevonden").
   - `bedrijven`: roep **eenmalig** `load_existing_terms()` (bestaand,
     MongoSaver) aan om alle termen te laden, en gebruik daarna per
-    bevestigde term in `intent.terms` de **bestaande**
+    bevestigde term in `intent["terms"]` de **bestaande**
     `TermComparator.find_existing_term(term_name, existing_terms)` om de
     term-dict te vinden; lees daaruit `.get("companies", [])`. Bouw zo
     `companies_per_term` (`dict[str, list[str]]`). Als
-    `len(intent.terms) >= 2`, bereken daarnaast altijd
+    `len(intent["terms"]) >= 2`, bereken daarnaast altijd
     `companies_intersection` via `intersect_companies`. Bij precies 1
     term blijft `companies_intersection` `None` (intersectie van één
     lijst is triviaal en voegt niets toe).
-- **Input:** `QueryIntent`, `resolved_terms` (van `resolve_query_terms`).
-- **Output:** `QueryResult` (domain object, formeel gedefinieerd in
-  ISSUE-4; hier al gebruikt met velden `intent`, `terms`, `found: bool`,
-  `companies_per_term: dict[str, list[str]] | None`,
-  `companies_intersection: list[str] | None`,
-  `definitions: dict[str, str] | None`).
+- **Input:** `intent: dict` (`QueryIntent`-vorm), `resolved_terms` (van
+  `resolve_query_terms`).
+- **Output:** `dict` — `QueryResult`-vorm (geen class, gewone dict; vorm
+  formeel vastgelegd in ISSUE-4), hier al gebruikt met keys `"intent"`,
+  `"terms"`, `"found"` (`bool`),
+  `"companies_per_term"` (`dict[str, list[str]] | None`),
+  `"companies_intersection"` (`list[str] | None`),
+  `"definitions"` (`dict[str, str] | None`).
   `found` is `True` zodra **minstens één** term een niet-lege
   bedrijvenlijst of definitie opleverde — niet pas wanneer alles gevonden
   is. Een deelresultaat (bijv. Kubernetes gevonden, Java niet) is nog
@@ -145,8 +147,8 @@ tests/Workflows/
   (gemockte `load_existing_terms`-output) → behandeld als `[]`, geen
   `KeyError`
 - `gather_query_results` voor `bedrijven`-intent met 1 term zonder
-  bevestigde match (leeg uit ISSUE-2) → `QueryResult(found=False, ...)`,
-  `companies_intersection is None`
+  bevestigde match (leeg uit ISSUE-2) → resultaat-dict met
+  `result["found"] is False`, `result["companies_intersection"] is None`
 - `gather_query_results` voor `bedrijven`-intent met 3 termen (Kubernetes,
   Java, Linux, zoals het voorbeeld in de userstory) → `companies_per_term`
   bevat alle drie de losse lijsten, `companies_intersection == ["Google"]`,
