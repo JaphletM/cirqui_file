@@ -2,9 +2,12 @@
 
 ## User story
 
-Als Jeroen wil ik een leesbaar antwoord in het Nederlands krijgen op mijn
-vraag, en een duidelijke melding als er niets gevonden is, zodat ik nooit
-zelf ruwe data hoef te interpreteren.
+**Epic:** Als CEO wil ik vragen kunnen stellen over het technische
+landschap van een klant, zodat ik hen vaardige mensen kan aanbieden.
+
+Dit issue behandelt daarvan de presentatie: ik wil een leesbaar antwoord
+in het Nederlands krijgen op mijn vraag, en een duidelijke melding als er
+niets gevonden is, zodat ik nooit zelf ruwe data hoef te interpreteren.
 
 ## Depends on
 
@@ -13,7 +16,7 @@ ISSUE-3 (levert een `QueryResult`).
 ## Business rules covered
 
 - Antwoorden zijn altijd in het Nederlands.
-- Bij geen resultaten krijgt de gebruiker een duidelijke melding.
+- Bij geen resultaten krijgt de User een duidelijke melding.
 - De chatbot informeert alleen — geen aanbevelingen of beslissingen in
   het antwoord.
 
@@ -44,7 +47,9 @@ tests/Extractors/
 ### `QueryResult` (dataclass, domain) — `src/Extractors/AnswerComposer.py`
 
 - **Velden:** `intent: str`, `terms: list[str]`, `found: bool`,
-  `companies: list[str] | None`, `definitions: dict[str, str] | None`.
+  `companies_per_term: dict[str, list[str]] | None`,
+  `companies_intersection: list[str] | None` (alleen gevuld bij `bedrijven`
+  met 2+ termen — zie ISSUE-3), `definitions: dict[str, str] | None`.
 - **Business rule of I/O:** business rule — het feit dat dit object géén
   velden heeft voor aanbevelingen/acties is de structurele afdwinging
   van "de chatbot informeert alleen".
@@ -53,9 +58,20 @@ tests/Extractors/
 
 - **Verantwoordelijkheid:** `QueryResult` omzetten naar de exacte data die
   in het antwoord-prompt gaat — puur feiten, geen state buiten wat is
-  meegegeven.
+  meegegeven. Bij meerdere termen krijgt het LLM zowel de lijst per term
+  als de intersectie aangereikt, en beslist zelf welke framing het beste
+  bij de gestelde vraag past (zie ISSUE-1: dat is bewust niet al bij de
+  intent-classificatie vastgelegd).
 - **Input:** `QueryResult`. **Output:** `dict`, bijv.
-  `{"gevonden": bool, "termen": [...], "bedrijven": [...] | None, "definities": {...} | None}`.
+  ```
+  {
+    "gevonden": bool,
+    "termen": [...],
+    "bedrijven_per_term": {...} | None,
+    "bedrijven_intersectie": [...] | None,
+    "definities": {...} | None
+  }
+  ```
 - **Failures:** geen (pure transformatie).
 - **Dependencies:** geen.
 - **Business rule of I/O:** business rule, pure en testbaar zonder LLM.
@@ -63,7 +79,11 @@ tests/Extractors/
 ### `compose_answer(result: QueryResult, llm_client, prompt_template: str) -> str` — `src/Extractors/AnswerComposer.py`
 
 - **Verantwoordelijkheid:** het uiteindelijke Nederlandstalige antwoord
-  produceren.
+  produceren. Volgt het bestaande "vul prompt-template → `llm_client.ask`"
+  patroon dat al meermaals voorkomt in `CustomerAnalysisWorkflow.py`
+  (`generate_technical_landscape`, `generate_followup_prompts`) — geen
+  nieuwe generieke "prompt-runner"-functie nodig, dit blijft één
+  functie-aanroep, dus er is niets om te extraheren of te dupliceren.
 - **Beslissing (business rule, geen LLM-afhankelijkheid voor de
   belangrijkste garantie):** als `result.found is False`, wordt **geen**
   LLM-call gedaan. Er wordt een vast, deterministisch Nederlands bericht
@@ -87,13 +107,24 @@ tests/Extractors/
 Moet expliciet instrueren:
 - Antwoord **altijd in het Nederlands**, ongeacht de taal van de vraag.
 - Gebruik **uitsluitend** de meegegeven feiten (`gevonden`, `termen`,
-  `bedrijven`, `definities`) — geen aannames, geen aanbevelingen, geen
-  vervolgacties voorstellen namens Jeroen.
+  `bedrijven_per_term`, `bedrijven_intersectie`, `definities`) — geen
+  aannames, geen aanbevelingen, geen vervolgacties voorstellen namens
+  de User.
+- Bij meerdere termen: als `bedrijven_intersectie` niet leeg is, benoem
+  die duidelijk ("X gebruikt alle genoemde technologieën"); benoem
+  daarnaast ook kort de losse resultaten per term uit
+  `bedrijven_per_term`, inclusief termen waarvoor niets is gevonden — dat
+  mag niet stilzwijgend verdwijnen uit het antwoord.
 
 ## Required tests
 
-- `build_answer_context` voor `found=True`, intent `bedrijven` → dict
-  bevat `bedrijven`-lijst, geen `definities`, geen "aanbeveling"-achtige key
+- `build_answer_context` voor `found=True`, intent `bedrijven`, 1 term →
+  dict bevat `bedrijven_per_term`, `bedrijven_intersectie is None`, geen
+  `definities`, geen "aanbeveling"-achtige key
+- `build_answer_context` voor `found=True`, intent `bedrijven`, 3 termen
+  (Kubernetes/Java/Linux-voorbeeld) → dict bevat zowel
+  `bedrijven_per_term` (drie losse lijsten) als
+  `bedrijven_intersectie == ["Google"]`
 - `build_answer_context` voor `found=False` → dict signaleert duidelijk
   "niet gevonden" (bijv. `gevonden: False`)
 - `compose_answer` met `result.found=False` → retourneert het vaste

@@ -2,10 +2,12 @@
 User: Jeroen (CEO) — niet-technisch, wil zonder SQL of database kennis vragen kunnen stellen over het technische landschap van klanten.
 
 ## Goals
-Natuurlijke taalvragen stellen over welke bedrijven welke technische tools gebruiken en een leesbaar antwoord terugkrijgen.
+
+"As a CEO, I want to ask questions about the application landscape of a customer so I can offer them skilled people" 
+
 Ondersteunde vraagtypes:
-Type 1 — Bedrijven opzoeken: "Welke bedrijven gebruiken Kubernetes?" → zoekt term → geeft lijst van bedrijven terug
-Type 2 — Term opzoeken: "Wat is Kubernetes?" → zoekt term → geeft definitie terug
+Type 1 — Bedrijven opzoeken: "Welke bedrijven gebruiken Kubernetes, Java, Linux?" → zoekt term → geeft lijst van bedrijven terug
+Type 2 — Term opzoeken: "Wat is Kubernetes, Java, Linux?" → zoekt term → geeft definitie terug
 
 
 Binnen scope: Technische termen die al in de database staan, enkelvoudige vragen
