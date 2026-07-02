@@ -2,9 +2,13 @@
 
 ## User story
 
-Als Jeroen wil ik dat het systeem de term(en) uit mijn vraag herkent,
-zelfs als ik een spelfout maak of niet de exacte naam gebruik, zodat ik
-niet precies hoef te weten hoe een term in de database staat.
+**Epic:** Als CEO wil ik vragen kunnen stellen over het technische
+landschap van een klant, zodat ik hen vaardige mensen kan aanbieden.
+
+Dit issue behandelt daarvan het onderdeel matching: het systeem herkent
+de term(en) uit mijn vraag, ook als ik een spelfout maak of niet de
+exacte naam gebruik, zodat ik niet precies hoef te weten hoe een term in
+de database staat.
 
 ## Depends on
 

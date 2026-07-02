@@ -2,10 +2,13 @@
 
 ## User story
 
-Als Jeroen (CEO, niet-technisch) wil ik een vraag in gewone taal kunnen
-stellen, zodat het systeem automatisch begrijpt wat ik zoek (bedrijven,
-een definitie, of meerdere termen tegelijk) zonder dat ik zoeksyntax hoef
-te kennen.
+**Epic:** Als CEO wil ik vragen kunnen stellen over het technische
+landschap van een klant, zodat ik hen vaardige mensen kan aanbieden.
+
+Dit issue behandelt de eerste stap daarvan: mijn vraag in gewone taal
+wordt automatisch begrepen — als een vraag naar bedrijven, naar een
+definitie, of naar meerdere termen tegelijk — zonder dat ik zoeksyntax
+hoef te kennen.
 
 ## Depends on
 
@@ -16,21 +19,49 @@ Niets (eerste stap in de pipeline).
 - Zoeken is alleen mogelijk op basis van herkende termen (garbage/onduidelijke
   vragen mogen niet stilzwijgend doorstromen naar de zoekstap).
 - De chatbot informeert alleen — deze stap classificeert een vraag, ze
-  neemt geen beslissingen namens Jeroen.
+  neemt geen beslissingen namens de User.
 
 ## Scope-beslissing (expliciet, geen aanname zonder onderbouwing)
 
-`docs/chatbot-userstory.md` beschrijft drie vraagtypes. Om dubbelzinnige
-combinaties te vermijden leggen we de cardinaliteit per intent vast:
+`docs/chatbot-userstory.md` beschrijft drie vraagtypes, waarvan er twee
+(bedrijven-lookup en de samengestelde/intersectie-lookup) in de praktijk
+dezelfde vraag zijn met een verschillend aantal termen: "welke bedrijven
+gebruiken Kubernetes?" en "welke bedrijven gebruiken Kubernetes, Java en
+Linux?" zijn beide een `bedrijven`-vraag — alleen het aantal termen
+verschilt. Er is dus **geen aparte `samengesteld`-intent meer nodig**: dat
+zou het LLM dwingen een classificatiebeslissing te maken (intersectie
+bedoeld, of gewoon losse termen opsommen?) die achteraf net zo goed puur
+op het aantal termen kan worden afgeleid, zonder risico op een verkeerde
+classificatie bij dubbelzinnige formuleringen.
 
-| intent        | aantal termen | voorbeeld                                   |
-|---------------|----------------|----------------------------------------------|
-| `bedrijven`   | exact 1        | "Welke bedrijven gebruiken Kubernetes?"       |
-| `definitie`   | exact 1        | "Wat is Kubernetes?"                          |
-| `samengesteld`| 2 of meer      | "Welke bedrijven gebruiken Kubernetes, Java en Linux?" |
+We houden twee intents over, allebei zonder harde cardinaliteitsgrens:
 
-Deze cardinaliteit is een domein-invariant en wordt afgedwongen in
-`validate_intent` (zie hieronder), niet overgelaten aan het LLM.
+| intent      | aantal termen | voorbeeld                                              |
+|-------------|----------------|---------------------------------------------------------|
+| `bedrijven` | 1 of meer      | "Welke bedrijven gebruiken Kubernetes?" / "...Kubernetes, Java en Linux?" |
+| `definitie` | 1 of meer      | "Wat is Kubernetes?" / "Wat is Kubernetes, Java en Linux?" |
+
+Bij `bedrijven` met meerdere termen wordt **altijd zowel** de
+bedrijvenlijst per term **als** de intersectie (bedrijven die alle
+opgegeven termen gebruiken) berekend en teruggegeven — zie ISSUE-3. De
+keuze welke framing het antwoord krijgt (per term, of de overlap
+benadrukken) ligt bij de antwoord-formattering in ISSUE-4, niet bij de
+intent-classificatie hier. Dat voorkomt dat een vraag als "welke
+bedrijven gebruiken Kubernetes en Java?" (die zowel "beide apart" als
+"het snijvlak" kan betekenen) al bij de intentherkenning fout wordt
+geïnterpreteerd.
+
+Bij `definitie` met meerdere termen ("Wat is Kubernetes, Java en Linux?")
+is er, anders dan bij `bedrijven`, geen alternatieve interpretatie
+mogelijk — er wordt altijd gewoon de definitie van elke genoemde term
+teruggegeven. Daarom is hier geen aparte scope-afweging nodig: de
+cardinaliteitsgrens van exact 1 term wordt losgelaten, puur om
+consistent te zijn met `bedrijven` en omdat er geen reden is om een
+vraag met meerdere termen te weigeren.
+
+Er geldt geen harde cardinaliteitsgrens meer die in `validate_intent`
+afgedwongen hoeft te worden (zie hieronder) — alleen de generieke regel
+dat `terms` niet leeg mag zijn.
 
 ## Proposed file tree
 
@@ -45,9 +76,19 @@ tests/Extractors/
   test_query_intent_extractor.py     # NIEUW
 ```
 
-> Er bestaat nog geen `tests/`-map in het project. Dit issue introduceert de
-> eerste testmap (pytest, mirrorend op `src/`). Voeg `pytest` toe als
-> dev-dependency als dat nog niet gebeurd is.
+> Er bestaat nog geen `tests/`-map in het project. Het opzetten van pytest
+> als testrunner (dependency toevoegen, testcommando documenteren) valt
+> onder `cirqui-skills/skills/app-configuration.md`, niet onder dit issue
+> zelf — die skill schrijft expliciet voor: *"Do not add feature code
+> while performing application configuration"* en *"Show the proposed
+> configuration files and dependencies before changing them."* De
+> tooling-setup (pytest als dev-dependency, testcommando in het
+> projectconfiguratiebestand) moet dus als losse, voorafgaande stap
+> gebeuren volgens die skill, vóórdat de functies uit dit issue worden
+> geïmplementeerd — niet stilzwijgend meegenomen in de feature-branch van
+> ISSUE-1. `tests/Extractors/test_query_intent_extractor.py` hieronder is
+> wel onderdeel van dit issue (het is de test van de feature zelf), maar
+> veronderstelt dat de testrunner al werkt.
 
 ## Functions
 
@@ -55,8 +96,7 @@ tests/Extractors/
 
 - **Verantwoordelijkheid:** valide, afgedwongen representatie van een
   geclassificeerde vraag.
-- **Velden:** `intent: str` (`"bedrijven" | "definitie" | "samengesteld"`),
-  `terms: list[str]`.
+- **Velden:** `intent: str` (`"bedrijven" | "definitie"`), `terms: list[str]`.
 - **Bevat geen I/O.**
 
 ### `validate_intent(raw: dict) -> QueryIntent`
@@ -70,9 +110,8 @@ tests/Extractors/
     `InvalidQueryIntentError("intent", raw.get("intent"))`
   - `raw["terms"]` ontbreekt, is geen lijst, is leeg, of bevat een
     lege/whitespace-only string → `InvalidQueryIntentError("terms", ...)`
-  - cardinaliteit klopt niet met de tabel hierboven →
-    `InvalidQueryIntentError("terms", ...)` met duidelijke boodschap
-    ("definitie verwacht exact 1 term, kreeg N")
+    (dit geldt voor beide intents — geen aparte cardinaliteitsregel meer
+    nodig sinds `definitie` ook meerdere termen toestaat)
 - **Dependencies:** geen (pure functie, geen infrastructuur).
 - **Business rule of I/O:** business rule (domain invariant).
 
@@ -105,19 +144,27 @@ de vorm:
 {"intent": "bedrijven", "terms": ["Kubernetes"]}
 ```
 
-en de drie toegestane intent-waarden en hun cardinaliteit expliciet
-benoemen, zodat het model zich aan de scope-beslissing hierboven houdt.
+en de twee toegestane intent-waarden benoemen. Instrueer expliciet dat:
+- een opsomming van meerdere technologieën bij een "welke bedrijven"-vraag
+  **altijd** intent `bedrijven` met alle genoemde termen in `terms`
+  oplevert — het LLM hoeft dus niet zelf te bepalen of een intersectie
+  bedoeld is;
+- een opsomming van meerdere technologieën bij een "wat is"-vraag
+  **altijd** intent `definitie` met alle genoemde termen in `terms`
+  oplevert (bijv. "Wat is Kubernetes, Java en Linux?" →
+  `{"intent": "definitie", "terms": ["Kubernetes", "Java", "Linux"]}`).
 
 ## Required tests
 
 - geldige input (`bedrijven`, 1 term) → correcte `QueryIntent`
-- geldige input (`samengesteld`, 3 termen) → correcte `QueryIntent`
+- geldige input (`bedrijven`, 3 termen) → correcte `QueryIntent` (meerdere
+  termen zijn toegestaan, geen aparte intent nodig)
+- geldige input (`definitie`, 1 term) → correcte `QueryIntent`
+- geldige input (`definitie`, 3 termen, bijv. Kubernetes/Java/Linux) →
+  correcte `QueryIntent` (geen cardinaliteitsgrens meer)
 - ontbrekende `terms`-key → `InvalidQueryIntentError` noemt veld `terms`
 - lege `terms`-lijst → raises
 - `terms` bevat een lege string → raises
 - onbekende `intent`-waarde → `InvalidQueryIntentError` noemt veld `intent`
-- `bedrijven` met 2 termen → raises (cardinaliteitsregel)
-- `definitie` met 2 termen → raises (cardinaliteitsregel)
-- `samengesteld` met 1 term → raises (cardinaliteitsregel)
 - `extract_query_intent` met LLM-mock die niet-JSON teruggeeft →
   `QueryIntentParseError`, geen stille lege default

@@ -23,17 +23,25 @@ Identify:
 - Produce errors that identify the invalid field or business operation.
 - Never silently replace invalid values with defaults.
 - Test boundary values, missing input, invalid types and valid input.
-- Derive stock status from quantity in one shared domain function.
+- Derive a business classification from raw data in one shared domain
+  function (e.g. match-confidence from a similarity score — not
+  duplicated per call site).
 
-## Required inventory tests
 
-- quantity below zero is rejected
-- quantity 0 becomes OutOfStock
-- quantities 1 and 5 become LowStock
-- quantity 6 becomes InStock
-- missing SKU is rejected at the input boundary
+## Required CIRQUI validation tests
 
-## Validation
+- unknown or missing `intent` value is rejected at the boundary (`validate_intent`)
+- empty `terms` list is rejected
+- a term that is an empty or whitespace-only string is rejected
+- 1 term is accepted for both `bedrijven` and `definitie`
+- multiple terms are accepted for both `bedrijven` and `definitie`
+  (no hidden cardinality limit)
+- a similarity score exactly at the match threshold (0.80) counts as a confirmed match
+- a similarity score just below the threshold (e.g. 0.79) does not count as a match
+- an empty candidate list from Qdrant yields zero matches, not an error
+- a term document missing the `companies` field is treated as "no companies",
+  not a crash
+
 
 - Each rule has one clear owner.
 - Invalid data cannot enter the domain unnoticed.

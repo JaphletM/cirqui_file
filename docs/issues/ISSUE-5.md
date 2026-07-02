@@ -1,10 +1,14 @@
-# ISSUE-5: Chatbot CLI end-to-end voor Jeroen
+# ISSUE-5: Chatbot CLI end-to-end voor de User
 
 ## User story
 
-Als Jeroen wil ik CIRQUI kunnen opstarten, een vraag typen, en direct een
-antwoord zien — net zoals de bestaande menu-opties voor rapportages —
-zodat ik zonder technische kennis bij de verzamelde informatie kan.
+**Epic:** Als CEO wil ik vragen kunnen stellen over het technische
+landschap van een klant, zodat ik hen vaardige mensen kan aanbieden.
+
+Dit issue behandelt daarvan de toegang: ik wil CIRQUI kunnen opstarten,
+een vraag typen, en direct een antwoord zien — net zoals de bestaande
+menu-opties voor rapportages — zodat ik zonder technische kennis bij de
+verzamelde informatie kan.
 
 ## Depends on
 
@@ -15,7 +19,7 @@ stappen en ontsluit ze via de CLI).
 
 Alle regels uit ISSUE-1 t/m ISSUE-4, plus: technische validatiefouten
 (bijv. een onherkenbare vraag) worden op de delivery-grens vertaald naar
-een begrijpelijke Nederlandse boodschap — Jeroen krijgt nooit een
+een begrijpelijke Nederlandse boodschap — de User krijgt nooit een
 stacktrace of Engelse foutmelding te zien.
 
 ## Proposed file tree
@@ -60,7 +64,7 @@ tests/Readers/
 ### `run_chatbot(llm_client=None) -> None` — `src/Readers/Chatbot.py`
 
 - **Verantwoordelijkheid:** CLI-lus, in dezelfde stijl als
-  `collect_humint_data` in `Readers/CollectHUMINT.py`: vraagt Jeroen om
+  `collect_humint_data` in `Readers/CollectHUMINT.py`: vraagt de User om
   input, roept `run_chatbot_query` aan, print het antwoord, herhaalt tot
   een stopcommando (`"stop"` / `"exit"`).
 - **Input:** optionele `llm_client` (als `None`, zelf opbouwen via
@@ -69,7 +73,7 @@ tests/Readers/
 - **Failures:** infrastructuurfouten die uit `run_chatbot_query`
   omhoogkomen worden hier gevangen en getoond als
   `"Er ging iets mis bij het ophalen van de informatie. Probeer het
-  opnieuw."` — de gebruiker ziet nooit een ruwe exceptie.
+  opnieuw."` — de User ziet nooit een ruwe exceptie.
 - **Dependencies:** `run_chatbot_query`, `ConfigReader`, `LLMClient`.
 - **Business rule of I/O:** delivery (CLI I/O).
 
@@ -83,11 +87,15 @@ tests/Readers/
 
 - `run_chatbot_query`, met gemockte `extract_query_intent`,
   `resolve_query_terms`, `gather_query_results`, `compose_answer`:
-  - happy path `bedrijven` (Type 1 uit `docs/chatbot-userstory.md`):
+  - happy path `bedrijven`, 1 term (Type 1 uit `docs/chatbot-userstory.md`):
     Kubernetes → `["Google", "ASML"]`
-  - happy path `definitie` (Type 2): Kubernetes → definitietekst
-  - happy path `samengesteld` (Type 3): Kubernetes ∩ Java ∩ Linux →
-    `["Google"]` (exact het voorbeeld uit de userstory)
+  - happy path `definitie`, 1 term (Type 2): Kubernetes → definitietekst
+  - happy path `definitie`, meerdere termen: "Wat is Kubernetes, Java en
+    Linux?" → antwoord bevat de definitie van elke term
+  - happy path `bedrijven`, meerdere termen (Type 3, herzien — zie
+    ISSUE-1/3): Kubernetes, Java, Linux → antwoord bevat zowel de losse
+    lijsten per term als de intersectie `["Google"]` (exact het
+    voorbeeld uit de userstory, nu zonder aparte `samengesteld`-intent)
   - geen bevestigde match → deterministisch "geen resultaten"-antwoord
     (uit ISSUE-4), geen LLM-call voor de formulering
   - ongeldige/onparsebare intent van het LLM → het vaste Nederlandse
