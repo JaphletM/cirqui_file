@@ -30,4 +30,4 @@ Voorbeeld: "Welke bedrijven gebruiken Docker?" →
 
 Invoer
 
-Gebruikersquery: {{query}}
+Gebruikersquery: {QUESTION}
