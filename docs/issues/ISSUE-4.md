@@ -79,7 +79,11 @@ tests/Extractors/
 ### `compose_answer(result: QueryResult, llm_client, prompt_template: str) -> str` — `src/Extractors/AnswerComposer.py`
 
 - **Verantwoordelijkheid:** het uiteindelijke Nederlandstalige antwoord
-  produceren.
+  produceren. Volgt het bestaande "vul prompt-template → `llm_client.ask`"
+  patroon dat al meermaals voorkomt in `CustomerAnalysisWorkflow.py`
+  (`generate_technical_landscape`, `generate_followup_prompts`) — geen
+  nieuwe generieke "prompt-runner"-functie nodig, dit blijft één
+  functie-aanroep, dus er is niets om te extraheren of te dupliceren.
 - **Beslissing (business rule, geen LLM-afhankelijkheid voor de
   belangrijkste garantie):** als `result.found is False`, wordt **geen**
   LLM-call gedaan. Er wordt een vast, deterministisch Nederlands bericht

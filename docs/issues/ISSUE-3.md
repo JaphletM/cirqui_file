@@ -34,42 +34,45 @@ lookup nodig is; `bedrijven` staat 1 of meer termen toe, zie ISSUE-1).
   Voorbeeld uit `docs/chatbot-userstory.md`: bij Kubernetes, Java, Linux
   krijg je zowel de losse lijsten per term als de intersectie `[Google]`.
 
+## Bestaande functies hergebruikt (geen duplicaten aangemaakt)
+
+Het lag voor de hand om een nieuwe `find_companies_for_term(term_name)`
+te schrijven die rechtstreeks op MongoDB queryt. Maar dat zou twee dingen
+dupliceren die al bestaan:
+
+1. **`MongoSaver.load_existing_terms()`** laadt nu al alle termen (met
+   hun `companies`-veld) en heeft de `PyMongoError` → JSON-fallback al
+   ingebouwd. Een nieuwe functie zou die fallback-logica opnieuw moeten
+   implementeren.
+2. **`TermComparator.find_existing_term(term_name, existing_terms)`**
+   doet al precies de case-insensitieve naam-match die nodig is om de
+   juiste term-dict uit een lijst te vinden.
+
+In plaats van een nieuwe infrastructuurfunctie roept `gather_query_results`
+daarom **eenmalig** `load_existing_terms()` aan (niet per term — één
+Mongo-call voor de hele vraag, ook bij meerdere termen), en gebruikt
+vervolgens `TermComparator.find_existing_term` per term om de bijbehorende
+term-dict te vinden en daar `.get("companies", [])` uit te lezen. Geen
+nieuwe functie in `MongoSaver.py` nodig voor dit issue.
+
 ## Proposed file tree
 
 ```
-src/Savers/
-  MongoSaver.py                      # UITBREIDEN — find_companies_for_term toevoegen
-
 src/Extractors/
   TermMatcher.py                     # UITBREIDEN — intersect_companies toevoegen
 
 src/Workflows/
   ChatbotWorkflow.py                 # UITBREIDEN — gather_query_results toevoegen
 
-tests/Savers/
-  test_mongo_saver_companies.py      # NIEUW
 tests/Extractors/
   test_term_matcher.py               # UITBREIDEN (intersect_companies tests)
+tests/Workflows/
+  test_chatbot_workflow.py           # UITBREIDEN (gather_query_results tests)
 ```
 
+> Geen wijziging aan `src/Savers/MongoSaver.py` in dit issue — zie hierboven.
+
 ## Functions
-
-### `find_companies_for_term(term_name: str) -> list[str]` — `src/Savers/MongoSaver.py`
-
-- **Verantwoordelijkheid:** de `companies`-lijst ophalen voor een exacte
-  termnaam (zoals opgeslagen door `save_new_terms`, dat `companies` vult
-  via `$addToSet`).
-- **Input:** `term_name: str` (de al-gematchte, exacte term uit Qdrant —
-  niet de ruwe gebruikersinput).
-- **Output:** `list[str]` — lege lijst als de term geen `companies`-veld
-  heeft (bijv. via de JSON-fallback, die dit veld niet altijd zet — zie
-  `save_terms_to_json`).
-- **Failures:** bij `PyMongoError` terugvallen op de bestaande
-  JSON-fallback (`load_terms_from_json`), consistent met
-  `load_existing_terms`. Geen andere silent defaults: als de term zelf
-  niet bestaat, is dat een normaal "niet gevonden"-resultaat, geen fout.
-- **Dependencies:** `get_terms_collection`, `load_terms_from_json` (fallback).
-- **Business rule of I/O:** infrastructuur (data access).
 
 ### `intersect_companies(companies_per_term: dict[str, list[str]]) -> list[str]` — `src/Extractors/TermMatcher.py`
 
@@ -89,19 +92,23 @@ tests/Extractors/
 ### `gather_query_results(intent: QueryIntent, resolved_terms: dict[str, list[dict]]) -> QueryResult` — `src/Workflows/ChatbotWorkflow.py`
 
 - **Verantwoordelijkheid:** orkestratie — vertaalt het intent-type naar de
-  juiste lookup:
+  juiste lookup, met hergebruik van bestaande functies:
   - `definitie`: pak voor **elke** term in `intent.terms` de definitie
     rechtstreeks uit de bijbehorende bevestigde Qdrant-match in
     `resolved_terms` en bouw `definitions` (`dict[str, str]`) — geen
     Mongo-call nodig. Een term zonder bevestigde match krijgt geen entry
     in `definitions` (niet een lege string — dat zou een gevonden-maar-
     lege definitie suggereren, wat niet hetzelfde is als "niet gevonden").
-  - `bedrijven`: roep `find_companies_for_term` aan voor **elke**
-    bevestigde term in `intent.terms` en bouw `companies_per_term`
-    (`dict[str, list[str]]`). Als `len(intent.terms) >= 2`, bereken
-    daarnaast altijd `companies_intersection` via `intersect_companies`.
-    Bij precies 1 term blijft `companies_intersection` `None` (intersectie
-    van één lijst is triviaal en voegt niets toe).
+  - `bedrijven`: roep **eenmalig** `load_existing_terms()` (bestaand,
+    MongoSaver) aan om alle termen te laden, en gebruik daarna per
+    bevestigde term in `intent.terms` de **bestaande**
+    `TermComparator.find_existing_term(term_name, existing_terms)` om de
+    term-dict te vinden; lees daaruit `.get("companies", [])`. Bouw zo
+    `companies_per_term` (`dict[str, list[str]]`). Als
+    `len(intent.terms) >= 2`, bereken daarnaast altijd
+    `companies_intersection` via `intersect_companies`. Bij precies 1
+    term blijft `companies_intersection` `None` (intersectie van één
+    lijst is triviaal en voegt niets toe).
 - **Input:** `QueryIntent`, `resolved_terms` (van `resolve_query_terms`).
 - **Output:** `QueryResult` (domain object, formeel gedefinieerd in
   ISSUE-4; hier al gebruikt met velden `intent`, `terms`, `found: bool`,
@@ -115,8 +122,11 @@ tests/Extractors/
   termen precies niets opleverden staat gewoon in `companies_per_term`
   als lege lijst per term, zodat ISSUE-4 dat expliciet kan benoemen in
   plaats van het te verzwijgen.
-- **Failures:** propageert infrastructuurfouten van `find_companies_for_term`.
-- **Dependencies:** `find_companies_for_term`, `intersect_companies`.
+- **Failures:** propageert infrastructuurfouten van `load_existing_terms`
+  (die zelf al terugvalt op JSON bij `PyMongoError` — geen nieuwe
+  foutafhandeling nodig).
+- **Dependencies:** `load_existing_terms` (bestaand, MongoSaver),
+  `TermComparator.find_existing_term` (bestaand), `intersect_companies`.
 - **Business rule of I/O:** orkestratie.
 
 ## Required tests
@@ -128,9 +138,12 @@ tests/Extractors/
 - `intersect_companies({})` → `[]`
 - `intersect_companies` met één term die een lege lijst heeft → `[]`
 - `intersect_companies` met één enkele term → geeft die termlijst terug ongewijzigd
-- `find_companies_for_term`: gemockt Mongo-document zonder `companies`-key
-  → `[]` (geen `KeyError`)
-- `find_companies_for_term`: gemockte `PyMongoError` → valt terug op JSON
+- `gather_query_results` voor `bedrijven`-intent: `load_existing_terms`
+  wordt precies **één keer** aangeroepen, ongeacht het aantal termen in
+  de vraag (regressie tegen het per-term-queryen dat expliciet vermeden is)
+- `gather_query_results` met een term-dict zonder `companies`-key
+  (gemockte `load_existing_terms`-output) → behandeld als `[]`, geen
+  `KeyError`
 - `gather_query_results` voor `bedrijven`-intent met 1 term zonder
   bevestigde match (leeg uit ISSUE-2) → `QueryResult(found=False, ...)`,
   `companies_intersection is None`
@@ -145,7 +158,7 @@ tests/Extractors/
 - `gather_query_results` voor `bedrijven`-intent waarbij **geen enkele**
   term iets oplevert → `found is False`
 - `gather_query_results` voor `definitie`-intent met 3 termen (Kubernetes,
-  Java, Linux) waarvan er 2 een bevestigde Qdrant-match hebben → 
+  Java, Linux) waarvan er 2 een bevestigde Qdrant-match hebben →
   `definitions` bevat exact die 2 termen met hun definitie, de derde term
   ontbreekt in de dict (geen lege string), `found is True`
 - `gather_query_results` voor `definitie`-intent waarbij geen enkele term

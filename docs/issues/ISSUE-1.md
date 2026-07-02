@@ -76,19 +76,12 @@ tests/Extractors/
   test_query_intent_extractor.py     # NIEUW
 ```
 
-> Er bestaat nog geen `tests/`-map in het project. Het opzetten van pytest
-> als testrunner (dependency toevoegen, testcommando documenteren) valt
-> onder `cirqui-skills/skills/app-configuration.md`, niet onder dit issue
-> zelf — die skill schrijft expliciet voor: *"Do not add feature code
-> while performing application configuration"* en *"Show the proposed
-> configuration files and dependencies before changing them."* De
-> tooling-setup (pytest als dev-dependency, testcommando in het
-> projectconfiguratiebestand) moet dus als losse, voorafgaande stap
-> gebeuren volgens die skill, vóórdat de functies uit dit issue worden
-> geïmplementeerd — niet stilzwijgend meegenomen in de feature-branch van
-> ISSUE-1. `tests/Extractors/test_query_intent_extractor.py` hieronder is
-> wel onderdeel van dit issue (het is de test van de feature zelf), maar
-> veronderstelt dat de testrunner al werkt.
+> Er bestaat nog geen `tests/`-map in het project. Dit issue introduceert
+> de eerste testmap (pytest, mirrorend op `src/`). `pytest` staat al
+> lokaal geïnstalleerd (geverifieerd), maar nergens in de repo als
+> dependency vastgelegd — dat vastleggen (bijv. `requirements-dev.txt`)
+> hoort niet bij de feature-code van dit issue en moet los opgepakt
+> worden.
 
 ## Functions
 
@@ -118,8 +111,12 @@ tests/Extractors/
 ### `extract_query_intent(question: str, llm_client, prompt_template: str) -> QueryIntent`
 
 - **Verantwoordelijkheid:** de vraag naar het LLM sturen, JSON-respons
-  parsen, en via `validate_intent` valideren. Analoog aan het bestaande
-  patroon in `extract_technical_terms`.
+  parsen, en via `validate_intent` valideren. Volgt hetzelfde patroon als
+  het bestaande `extract_technical_terms` (LLM-call + JSON-parse), maar
+  is geen duplicaat: andere prompt, ander doel (intent-classificatie
+  i.p.v. termextractie) en een ander eind-domeinobject (`QueryIntent` vs.
+  een lijst termen). Er is geen bestaande functie die hergebruikt kan
+  worden voor deze specifieke taak.
 - **Input:** `question: str`, `llm_client` (bestaande `LLMClient`),
   `prompt_template: str` (uit `006-query-intent.md`).
 - **Output:** `QueryIntent`.

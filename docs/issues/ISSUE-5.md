@@ -66,7 +66,11 @@ tests/Readers/
 - **Verantwoordelijkheid:** CLI-lus, in dezelfde stijl als
   `collect_humint_data` in `Readers/CollectHUMINT.py`: vraagt de User om
   input, roept `run_chatbot_query` aan, print het antwoord, herhaalt tot
-  een stopcommando (`"stop"` / `"exit"`).
+  een stopcommando (`"stop"` / `"exit"`). Geen duplicaat van
+  `collect_humint_data` zelf — dat verzamelt HUMINT-metadata via meerdere
+  vragen, dit stelt telkens één vrije-tekstvraag; alleen de CLI-lusvorm
+  (vraag → verwerk → print → herhaal) wordt hergebruikt als patroon, niet
+  als code.
 - **Input:** optionele `llm_client` (als `None`, zelf opbouwen via
   `ConfigReader` + `LLMClient`, analoog aan `run_customer_analysis_workflow`).
 - **Output:** geen (side-effecting: `print`).
