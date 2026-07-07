@@ -15,10 +15,8 @@ ISSUE-3 (levert een `QueryResult`-dict).
 
 ## Business rules covered
 
-- Antwoorden zijn altijd in het Nederlands.
 - Bij geen resultaten krijgt de User een duidelijke melding.
-- De chatbot informeert alleen — geen aanbevelingen of beslissingen in
-  het antwoord.
+- De chatbot informeert alleen — geen aanbevelingen of beslissingen in het antwoord.
 
 ## Let op — afwijking t.o.v. `docs/chatbot-userstory.md`
 
