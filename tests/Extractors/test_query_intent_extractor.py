@@ -31,7 +31,12 @@ def test_valid_intent_with_multiple_terms_no_cardinality_limit():
 
 def test_terms_with_non_string_raises():
     with pytest.raises(ValueError):
-        validate_intent({"intent": "bedrijven", "terms": ["Kubernetes", 123]})  
+        validate_intent({"intent": "bedrijven", "terms": ["Kubernetes", 123]})
+
+
+def test_valid_intent_technologieen():
+    result = validate_intent({"intent": "technologieen", "terms": ["Google"]})
+    assert result == {"intent": "technologieen", "terms": ["Google"]}
 
 
         

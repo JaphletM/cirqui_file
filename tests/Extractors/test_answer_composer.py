@@ -35,7 +35,8 @@ def test_build_answer_context_translates_keys_correctly():
             "termen": ["Foo", "Bar"],
             "bedrijven_per_term": {"Foo": ["Company1"], "Bar": ["Company2"]},
             "bedrijven_intersectie": ["Company1"],
-            "definities": {"Foo": "Definition of Foo", "Bar": "Definition of Bar"}
+            "definities": {"Foo": "Definition of Foo", "Bar": "Definition of Bar"},
+            "technologieen_per_bedrijf": None
         }
 
 def test_compose_answer_calls_llm_with_filled_prompt_when_found():
@@ -57,5 +58,20 @@ def test_compose_answer_calls_llm_with_filled_prompt_when_found():
         "Definities: {DEFINITIES}"
     )   
     assert compose_answer(result, llm_client, prompt_template) == "LLM response"
+
+
+def test_build_answer_context_translates_technologies_per_company():
+    result = {
+        "found": True,
+        "terms": ["Google"],
+        "companies_per_term": None,
+        "companies_intersection": None,
+        "definitions": None,
+        "technologies_per_company": {"Google": ["Docker", "Kubernetes"]}
+    }
+
+    context = build_answer_context(result)
+
+    assert context["technologieen_per_bedrijf"] == {"Google": ["Docker", "Kubernetes"]}
 
 

@@ -1,4 +1,4 @@
-from Extractors.TermMatcher import normalize_term, select_confident_matches, intersect_companies
+from Extractors.TermMatcher import normalize_term, select_confident_matches, intersect_companies, find_technologies_for_company
 
 
 def test_normalize_term_strips_surrounding_whitespace():
@@ -55,3 +55,31 @@ def test_intersect_companies_with_single_term_returns_it_unchanged():
     companies_per_term = {"Kubernetes": ["Google", "ASML"]}
 
     assert intersect_companies(companies_per_term) == ["Google", "ASML"]
+
+
+def test_find_technologies_for_company_returns_matching_terms():
+    existing_terms = [
+        {"term": "Docker", "companies": ["Google", "ASML"]},
+        {"term": "Kubernetes", "companies": ["Google"]},
+        {"term": "Java", "companies": ["Booking"]}
+    ]
+
+    assert find_technologies_for_company("Google", existing_terms) == ["Docker", "Kubernetes"]
+
+
+def test_find_technologies_for_company_is_case_insensitive():
+    existing_terms = [{"term": "Docker", "companies": ["Google"]}]
+
+    assert find_technologies_for_company("google", existing_terms) == ["Docker"]
+
+
+def test_find_technologies_for_company_missing_companies_key_treated_as_empty():
+    existing_terms = [{"term": "Docker"}]
+
+    assert find_technologies_for_company("Google", existing_terms) == []
+
+
+def test_find_technologies_for_company_returns_empty_list_when_no_match():
+    existing_terms = [{"term": "Docker", "companies": ["ASML"]}]
+
+    assert find_technologies_for_company("Google", existing_terms) == []

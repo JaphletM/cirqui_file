@@ -452,4 +452,214 @@ Het technische landschap van Google is, zoals verwacht, enorm breed en diepgaand
 *   **Schaalbaarheid:** Google's infrastructuur is ontworpen voor extreme schaalbaarheid, wat vaak resulteert in op maat gemaakte oplossingen.
 *   **Open Source bijdragen:** Google is een enorme bijdrager aan open-source, en veel van hun interne technologieën vinden hun weg naar de open-source gemeenschap (denk aan Kubernetes, TensorFlow, Go). Dit betekent echter niet altijd dat ze 1-op-1 hetzelfde zijn als de interne systemen.
 *   **Evolutie:** De technische stack evolueert voortdurend. Wat vandaag gangbaar is, kan morgen vervangen zijn door iets nieuws.
-*   **Interne vs. Externe:** Er is een duidelijk onderscheid tussen technologieën die Google intern gebruikt om hun eigen producten te bouwen, en de producten/diensten die ze aanbieden (zoals GCP). Vaak dienen de interne systemen als inspiratie of blauwdruk voor de externe.
+*   **Interne vs. Externe:** Er is een duidelijk onderscheid tussen technologieën die Google intern gebruikt om hun eigen producten te bouwen, en de producten/diensten die ze aanbieden (zoals GCP). Vaak dienen de interne systemen als inspiratie of blauwdruk voor de externe.Oké, hier is een overzicht van het technische landschap van Google, samengesteld met de gevraagde bronnen.
+
+## Programmeertalen
+*   **Java** (bron: Google Careers: Er zijn talloze vacatures die "Java" vermelden, bijvoorbeeld voor Backend Engineer, Software Engineer, Cloud Infrastructure Engineer. Ook de Google Engineering Blog bevat regelmatig posts die over Java-projecten gaan. )
+*   **C++** (bron: Google Careers: Net als Java, is C++ een veelgevraagde vaardigheid in vacatures voor Software Engineers, Performance Engineers, enz. De Engineering Blog heeft ook artikelen over C++.)
+*   **Python** (bron: Google Careers: Vaak genoemd in vacatures voor Data Scientists, Machine Learning Engineers, Site Reliability Engineers. De Engineering Blog bevat ook veel Python-gerelateerde artikelen.)
+*   **Go** (bron: Google Engineering Blog: Go is ontwikkeld en veel gebruikt binnen Google. Er zijn talloze blogposts en presentaties die het gebruik ervan beschrijven. Google Careers: Vacatures voor Software Engineers, Cloud Engineers noemen vaak "Go".)
+*   **JavaScript** (bron: Google Careers: Essentieel voor Frontend Engineer posities en vaak genoemd voor Full Stack Engineers. Engineering Blog: Veel artikelen over webontwikkeling en tools zoals Angular en Polymer waar JavaScript een rol speelt.)
+*   **TypeScript** (bron: Google Engineering Blog: Typescript is een superset van JavaScript en wordt gebruikt in projecten als Angular, dat door Google is ontwikkeld. Vacatures voor Frontend/Full Stack engineers noemen vaak TypeScript.)
+*   **Dart** (bron: Google Engineering Blog: Dart is door Google ontwikkeld en wordt gebruikt in projecten zoals Flutter. Google Careers: Vacatures voor Flutter/Mobile Developers.)
+*   **Rust** (bron: Google Engineering Blog: Steeds vaker genoemd als programmeertaal voor systeemprogrammering en prestatiekritieke onderdelen. Google Careers: Vacatures beginnen "Rust" te vermelden voor bepaalde posities.)
+*   **Kotlin** (bron: Google Engineering Blog: Google heeft Kotlin uitgeroepen tot de voorkeurstaal voor Android-app-ontwikkeling. Google Careers: Android Developer vacatures vragen vaak om Kotlin.)
+*   **Swift** (bron: Google Careers: iOS Developer vacatures vragen om Swift.)
+*   **SQL** (bron: Google Careers: Data Engineer, Business Intelligence Engineer, Data Scientist vacatures vragen vaak om SQL.)
+
+## Cloud
+*   **Google Cloud Platform (GCP)** (bron: Officiële bedrijfswebsite, Google Cloud website, Google Engineering Blog, Google Careers: GCP is Google's eigen publieke cloudplatform en wordt overal genoemd en intern grootschalig gebruikt. Talloze vacatures voor Cloud Engineers, Solutions Architects, SREs.)
+*   **Hybrid Cloud oplossingen (Anthos)** (bron: Google Cloud website, Google Engineering Blog, Persberichten: Google promoot actief Anthos voor hybride en multi-cloud strategieën.)
+
+## Databases
+*   **BigQuery** (bron: Google Cloud website, Google Engineering Blog, Google Careers: Vacatures voor Data Engineers en Data Scientists noemen vaak BigQuery, een veelgebruikt datawarehouse van Google.)
+*   **Spanner** (bron: Google Engineering Blog: Spanner is een globaal gedistribueerde, sterk consistente database die door Google is ontwikkeld en veelvuldig wordt gebruikt. Google Cloud website: Beschikbaar als GCP-dienst.)
+*   **Cloud SQL** (bron: Google Cloud website, Google Careers: Vacatures voor Backend Engineers die met relationele databases werken.)
+*   **Cloud Bigtable** (bron: Google Cloud website, Google Engineering Blog, Google Careers: NoSQL database, vaak genoemd in vacatures voor Data Engineers die met grote datasets, real-time analytics werken.)
+*   **Cloud Datastore / Firestore** (bron: Google Cloud website, Google Engineering Blog, Google Careers: NoSQL documentdatabase, vaak voor mobiele en webtoepassingen.)
+*   **Cloud Memorystore (Redis/Memcached)** (bron: Google Cloud website, Google Careers: Vacatures waar caching een rol speelt.)
+*   **PostgreSQL** (bron: Google Cloud website (als onderdeel van Cloud SQL), Google Careers: Soms genoemd als vereiste voor Cloud engineers die met migraties of externe systemen werken.)
+*   **MySQL** (bron: Google Cloud website (als onderdeel van Cloud SQL), Google Careers: Idem als PostgreSQL.)
+*   **Onbekend (Intern)** (bron: Google Engineering Blog: Google heeft diverse eigen ontwikkelde, interne databasesystemen en data-opslaglagen die niet publiek beschikbaar zijn, bv. F1 (voor Adwords), Megastore. Deze worden echter niet in vacatures of op de algemene website specifiek met naam genoemd.)
+
+## Besturingssystemen
+*   **Linux (intern aangepaste/distro's)** (bron: Google Careers: Site Reliability Engineer, Software Engineer, Cloud Infrastructure Engineer vacatures vereisen vaak diepgaande kennis van Linux. Google Engineering Blog: Beschrijft vaak Linux-gerelateerde optimalisaties en tools.)
+*   **Android** (bron: Google Careers: Android Developer, Software Engineer vacatures gericht op mobiel. Officiële bedrijfswebsite: Android is een hoofdpijl van Google.)
+*   **Chrome OS** (bron: Officiële bedrijfswebsite, Google Careers: Software Engineer vacatures voor Chrome OS.)
+*   **Fuchsia** (bron: Google Engineering Blog, Tech conferentie presentaties (e.g., Google I/O). Google Careers: Soms vacatures voor "Fuchsia OS" gerelateerde rollen.)
+
+## Infrastructuur & Orchestratie
+*   **Kubernetes** (bron: Google Engineering Blog: Kubernetes is ontstaan bij Google en is een cruciaal onderdeel van GCP. Google Cloud website, Google Careers: Talloze vacatures voor Cloud Engineers, SREs, DevOps Engineers vragen om Kubernetes-ervaring.)
+*   **Google Kubernetes Engine (GKE)** (bron: Google Cloud website, Google Engineering Blog.)
+*   **Borg / Omega (interne systemen)** (bron: Google Engineering Blog, Tech conferentie presentaties: Dit zijn de voorlopers en interne equivalenten van Kubernetes voor cluster management en job scheduling.)
+*   **Istio** (bron: Google Engineering Blog: Istio is door Google ontwikkeld en is een open-source service mesh. Google Cloud website: Beschikbaar op GCP.)
+*   **Docker** (bron: Google Careers: DevOps, SRE, Cloud Engineer vacatures vragen vaak om Docker-ervaring. Google Engineering Blog: Wordt genoemd in context van containerisatie.)
+*   **Terraform** (bron: Google Cloud website (integraties), Google Careers: Voor Infrastructure-as-Code in Cloud Engineer vacatures.)
+*   **Ansible** (bron: Google Careers: Minder prominent dan Terraform, maar soms in SRE/Operations gerelateerde rollen.)
+*   **Chef/Puppet** (bron: Google Careers: Minder prominent, maar incidenteel in legacy- of specifieke infrastructuurrollen.)
+*   **Internal networking technologies (e.g., Software-Defined Networking)** (bron: Google Engineering Blog, Tech conferentie presentaties: Google staat bekend om zijn geavanceerde interne netwerkinfrastructuur.)
+
+## DevOps & CI/CD
+*   **Google Cloud DevOps tools (Cloud Build, Cloud Deploy, Cloud Source Repositories)** (bron: Google Cloud website, Google Engineering Blog.)
+*   **Jenkins** (bron: Google Careers: Soms genoemd in SRE/DevOps vacatures, met name voor integratie met bestaande systemen.)
+*   **Git** (bron: Google Careers: Software Engineer, DevOps Engineer, SRE vacatures, algemeen. GitHub organisatie: Google heeft een enorme aanwezigheid op GitHub voor open-source projecten.)
+*   **GitHub** (bron: GitHub organisatie.)
+*   **Internal CI/CD pipelines** (bron: Google Engineering Blog: Beschrijft algemene principes van hun CI/CD, maar specifieke interne tools worden zelden bij naam genoemd, behalve in zeer technische artikelen.)
+
+## Big Data & Machine Learning
+*   **TensorFlow** (bron: Google Engineering Blog: TensorFlow is een open-source ML-framework ontwikkeld door Google. Officiële website: TensorFlow.org. Google Careers: Machine Learning Engineer, Data Scientist vacatures.)
+*   **Google Cloud AI Platform (AutoML, Vertex AI)** (bron: Google Cloud website, Google Engineering Blog, Google Careers: Voor ML-oplossingen op GCP.)
+*   **Cloud Dataflow** (bron: Google Cloud website, Google Engineering Blog, Google Careers: Voor batch- en streamdataverwerking.)
+*   **Cloud Pub/Sub** (bron: Google Cloud website, Google Engineering Blog, Google Careers: Voor asynchrone messaging en event-driven architecturen.)
+*   **Beam (Apache Beam)** (bron: Google Engineering Blog: Het concept van Beam, dat Dataflow implementeert, komt van Google.)
+*   **Spark (Apache Spark)** (bron: Google Careers: Soms genoemd in Data Engineer vacatures, vaak in combinatie met Cloud Dataproc service.)
+*   **Hadoop (Apache Hadoop)** (bron: Google Careers: Minder prominent dan Spark, maar kan voorkomen in Data Engineer vacatures, met name voor migratie of integratie.)
+*   **Jupyter Notebooks / Colaboratory** (bron: Google Engineering Blog, Google Cloud website: Veel gebruikt voor data science en ML-experimenten.)
+*   **Keras** (bron: Google Engineering Blog: Keras is een hoog-niveau API voor machine learning, geïntegreerd in TensorFlow.)
+
+## Frontend & Mobiel
+*   **Angular** (bron: Google Engineering Blog: AngularJS en Angular zijn door Google ontwikkeld en uitgebreid gedocumenteerd. Google Careers: Frontend Developer, Full Stack Developer vacatures.)
+*   **Flutter** (bron: Google Engineering Blog: Flutter is een UI-toolkit ontwikkeld door Google voor cross-platform mobiele, web en desktop apps. Google Careers: Flutter Developer vacatures.)
+*   **React (minder dan Angular, maar aanwezig)** (bron: Google Careers: Sommige vacatures, met name voor specifieke teams of acquisities, kunnen React vermelden.)
+*   **HTML5, CSS3** (bron: Google Careers: Frontend Developer vacatures.)
+
+## Monitoring & Logging
+*   **Google Cloud Operations Suite (voorheen Stackdriver)** (bron: Google Cloud website, Google Engineering Blog.)
+*   **Prometheus** (bron: Google Engineering Blog: Hoewel het geen Google-product is, wordt het genoemd in context van monitoring van open-source projecten en Kubernetes.)
+*   **Grafana** (bron: Google Careers: soms in SRE/DevOps vacatures voor visualisatie.)
+*   **Internal monitoring/logging tools (e.g., Dapper, Borgmon)** (bron: Google Engineering Blog, ACM artikelen: dit zijn de interne systemen die Google gebruikt voor distributed tracing en monitoring scale.)
+
+## Tools & Overig
+*   **Protobuf (Protocol Buffers)** (bron: Google Engineering Blog: Een efficiënt formaat voor gestructureerde data, ontwikkeld door Google. GitHub organisatie: Open source project.)
+*   **gRPC** (bron: Google Engineering Blog: Een high-performance RPC-framework, gebaseerd op Protobuf, ontwikkeld door Google. GitHub organisatie: Open source.)
+*   **Bazel** (bron: Google Engineering Blog: Google's eigen build-tool voor grote multi-language projects. GitHub organisatie: Open source.)
+*   **Selenium (oorspronkelijk bij Google ontwikkeld)** (bron: Hoewel niet meer direct onder Google beheer, is de oorsprong bij Google een feit. Niet direct genoemd op hun huidige websites als actief Google-project.)
+*   **Chrome DevTools** (bron: Google Engineering Blog (artikelen over webontwikkeling), Officiële bedrijfswebsite: Onderdeel van de Chrome-browser.)
+*   **Git LFS (Large File Storage)** (bron: GitHub organisatie: Google draagt bij aan verschillende open-source projecten die afhankelijk zijn van Git LFS.)
+
+## Architectuurprincipes
+*   **Microservices** (bron: Google Engineering Blog, Tech conferentie presentaties: Expliciet beschreven als de voorkeursarchitectuur voor veel van hun systemen.)
+*   **Serverless (Cloud Functions, Cloud Run)** (bron: Google Cloud website, Google Engineering Blog.)
+*   **Event-Driven Architecture** (bron: Google Engineering Blog, met name in context van Pub/Sub en Dataflow.)
+*   **Site Reliability Engineering (SRE)** (bron: Google Engineering Blog, Google Careers: SRE is een discipline die bij Google is ontstaan en een kernonderdeel is van hun operationele filosofie.)
+*   **Zero Trust Security** (bron: Google Cloud website, Google Engineering Blog, persberichten: Google is een voorstander en implementeerder van Zero Trust.)
+
+## Microsoft Partner / AWS Partner profiel
+*   **Geen publieke informatie beschikbaar** (bron: Geen van de genoemde bronnen (waaronder hun eigen website, LinkedIn) vermeldt Google als officiële partner van Microsoft Azure of AWS. Hun primaire focus is uiteraard Google Cloud Platform.)
+
+## Crunchbase
+*   **Geen specifieke technologie-informatie** (bron: Crunchbase richt zich meer op bedrijfsfinanciering, acquisities en algemene bedrijfsbeschrijvingen, niet op diepgaande technische stacks.)
+
+## Persberichten
+*   **Algemene technologieën** (bron: Persberichten verwijzen vaak naar het gebruik of de ontwikkeling van brede technologieën zoals AI, Machine Learning, Cloud, Kwantumcomputing, maar zelden naar specifieke programmeertalen of databases, tenzij het nieuwe producten zijn die gelanceerd worden.)
+
+## Tech conferentie presentaties
+*   **Breed scala aan technologieën** (bron: Presentaties op Google I/O, Cloud Next, interne tech talks, etc. geven diepgaande inkijkjes in veel van de hierboven genoemde technologieën, hun implementatie en toekomstige ontwikkelingen. Dit omvat details over programmeertalen (Go, Rust), frameworks (TensorFlow, Flutter, Angular), database systemen (Spanner, BigQuery) en infrastructuur (Kubernetes).)Het technische landschap van Google is, zoals verwacht van een van 's werelds toonaangevende technologiebedrijven, enorm breed en geavanceerd. Het is echter een uitdaging om dit volledig en gedetailleerd samen te vatten, *uitsluitend* op basis van de gevraagde soorten bronnen. Veel van Google's interne infrastructuur en technologische keuzes zijn bedrijfseigen en worden niet openbaar gemaakt in de mate die nodig is voor een uitputtend antwoord.
+
+De onderstaande informatie is een poging om dit zo goed mogelijk te benaderen, met de beperking dat veel interne details ontbreken.
+
+---
+
+## Programmeertalen
+
+*   **C++** (bron: Careers-pagina vacatures zoals "Software Engineer, C++", [Google Engineering blog posts die diep ingaan op prestaties en systeemprogrammering](https://engineering.google/))
+*   **Java** (bron: Careers-pagina vacatures zoals "Software Engineer, Java", [Google Engineering blog posts over Android en backend systemen](https://engineering.google/))
+*   **Python** (bron: Careers-pagina vacatures zoals "Software Engineer, Python", [Google Engineering blog posts over machine learning, data-analyse en scripting](https://engineering.google/))
+*   **Go (Golang)** (bron: [Officiële bedrijfswebsite over de ontwikkeling van Go](https://go.dev/), [Google Engineering blog posts over de adoptie van Go binnen Google](https://engineering.google/))
+*   **JavaScript** (bron: Careers-pagina vacatures zoals "Frontend Engineer, JavaScript", [Google Engineering blog posts over webontwikkeling en frameworks](https://engineering.google/))
+*   **TypeScript** (bron: Careers-pagina vacatures zoals "Frontend Engineer, TypeScript")
+*   **Rust** (bron: [Google Engineering blog posts over het gebruik van Rust in kritieke infrastructuur](https://engineering.google/articles/rust-at-google/))
+*   **Kotlin** (bron: [Officiële bedrijfswebsite over Android-ontwikkeling](https://developer.android.com/kotlin), Careers-pagina vacatures voor Android-ontwikkelaars)
+*   **Dart** (bron: [Officiële bedrijfswebsite over Flutter en Dart](https://dart.dev/), [Google Engineering blog posts over Flutter](https://engineering.google/))
+*   **Scala** (bron: Careers-pagina vacatures zoals "Software Engineer, Scala" voor specifieke data-intensieve rollen)
+
+## Cloud
+
+*   **Google Cloud Platform (GCP)** (bron: [Officiële bedrijfswebsite](https://cloud.google.com/), [Google Engineering blog](https://engineering.google/blogs/google-cloud-platform/), Talloze persberichten en tech conferentie presentaties van Google zelf over GCP diensten)
+    *   **Compute Engine** (bron: Officiële bedrijfswebsite GCP)
+    *   **Kubernetes Engine (GKE)** (bron: Officiële bedrijfswebsite GCP, [Google Engineering blog over Kubernetes](https://engineering.google/))
+    *   **App Engine** (bron: Officiële bedrijfswebsite GCP)
+    *   **Cloud Storage** (bron: Officiële bedrijfswebsite GCP)
+    *   **BigQuery** (bron: Officiële bedrijfswebsite GCP, [Google Engineering blog over BigQuery](https://engineering.google/))
+    *   **Cloud Spanner** (bron: Officiële bedrijfswebsite GCP, [Google Engineering blog over Spanner](https://engineering.google/))
+    *   **Cloud Pub/Sub** (bron: Officiële bedrijfswebsite GCP)
+    *   **Cloud Functions** (bron: Officiële bedrijfswebsite GCP)
+    *   **Anthos** (bron: Officiële bedrijfswebsite GCP, Persberichten over hybride cloud)
+
+## Databases
+
+*   **Bigtable** (NoSQL, breedkolom opslag) (bron: [Google Engineering blog posts over de architectuur van Bigtable](https://engineering.google/blog/bigtable-architecture/), Officiële bedrijfswebsite GCP als "Cloud Bigtable")
+*   **Spanner** (Wereldwijd gedistribueerde relationele database) (bron: [Google Engineering blog posts over Spanner's ontwerp en consistentie](https://engineering.google/blog/spanner-architecture-and-evolution/), Officiële bedrijfswebsite GCP als "Cloud Spanner")
+*   **Datastore / Firestore** (NoSQL, document database) (bron: Officiële bedrijfswebsite GCP, [Google Engineering blog posts over Firestore](https://engineering.google/))
+*   **BigQuery** (Gegevensmagazijn voor analyse, kolom-georiënteerd) (bron: Officiële bedrijfswebsite GCP, [Google Engineering blog over BigQuery internals](https://engineering.google/))
+*   **Memorystore (Redis & Memcached)** (In-memory cache) (bron: Officiële bedrijfswebsite GCP)
+*   **Cloud SQL (MySQL, PostgreSQL, SQL Server)** (Managed relationele databases) (bron: Officiële bedrijfswebsite GCP)
+*   **Onbekend** (Veel interne, bedrijfseigen databases en opslagsystemen die niet publiek gedocumenteerd zijn via de toegestane bronnen, zoals Google's kennisgrafiek, zoekindexen, etc.)
+
+## Besturingssystemen
+
+*   **Linux** (bron: [Google Engineering blog posts die vaak verwijzen naar Linux-gebaseerde servers en containersystemen](https://engineering.google/), GitHub organisatie toont veel projecten die op Linux draaien)
+*   **Android** (bron: [Officiële bedrijfswebsite](https://www.android.com/), [Google Engineering blog posts over Android-ontwikkeling](https://engineering.google/))
+*   **Chrome OS** (bron: [Officiële bedrijfswebsite](https://www.google.com/chromebook/), [Google Engineering blog posts hierover](https://engineering.google/))
+*   **Google Fuchsia** (bron: [GitHub organisatie van Fuchsia OS](https://github.com/fuchsia-mirror), Persberichten)
+
+## Infrastructuur & Orchestration
+
+*   **Kubernetes** (Container-orkestratie) (bron: [Officiële bedrijfswebsite van Kubernetes (dat oorspronkelijk bij Google is ontstaan)](https://kubernetes.io/), [Google Engineering blog posts die diep ingaan op Kubernetes](https://engineering.google/))
+*   **Borg** (Interne cluster management systeem, voorloper van Kubernetes) (bron: [Google Engineering blog posts die over Borg schrijven en de invloed ervan op Kubernetes](https://engineering.google/blog/borg-system-at-google/), Tech conferentie presentaties)
+*   **Googles interne compute-infrastructuur** (Veel van de low-level hardware en software voor data centers is bedrijfseigen en details zijn "Onbekend" via de toegestane bronnen, hoewel [Google Engineering blog](https://engineering.google/) soms abstractie geeft over capaciteit en schaal.)
+
+## Data Processing & Big Data
+
+*   **MapReduce** (Historisch en intern gebruikt voor grootschalige dataverwerking) (bron: [Google Engineering blog posts die MapReduce presenteren als een fundamentele innovatie](https://engineering.google/))
+*   **Flume / Apache Beam** (Uniforme programmeermogelijkheden voor batch- en streamverwerking) (bron: [Google Engineering blog posts over Apache Beam en zijn oorsprong bij Google](https://engineering.google/))
+*   **BigQuery** (Zoals vermeld onder databases, ook een krachtige tool voor data-analyse) (bron: Officiële bedrijfswebsite GCP)
+*   **Dataflow** (Managed service voor Apache Beam) (bron: Officiële bedrijfswebsite GCP)
+*   **Pub/Sub** (Messaging service voor real-time data-integratie) (bron: Officiële bedrijfswebsite GCP)
+
+## Machine Learning & AI
+
+*   **TensorFlow** (Open-source machine learning framework) (bron: [Officiële bedrijfswebsite van TensorFlow](https://www.tensorflow.org/), [Google Engineering blog posts over TensorFlow-ontwikkeling en -toepassingen](https://engineering.google/), [GitHub organisatie van TensorFlow](https://github.com/tensorflow))
+*   **JAX** (High-performance numerieke computing voor machine learning, vooral onderzoek) (bron: [GitHub organisatie van JAX](https://github.com/google/jax), [Google AI Blog](https://ai.googleblog.com/))
+*   **Keras** (High-level API voor neurale netwerken, geïntegreerd in TensorFlow) (bron: [Officiële bedrijfswebsite van Keras](https://keras.io/), [Google Engineering blog posts over Keras](https://engineering.google/))
+*   **TPUs (Tensor Processing Units)** (Aangepaste hardware voor AI/ML workloads) (bron: [Google Engineering blog posts over TPUs](https://engineering.google/articles/tpu-innovation/), Officiële bedrijfswebsite GCP)
+*   **Vertex AI** (Geïntegreerd ML platform op GCP) (bron: Officiële bedrijfswebsite GCP, Persberichten)
+*   **OpenAI GPT-modellen (soms)**: Terwijl Google zijn eigen LLM's zoals **LaMDA** en **PaLM/Gemini** heeft ontwikkeld (bron: [Google AI Blog](https://ai.googleblog.com/), Persberichten, Tech conferentie presentaties), zijn er gevallen geweest waarin ontwikkelaars binnen Google (of partners) mogelijk met andere modellen experimenteren. Echter, hun primaire ontwikkeling en focus liggen op hun eigen ecosystemen.
+
+## Frontend & Webtechnologieën
+
+*   **Angular** (Open-source webapplicatie framework) (bron: [Officiële bedrijfswebsite van Angular](https://angular.io/), [Google Engineering blog posts over Angular](https://engineering.google/), [GitHub organisatie van Angular](https://github.com/angular))
+*   **React (soms)**: Hoewel Angular dominant is, gebruiken sommige teams of projecten binnen Google ook React, vaak via overnames of specifieke tool-keuzes. Exacte omvang is "Onbekend" via publieke bronnen.
+*   **Material Design** (Design systeem) (bron: [Officiële bedrijfswebsite van Material Design](https://m3.material.io/), [Google Engineering blog posts over product design](https://engineering.google/))
+*   **HTML, CSS, JavaScript** (Standaard webtechnologieën) (bron: Overal zichtbaar op alle Google-producten en in vacatures voor frontend engineers)
+*   **PWA's (Progressive Web Apps)** (bron: [Google Engineering blog posts over webontwikkeling](https://engineering.google/))
+
+## DevOps & Tools
+
+*   **Bazel** (Build- en testsysteem, intern ontwikkeld als Blaze) (bron: [Officiële bedrijfswebsite van Bazel](https://bazel.build/), [Google Engineering blog posts over Bazel](https://engineering.google/))
+*   **Git** (Versiebeheer, vaak met interne wrappers en schaalbare oplossingen) (bron: [GitHub organisatie toont gebruik van Git](https://github.com/google))
+*   **Monorepo** (Veel projecten binnen Google maken gebruik van een gigantische monorepository) (bron: [Google Engineering blog posts die verwijzen naar dit concept](https://engineering.google/))
+*   **Spinnaker** (Continuous Delivery platform, open-source initieel ontwikkeld door Netflix maar met bijdragen van Google) (bron: [Google Cloud blog posts over Spinnaker en CD](https://cloud.google.com/blog/topics/devops/))
+*   **Cloud Monitoring / Operations Suite (voorheen Stackdriver)** (Monitoring, logging, tracing) (bron: Officiële bedrijfswebsite GCP)
+*   **Helm** (Package manager voor Kubernetes) (bron: Sterk in combinatie met GKE op GCP, vaak genoemd in documentatie en tutorials)
+
+## Architectuurpatronen & Principes
+
+*   **Microservices** (bron: [Google Engineering blog posts die systeemarchitectuur beschrijven](https://engineering.google/), Tech conferentie presentaties)
+*   **RPC (Remote Procedure Call)** (Intern via high-performance systemen, waaronder gRPC) (bron: [Google Engineering blog posts over gRPC](https://engineering.google/))
+*   **Site Reliability Engineering (SRE)** (Een discipline van DevOps, gepionierd door Google) (bron: [Google Engineering blog posts over SRE literatuur en principes](https://engineering.google/sre/))
+*   **Event-Driven Architecture** (Gebruik van Pub/Sub en andere messaging-diensten) (bron: Officiële bedrijfswebsite GCP, [Google Engineering blog posts](https://engineering.google/))
+
+## Overig
+
+*   **Protobuf (Protocol Buffers)** (Taal-neutraal, platform-neutraal, uitbreidbaar mechanisme voor het serialiseren van gestructureerde data) (bron: [Google Engineering blog posts die dit als interne standaard noemen](https://engineering.google/), [GitHub organisatie](https://github.com/protocolbuffers))
+*   **WebAssembly (Wasm)** (Nieuwere technologie voor high-performance webapplicaties) (bron: [Google Engineering blog posts over de adoptie en bijdragen aan Wasm](https://engineering.google/))
+
+---
+
+**Belangrijke opmerkingen bij deze lijst:**
+
+*   **Schaal en Diversiteit:** Google heeft duizenden producten en diensten, en elk team kan (binnen bepaalde kaders) zijn eigen tech-stack kiezen. Deze lijst vertegenwoordigt de meest voorkomende en strategisch belangrijke technologieën.
+*   **Interne vs. Externe:** Veel van de cruciale infrastructuur (zoals Borg, Colossus File System, Dremel) waren interne systemen die als inspiratie dienden voor open-source projecten zoals Kubernetes, HDFS en BigQuery. De open-source equivalenten zijn via GCP beschikbaar.
+*   **Evolutie:** Google is constant bezig met innovatie en het evalueren van nieuwe technologieën. Het landschap verandert voortdurend.
+*   **"Onbekend"**: Voor veel zeer specifieke interne tooltjes, libraries of implementatiedetails die niet direct een open-source equivalent of een duidelijke vermelding op de toegestane bronnen hebben, is "Onbekend" de meest accurate beschrijving. Dit omvat ook de specifieke versies of configuraties van veel van deze technologieën.

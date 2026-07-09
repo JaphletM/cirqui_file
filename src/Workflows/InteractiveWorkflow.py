@@ -1,5 +1,6 @@
 from Readers.CollectHUMINT import collect_humint_data, save_humint_data
 from Workflows.CustomerAnalysisWorkflow import run_customer_analysis_workflow
+from Readers.Chatbot import run_chatbot
 from Services.LLMclient import LLMClient
 from Readers.ConfigReader import ConfigReader
 
@@ -17,7 +18,8 @@ def interactive_workflow():
         menu = input(
             "\nA) Genereer een rapport over het technische landschap van een bedrijf\n"
             "B) Verzamel Human Intelligence over een bedrijf en genereer een rapport\n"
-            "C) Exit\n"
+            "C) Stel een vraag aan de chatbot over opgeslagen technische kennis\n"
+            "D) Exit\n"
         ).upper().strip()
 
         if menu == "A":
@@ -34,8 +36,11 @@ def interactive_workflow():
             print("Wat wil je nu doen?")
 
         elif menu == "C":
+            run_chatbot(llm_client=llm_client)
+
+        elif menu == "D":
             print("\nTot ziens!")
             break
 
         else:
-            print("Ongeldige keuze. Kies A, B of C.")
+            print("Ongeldige keuze. Kies A, B, C of D.")
