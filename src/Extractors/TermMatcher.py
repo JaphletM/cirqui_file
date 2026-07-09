@@ -17,3 +17,13 @@ def intersect_companies(companies_per_term: dict[str, list[str]]) -> list[str]:
         common_companies &= set(companies)
 
     return [company for company in company_lists[0] if company in common_companies]
+
+
+def find_technologies_for_company(company_name: str, existing_terms: list[dict]) -> list[str]:
+    normalized_company = normalize_term(company_name)
+
+    return [
+        term_doc["term"]
+        for term_doc in existing_terms
+        if normalized_company in [normalize_term(c) for c in term_doc.get("companies", [])]
+    ]

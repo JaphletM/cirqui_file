@@ -111,24 +111,72 @@ tests/Workflows/
 ### `resolve_query_terms(intent: dict) -> dict[str, list[dict]]` — `src/Workflows/ChatbotWorkflow.py`
 
 - **Verantwoordelijkheid:** orkestratie — voor elke term in
-  `intent["terms"]`: normaliseren (`normalize_term`) → **bestaande**
-  `search_similar_terms` aanroepen (embedt intern al, geen aparte
-  embed-stap nodig) → de teruggekregen `ScoredPoint`-lijst omzetten naar
-  platte dicts (`{"term": point.payload["term"], "definition":
-  point.payload.get("definition", ""), "score": point.score}`) →
-  `select_confident_matches`.
+  `intent["terms"]`:
+  1. **Eerst een exacte, hoofdletter-ongevoelige match tegen MongoDB**
+     via de bestaande `TermComparator.find_existing_term` (laadt
+     `existing_terms` via `load_existing_terms`). Bij een match: score
+     `1.0`, klaar — **geen** Qdrant-aanroep nodig.
+  2. **Alleen als er geen exacte match is**, terugvallen op semantisch
+     zoeken in Qdrant met **twee varianten** van de term — de tekst
+     zoals opgegeven, én `term.capitalize()` — kandidaten samenvoegen
+     (bij dezelfde gevonden term de hoogste score bewaren), en dan
+     `select_confident_matches` de drempel laten toepassen.
+- **Waarom de exacte-match-stap nodig bleek (belangrijke bevinding,
+  ontdekt na livegebruik):** termen worden bij opslag embed als
+  `"term: definitie"` (`embed_term` in `EmbeddingService.py`), maar een
+  zoekopdracht vanuit de chatbot embed alleen de **kale term** (de
+  definitie is nu juist onbekend — dat is wat we zoeken). Die twee
+  teksten zijn structureel te verschillend om een hoge similarity-score
+  te halen, ook bij een perfecte naammatch. Empirisch gemeten:
+  `search_similar_terms("Java")` → score 0.593, maar
+  `search_similar_terms("Java: <de opgeslagen definitie>")` → score
+  1.0. Dit bleek **geen randgeval**: van tien getoetste, alledaagse
+  termen misten acht de drempel van 0.80, waaronder Java (0.593),
+  Python (0.603), Redis (0.647) en zelfs Kubernetes (0.795 — net onder
+  de grens). De exacte-match-stap via MongoDB omzeilt dit probleem
+  volledig voor elke term die letterlijk (ongeacht hoofdletters)
+  overeenkomt met een opgeslagen termnaam — wat de overgrote meerderheid
+  van echte vragen dekt.
+- **Waarom niet `normalize_term` (lowercase) vóór de Qdrant-fallback
+  gebruiken:** lowercasen vóór het embedden verlaagt de score juist
+  (Docker: 0.814 origineel vs. 0.565 lowercase) — vandaar de
+  "probeer origineel + capitalize()"-aanpak in de Qdrant-fallback,
+  in plaats van één vaste normalisatie.
 - **Input:** `intent: dict` — `QueryIntent`-vorm uit ISSUE-1
   (`{"intent": str, "terms": list[str]}`).
 - **Output:** `dict[str, list[dict]]` — map van originele term naar zijn
-  bevestigde matches (kan leeg zijn per term als niets de drempel haalt).
-- **Failures:** propageert infrastructuurfouten van `search_similar_terms`.
-- **Dependencies:** `normalize_term`, `search_similar_terms` (bestaand,
-  QdrantSaver), `select_confident_matches`.
+  bevestigde matches (kan leeg zijn per term als niets gevonden wordt).
+- **Failures:** propageert infrastructuurfouten van `load_existing_terms`
+  en `search_similar_terms`.
+- **Dependencies:** `load_existing_terms` (MongoSaver),
+  `find_existing_term` (TermComparator), `search_similar_terms`
+  (QdrantSaver), `select_confident_matches`.
 - **Business rule of I/O:** orkestratie (combineert domain + infra,
-  hoort in de workflow-laag, niet in de domeinlaag). De `ScoredPoint`→dict
-  reshaping hoort hier en niet in een nieuwe Qdrant-functie, omdat het
-  puur een aanpassing is voor deze ene call site, geen herbruikbare
-  infrastructuurverantwoordelijkheid.
+  hoort in de workflow-laag, niet in de domeinlaag).
+
+## Bekende beperking: Qdrant-fallback onderscheidt spelfouten slecht van foute termen
+
+De Qdrant-stap is nu alleen nog een **vangnet** voor termen zonder
+exacte match (echte spelfouten/variaties) — maar dat vangnet is minder
+betrouwbaar dan gehoopt. Empirisch getest, bare-term-embeddings zonder
+definitie:
+
+| vergelijking | score |
+|---|---|
+| "Kubernetes" vs "Kubernets" (spelfout) | 0.538 |
+| "Kubernetes" vs "Docker" (compleet andere term) | 0.529 |
+
+Deze twee liggen te dicht bij elkaar om een betrouwbare drempel op te
+zetten die de ene wél en de andere niét zou doorlaten — het
+embedding-model heeft bij korte, losse termen onvoldoende onderscheidend
+vermogen tussen "bijna goed gespeld" en "gewoon een ander woord". Omdat
+dit pad nu alleen nog als fallback dient (de meeste vragen worden al
+via de exacte MongoDB-match opgelost), is de praktische impact klein,
+maar puur op spelfouten vertrouwen voor de resterende gevallen blijft
+onbetrouwbaar. Nog niet opgelost — zou een preciezere fuzzy-matching-
+aanpak vereisen (bijv. directe stringvergelijking met een
+edit-distance-drempel) in plaats van embedding-similarity, buiten de
+scope van dit issue.
 
 ## Required tests
 
@@ -138,9 +186,19 @@ tests/Workflows/
 - `select_confident_matches` met score 0.50 → kandidaat uitgesloten
 - `select_confident_matches` met score exact 0.80 → bevat kandidaat (boundary-waarde)
 - `select_confident_matches([])` → `[]`
+- `resolve_query_terms` vindt een exacte match via MongoDB en roept
+  **geen** `search_similar_terms` aan (score `1.0`)
+- `resolve_query_terms`'s exacte match is hoofdletter-ongevoelig
+  ("java" vindt "Java")
 - `resolve_query_terms` met gemockte `search_similar_terms`: term zonder
   kandidaat boven de drempel → lege lijst voor die term (traceerbaar naar
   de "geen resultaten"-regel later in de pipeline)
+- `resolve_query_terms` vindt een match als de gebruiker lowercase typt
+  ("docker"), doordat ook op `.capitalize()` ("Docker") gezocht wordt
+- `resolve_query_terms` zoekt maar **één keer** als de term al
+  gecapitaliseerd is (geen dubbele Qdrant-aanroep voor "Kubernetes")
+- `resolve_query_terms` bewaart de **hoogste** score als beide
+  zoekvarianten dezelfde term opleveren met verschillende scores
 - refactor-check: `find_existing_term` (QdrantSaver) roept
   `select_confident_matches` aan (geen losstaande duplicaat-drempelcheck
   meer), en `check_terms_in_vector_store` blijft ongewijzigd werken

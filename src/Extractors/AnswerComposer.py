@@ -1,15 +1,16 @@
 def build_answer_context(result: dict) -> dict:
     """
     Vertaalt de QueryResult-dict (keys: found, terms, companies_per_term,
-    companies_intersection, definitions) naar de Nederlandse vorm die de
-    antwoord-prompt gebruikt.
+    companies_intersection, definitions, technologies_per_company) naar
+    de Nederlandse vorm die de antwoord-prompt gebruikt.
     """
     return {
         "gevonden": result.get("found"),
         "termen": result.get("terms", []),
         "bedrijven_per_term": result.get("companies_per_term"),
         "bedrijven_intersectie": result.get("companies_intersection"),
-        "definities": result.get("definitions")
+        "definities": result.get("definitions"),
+        "technologieen_per_bedrijf": result.get("technologies_per_company")
     }
 
 
@@ -26,6 +27,7 @@ def compose_answer(result: dict, llm_client, prompt_template: str) -> str:
         .replace("{BEDRIJVEN_PER_TERM}", str(context["bedrijven_per_term"]))
         .replace("{BEDRIJVEN_INTERSECTIE}", str(context["bedrijven_intersectie"]))
         .replace("{DEFINITIES}", str(context["definities"]))
+        .replace("{TECHNOLOGIEEN_PER_BEDRIJF}", str(context["technologieen_per_bedrijf"]))
     )
 
     return llm_client.ask(filled_prompt)

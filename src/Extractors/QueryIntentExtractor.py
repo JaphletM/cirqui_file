@@ -2,7 +2,7 @@ import json
 
 from Services.LLMclient import LLMClient
 
-ALLOWED_INTENTS = {"bedrijven", "definitie"}
+ALLOWED_INTENTS = {"bedrijven", "definitie", "technologieen"}
 
 def validate_intent(raw: dict) -> dict:
     intent= raw.get("intent") 
@@ -25,6 +25,11 @@ def extract_query_intent(question: str, llm_client: LLMClient, prompt_template: 
     response = llm_client.ask(filled_prompt)
 
     clean_response = response.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
+
+    start = clean_response.find("{")
+    end = clean_response.rfind("}")
+    if start != -1 and end != -1:
+        clean_response = clean_response[start:end + 1]
 
     try:
         raw = json.loads(clean_response)

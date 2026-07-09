@@ -59,16 +59,16 @@
     },
     {
       "term": "TypeScript",
-      "definition": "Een superset van JavaScript die vaak wordt gevraagd in vacatures voor Frontend Engineers bij Google.",
+      "definition": "Een superset van JavaScript die statische typering toevoegt, ontworpen om grote applicaties te ontwikkelen.",
       "followup_prompts": [
-        "Welke specifieke pijnpunten of uitdagingen heeft de klant momenteel met hun JavaScript-codebase, die TypeScript zou kunnen oplossen? Denk aan foutenopsporing, onderhoud of samenwerking.",
-        "In hoeverre is de klant bekend met het concept van statisch typen en zijn ze bereid om te investeren in de leercurve die gepaard gaat met de adoptie van TypeScript?",
-        "Zijn er bestaande projecten of teams binnen de organisatie van de klant die al openstaan voor of ervaring hebben met TypeScript, en zo ja, welke lessen kunnen we daaruit trekken?"
+        "Welke specifieke pijnpunten ervaart het development team momenteel met JavaScript die opgelost zouden kunnen worden door de introductie van TypeScript? (Denk aan typfouten, refactoring, leesbaarheid).",
+        "In hoeverre is het huidige development team bekend met type-georiënteerde talen (bijv. Java, C#)? Dit helpt inschatten hoe steil de leercurve van TypeScript zal zijn.",
+        "Zijn er bestaande projecten of bibliotheken binnen de organisatie die al TypeScript gebruiken of die overwegen over te stappen? Dit kan dienen als een intern voorbeeld of resource."
       ],
       "followup_answers": [
-        "De klant ervaart vaak runtime-fouten door typegerelateerde problemen, wat resulteert in langere debugtijden en verminderde productiviteit. Daarnaast maakt het gebrek aan type-informatie het onderhoud van grotere codebases complexer en bemoeilijkt het de samenwerking tussen ontwikkelaars, vooral bij projecten met meerdere teams.",
-        "De klant heeft een basisbegrip van statisch typen vanuit ervaring met talen als C# of Java, maar de diepte van hun kennis over TypeScript specifiek is beperkt. Ze zijn bereid om te investeren in training en leerresources, mits de voordelen op lange termijn duidelijk aantoonbaar zijn en er een gedegen adoptieplan ligt.",
-        "Ja, er is een klein pilot-team dat met TypeScript experimenteert voor een nieuwe microservice. Zij waarderen de betere codekwaliteit en de snellere refactoring. Belangrijke lessen zijn het belang van goede configuratie, het gebruik van een linter en het geleidelijk introduceren van types, in plaats van alles in één keer om te zetten."
+        "Ons team ervaart regelmatig runtime-fouten gerelateerd aan verkeerde datatypen, wat de debugging-tijd aanzienlijk verlengt. Refactoring is vaak risicovol omdat de impact van wijzigingen in functie-signatures of objectstructuren moeilijk te overzien is zonder uitgebreide handmatige tests. Dit leidt tot een tragere ontwikkeling en minder vertrouwen in de codebasis. De leesbaarheid van grotere JavaScript-codebases is ook een uitdaging, vooral voor nieuwe teamleden, omdat functies en objecten vaak niet duidelijk documenteren welk type input ze verwachten of output ze produceren.",
+        "Ongeveer 60% van ons development team heeft ervaring met Java, en 20% heeft enige projectervaring met C#. De overige 20% heeft voornamelijk met JavaScript gewerkt. Dit suggereert dat een aanzienlijk deel van het team al bekend is met de concepten van statische typering, wat de leercurve voor TypeScript minder steil zal maken. We verwachten dat de overgang voor de puur JavaScript-ontwikkelaars meer focus en training zal vergen.",
+        "Nee, er zijn momenteel geen projecten binnen onze organisatie die actief TypeScript gebruiken. Er is echter wel een kleine interne Proof-of-Concept gestart voor een nieuwe microservice die overwogen wordt in TypeScript te bouwen, maar dit staat nog in de kinderschoenen. Vooralsnog zijn er geen interne voorbeelden of experts die als directe resource kunnen dienen."
       ]
     },
     {
@@ -143,17 +143,13 @@
     },
     {
       "term": "CSS3",
-      "definition": "De derde revisie van de Cascading Style Sheets-standaard, gebruikt voor het stijlen en opmaken van webpagina's.",
+      "definition": "De derde revisie van de Cascading Style Sheets-specificatie voor webpagina-styling.",
       "followup_prompts": [
-        "Welke specifieke uitdagingen ervaart de klant momenteel met de responsive design, animaties of complexe lay-outs op hun websites of webapplicaties?",
-        "Maakt de klant al gebruik van CSS preprocessors (zoals Sass of Less) of CSS-in-JS oplossingen, en welke problemen proberen ze hiermee op te lossen die inherent zijn aan standaard CSS?",
-        "Hoe belangrijk is cross-browser compatibiliteit en optimale performance voor de visuele presentatie van de webapplicaties van de klant, en in hoeverre maken ze effectief gebruik van moderne CSS3 features hiervoor?"
+        "Welke specifieke uitdagingen ervaart de klant momenteel bij het creëren en onderhouden van consistente UI/UX over verschillende browsers en apparaten voor zijn webapplicaties, en hoe kan CSS3 dit verbeteren?",
+        "Hoe belangrijk is de 'look and feel' en de merkidentiteit voor de digitale producten van de klant, en welke mogelijkheden van CSS3 (zoals advanced selectors, flexbox, grid, animaties) zouden kunnen bijdragen aan een modernere, responsievere en visueel aantrekkelijkere ervaring?",
+        "In welke mate heeft de klant behoefte aan dynamische en interactieve webcomponenten zonder zware JavaScript-frameworks? Welke specifieke animaties, transities of transformaties zou hij willen implementeren met behulp van pure CSS3?"
       ],
-      "followup_answers": [
-        "Onze responsive designs zijn vaak inconsistent over verschillende projecten en het beheren van media queries is soms een uitdaging. Complexe animaties zijn moeilijk te implementeren performant en cross-browser. Vooral CSS Grid lay-outs worden nog niet volledig benut, wat resulteert in veel floats en flexbox hacks.",
-        "We gebruiken momenteel Sass om problemen met schaalbaarheid en onderhoudbaarheid van grote stylesheets te tackelen (variabelen, mixins, nesting). Echter, we merken dat het nog steeds leidt tot grote CSS-bestanden en soms specifieke stijlproblemen oplost (globale lekken). CSS-in-JS overwegen we voor micro frontends.",
-        "Cross-browser compatibiliteit is van cruciaal belang, aangezien onze gebruikers een breed scala aan browsers en apparaten gebruiken. Performance (laadtijd, renderen) is ook een hoge prioriteit. We maken deels gebruik van moderne CSS3 features (flexbox, transitions), maar er is ruimte voor verbetering, bijvoorbeeld met native CSS variabelen en meer geavanceerde animatietechnieken."
-      ]
+      "followup_answers": []
     },
     {
       "term": "Google Cloud Vision AI",
@@ -227,45 +223,33 @@
     },
     {
       "term": "Ansible",
-      "definition": "Een open-source softwaretool voor geautomatiseerde software-configuratie, applicatie-implementatie en orkestratie.",
+      "definition": "Een open-source automatiseringstool voor configuratiebeheer, applicatiedistributie en taakorkestratie.",
       "followup_prompts": [
-        "Welke infrastructuur- of applicatieconfiguraties beheert de klant momenteel handmatig, en welke problemen (bijv. inconsistentie, foutgevoeligheid) ervaren ze hierdoor?",
-        "Heeft de klant behoefte aan een agentless automatiseringsoplossing die relatief eenvoudig te leren en te implementeren is voor IT-operaties en 'infrastructure as code'?",
-        "Zijn er bij de klant omgevingen (bijv. on-premise, multi-cloud) waar een consistente en herhaalbare provisioning en configuratie essentieel is, en hoe wordt dit nu gewaarborgd?"
+        "Welke infrastructuurcomponenten of applicaties beheert deze klant momenteel handmatig of via scripts, en in hoeverre ervaart hij hierbij inefficiënties of fouten die met Ansible geautomatiseerd zouden kunnen worden?",
+        "Heeft de klant binnen zijn ontwikkel- of operations-teams ervaring met Infrastructure as Code (IaC) principes, en zo ja, welke tools worden hiervoor nu gebruikt en wat zijn eventuele frustraties hiermee in relatie tot de mogelijkheden van Ansible?",
+        "Hoe is de huidige omgeving van de klant ingericht qua besturingssystemen (Linux/Windows), netwerkapparatuur, en cloudproviders, en welke specifieke use-cases voor configuratiebeheer in deze omgeving zouden baat hebben bij de agentless architectuur van Ansible?"
       ],
-      "followup_answers": [
-        "We configureren momenteel serverinstallaties, applicatied-deployments en netwerkinstellingen vaak handmatig via SSH. Dit leidt tot inconsistentie tussen omgevingen (dev, staging, prod), 'snowflake servers' en een hoge mate van foutgevoeligheid bij routinetaken. Nieuwe deployments zijn tijdrovend en riskant.",
-        "Absoluut. De simpliciteit van Ansible's agentless architectuur en het gebruik van YAML voor playbooks spreken ons erg aan. Onze IT-operators zijn op zoek naar een tool met een lage drempel en snelle resultaten om de eerste stappen te zetten naar 'infrastructure as code' zonder zware leercurves.",
-        "We hebben zowel on-premise servers als workloads in Google Cloud en AWS. Consistente provisioning en configuratie over deze hybride omgevingen is cruciaal voor betrouwbaarheid en compliance. Nu proberen we dat te waarborgen met scripts, maar dit is ineffectief en foutgevoelig. Met Ansible hopen we een uniform platform te creëren."
-      ]
+      "followup_answers": []
     },
     {
       "term": "Chef",
-      "definition": "Een hulpmiddel voor automatisering waarmee configuratie, implementatie en het beheer van machines en applicaties in een datacentrum kan plaatsvinden.",
+      "definition": "Een automatiseringstool voor infrastructuurcode, gebruikt voor configuratiebeheer.",
       "followup_prompts": [
-        "Welke infrastructuurbeheeruitdagingen ervaart de klant op het gebied van schaalbaarheid, compliance en de complexiteit van serverconfiguraties?",
-        "Zijn er bij de klant complexe, heterogene serveromgevingen (bijv. Linux, Windows) waar een krachtigere, op Ruby gebaseerde configuratiemanagementtool zoals Chef van pas zou komen?",
-        "Hoe belangrijk is gedetailleerde controle en het testen van infrastructuurcode (test-driven infrastructure) voor de klant, en in hoeverre sluit de benadering van Chef hierbij aan?"
+        "Welke processen voor serverconfiguratie, applicatiedeployment of compliance management zijn momenteel arbeidsintensief en gevoelig voor inconsistenties binnen de organisatie van deze klant, en hoe zou Chef deze kunnen standaardiseren en automatiseren?",
+        "Heeft de klant te maken met heterogene omgevingen (bijv. on-premise en cloud, verschillende OS-versies) waarvoor consistente configuratie cruciaal is? Zo ja, welke specifieke uitdagingen ervaart hij bij het handhaven van deze consistentie en hoe zou Chef hierin een oplossing kunnen bieden?",
+        "Welke vaardigheden en kennis van 'code' (bijv. Ruby) zijn aanwezig binnen het operationele of engineeringteam van de klant, en hoe sluit dit aan bij de programmeerbare aard van Chef-recepten en cookbooks om snellere adoptie te garanderen?"
       ],
-      "followup_answers": [
-        "We hebben een snelgroeiende infrastructuur met honderden servers, die elk een unieke maar complexe configuratie hebben. Het waarborgen van compliance (aanwezigheid van specifieke software, security patches) wordt steeds moeilijker. Handmatige processen zijn niet schaalbaar en leiden tot configuratie drift.",
-        "Ja, we beheren een mix van RHEL, Ubuntu en Windows servers. De expressieve kracht van Ruby in Chef's cookbooks zou ons in staat stellen om complexe configuratielogica te definiëren en te abstraheren, wat nu moeilijk is met eenvoudige scripts. Cross-platform compatibiliteit is ook een grote plus.",
-        "Gedetailleerde controle en testbaarheid zijn extreem belangrijk voor ons, vooral in productieomgevingen waar downtime hoge kosten met zich meebrengt. We willen onze infrastructuurconfiguraties behandelen als applicatiecode, met unit- en integratietests. Chef met zijn 'recipes' en 'cookbooks' sluit hier goed bij aan, en de community-tools (bijv. Test Kitchen) zijn zeer aantrekkelijk."
-      ]
+      "followup_answers": []
     },
     {
       "term": "Puppet",
-      "definition": "Een software-configuratiebeheer en automatiseringstool ontworpen om de configuratie van computers op basis van een centrale repository te beheren via een declarative benadering.",
+      "definition": "Een automatiseringsplatform voor configuratiebeheer en IT-orkestratie.",
       "followup_prompts": [
-        "Welke configuratiebeheerdoelen heeft de klant op het gebied van automatisering, auditing en het afdwingen van 'desired state' over grote, diverse infrastructuren?",
-        "Heeft de klant behoefte aan een declaratieve configuratiemanagementoplossing die robuuste rapportage en centrale controle biedt over servers en netwerkapparaten?",
-        "Zijn er compliance-eisen of beveiligingsprotocollen bij de klant die een constante handhaving van configuraties vereisen, en hoe wordt dit momenteel geverifieerd en afgedwongen?"
+        "Welke compliance-eisen of interne standaarden voor systeemconfiguratie moeten consistent worden afgedwongen binnen de IT-infrastructuur van de klant, en hoe voldoet de huidige aanpak hieraan versus de declaratieve aard van Puppet?",
+        "Hoe groot is de schaal van de serverinfrastructuur van de klant (aantal servers, virtuele machines, containers) en welke groeiverwachtingen zijn er, en in hoeverre is de huidige aanpak schaalbaar in vergelijking met de mogelijkheden van Puppet?",
+        "Heeft de klant behoefte aan gedetailleerde rapportage en auditing over de configuratiestatus van zijn systemen? Zo ja, welke informatie is cruciaal en hoe kan Puppet hierin voorzien met zijn statusmanagement en forensische mogelijkheden?"
       ],
-      "followup_answers": [
-        "We willen automatisering van server provisioning, software-installaties en configuratie updates. Auditing van alle wijzigingen is cruciaal voor compliance. Het belangrijkste doel is het afdwingen van een consistente 'desired state' over duizenden servers, van netwerkapparatuur tot applicatieconfiguraties, onafhankelijk van hun initiële staat.",
-        "Ja, een declaratieve aanpak spreekt ons aan, omdat we de eindtoestand van de infrastructuur willen beschrijven in plaats van de stappen ernaartoe. De 'master-agent' architectuur van Puppet voor centrale controle, samen met de uitgebreide rapportagemogelijkheden over alle beheerde knooppunten, zijn belangrijke voordelen voor ons.",
-        "We moeten voldoen aan strenge security standaarden (zoals ISO 27001 en HIPAA in bepaalde afdelingen) die constante configuratievalidatie vereisen. Momenteel gebeurt dit deels handmatig met audits en deels met kwetsbaarheidsscanners, maar dat is reactief. Puppet's vermogen om continu de 'desired state' af te dwingen, zou hier een proactieve oplossing voor bieden."
-      ]
+      "followup_answers": []
     },
     {
       "term": "F1",
@@ -283,16 +267,16 @@
     },
     {
       "term": "Pub/Sub",
-      "definition": "Een volledig beheerde real-time messaging service.",
+      "definition": "Een messaging service voor real-time data-integratie en streaming analytics op Google Cloud Platform.",
       "followup_prompts": [
-        "Welke datastromen of communicatiepatronen tussen microservices en applicaties heeft de klant momenteel die baat zouden hebben bij een asynchrone, gebeurtenisgestuurde architectuur met Pub/Sub?",
-        "Welke eisen stelt de klant aan de betrouwbaarheid en gegarandeerde levering van berichten in hun huidige communicatiesystemen, en hoe belangrijk is dit voor hun bedrijfskritische processen?",
-        "Zijn er specifieke use-cases waar de klant real-time dataverwerking of het triggeren van downstream processen op basis van gebeurtenissen nodig heeft, zoals log-aggregatie, IoT-verwerking of notificaties?"
+        "Welke communicatiepatronen tussen backend services zijn momenteel een uitdaging qua schaalbaarheid, betrouwbaarheid of latency? (Bijv. synchrone REST calls die lang duren).",
+        "Zijn er processen die op gebeurtenissen moeten reageren, maar waarbij de afzender niet direct op de ontvanger hoeft te wachten? (Denk aan asynchrone taken zoals e-mailverzending, rapportgeneratie).",
+        "Hoe belangrijk is het voor de klant om berichtleveringsgaranties (at-least-once, at-most-once) te hebben voor verschillende communicatiestromen binnen de applicatiearchitectuur?"
       ],
       "followup_answers": [
-        "De klant heeft diverse asynchrone integratiepatronen, waaronder notificaties na orderplaatsing, log-aggregatie van verschillende microservices, data-events voor analytics pipelines, en het aansturen van downstream processen na gebruikersacties op de website. Dit zijn allemaal ideale kandidaten voor een gebeurtenisgestuurde aanpak met Pub/Sub.",
-        "De eisen aan betrouwbaarheid en gegarandeerde levering zijn zeer hoog, vooral voor bedrijfskritische processen zoals orderbevestigingen, betalingsverwerking en updates in klantprofielen. Het verlies van zelfs een enkel bericht kan leiden tot operationele verstoringen en klantontevredenheid.",
-        "Ja, de klant heeft behoefte aan real-time verwerking voor een aantal use-cases: 1) direct reageren op IoT-sensordata voor afwijkingsdetectie, 2) het direct verwerken van clicks en impressies voor hun advertentieplatform, en 3) het direct versturen van pushnotificaties naar gebruikers na een belangrijke gebeurtenis."
+        "De grootste uitdaging zit in onze orderverwerking, waarbij de ontvangst van een order via een REST API direct meerdere downstream services synchroon aanroept (voorraadinvoer, betalingsverificatie, verzendplanning). Deze keten van synchrone calls kan leiden tot aanzienlijke latency voor de klant als één van de services traag is, en vormt een single point of failure. Bij hoge belasting kunnen deze calls ook time-outs veroorzaken en is schaalbaarheid een probleem omdat elke service direct op elkaar moet wachten.",
+        "Absoluut. Na een succesvolle orderplaatsing moet er een bevestigingsmail naar de klant worden gestuurd, een intern logboekitem met een samenvatting van de order voor BI-doeleinden worden gegenereerd, en in sommige gevallen moet een extern partneraccount worden bijgewerkt. Deze taken hoeven niet in-line met de orderbevestiging te gebeuren en kunnen perfect asynchroon worden afgehandeld om de responsietijd voor de gebruiker te optimaliseren. Momenteel gebeurt dit deels synchroon, wat de orderbevestiging vertraagt, of via batchprocessen die niet real-time zijn.",
+        "Voor kritieke stromen zoals orderverwerking en betalingsafhandeling is een 'at-least-once' leveringsgarantie absoluut essentieel; we kunnen geen data verliezen. Duplicaten moeten wel op applicatieniveau kunnen worden afgehandeld om consistentie te garanderen (idempotentie). Voor minder kritieke zaken zoals logboekmeldingen of analytische events is 'at-most-once' of een best-effort levering acceptabel, zolang het de prestaties niet negatief beïnvloedt. E-mailverzending is een tussengeval; een 'at-least-once' is gewenst, hoewel een dubbele e-mail beter is dan geen. Het is van cruciaal belang dat we per communicatiestroom de juiste garantie kunnen configureren."
       ]
     },
     {
@@ -503,6 +487,142 @@
         "De klant heeft de volgende aanpassingen nodig: 1) Een volledig aangepaste UI/UX met eigen branding en 'launcher' voor zakelijk gebruik (geen toegang tot Play Store, 'kiosk mode'). 2) Specifieke 'device management' functionaliteiten, inclusief 'remote wipe' en 'lockdown' van apparaten. 3) Integratie met 'hardware specific' sensoren die niet standaard worden ondersteund door reguliere Android. 4) Een strikt beveiligingsbeleid dat 'root access' en 'side-loading' blokkeert, en versleuteling op bestandsniveau afdwingt.",
         "De klant wil hun aangepaste Android-versie draaien op: 1) Qualcomm Snapdragon 8-serie chipsets voor hun high-end apparaten; 2) Rockchip RK3399 voor 'embedded' systemen (bijv. 'digital signage'); 3) specifieke industriële camera's en barcode-scanners via USB/GPIO; 4) een 'custom' NFC-module. Hierdoor zijn 'low-level' driver-integraties en optimalisaties van de 'kernel' noodzakelijk om optimale prestaties en energie-efficiëntie te garanderen, met name voor de camera-interface en de industriële sensoren.",
         "Volledige controle over de software-stack is van cruciaal belang voor de klant, vooral vanwege 'security and compliance'. Ze willen onafhankelijk 'Over-The-Air' (OTA) updates kunnen uitrollen en 'security patches' beheren zonder afhankelijk te zijn van externe vendors, vaak met een 'patching' cyclus van minder dan 24 uur in geval van kritieke kwetsbaarheden. Er moeten certificeringen behaald worden conform ISO 27001 en 'Common Criteria' (EAL-2/EAL-3) voor de gehele software-oplossing, inclusief de aangepaste Android-versie. Daarnaast is een 'trusted boot' proces en 'hardware-backed security' vereist voor de bescherming van cryptografische sleutels."
+      ]
+    },
+    {
+      "term": "Cloud Deploy",
+      "definition": "Een managed service in Google Cloud voor continue implementatie (CD) van applicaties naar GKE-omgevingen.",
+      "followup_prompts": [
+        "Welke stappen om applicaties naar de cloud te deployen zijn momenteel handmatig, langzaam, foutgevoelig, of vereisen veel menselijke interventie bij deze klant, en hoe zou Cloud Deploy deze kunnen stroomlijnen?",
+        "Heeft de klant een meervoudige deploymentstrategie (bijv. canary deployments, blue-green deployments, rollbacks) nodig voor zijn kritieke applicaties, en zo ja, welke uitdagingen ervaart hij bij het implementeren en beheren hiervan met de huidige tooling vergeleken met Cloud Deploy?",
+        "Welke Cloud tooling (bijv. GKE, Cloud Run, App Engine) gebruikt de klant al, of welke heeft hij in overweging, en hoe sluit de integratie van Cloud Deploy met deze diensten aan bij zijn huidige en toekomstige cloudstrategie?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "AutoML",
+      "definition": "Een suite van machine learning producten van Google Cloud om ontwikkelaars te helpen bij het bouwen van ML-modellen met beperkte expertise.",
+      "followup_prompts": [
+        "Welke dataproblemen of zakelijke uitdagingen probeert de klant op te lossen met machine learning, en welke modellenbouwfases (data-voorbereiding, feature engineering, modelselectie, tuning) zijn momenteel een knelpunt door gebrek aan expertise of resources?",
+        "Heeft de klant data scientists in huis, en zo ja, welke taken nemen veel tijd in beslag die met AutoML geautomatiseerd zouden kunnen worden, zodat zij zich kunnen richten op complexere vraagstukken of domeinspecifieke kennis?",
+        "Welke eisen stelt de klant aan de doorlooptijd van het ontwikkelen van ML-modellen en de schaalbaarheid van de oplossing? In hoeverre zou AutoML de 'time-to-insight' en de productiviteit van het ML-team kunnen versnellen vergeleken met handmatige methoden?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Jupyter Notebooks",
+      "definition": "Een interactieve computeringomgeving voor data science en machine learning.",
+      "followup_prompts": [
+        "Welke soorten data-analyse, data-exploratie of modelontwikkelingstaken voeren de analisten/data scientists van de klant momenteel uit, en welke hulpmiddelen gebruiken ze daarbij die minder interactief of reproduceerbaar zijn dan Jupyter Notebooks?",
+        "Heeft de klant behoefte aan betere documentatie, samenwerking en deelbaarheid van analysecode en -resultaten binnen teams? Zo ja, welke concrete problemen ervaart hij nu en hoe zou de narratieve en interactieve aard van Jupyter Notebooks hierin een oplossing bieden?",
+        "Welke programmeertalen (bijv. Python, R, Julia) en bibliotheken gebruiken de teams van de klant het meest, en in hoeverre is de flexibiliteit van Jupyter Notebooks om met verschillende 'kernels' te werken een meerwaarde voor hun bestaande workflows?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Colaboratory",
+      "definition": "Een gratis Jupyter Notebook-dienst van Google.",
+      "followup_prompts": [
+        "Welke compute-resources (GPU's/TPU's) heeft de klant momenteel beschikbaar voor machine learning of intensieve dataverwerking, en in hoeverre zijn deze beperkt of duur in vergelijking met de gratis of betaalde opties van Colaboratory?",
+        "Hoe werken de data scientists of onderzoekers van de klant momenteel samen aan data-projecten, en welke frictie ervaren ze bij het delen van code, data of resultaten, die met de geïntegreerde collaboratiemogelijkheden van Colaboratory verminderd zouden kunnen worden?",
+        "Welke beveiligings- en compliance-eisen heeft de klant voor het verwerken van data in de cloud? In hoeverre sluit de Google Cloud-infrastructuur achter Colaboratory (voor gevoelige data) aan bij deze eisen versus lokaal draaien van Jupyter Notebooks?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Dapper",
+      "definition": "Google's interne gedistribueerde tracing-systeem.",
+      "followup_prompts": [
+        "Welke processen voor 'distributed tracing' of het monitoren van microservices-architecturen heeft de klant momenteel geïmplementeerd, en welke 'blinde vlekken' of inefficiënties ervaart hij bij het identificeren van latency of fouten in complexe gedistribueerde systemen?",
+        "Heeft de klant moeite met het correleren van logs, metrics en traces over verschillende services, of het identificeren van de hoofdoorzaak van prestatieproblemen in een gedistribueerde omgeving? Zo ja, hoe zou de end-to-end traceerbaarheid van Dapper hulp bieden?",
+        "Welke open-source of commerciële monitoringtools gebruikt de klant momenteel, en in hoeverre is er behoefte aan een meer holistische weergave van de applicatiestroom, zoals Dapper kan bieden, om sneller problemen op te lossen en de gebruikerservaring te verbeteren?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Selenium",
+      "definition": "Een suitle van tools voor browserautomatisering, oorspronkelijk ontwikkeld bij Google.",
+      "followup_prompts": [
+        "Welke huidige testprocessen voor webapplicaties van de klant zijn nog handmatig, tijdrovend en vatbaar voor menselijke fouten, en welke specifieke testscenario's zouden het meest profiteren van automatisering met Selenium?",
+        "Heeft de klant behoefte aan cross-browser testen of het testen van webapplicaties op verschillende besturingssystemen (bijv. Windows, macOS, Linux, mobiele browsers), en welke uitdagingen ervaart hij nu met het dekken van deze diversiteit zonder Selenium?",
+        "Welke programmeertalen (bijv. Java, Python, C#, JavaScript) worden gebruikt door de huidige ontwikkelaars of QA-teams van de klant, en hoe zou de flexibiliteit van Selenium in taalkeuze aansluiten bij hun bestaande skillsets en de adoptie vergemakkelijken?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Git LFS (Large File Storage)",
+      "definition": "Een Git-extensie voor het omgaan met grote bestanden.",
+      "followup_prompts": [
+        "Met welke grote binaire bestanden (bijv. video's, 3D-modellen, datasets, grafische assets, VM-images) werkt de klant momenteel in zijn Git repositories, en welke problemen ervaart hij met de Git prestaties (klonen, pushen, fetchen) hierdoor?",
+        "Heeft de klant last van trage Git-operaties of repositories die te groot worden, waardoor ontwikkelaars vertraging oplopen in hun workflow, en hoe zou Git LFS de snelheid en efficiëntie van deze operaties kunnen verbeteren?",
+        "Hoe is de versiebeheerstrategie van de klant voor zijn grote binaire bestanden momenteel ingericht, en welke uitdagingen ervaart hij bij het bijhouden van versies, het beheren van opslagruimte of het samenwerken aan deze bestanden zonder Git LFS?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Megastore",
+      "definition": "Google's NoSQL-opslagoplossing, ontworpen voor grootschalige, geografisch gedistribueerde opslag.",
+      "followup_prompts": [
+        "Welke specifieke soorten data (bijv. transactionele, analytics, IoT, ongestructureerde) beheert de klant momenteel, en welke schaal (volume, snelheid, diversiteit) ervaart hij die de mogelijkheden van traditionele databases overstijgt?",
+        "Welke uitdagingen ervaart de klant met de huidige database-oplossingen op het gebied van schaalbaarheid, beschikbaarheid (uptime), consistentie van data over gedistribueerde systemen, of de complexe query's die nodig zijn voor grootschalige data-analyse?",
+        "Heeft de klant behoefte aan een globale, gedistribueerde databaseoplossing met sterke consistentiegerechten voor bedrijfskritische applicaties, en welke 'single points of failure' of prestatieknelpunten ervaart hij met zijn huidige database-architectuur?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "PaLM/Gemini",
+      "definition": "Google's familie van krachtige Large Language Models.",
+      "followup_prompts": [
+        "Welke bestaande processen of klantinteracties zijn momenteel tijdrovend of inefficiënt en zouden baat kunnen hebben bij geautomatiseerde tekstgeneratie of begrip? (Bijv. klantenservice FAQ's, samenvatten van documenten).",
+        "Welke soorten data met betrekking tot tekst heeft de klant beschikbaar die als trainingsmateriaal gebruikt zouden kunnen worden voor een Large Language Model (LLM)? (Denk aan transcripten, e-mails, documentatie).",
+        "Zijn er specifieke use-cases waar de klant momenteel moeite heeft met het analyseren van ongestructureerde tekstdata en waar een LLM zoals PaLM/Gemini mogelijk inzicht kan bieden? (Bijv. sentimentanalyse, categorisatie)."
+      ],
+      "followup_answers": [
+        "Onze klantenservice besteedt veel tijd aan het beantwoorden van veelgestelde vragen, wat resulteert in lange wachttijden en inconsistente antwoorden. Automatisering hierin, bijvoorbeeld via een slimme chatbot die direct antwoorden kan genereren op basis van onze kennisbank, zou veel efficiëntie opleveren. Daarnaast wordt er veel tijd besteed aan het handmatig samenvatten van lange klantfeedbackrapporten en supporttickets om trends te identificeren, dit proces zou aanzienlijk versneld kunnen worden met geautomatiseerde samenvatting.",
+        "We hebben een uitgebreide kennisbank met technische documentatie en FAQs, transcripten van duizenden klantenservicegesprekken van de afgelopen vijf jaar, gearchiveerde e-mailcorrespondenties met klanten en interne projectdocumentatie. Dit betreft voornamelijk tekstdata in het Nederlands, soms met technische jargon of sectorspecifieke termen. We hebben ook grote datasets van productreviews en supportticketbeschrijvingen. Deze data is relatief schoon en goed georganiseerd.",
+        "Zeker, we worstelen met het identificeren van opkomende productproblemen of veelvoorkomende klachten uit de ongestructureerde tekst van duizenden supporttickets. Handmatige analyse is arbeidsintensief en levert vaak onvolledige inzichten op. Een LLM zou kunnen helpen bij sentimentanalyse om direct de urgentie van klantfeedback te beoordelen, het categoriseren van tickets op basis van onderwerp of productcomponent, en het extraheren van specifieke entiteiten zoals productnamen of versienummers uit vrije tekst. Dit zou leiden tot een snellere oplossing van problemen en verbeterde productontwikkeling."
+      ]
+    },
+    {
+      "term": "HTML",
+      "definition": "De standaard opmaaktaal voor webpagina's.",
+      "followup_prompts": [
+        "Hoe complex zijn de ontwerpen die de klant voor hun webapplicaties wil implementeren qua structuur en content? (Bijv. veel dynamische elementen, complexe formulieren).",
+        "Wordt er veel belang gehecht aan SEO (Search Engine Optimization) voor de content van de webpagina's die gebouwd moeten worden? Dit beïnvloedt keuzes in semantische HTML.",
+        "Zijn er specifieke toegankelijkheidsvereisten (WCAG) waaraan de webapplicaties moeten voldoen? Dit heeft invloed op de correcte implementatie van HTML-elementen en attributen."
+      ],
+      "followup_answers": [
+        "De ontwerpen variëren van redelijk complex tot zeer complex. Voor onze publieke website verwachten we veel dynamische contentblokken, complexe navigatiestructuren en interactieve componenten zoals carrousels en accordions. Onze interne beheertools bevatten veel complexe formulieren met uitgebreide validatie, dynamische velden die afhankelijk zijn van eerdere keuzes, en datatabellen met sorteer-, filter- en zoekfunctionaliteit. Dit vereist een robuuste en semantisch rijke HTML-basis.",
+        "Ja, SEO is van cruciaal belang voor onze publieke webapplicaties, met name de marketinggerichte pagina's en productcatalogus. De zichtbaarheid in zoekmachines is direct gekoppeld aan leadgeneratie en omzet. Daarom is het essentieel om semantische HTML5-elementen correct te gebruiken (bijv. `<article>`, `<section>`, `<nav>`, `<aside>`, `<header>`, `<footer>`), juiste heading-structuren (`<h1>`, `<h2>`, etc.) en relevante meta-tags en attributen om zoekmachines te helpen de content te begrijpen en te indexeren. We streven naar een hoge score op Google Lighthouse en andere SEO-audits.",
+        "Ja, voor alle publiekefacing webapplicaties streven we naar WCAG 2.1 AA-conformiteit, en voor interne tools is minstens WCAG 2.1 A een vereiste. Dit betekent dat we veel aandacht moeten besteden aan correcte HTML-elementen voor structurele betekenis (bijv. lijsten, tabellen, formulieren), zinvolle alt-teksten voor afbeeldingen, correcte ARIA-attributen voor dynamische componenten (aria-label, aria-expanded, etc.), en een logische tab-volgorde. Focus op toetsenbordnavigatie en schermlezercompatibiliteit is een must."
+      ]
+    },
+    {
+      "term": "CSS",
+      "definition": "Een stijlbladtaal die wordt gebruikt om de presentatie van een document geschreven in een opmaaktaal te beschrijven.",
+      "followup_prompts": [
+        "Welke richtlijnen of huisstijlen bestaan er voor het uiterlijk van de applicaties (corporate identity, design system)? Dit helpt bepalen hoe CSS-architectuur opgezet moet worden.",
+        "In hoeverre is responsive design een prioriteit? Moet de applicatie naadloos werken op verschillende schermformaten en apparaten?",
+        "Zijn er voorkeuren of bestaande expertise binnen het team met betrekking tot specifieke CSS-frameworks (bijv. Bootstrap, Tailwind CSS) of methodologieën (bijv. BEM, ITCSS)?"
+      ],
+      "followup_answers": [
+        "We hebben een uitgebreide corporate identity gids met gedetailleerde specificaties voor kleurenpaletten, typografie (lettertypes, groottes, lijnhoogtes), logo's en iconografie. Daarnaast is er een beginnend design system in Figma met basiscomponenten zoals knoppen, invoervelden, kaarten en modale vensters. De CSS-architectuur moet deze richtlijnen nauwkeurig repliceren en bovendien schaalbaar zijn voor toekomstige uitbreidingen van het design system.",
+        "Responsive design is een hoge prioriteit voor alle webapplicaties, zowel publiek als intern. Onze gebruikers verwachten een consistente en optimale ervaring op desktops, laptops, tablets en mobiele telefoons. Dit betekent dat lay-outs zich dynamisch moeten aanpassen, afbeeldingen schaalbaar moeten zijn, en interactieve elementen goed bedienbaar moeten zijn op touchscreens, zonder horizontaal scrollen of verlies van functionaliteit. De breakpoints moeten aansluiten bij de gangbare apparaten van onze doelgroep.",
+        "Binnen het team is er enige ervaring met Bootstrap 4 en 5, wat door een deel van de ontwikkelaars wordt gewaardeerd vanwege de snelheid van prototypebouw. Er is ook een groeiende interesse in Tailwind CSS vanwege de flexibiliteit en de focus op utility classes. Qua methodologieën heeft een klein deel van het team ervaring met Sass in combinatie met BEM voor schaalbare CSS-organisatie. We staan open voor discussie over welk framework of welke aanpak het beste aansluit bij onze design system eisen en de team expertise, met een lichte voorkeur voor oplossingen die goed integreren met een component-georiënteerde aanpak."
+      ]
+    },
+    {
+      "term": "Helm",
+      "definition": "De pakketmanager voor Kubernetes, waarmee applicaties en services gedefinieerd, geïnstalleerd en geüpgraded kunnen worden.",
+      "followup_prompts": [
+        "Hoeveel verschillende applicaties of microservices moeten er momenteel worden uitgerold en beheerd in Kubernetes? Dit geeft een indicatie van de complexiteit van de deployments.",
+        "Is er behoefte aan het eenvoudig aanpassen van configuratieparameters voor verschillende omgevingen (bijv. development, staging, production) voor de Kubernetes deployments?",
+        "Hoe belangrijk is de mogelijkheid om applicatieversies terug te draaien (rollback) in geval van problemen na een deployment in Kubernetes?"
+      ],
+      "followup_answers": [
+        "Momenteel beheren we ongeveer 15 verschillende microservices binnen Kubernetes, naast een aantal shared services zoals databases (via operators) en monitoring tools. Dit aantal groeit gestaag, met projecties van 25-30 microservices binnen het komende jaar. Elk van deze services heeft zijn eigen deployment, service, ingress en soms configmaps/secrets. Zonder een gestandaardiseerde aanpak wordt het beheer van al deze yaml-bestanden een aanzienlijke uitdaging.",
+        "Absoluut! Dit is een van de belangrijkste pijnpunten. Momenteel kopiëren en plakken we vaak Kubernetes YAML-bestanden en passen we handmatig omgevingsspecifieke waarden aan (zoals database URL's, API-sleutels, resource-limieten) in separate bestanden voor elke omgeving. Dit is foutgevoelig, moeilijk te onderhouden en leidt tot inconsistenties. We hebben dringend behoefte aan een mechanisme om configuratieparameters op een geautomatiseerde en herhaalbare manier te beheren en te injecteren, gescheiden per deployment-omgeving, zonder de basisconfiguratie van de applicatie aan te raken.",
+        "Het kunnen terugdraaien van applicatieversies is van cruciaal belang. In een omgeving met continue deployments en veel microservices kunnen zich altijd onverwachte problemen voordoen na een nieuwe release. De mogelijkheid om snel en betrouwbaar een vorige, stabiele versie van een applicatie te herstellen met één commando is essentieel om de downtime te minimaliseren en de service continuïteit te waarborgen. Handmatige rollbacks zijn foutgevoelig en tijdrovend, wat in een productieomgeving onacceptabel is. Een geautomatiseerde, getraceerde rollback-functionaliteit is een 'must-have'."
       ]
     }
   ]

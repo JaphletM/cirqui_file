@@ -1,7 +1,31 @@
 from types import SimpleNamespace
 from unittest.mock import patch
 
-from Workflows.ChatbotWorkflow import resolve_query_terms, gather_query_results
+from Workflows.ChatbotWorkflow import resolve_query_terms, gather_query_results, gather_technologies_for_companies
+
+
+def test_resolve_query_terms_returns_exact_match_without_calling_qdrant():
+    intent = {"intent": "definitie", "terms": ["Java"]}
+    existing_terms = [{"term": "Java", "definition": "programmeertaal"}]
+
+    with patch("Workflows.ChatbotWorkflow.load_existing_terms", return_value=existing_terms), \
+         patch("Workflows.ChatbotWorkflow.search_similar_terms") as mocked_search:
+        resolved = resolve_query_terms(intent)
+
+    mocked_search.assert_not_called()
+    assert resolved == {"Java": [{"term": "Java", "definition": "programmeertaal", "score": 1.0}]}
+
+
+def test_resolve_query_terms_exact_match_is_case_insensitive():
+    intent = {"intent": "definitie", "terms": ["java"]}
+    existing_terms = [{"term": "Java", "definition": "programmeertaal"}]
+
+    with patch("Workflows.ChatbotWorkflow.load_existing_terms", return_value=existing_terms), \
+         patch("Workflows.ChatbotWorkflow.search_similar_terms") as mocked_search:
+        resolved = resolve_query_terms(intent)
+
+    mocked_search.assert_not_called()
+    assert resolved == {"java": [{"term": "Java", "definition": "programmeertaal", "score": 1.0}]}
 
 
 def test_resolve_query_terms_returns_confident_matches_per_term():
@@ -10,13 +34,59 @@ def test_resolve_query_terms_returns_confident_matches_per_term():
         SimpleNamespace(payload={"term": "Kubernetes", "definition": "container orchestration"}, score=0.95)
     ]
 
-    with patch("Workflows.ChatbotWorkflow.search_similar_terms", return_value=fake_results) as mocked_search:
+    with patch("Workflows.ChatbotWorkflow.load_existing_terms", return_value=[]), \
+         patch("Workflows.ChatbotWorkflow.search_similar_terms", return_value=fake_results) as mocked_search:
         resolved = resolve_query_terms(intent)
 
-    mocked_search.assert_called_once_with("kubernetes")
+    mocked_search.assert_called_once_with("Kubernetes")
     assert resolved == {
         "Kubernetes": [{"term": "Kubernetes", "definition": "container orchestration", "score": 0.95}]
     }
+
+
+def test_resolve_query_terms_finds_match_when_user_types_lowercase():
+    intent = {"intent": "definitie", "terms": ["docker"]}
+
+    def fake_search(query, *args, **kwargs):
+        if query == "Docker":
+            return [SimpleNamespace(payload={"term": "Docker", "definition": "container platform"}, score=0.81)]
+        return [SimpleNamespace(payload={"term": "Docker", "definition": "container platform"}, score=0.57)]
+
+    with patch("Workflows.ChatbotWorkflow.load_existing_terms", return_value=[]), \
+         patch("Workflows.ChatbotWorkflow.search_similar_terms", side_effect=fake_search) as mocked_search:
+        resolved = resolve_query_terms(intent)
+
+    assert mocked_search.call_count == 2
+    mocked_search.assert_any_call("docker")
+    mocked_search.assert_any_call("Docker")
+    assert resolved["docker"] == [{"term": "Docker", "definition": "container platform", "score": 0.81}]
+
+
+def test_resolve_query_terms_does_not_search_twice_when_already_capitalized():
+    intent = {"intent": "definitie", "terms": ["Kubernetes"]}
+    fake_results = [
+        SimpleNamespace(payload={"term": "Kubernetes", "definition": "container orchestration"}, score=0.95)
+    ]
+
+    with patch("Workflows.ChatbotWorkflow.load_existing_terms", return_value=[]), \
+         patch("Workflows.ChatbotWorkflow.search_similar_terms", return_value=fake_results) as mocked_search:
+        resolve_query_terms(intent)
+
+    assert mocked_search.call_count == 1
+
+
+def test_resolve_query_terms_keeps_highest_score_when_both_queries_match():
+    intent = {"intent": "definitie", "terms": ["docker"]}
+
+    def fake_search(query, *args, **kwargs):
+        score = 0.60 if query == "docker" else 0.90
+        return [SimpleNamespace(payload={"term": "Docker", "definition": "container platform"}, score=score)]
+
+    with patch("Workflows.ChatbotWorkflow.load_existing_terms", return_value=[]), \
+         patch("Workflows.ChatbotWorkflow.search_similar_terms", side_effect=fake_search):
+        resolved = resolve_query_terms(intent)
+
+    assert resolved["docker"] == [{"term": "Docker", "definition": "container platform", "score": 0.90}]
 
 
 def test_resolve_query_terms_returns_empty_list_for_term_without_confident_match():
@@ -25,7 +95,8 @@ def test_resolve_query_terms_returns_empty_list_for_term_without_confident_match
         SimpleNamespace(payload={"term": "Foo", "definition": "onduidelijk"}, score=0.40)
     ]
 
-    with patch("Workflows.ChatbotWorkflow.search_similar_terms", return_value=fake_results):
+    with patch("Workflows.ChatbotWorkflow.load_existing_terms", return_value=[]), \
+         patch("Workflows.ChatbotWorkflow.search_similar_terms", return_value=fake_results):
         resolved = resolve_query_terms(intent)
 
     assert resolved == {"Foo": []}
@@ -34,14 +105,15 @@ def test_resolve_query_terms_returns_empty_list_for_term_without_confident_match
 def test_resolve_query_terms_handles_multiple_terms_independently():
     intent = {"intent": "bedrijven", "terms": ["Kubernetes", "Java"]}
     fake_results_by_query = {
-        "kubernetes": [SimpleNamespace(payload={"term": "Kubernetes", "definition": ""}, score=0.90)],
-        "java": [SimpleNamespace(payload={"term": "Java", "definition": ""}, score=0.30)],
+        "Kubernetes": [SimpleNamespace(payload={"term": "Kubernetes", "definition": ""}, score=0.90)],
+        "Java": [SimpleNamespace(payload={"term": "Java", "definition": ""}, score=0.30)],
     }
 
     def fake_search(query, *args, **kwargs):
         return fake_results_by_query[query]
 
-    with patch("Workflows.ChatbotWorkflow.search_similar_terms", side_effect=fake_search):
+    with patch("Workflows.ChatbotWorkflow.load_existing_terms", return_value=[]), \
+         patch("Workflows.ChatbotWorkflow.search_similar_terms", side_effect=fake_search):
         resolved = resolve_query_terms(intent)
 
     assert resolved["Kubernetes"] == [{"term": "Kubernetes", "definition": "", "score": 0.90}]
@@ -167,3 +239,41 @@ def test_gather_query_results_bedrijven_no_match_at_all():
         result = gather_query_results(intent, resolved_terms)
 
     assert result["found"] is False
+
+
+def test_gather_technologies_for_companies_returns_matching_technologies():
+    intent = {"intent": "technologieen", "terms": ["Google"]}
+    existing_terms = [
+        {"term": "Docker", "companies": ["Google", "ASML"]},
+        {"term": "Kubernetes", "companies": ["Google"]},
+        {"term": "Java", "companies": ["Booking"]}
+    ]
+
+    with patch("Workflows.ChatbotWorkflow.load_existing_terms", return_value=existing_terms):
+        result = gather_technologies_for_companies(intent)
+
+    assert result["technologies_per_company"] == {"Google": ["Docker", "Kubernetes"]}
+    assert result["found"] is True
+    assert result["companies_per_term"] is None
+    assert result["definitions"] is None
+
+
+def test_gather_technologies_for_companies_returns_not_found_when_no_match():
+    intent = {"intent": "technologieen", "terms": ["OnbekendBedrijf"]}
+
+    with patch("Workflows.ChatbotWorkflow.load_existing_terms", return_value=[]):
+        result = gather_technologies_for_companies(intent)
+
+    assert result["found"] is False
+    assert result["technologies_per_company"] == {"OnbekendBedrijf": []}
+
+
+def test_gather_technologies_for_companies_partial_match_still_found():
+    intent = {"intent": "technologieen", "terms": ["Google", "OnbekendBedrijf"]}
+    existing_terms = [{"term": "Docker", "companies": ["Google"]}]
+
+    with patch("Workflows.ChatbotWorkflow.load_existing_terms", return_value=existing_terms):
+        result = gather_technologies_for_companies(intent)
+
+    assert result["found"] is True
+    assert result["technologies_per_company"]["OnbekendBedrijf"] == []
