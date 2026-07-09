@@ -10,7 +10,7 @@ def test_find_existing_term_returns_payload_when_score_above_threshold():
     ]
 
     with patch("Savers.QdrantSaver.search_similar_terms", return_value=fake_results):
-        match = find_existing_term("Kubernetes", "container orchestration")
+        match = find_existing_term({"term": "Kubernetes", "definition": "container orchestration"})
 
     assert match == {"term": "Kubernetes", "definition": "container orchestration"}
 
@@ -21,13 +21,13 @@ def test_find_existing_term_returns_none_when_score_below_threshold():
     ]
 
     with patch("Savers.QdrantSaver.search_similar_terms", return_value=fake_results):
-        match = find_existing_term("Kubernetes", "container orchestration")
+        match = find_existing_term({"term": "Kubernetes", "definition": "container orchestration"})
 
     assert match is None
 
 
 def test_find_existing_term_returns_none_when_no_results():
     with patch("Savers.QdrantSaver.search_similar_terms", return_value=[]):
-        match = find_existing_term("Kubernetes", "container orchestration")
+        match = find_existing_term({"term": "Kubernetes", "definition": "container orchestration"})
 
     assert match is None

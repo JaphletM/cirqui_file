@@ -126,7 +126,9 @@ def search_similar_terms(query_text, limit=5):
     return results.points
 
 
-def find_existing_term(term, definition="", threshold=0.80):
+def find_existing_term(request: dict, threshold: float = 0.80):
+    term = request["term"]
+    definition = request.get("definition", "")
     query = f"{term}: {definition}" if definition else term
     results = search_similar_terms(query, limit=1)
 

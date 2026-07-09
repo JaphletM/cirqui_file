@@ -1,7 +1,7 @@
 import json
 
-def extract_technical_terms(text, llm_client, prompt_template):
-    prompt = prompt_template.format(TEXT=text)
+def extract_technical_terms(request, llm_client):
+    prompt = request["prompt_template"].format(TEXT=request["text"])
     response = llm_client.ask(prompt)
 
     try:

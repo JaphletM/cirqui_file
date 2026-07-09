@@ -16,14 +16,18 @@ def run_chatbot(llm_client=None) -> None:
     with open("data/prompts/007-answer-formatter.md", encoding="utf-8") as f:
         prompt_template_answer = f.read()
 
+    prompt_templates = {"intent": prompt_template_intent, "answer": prompt_template_answer}
+
     print("Welkom bij de chatbot! Typ 'exit' om te stoppen.")
     while True:
         question = input("Stel een vraag: ")
         if question.lower() == "exit":
             break
 
+        request = {"question": question, "prompt_templates": prompt_templates}
+
         try:
-            answer = run_chatbot_query(question, llm_client, prompt_template_intent, prompt_template_answer)
+            answer = run_chatbot_query(request, llm_client)
             print(f"Antwoord: {answer}")
         except Exception as e:
             print(f"Er is een fout opgetreden: {e}")

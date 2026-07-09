@@ -6,15 +6,23 @@ class ConfigReader:
     def read_config(self):
         try:
             with open(self.config_file, 'r') as file:
-                for line in file:
-                    line = line.strip()
-                    if line and not line.startswith('#'):
-                        key, value = line.split('=', 1)
-                        self.config_data[key.strip()] = value.strip()
+                self.parse_lines(file)
         except FileNotFoundError:
             print(f"Config file {self.config_file} not found.")
         except Exception as e:
             print(f"An error occurred while reading the config file: {e}")
+
+    def parse_lines(self, file):
+        for line in file:
+            self.parse_line(line)
+
+    def parse_line(self, line):
+        line = line.strip()
+        if not line or line.startswith('#'):
+            return
+
+        key, value = line.split('=', 1)
+        self.config_data[key.strip()] = value.strip()
 
     def get_config(self, key, default=None):
         return self.config_data.get(key, default)
