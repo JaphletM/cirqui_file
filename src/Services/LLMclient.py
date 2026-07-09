@@ -14,6 +14,7 @@ class LLMClient:
             base_url="https://openrouter.ai/api/v1",
             api_key=os.getenv("OPENROUTER_API_KEY"),
         )
+        return None
 
     def ask(self, prompt: str) -> str:
         response = self.client.chat.completions.create(

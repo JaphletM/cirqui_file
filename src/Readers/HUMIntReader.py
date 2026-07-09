@@ -4,6 +4,7 @@ from pathlib import Path
 class HumintReader:
     def __init__(self, file_path: str):
         self.file_path = Path(file_path)
+        return None
 
     def read_humint(self) -> str:
         if not self.file_path.exists():

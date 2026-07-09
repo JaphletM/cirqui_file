@@ -87,6 +87,7 @@ def run_customer_analysis_workflow(customer_name: str = None, llm_client=None):
 
     print("\n" + "─" * 40)
     print(f"✅ Analyse voor {customer_name} voltooid!")
+    return None
 
 
 def resolve_customer_name(customer_name):
@@ -151,40 +152,47 @@ def is_known_term(result: dict) -> bool:
 
 def save_terms(comparison_results, company_name):
     save_new_terms(comparison_results, company_name)
+    return None
 
 
 def generate_and_save_embeddings(new_terms):
     for term_doc in new_terms:
         save_and_report_embedding(term_doc)
 
+    return None
+
 
 def save_and_report_embedding(term_doc: dict) -> None:
     term = term_doc.get("term")
     if not term:
-        return
+        return None
 
     embedding = embed_term(term_doc)
     save_term_embedding(term_doc, embedding)
     print(f"  Embedding opgeslagen voor: {term}")
+    return None
 
 
 def check_terms_in_vector_store(comparison_results):
     for result in comparison_results:
         report_term_status(result)
 
+    return None
+
 
 def report_term_status(result: dict) -> None:
     term = result.get("term")
     if not term:
-        return
+        return None
 
     request = {"term": term, "definition": result.get("definition", "")}
     existing_info = find_existing_term(request)
     if not existing_info:
         print(f"  + Nieuwe term: {term}")
-        return
+        return None
 
     print(f"  ✓ Bestaande kennis gevonden voor: {term}")
+    return None
 
 
 def generate_followup_prompts(request: dict, llm_client) -> tuple:

@@ -70,6 +70,8 @@ def merge_candidates(candidates_by_term: dict, results: list) -> None:
         }
         keep_highest_scoring(candidates_by_term, candidate)
 
+    return None
+
 
 def keep_highest_scoring(candidates_by_term: dict, candidate: dict) -> None:
     matched_term = candidate["term"]
@@ -77,6 +79,8 @@ def keep_highest_scoring(candidates_by_term: dict, candidate: dict) -> None:
 
     if not existing or candidate["score"] > existing["score"]:
         candidates_by_term[matched_term] = candidate
+
+    return None
 
 
 def gather_query_results(intent: dict, resolved_terms: dict) -> dict:

@@ -44,3 +44,5 @@ def interactive_workflow():
 
         else:
             print("Ongeldige keuze. Kies A, B, C of D.")
+
+    return None

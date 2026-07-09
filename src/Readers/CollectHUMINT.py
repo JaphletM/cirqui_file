@@ -199,3 +199,4 @@ def save_humint_data(data):
         f.write(data["humint"])
 
     print(f"HUMINT data opgeslagen als {json_path} en {md_path}")
+    return None

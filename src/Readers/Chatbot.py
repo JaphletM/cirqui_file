@@ -31,3 +31,5 @@ def run_chatbot(llm_client=None) -> None:
             print(f"Antwoord: {answer}")
         except Exception as e:
             print(f"Er is een fout opgetreden: {e}")
+
+    return None

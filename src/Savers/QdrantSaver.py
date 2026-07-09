@@ -33,6 +33,8 @@ def create_collection_if_not_exists():
             )
         )
 
+    return None
+
 
 def create_rapport_collection_if_not_exists():
     collection_names = [
@@ -50,6 +52,8 @@ def create_rapport_collection_if_not_exists():
                 distance=Distance.COSINE
             )
         )
+
+    return None
 
 
 def split_rapport_into_sections(rapport_text):
@@ -92,6 +96,8 @@ def save_rapport_embedding(company_name, rapport_text):
             points=[point]
         )
 
+    return None
+
 
 def save_term_embedding(term_doc, embedding):
     create_collection_if_not_exists()
@@ -109,6 +115,8 @@ def save_term_embedding(term_doc, embedding):
         collection_name=COLLECTION_NAME,
         points=[point]
     )
+
+    return None
 
 
 def search_similar_terms(query_text, limit=5):

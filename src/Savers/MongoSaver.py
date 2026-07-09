@@ -67,6 +67,8 @@ def save_terms_to_json(new_terms):
     with JSON_FILE.open("w", encoding="utf-8") as file:
         json.dump(existing_terms, file, indent=4, ensure_ascii=False)
 
+    return None
+
 
 def load_existing_terms():
     try:
@@ -112,6 +114,8 @@ def save_new_terms(comparison_results, company_name):
         save_terms_to_json(comparison_results)
         print(f"MongoDB unavailable. Saved {len(comparison_results)} new terms to JSON.")
 
+    return None
+
 
 def upsert_term(collection, request):
     item = request["item"]
@@ -129,6 +133,8 @@ def upsert_term(collection, request):
         },
         upsert=True
     )
+
+    return None
 
 
 
