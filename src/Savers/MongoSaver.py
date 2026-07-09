@@ -24,24 +24,40 @@ def load_terms_from_json():
         return []
 
     try:
-        with JSON_FILE.open("r", encoding="utf-8") as file:
-            data = json.load(file)
-
-        if isinstance(data, dict):
-            data = data.get("terms", [])
-
-        flattened_terms = []
-
-        for item in data:
-            if isinstance(item, list):
-                flattened_terms.extend(item)
-            elif isinstance(item, dict):
-                flattened_terms.append(item)
-
-        return flattened_terms
-
+        data = read_json_file(JSON_FILE)
     except json.JSONDecodeError:
         return []
+
+    return flatten_terms(data)
+
+
+def read_json_file(path):
+    with path.open("r", encoding="utf-8") as file:
+        data = json.load(file)
+
+    if isinstance(data, dict):
+        return data.get("terms", [])
+
+    return data
+
+
+def flatten_terms(data):
+    flattened_terms = []
+
+    for item in data:
+        flattened_terms.extend(normalize_term_item(item))
+
+    return flattened_terms
+
+
+def normalize_term_item(item):
+    if isinstance(item, list):
+        return item
+
+    if isinstance(item, dict):
+        return [item]
+
+    return []
 
 
 def save_terms_to_json(new_terms):
@@ -88,25 +104,31 @@ def load_existing_terms():
     #    print(f"MongoDB unavailable. Saved {len(new_terms)} new terms to JSON.")
 
 def save_new_terms(comparison_results, company_name):
-
     try:
-        collection=get_terms_collection()
+        collection = get_terms_collection()
         for item in comparison_results:
-                collection.update_one (
-                    {"term":item["term"]},
-                    {
-                        "$set": {
-                        "term": item["term"],
-                        "definition": item["definition"],
-                        "category": item["category"]},
-                        "$addToSet": {"companies":{"$each": [company_name]}}
-                        },
-                    upsert=True,
-                )
-                
+            upsert_term(collection, {"item": item, "company_name": company_name})
     except PyMongoError:
         save_terms_to_json(comparison_results)
         print(f"MongoDB unavailable. Saved {len(comparison_results)} new terms to JSON.")
+
+
+def upsert_term(collection, request):
+    item = request["item"]
+    company_name = request["company_name"]
+
+    collection.update_one(
+        {"term": item["term"]},
+        {
+            "$set": {
+                "term": item["term"],
+                "definition": item["definition"],
+                "category": item["category"]
+            },
+            "$addToSet": {"companies": {"$each": [company_name]}}
+        },
+        upsert=True
+    )
 
 
 

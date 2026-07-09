@@ -20,8 +20,8 @@ def validate_intent(raw: dict) -> dict:
                     
 
 
-def extract_query_intent(question: str, llm_client: LLMClient, prompt_template: str) -> dict:
-    filled_prompt = prompt_template.replace("{QUESTION}", question)
+def extract_query_intent(request: dict, llm_client: LLMClient) -> dict:
+    filled_prompt = request["prompt_template"].replace("{QUESTION}", request["question"])
     response = llm_client.ask(filled_prompt)
 
     clean_response = response.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()

@@ -1,7 +1,7 @@
 from types import SimpleNamespace
 from unittest.mock import patch
 
-from Workflows.ChatbotWorkflow import resolve_query_terms, gather_query_results, gather_technologies_for_companies
+from Workflows.ChatbotWorkflow import resolve_query_terms, gather_query_results, gather_technologies_for_companies, run_chatbot_query
 
 
 def test_resolve_query_terms_returns_exact_match_without_calling_qdrant():
@@ -277,3 +277,24 @@ def test_gather_technologies_for_companies_partial_match_still_found():
 
     assert result["found"] is True
     assert result["technologies_per_company"]["OnbekendBedrijf"] == []
+
+
+def test_run_chatbot_query_takes_request_dict_and_llm_client():
+    request = {
+        "question": "Wat is Docker?",
+        "prompt_templates": {"intent": "intent-template", "answer": "answer-template"}
+    }
+    llm_client = "irrelevant-for-this-test"
+
+    with patch("Workflows.ChatbotWorkflow.extract_query_intent", return_value={"intent": "definitie", "terms": ["Docker"]}) as mocked_extract, \
+         patch("Workflows.ChatbotWorkflow.gather_results_for_intent", return_value={"found": False, "terms": ["Docker"]}), \
+         patch("Workflows.ChatbotWorkflow.compose_answer", return_value="het antwoord") as mocked_compose:
+        answer = run_chatbot_query(request, llm_client)
+
+    mocked_extract.assert_called_once_with(
+        {"question": "Wat is Docker?", "prompt_template": "intent-template"}, llm_client
+    )
+    mocked_compose.assert_called_once_with(
+        {"result": {"found": False, "terms": ["Docker"]}, "prompt_template": "answer-template"}, llm_client
+    )
+    assert answer == "het antwoord"

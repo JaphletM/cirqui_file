@@ -6,18 +6,24 @@ from Savers.MongoSaver import load_existing_terms
 from Extractors.QueryIntentExtractor import extract_query_intent
 
 
-def run_chatbot_query(question: str, llm_client, prompt_template_intent: str, prompt_template_answer: str) -> str:
-    intent = extract_query_intent(question, llm_client, prompt_template_intent)
+def run_chatbot_query(request: dict, llm_client) -> str:
+    prompt_templates = request["prompt_templates"]
 
+    intent_request = {"question": request["question"], "prompt_template": prompt_templates["intent"]}
+    intent = extract_query_intent(intent_request, llm_client)
+
+    query_results = gather_results_for_intent(intent)
+
+    answer_request = {"result": query_results, "prompt_template": prompt_templates["answer"]}
+    return compose_answer(answer_request, llm_client)
+
+
+def gather_results_for_intent(intent: dict) -> dict:
     if intent["intent"] == "technologieen":
-        query_results = gather_technologies_for_companies(intent)
-    else:
-        resolved_terms = resolve_query_terms(intent)
-        query_results = gather_query_results(intent, resolved_terms)
+        return gather_technologies_for_companies(intent)
 
-    answer = compose_answer(query_results, llm_client, prompt_template_answer)
-    return answer
-
+    resolved_terms = resolve_query_terms(intent)
+    return gather_query_results(intent, resolved_terms)
 
 
 def resolve_query_terms(intent: dict) -> dict:
@@ -25,66 +31,87 @@ def resolve_query_terms(intent: dict) -> dict:
     resolved_terms = {}
 
     for term in intent["terms"]:
-        exact_match = find_existing_term(term, existing_terms)
-
-        if exact_match:
-            resolved_terms[term] = [{
-                "term": exact_match["term"],
-                "definition": exact_match.get("definition", ""),
-                "score": 1.0
-            }]
-            continue
-
-        queries = {term, term.capitalize()}
-
-        candidates_by_term = {}
-        for query in queries:
-            for result in search_similar_terms(query):
-                matched_term = result.payload["term"]
-
-                if matched_term not in candidates_by_term or result.score > candidates_by_term[matched_term]["score"]:
-                    candidates_by_term[matched_term] = {
-                        "term": matched_term,
-                        "definition": result.payload.get("definition", ""),
-                        "score": result.score
-                    }
-
-        resolved_terms[term] = select_confident_matches(list(candidates_by_term.values()))
+        resolved_terms[term] = resolve_single_term(term, existing_terms)
 
     return resolved_terms
 
 
+def resolve_single_term(term: str, existing_terms: list) -> list:
+    exact_match = find_existing_term(term, existing_terms)
+
+    if not exact_match:
+        candidates = search_qdrant_candidates(term)
+        return select_confident_matches(candidates)
+
+    return [{
+        "term": exact_match["term"],
+        "definition": exact_match.get("definition", ""),
+        "score": 1.0
+    }]
+
+
+def search_qdrant_candidates(term: str) -> list:
+    queries = {term, term.capitalize()}
+    candidates_by_term = {}
+
+    for query in queries:
+        results = search_similar_terms(query)
+        merge_candidates(candidates_by_term, results)
+
+    return list(candidates_by_term.values())
+
+
+def merge_candidates(candidates_by_term: dict, results: list) -> None:
+    for result in results:
+        candidate = {
+            "term": result.payload["term"],
+            "definition": result.payload.get("definition", ""),
+            "score": result.score
+        }
+        keep_highest_scoring(candidates_by_term, candidate)
+
+
+def keep_highest_scoring(candidates_by_term: dict, candidate: dict) -> None:
+    matched_term = candidate["term"]
+    existing = candidates_by_term.get(matched_term)
+
+    if not existing or candidate["score"] > existing["score"]:
+        candidates_by_term[matched_term] = candidate
+
+
 def gather_query_results(intent: dict, resolved_terms: dict) -> dict:
-    terms = intent["terms"]
-
     if intent["intent"] == "definitie":
-        definitions = {
-            term: resolved_terms[term][0]["definition"]
-            for term in terms
-            if resolved_terms[term]
-        }
+        return gather_definitions(intent, resolved_terms)
 
-        return {
-            "intent": intent["intent"],
-            "terms": terms,
-            "found": bool(definitions),
-            "companies_per_term": None,
-            "companies_intersection": None,
-            "definitions": definitions,
-            "technologies_per_company": None
-        }
+    return gather_companies(intent, resolved_terms)
 
+
+def gather_definitions(intent: dict, resolved_terms: dict) -> dict:
+    terms = intent["terms"]
+    definitions = {
+        term: resolved_terms[term][0]["definition"]
+        for term in terms
+        if resolved_terms[term]
+    }
+
+    return {
+        "intent": intent["intent"],
+        "terms": terms,
+        "found": bool(definitions),
+        "companies_per_term": None,
+        "companies_intersection": None,
+        "definitions": definitions,
+        "technologies_per_company": None
+    }
+
+
+def gather_companies(intent: dict, resolved_terms: dict) -> dict:
+    terms = intent["terms"]
     existing_terms = load_existing_terms()
-    companies_per_term = {}
-
-    for term in terms:
-        if not resolved_terms[term]:
-            companies_per_term[term] = []
-            continue
-
-        matched_term_name = resolved_terms[term][0]["term"]
-        term_doc = find_existing_term(matched_term_name, existing_terms)
-        companies_per_term[term] = term_doc.get("companies", []) if term_doc else []
+    companies_per_term = {
+        term: find_companies_for_resolved_term(resolved_terms[term], existing_terms)
+        for term in terms
+    }
 
     companies_intersection = intersect_companies(companies_per_term) if len(terms) >= 2 else None
     found = any(companies_per_term[term] for term in terms)
@@ -100,10 +127,22 @@ def gather_query_results(intent: dict, resolved_terms: dict) -> dict:
     }
 
 
+def find_companies_for_resolved_term(matches: list, existing_terms: list) -> list:
+    if not matches:
+        return []
+
+    matched_term_name = matches[0]["term"]
+    term_doc = find_existing_term(matched_term_name, existing_terms)
+
+    if not term_doc:
+        return []
+
+    return term_doc.get("companies", [])
+
+
 def gather_technologies_for_companies(intent: dict) -> dict:
     companies = intent["terms"]
     existing_terms = load_existing_terms()
-
     technologies_per_company = {
         company: find_technologies_for_company(company, existing_terms)
         for company in companies

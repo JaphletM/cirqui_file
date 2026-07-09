@@ -17,24 +17,18 @@ def compare_terms(extracted_terms, existing_terms):
     results = []
 
     for extracted_term in extracted_terms:
-        match = find_existing_term(
-            extracted_term.get("term", ""),
-            existing_terms
-        )
-
-        if match:
-            results.append({
-                "term": extracted_term.get("term", ""),
-                "definition": extracted_term.get("definition", ""),
-                "category": extracted_term.get("category", ""),
-                "status": "exists"
-            })
-        else:
-            results.append({
-                "term": extracted_term.get("term", ""),
-                "definition": extracted_term.get("definition", ""),
-                "category": extracted_term.get("category", ""),
-                "status": "new"
-            })
+        results.append(build_comparison_result(extracted_term, existing_terms))
 
     return results
+
+
+def build_comparison_result(extracted_term, existing_terms):
+    match = find_existing_term(extracted_term.get("term", ""), existing_terms)
+    status = "exists" if match else "new"
+
+    return {
+        "term": extracted_term.get("term", ""),
+        "definition": extracted_term.get("definition", ""),
+        "category": extracted_term.get("category", ""),
+        "status": status
+    }

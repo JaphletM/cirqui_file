@@ -14,13 +14,20 @@ def build_answer_context(result: dict) -> dict:
     }
 
 
-def compose_answer(result: dict, llm_client, prompt_template: str) -> str:
+def compose_answer(request: dict, llm_client) -> str:
+    result = request["result"]
+
     if result.get("found") is False:
         return f"Geen informatie gevonden over: {', '.join(result.get('terms', []))}."
 
+    filled_prompt = build_filled_prompt(result, request["prompt_template"])
+    return llm_client.ask(filled_prompt)
+
+
+def build_filled_prompt(result: dict, prompt_template: str) -> str:
     context = build_answer_context(result)
 
-    filled_prompt = (
+    return (
         prompt_template
         .replace("{GEVONDEN}", str(context["gevonden"]))
         .replace("{TERMEN}", ", ".join(context["termen"]))
@@ -29,5 +36,3 @@ def compose_answer(result: dict, llm_client, prompt_template: str) -> str:
         .replace("{DEFINITIES}", str(context["definities"]))
         .replace("{TECHNOLOGIEEN_PER_BEDRIJF}", str(context["technologieen_per_bedrijf"]))
     )
-
-    return llm_client.ask(filled_prompt)

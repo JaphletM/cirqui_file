@@ -14,7 +14,7 @@ def test_compose_answer_returns_fixed_message_without_calling_llm_when_not_found
     }
     llm_client = MagicMock()
 
-    answer = compose_answer(result, llm_client, prompt_template="irrelevant")
+    answer = compose_answer({"result": result, "prompt_template": "irrelevant"}, llm_client)
 
     assert answer == "Geen informatie gevonden over: Foo."
     llm_client.ask.assert_not_called()
@@ -57,7 +57,8 @@ def test_compose_answer_calls_llm_with_filled_prompt_when_found():
         "Bedrijven intersectie: {BEDRIJVEN_INTERSECTIE}\n"
         "Definities: {DEFINITIES}"
     )   
-    assert compose_answer(result, llm_client, prompt_template) == "LLM response"
+    request = {"result": result, "prompt_template": prompt_template}
+    assert compose_answer(request, llm_client) == "LLM response"
 
 
 def test_build_answer_context_translates_technologies_per_company():

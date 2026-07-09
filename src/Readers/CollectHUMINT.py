@@ -43,122 +43,157 @@ Richtlijnen:
 Begin het gesprek nu."""
 
 
-def _run_interview(company, initial_input, llm_client):
-    """Runs an LLM-guided interview based on initial input."""
-    conversation = [f"Gebruiker: {initial_input}"]
-    print()
-
-    for _ in range(4):
-        filled_prompt = INTERVIEW_PROMPT.format(
-            COMPANY=company,
-            CONVERSATION="\n".join(conversation)
-        )
-        question = llm_client.ask(filled_prompt).strip()
-
-        if "GENOEG_INFORMATIE" in question:
-            print("Genoeg informatie verzameld. Samenvatting wordt gemaakt...\n")
-            break
-
-        print(f"Vraag: {question}")
-        answer = input("Jouw antwoord: ").strip()
-        conversation.append(f"Analist: {question}")
-        conversation.append(f"Gebruiker: {answer}")
-
-    filled_summary = SUMMARY_PROMPT.format(
-        COMPANY=company,
-        CONVERSATION="\n".join(conversation)
-    )
-    summary = llm_client.ask(filled_summary)
-    return summary
-
-
 def collect_humint_data(llm_client=None):
-
     company = input("Voor welk bedrijf wil je Human Intelligence verstrekken? ").strip()
+    humint_choice = ask_humint_choice()
 
-    while True:
-        humint_choice = input(
-            "Wil je tekst delen, een bestand uploaden, of HUMINT laten genereren? (tekst/bestand/genereer): "
-        ).lower().strip()
-
-        if humint_choice in ["tekst", "bestand", "genereer"]:
-            break
-        print("Ongeldige keuze. Probeer opnieuw (tekst/bestand/genereer).")
-
-    if humint_choice == "bestand":
-        file_path = input("Voer het pad naar het bestand in: ")
-        if os.path.isfile(file_path):
-            with open(file_path, "r", encoding="utf-8") as f:
-                initial_input = f.read()
-        else:
-            print("Bestand niet gevonden. Voer de informatie handmatig in.")
-            initial_input = input("Wat weet je over dit bedrijf? ").strip()
-
-        if llm_client:
-            humint = _run_interview(company, initial_input, llm_client)
-            infotype = "interview"
-            bron = "gebruiker"
-            reliability = "N/A"
-            reliability_check = "Verzameld via LLM-gestuurd interview"
-        else:
-            humint = initial_input
-            infotype, bron, reliability, reliability_check = _ask_metadata()
-
-    elif humint_choice == "tekst":
-        initial_input = input("Wat weet je over dit bedrijf? ").strip()
-
-        if llm_client:
-            humint = _run_interview(company, initial_input, llm_client)
-            infotype = "interview"
-            bron = "gebruiker"
-            reliability = "N/A"
-            reliability_check = "Verzameld via LLM-gestuurd interview"
-        else:
-            humint = initial_input
-            infotype, bron, reliability, reliability_check = _ask_metadata()
-
-    elif humint_choice == "genereer":
-        if llm_client is None:
-            print("Geen LLM-client beschikbaar. Voer de informatie handmatig in.")
-            humint = input("Wat weet je over dit bedrijf? ").strip()
-            infotype, bron, reliability, reliability_check = _ask_metadata()
-        else:
-            print(f"\nHUMINT wordt automatisch gegenereerd voor '{company}'...\n")
-            filled_prompt = FAKE_HUMINT_PROMPT.format(COMPANY=company)
-            humint = llm_client.ask(filled_prompt)
-            print("HUMINT gegenereerd.\n")
-            infotype = "automatisch gegenereerd"
-            bron = "LLM-gegenereerd (demonstratie)"
-            reliability = "N/A"
-            reliability_check = "Automatisch gegenereerd door CIRQUI voor demonstratiedoeleinden."
+    request = {"company": company, "llm_client": llm_client}
+    humint, metadata = collect_humint_for_choice(humint_choice, request)
 
     return {
         "company": company,
         "humint": humint,
-        "reliability": reliability,
-        "reason": reliability_check,
-        "infotype": infotype,
-        "bron": bron
+        "reliability": metadata["reliability"],
+        "reason": metadata["reliability_check"],
+        "infotype": metadata["infotype"],
+        "bron": metadata["bron"]
     }
 
 
-def _ask_metadata():
-    infotype = input("Wat voor soort informatie is dit? (bijv. bedrijfsstrategie, productinformatie, marktinzichten): ")
-    bron = input("Wat is de bron van deze informatie? (bijv. interne medewerker, externe consultant, openbare bron): ")
-    reliability = input("Hoe betrouwbaar acht je deze bron? (1-10): ")
-    reliability_check = input("Waarom beschouw je deze informatie als betrouwbaar? ")
-    return infotype, bron, reliability, reliability_check
+def ask_humint_choice():
+    while True:
+        choice = input(
+            "Wil je tekst delen, een bestand uploaden, of HUMINT laten genereren? (tekst/bestand/genereer): "
+        ).lower().strip()
+
+        if choice in ["tekst", "bestand", "genereer"]:
+            return choice
+
+        print("Ongeldige keuze. Probeer opnieuw (tekst/bestand/genereer).")
+
+
+def collect_humint_for_choice(choice, request):
+    if choice == "bestand":
+        return collect_from_file(request)
+
+    if choice == "tekst":
+        return collect_from_text(request)
+
+    return collect_generated(request)
+
+
+def collect_from_file(request):
+    file_path = input("Voer het pad naar het bestand in: ")
+    initial_input = read_file_or_ask(file_path)
+
+    return collect_with_optional_interview(request, initial_input)
+
+
+def read_file_or_ask(file_path):
+    if os.path.isfile(file_path):
+        with open(file_path, "r", encoding="utf-8") as f:
+            return f.read()
+
+    print("Bestand niet gevonden. Voer de informatie handmatig in.")
+    return input("Wat weet je over dit bedrijf? ").strip()
+
+
+def collect_from_text(request):
+    initial_input = input("Wat weet je over dit bedrijf? ").strip()
+    return collect_with_optional_interview(request, initial_input)
+
+
+def collect_with_optional_interview(request, initial_input):
+    llm_client = request["llm_client"]
+
+    if not llm_client:
+        return initial_input, ask_metadata()
+
+    interview_request = {**request, "initial_input": initial_input}
+    humint = run_interview(interview_request)
+    metadata = {
+        "infotype": "interview",
+        "bron": "gebruiker",
+        "reliability": "N/A",
+        "reliability_check": "Verzameld via LLM-gestuurd interview"
+    }
+    return humint, metadata
+
+
+def collect_generated(request):
+    llm_client = request["llm_client"]
+
+    if not llm_client:
+        print("Geen LLM-client beschikbaar. Voer de informatie handmatig in.")
+        humint = input("Wat weet je over dit bedrijf? ").strip()
+        return humint, ask_metadata()
+
+    print(f"\nHUMINT wordt automatisch gegenereerd voor '{request['company']}'...\n")
+    filled_prompt = FAKE_HUMINT_PROMPT.format(COMPANY=request["company"])
+    humint = llm_client.ask(filled_prompt)
+    print("HUMINT gegenereerd.\n")
+
+    metadata = {
+        "infotype": "automatisch gegenereerd",
+        "bron": "LLM-gegenereerd (demonstratie)",
+        "reliability": "N/A",
+        "reliability_check": "Automatisch gegenereerd door CIRQUI voor demonstratiedoeleinden."
+    }
+    return humint, metadata
+
+
+def run_interview(request):
+    llm_client = request["llm_client"]
+    conversation = [f"Gebruiker: {request['initial_input']}"]
+    print()
+
+    round_request = {"company": request["company"], "conversation": conversation}
+    for _ in range(4):
+        answered_enough = conduct_interview_round(round_request, llm_client)
+        if answered_enough:
+            break
+
+    filled_summary = SUMMARY_PROMPT.format(
+        COMPANY=request["company"],
+        CONVERSATION="\n".join(conversation)
+    )
+    return llm_client.ask(filled_summary)
+
+
+def conduct_interview_round(round_request, llm_client):
+    company = round_request["company"]
+    conversation = round_request["conversation"]
+
+    filled_prompt = INTERVIEW_PROMPT.format(COMPANY=company, CONVERSATION="\n".join(conversation))
+    question = llm_client.ask(filled_prompt).strip()
+
+    if "GENOEG_INFORMATIE" in question:
+        print("Genoeg informatie verzameld. Samenvatting wordt gemaakt...\n")
+        return True
+
+    print(f"Vraag: {question}")
+    answer = input("Jouw antwoord: ").strip()
+    conversation.append(f"Analist: {question}")
+    conversation.append(f"Gebruiker: {answer}")
+    return False
+
+
+def ask_metadata():
+    return {
+        "infotype": input("Wat voor soort informatie is dit? (bijv. bedrijfsstrategie, productinformatie, marktinzichten): "),
+        "bron": input("Wat is de bron van deze informatie? (bijv. interne medewerker, externe consultant, openbare bron): "),
+        "reliability": input("Hoe betrouwbaar acht je deze bron? (1-10): "),
+        "reliability_check": input("Waarom beschouw je deze informatie als betrouwbaar? ")
+    }
 
 
 def save_humint_data(data):
     os.makedirs("data/humanInt", exist_ok=True)
 
-    # Save full metadata as JSON
     json_path = f"data/humanInt/{data['company']}_humint.json"
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
 
-    # Save just the text as .md for the pipeline
     md_path = f"data/humanInt/{data['company']}.md"
     with open(md_path, "w", encoding="utf-8") as f:
         f.write(data["humint"])
