@@ -1,0 +1,187 @@
+{
+  "company": "Phillips",
+  "results": [
+    {
+      "term": ".NET",
+      "definition": "Een open-source ontwikkelaarsplatform van Microsoft voor het bouwen van allerlei soorten apps.",
+      "followup_prompts": [
+        "Welke specifieke .NET-versie(s) gebruikt de klant momenteel en zijn er plannen voor een upgrade naar .NET 6 of hoger, en zo ja, welke overwegingen spelen daarbij een rol?",
+        "Welke type applicaties heeft de klant ontwikkeld met .NET (bijvoorbeeld webapplicaties, desktop applicaties, microservices), en welk frameworks (zoals ASP.NET Core, Windows Forms, WPF) zijn daarbij ingezet?",
+        "Heeft de klant behoefte aan cross-platform functionaliteit voor .NET-applicaties, en zo ja, welke besturingssystemen (Windows, Linux, macOS) moeten ondersteund worden en welke eisen worden daarbij gesteld aan performance en deployment?"
+      ],
+      "followup_answers": [
+        "De klant gebruikt momenteel .NET Framework 4.8 voor de meeste legacy-applicaties. Er zijn plannen om een deel van de kritieke webapplicaties te migreren naar .NET 8 om te profiteren van prestatieverbeteringen en microservices-mogelijkheden. Overwegingen zijn de complexiteit van de migratie, compatibiliteit met bestaande bibliotheken en de training van ontwikkelaars.",
+        "De klant heeft een mix van applicaties ontwikkeld: ASP.NET Web Forms voor oudere interne portalen, WPF voor een complexe desktop-CRM-applicatie en onlangs zijn enkele nieuwe RESTful API's gebouwd met ASP.NET Core voor integratie met mobiele apps.",
+        "Ja, er is een groeiende behoefte aan cross-platform functionaliteit, met name voor nieuwe microservices die op Linux containers (Docker) moeten draaien. Windows blijft het primaire platform voor desktopapplicaties. De eisen voor de Linux-deployments zijn gericht op lage latency en hoge doorvoer, met geautomatiseerde CI/CD pipelines via Azure DevOps."
+      ]
+    },
+    {
+      "term": "R",
+      "definition": "Een programmeertaal en softwareomgeving voor statistische computing en graphics.",
+      "followup_prompts": [
+        "Voor welke specifieke data-analyse (bijvoorbeeld statistische modellering, machine learning, datavisualisatie) gebruikt de klant R en welke businessvragen proberen zij hiermee te beantwoorden?",
+        "Welke R-pakketten en bibliotheken zijn momenteel in gebruik bij de klant (bijvoorbeeld tidyverse, ggplot2, caret) en zijn er wensen voor de inzet van nieuwe of specifieke pakketten voor toekomstige projecten?",
+        "Hoe wordt de R-code bij de klant beheerd en gedeployed (bijvoorbeeld via RStudio Server, ShinyApps, Quarto), en zijn er eisen aan integratie met andere systemen of aan geautomatiseerde rapportage?"
+      ],
+      "followup_answers": [
+        "De klant gebruikt R voornamelijk voor geavanceerde statistische modellering en data-visualisatie, met name voor het voorspellen van klantgedrag (churn) en het optimaliseren van marketingcampagnes. Ze proberen hiermee de effectiviteit van hun marketinguitgaven te verhogen.",
+        "De klant maakt intensief gebruik van het tidyverse (dplyr, ggplot2) voor data-manipulatie en visualisatie. Voor machine learning wordt caret gebruikt. Er is interesse in het verkennen van 'keras' of 'tensorflow' voor deep learning projecten in de toekomst.",
+        "R-code wordt beheerd via Git en ontwikkeld in RStudio. Een deel van de analyses wordt via ShinyApps ontsloten voor business users. Er is een sterke wens voor integratie met de bestaande BI-omgeving (Tableau) en geautomatiseerde generatie van PDF-rapporten op basis van R Markdown/Quarto."
+      ]
+    },
+    {
+      "term": "MATLAB",
+      "definition": "Een programmeerplatform ontworpen voor ingenieurs en wetenschappers voor computationele taken, data-analyse en algoritme-ontwikkeling.",
+      "followup_prompts": [
+        "Voor welke specifieke technische of wetenschappelijke berekeningen (bijvoorbeeld signaalverwerking, beeldverwerking, simulatie) gebruikt de klant MATLAB, en welke alternatieven zijn eventueel overwogen of zijn in de toekomst relevant?",
+        "Welke MATLAB-toolboxes zijn essentieel voor de huidige workflows van de klant en zijn er wensen voor de uitbreiding hiervan of de ontwikkeling van aangepaste toolboxes?",
+        "Hoe worden MATLAB-scripts en modellen bij de klant beheerd, gedeeld en gedocumenteerd, en zijn er eisen aan de integratie met andere programmeertalen of aan de deployment van MATLAB-applicaties (bijvoorbeeld via MATLAB Compiler)?"
+      ],
+      "followup_answers": [
+        "De klant gebruikt MATLAB voornamelijk voor signaalverwerking in real-time sensordata en voor simulaties van complexe systemen binnen hun R&D-afdeling. Octave is overwogen als open-source alternatief, maar de voorkeur gaat uit naar MATLAB vanwege de uitgebreide toolboxes en support. Python met SciPy/NumPy wordt ook gezien als relevante optie voor de toekomst.",
+        "De Signal Processing Toolbox en Simulink zijn essentieel voor de huidige workflows. Er is een wens om de Control System Toolbox te gaan gebruiken voor verdiepende analyses en wellicht de ontwikkeling van enkele interne, aangepaste toolboxes voor specifieke bedrijfsspecifieke algoritmen.",
+        "MATLAB-scripts worden beheerd in een centrale repository (SVN). Documentatie is veelal intern via Confluence. Er is een eis om MATLAB-modellen te kunnen integreren met C++ codebases en de deployment van (gecompileerde) MATLAB-applicaties via MATLAB Compiler op embedded systemen te vereenvoudigen."
+      ]
+    },
+    {
+      "term": "GitHub",
+      "definition": "Een webgebaseerde hostingdienst voor versiebeheer die Git gebruikt, met extra functies zoals bug tracking en projectmanagement.",
+      "followup_prompts": [
+        "Hoe beheert de klant hun versiebeheer en samenwerkingsprocessen via GitHub (bijvoorbeeld via pull requests, branches, code reviews) en zijn er specifieke vereisten voor workflows of compliance?",
+        "Welke GitHub-functionaliteiten (bijvoorbeeld GitHub Actions voor CI/CD, GitHub Pages voor documentatie, GitHub Projects voor projectmanagement) worden momenteel benut en zijn er wensen voor de uitbreiding of optimalisatie hiervan?",
+        "Hoe is de integratie tussen GitHub en andere tools die de klant gebruikt (bijvoorbeeld Jira voor issue tracking, Jenkins voor CI) geconfigureerd, en zijn er gaps in de automatisering of rapportage?"
+      ],
+      "followup_answers": [
+        "De klant gebruikt GitFlow als branching-strategie in GitHub. Alle code wijzigingen verlopen via Pull Requests met verplichte code reviews door minimaal twee teamleden. Er zijn specifieke compliance-eisen met betrekking tot audit trails en geautoriseerde merges, die door GitHub's instellingen worden afgedwongen.",
+        "GitHub Actions wordt reeds gebruikt voor CI/CD voor het merendeel van de projecten. GitHub Pages wordt beperkt ingezet voor projectdocumentatie. Er is een duidelijke wens om GitHub Projects meer te benutten voor gestructureerd projectmanagement en om GitHub Advanced Security te implementeren voor kwetsbaarheidsanalyse.",
+        "GitHub is geïntegreerd met Jira via de officiële GitHub App voor het linken van issues aan commits en pull requests. Eerdere Jenkins CI-pipelines zijn grotendeels gemigreerd naar GitHub Actions. Er zijn nog enkele gaps in de geautomatiseerde rapportage over codekwaliteit en security scanning resultaten, die verder geoptimaliseerd moeten worden."
+      ]
+    },
+    {
+      "term": "Ansible",
+      "definition": "Een open-source software automatiseringsplatform voor configuratiebeheer, applicatiedistributie en taakautomatisering.",
+      "followup_prompts": [
+        "Voor welke specifieke infrastructuurautomatiseringstaken (bijvoorbeeld provisioning van servers, configuratiemanagement, applicatie deployment) zet de klant Ansible in en welke andere tools vervangen zij hiermee?",
+        "Welke Ansible playbooks, rollen en modules zijn momenteel in gebruik bij de klant, en zijn er specifieke eisen aan het beheer, de beveiliging of de auditbaarheid van deze automatisering?",
+        "Hoe is de Ansible-infrastructuur (bijvoorbeeld Ansible Tower/AWX, inventaris) bij de klant opgezet, en zijn er wensen voor schaalbaarheid, integratie met cloudproviders of geavanceerde rapportagefunctionaliteit?"
+      ],
+      "followup_answers": [
+        "De klant zet Ansible in voor het provisionen van VM's in VMware, configuratiemanagement van Linux-servers (webservers, databases) en de geautomatiseerde deployment van backend-applicaties. Hiermee vervangen ze handmatige scripts en gedeeltelijk Puppet, dat in het verleden werd gebruikt.",
+        "De klant heeft een groeiende bibliotheek van aangepaste Ansible playbooks en rollen voor server hardening, software-installatie en patching. Ze gebruiken veel standaardmodules. Er zijn strenge eisen aan het beheer via Git, de beveiliging van gevoelige data via Ansible Vault en de auditbaarheid van alle uitgevoerde wijzigingen.",
+        "De klant maakt gebruik van AWX (de open-source variant van Ansible Tower) voor de centrale orchestratie en een dynamische inventaris op basis van VMware vCenter. Er is een sterke wens voor verbeterde schaalbaarheid van de AWX-omgeving, betere integratie met Azure (voor toekomstige cloudimplementaties) en geavanceerde dashboarding en rapportage over de status van de infrastructuur."
+      ]
+    },
+    {
+      "term": "Chef",
+      "definition": "Een open-source configuratiemanagement tool die gebruikt wordt om het installatieproces van servers te automatiseren.",
+      "followup_prompts": [
+        "Voor welke serverconfiguratie- en applicatie-deploymentprocessen gebruikt de klant Chef (bijvoorbeeld via Chef Infra, Chef InSpec) en welke uitdagingen proberen zij hiermee op te lossen?",
+        "Welke Chef cookbooks, recipes en resources zijn bij de klant in gebruik, en zijn er specifieke vereisten voor het beheer van de codebase, de versiebeheersing of de teststrategie van deze Chef-artefacten?",
+        "Hoe is de Chef-serverinfrastructuur (bijvoorbeeld Chef Infra Server, Chef Automate) van de klant geconfigureerd, en zijn er behoeften aan hogere beschikbaarheid, integratie met monitoringtools of verbeterde rapportage?"
+      ],
+      "followup_answers": [
+        "De klant gebruikt Chef Infra voor de geautomatiseerde configuratie van de Windows-servers (IIS-applicaties) en Linux-servers (Java-applicaties) in hun datacenter. Chef InSpec wordt beperkt gebruikt voor security compliance auditing. Het belangrijkste doel is het elimineren van configuratie-drift en het versnellen van deploymentprocessen.",
+        "De klant heeft een kernset van interne cookbooks (bijv. 'iis_config', 'java_app') en maakt gebruik van diverse community cookbooks. Er zijn strenge eisen aan versiebeheer van cookbooks via Git. Testen gebeurt handmatig, maar er is een wens om Test Kitchen en InSpec verder te integreren in de CI/CD-pipeline.",
+        "De klant heeft een Chef Infra Server op locatie draaien. Chef Automate is beperkt in gebruik voor basisrapportage. Er is een dringende behoefte aan een hogere beschikbaarheid van de Chef Server (potentieel via een HA-setup). Integratie met hun bestaande monitoringtools (Prometheus/Grafana) en meer gedetailleerde rapportage over configuratie-status zijn ook wenselijk."
+      ]
+    },
+    {
+      "term": "Puppet",
+      "definition": "Een open-source softwareconfiguratiebeheertool die helpt bij het automatiseren van softwarelevering en -implementatie.",
+      "followup_prompts": [
+        "Voor welke specifieke configuratiemanagementtaken (bijvoorbeeld server hardening, software-installatie, servicebeheer) zet de klant Puppet in en hoe verhoudt dit zich tot hun bestaande processen?",
+        "Welke Puppet manifests, modules en hiera-data zijn bij de klant in gebruik, en zijn er specifieke eisen aan de modulaire opbouw, de herbruikbaarheid of de beveiligingsaspecten van de Puppet-code?",
+        "Hoe is de Puppet-infrastructuur (bijvoorbeeld Puppet Master, Puppet Enterprise) bij de klant opgebouwd, en zijn er wensen voor een verbeterde user interface, integratie met ITSM-systemen of geavanceerde compliance auditing?"
+      ],
+      "followup_answers": [
+        "De klant zet Puppet in voor het centraliseren van server hardening, de geautomatiseerde installatie van standaardsoftwarepakketten op Linux-systemen en het beheer van kritieke systeemservices. Dit heeft de consistentie en snelheid van systeembeheer aanzienlijk verbeterd ten opzichte van hun eerdere script-gebaseerde aanpak.",
+        "De klant gebruikt een mix van eigen Puppet manifests en diverse Forge modules. Hiera wordt intensief gebruikt voor het scheiden van data en code. Er zijn strikte eisen voor de modulaire opbouw van de Puppet-code om herbruikbaarheid en onderhoudbaarheid te maximaliseren. Beveiliging van gevoelige data in Hiera is een belangrijke afweging.",
+        "De klant heeft een Puppet Master draaien met een set Puppet Agents. Er is een wens om naar Puppet Enterprise te migreren voor de verbeterde user interface en de ingebouwde rapportagefuncties. Integratie met hun ServiceNow ITSM-systeem voor geautomatiseerde wijzigingsbeheerprocessen en geavanceerde compliance auditing zijn hoge prioriteiten."
+      ]
+    },
+    {
+      "term": "Spring Framework",
+      "definition": "Een open-source applicatieframework voor de Java-platform.",
+      "followup_prompts": [
+        "Welke specifieke modules van het Spring Framework (bijvoorbeeld Spring Boot, Spring Data, Spring Security) gebruikt de klant voor hun Java-applicaties, en welke architectuurpatronen passen zij hierbij toe?",
+        "Welke type applicaties heeft de klant ontwikkeld met Spring (bijvoorbeeld RESTful APIs, microservices, batch processing), en zijn er plannen voor de adoptie van nieuwe Spring-projecten of de migratie van bestaande applicaties?",
+        "Hoe worden Spring-applicaties bij de klant gedeployed en beheerd (bijvoorbeeld via containers, Kubernetes), en zijn er specifieke eisen aan de performance, schaalbaarheid of integratie met externe systemen?"
+      ],
+      "followup_answers": [
+        "De klant gebruikt Spring Boot voor het snel opzetten van nieuwe microservices, Spring Data JPA voor database-interactie en Spring Security voor authenticatie en autorisatie. Ze passen met name het Microservices-architectuurpatroon en het Domain-Driven Design (DDD) principe toe.",
+        "De klant heeft een groot aantal RESTful APIs en microservices ontwikkeld met Spring. Ook worden enkele batch processing taken uitgevoerd met Spring Batch. Er zijn plannen om een aantal oudere monolithische Java-applicaties gefaseerd te migreren naar Spring Boot microservices.",
+        "Spring-applicaties worden verpakt in Docker-containers en deployed op een Kubernetes-cluster (OpenShift). Er zijn strenge eisen aan performance (lage latency voor API's) en schaalbaarheid om piekbelasting op te vangen. Integratie met diverse externe systemen (bijv. messaging queues, legacy mainframes) is cruciaal."
+      ]
+    },
+    {
+      "term": "ASP.NET",
+      "definition": "Een open-source, server-side webapplicatieframework ontwikkeld door Microsoft voor het bouwen van dynamische websites en webdiensten.",
+      "followup_prompts": [
+        "Welke specifieke versies van ASP.NET (bijvoorbeeld ASP.NET Core, ASP.NET MVC, Web Forms) gebruikt de klant voor hun webapplicaties, en zijn er plannen voor modernisering of migratie naar nieuwere technologieën?",
+        "Welke type webapplicaties heeft de klant ontwikkeld met ASP.NET (bijvoorbeeld CMS, e-commerce, interne portalen), en wat zijn de belangrijkste functionaliteiten en prestatie-eisen van deze applicaties?",
+        "Hoe worden ASP.NET-applicaties bij de klant gehost en gedeployed (bijvoorbeeld on-premise, Azure App Service, IIS), en zijn er specifieke vereisten voor beveiliging, schaalbaarheid of monitoring?"
+      ],
+      "followup_answers": [
+        "De klant heeft een mix van applicaties: oudere interne portalen draaien op ASP.NET Web Forms, terwijl nieuwere klantgerichte webapplicaties zijn gebouwd met ASP.NET MVC 5. Er zijn concrete plannen om strategische applicaties te moderniseren en te migreren naar ASP.NET Core.",
+        "De klant heeft een e-commerce platform ontwikkeld, een intern CMS voor contentbeheer en diverse klantportalenen. De belangrijkste functionaliteiten zijn online bestellingen, gepersonaliseerde content en self-service opties. Prestatie-eisen omvatten snelle laadtijden (<2s) en hoge beschikbaarheid (99.9%).",
+        "De meeste ASP.NET-applicaties worden gehost op on-premise IIS-servers. Nieuwere ASP.NET Core applicaties worden in Azure App Service gedeployed. Specifieke vereisten zijn strenge beveiliging conform ISO 27001, horizontale schaalbaarheid om seizoensgebonden pieken op te vangen en uitgebreide monitoring met Azure Monitor/Application Insights."
+      ]
+    },
+    {
+      "term": "Vue.js",
+      "definition": "Een progressief JavaScript-framework voor het bouwen van gebruikersinterfaces en single-page applicaties.",
+      "followup_prompts": [
+        "Voor welke specifieke frontend-applicaties of onderdelen (bijvoorbeeld dashboards, interactieve formulieren, single-page applications) gebruikt de klant Vue.js en welke andere JavaScript-frameworks zijn eventueel in gebruik?",
+        "Welke Vue.js-libraries en tools (bijvoorbeeld Vuex voor state management, Vue Router voor routing) worden door de klant gebruikt, en zijn er wensen voor de integratie met bijv. een componentenbibliotheek (zoals Vuetify)?",
+        "Hoe is het ontwikkelproces voor Vue.js-applicaties bij de klant georganiseerd (bijvoorbeeld via Vue CLI, Webpack, linter), en welke eisen worden er gesteld aan de performance van de frontend, de accessibility of de testautomatisering?"
+      ],
+      "followup_answers": [
+        "De klant gebruikt Vue.js primair voor interactieve dashboards in hun interne BI-platform en voor een single-page application (SPA) voor orderbeheer. Daarnaast is er een legacy-applicatie die nog Angular.js gebruikt, maar nieuw ontwikkelwerk focust op Vue.js.",
+        "De klant maakt breed gebruik van Vuex voor state management en Vue Router voor de client-side routing. Er is een sterke wens om een gedegen componentenbibliotheek zoals Vuetify of Element UI te integreren om de consistentie van de UI en de ontwikkelingssnelheid te verhogen.",
+        "Het ontwikkelproces is gestandaardiseerd met Vue CLI en Webpack. ESLint wordt gebruikt voor codekwaliteit. Er zijn hoge eisen aan de performance van de frontend (snelle laadtijden, vloeiende interacties), accessibility (WCAG 2.1 compliance) en unit/end-to-end testautomatisering met tooling zoals Jest en Cypress."
+      ]
+    },
+    {
+      "term": "Node.js",
+      "definition": "Een JavaScript runtime-omgeving gebouwd op Chrome's V8 JavaScript engine, waarmee JavaScript buiten de browser kan worden uitgevoerd, vaak gebruikt voor backend-ontwikkeling.",
+      "followup_prompts": [
+        "Voor welke specifieke backend-services (bijvoorbeeld RESTful APIs, real-time communicatie, serverless functions) gebruikt de klant Node.js en welke andere backend-technologieën zijn relevant in hun architectuur?",
+        "Welke Node.js-frameworks en libraries (bijvoorbeeld Express.js, NestJS, Socket.io) zijn bij de klant in gebruik, en zijn er specifieke wensen voor prestatie-optimalisatie, beveiliging of integratie met databases?",
+        "Hoe worden Node.js-applicaties bij de klant gedeployed en gemonitord (bijvoorbeeld via Docker, Kubernetes, PM2), en zijn er vereisten voor schaalbaarheid, logging of foutafhandeling?"
+      ],
+      "followup_answers": [
+        "De klant gebruikt Node.js voor de ontwikkeling van high-performance RESTful APIs die dienen als gateway naar andere microservices. Daarnaast wordt het ingezet voor real-time communicatie via WebSockets (chatfunctie) en enkele serverless functions in AWS Lambda. Naast Node.js worden ook Java (Spring Boot) en Python (Django) gebruikt voor andere backend-services.",
+        "Express.js is het meestgebruikte framework voor de RESTful APIs. Voor de real-time toepassingen wordt Socket.io ingezet. Er zijn wensen voor prestatie-optimalisatie (bijv. cachingstrategieën), robuuste beveiligingsimplementaties (OAuth2, JWT) en integratie met zowel relationele databases (PostgreSQL) als NoSQL-databases (MongoDB).",
+        "Node.js-applicaties worden gecontaineriseerd met Docker en gedeployed op een Kubernetes-cluster. PM2 wordt lokaal gebruikt voor development. Er zijn strikte vereisten voor horizontale schaalbaarheid, gecentraliseerde logging (ELK-stack) en geavanceerde foutafhandeling met geautomatiseerde alerts."
+      ]
+    },
+    {
+      "term": "Real-time Operating Systems (RTOS)",
+      "definition": "Een besturingssysteem bedoeld voor real-time applicaties die strikte timing-vereisten hebben.",
+      "followup_prompts": [
+        "Voor welke specifieke embedded systemen of kritieke controlesystemen gebruikt de klant een RTOS (bijvoorbeeld FreeRTOS, Zephyr, VxWorks) en welke processen worden hiermee aangestuurd?",
+        "Welke specifieke eisen stelt de klant aan de real-time prestaties (bijvoorbeeld latency, jitter, determinisme) van hun RTOS-gebaseerde systemen, en zijn er certificeringseisen?",
+        "Hoe is het ontwikkel- en debugproces voor RTOS-applicaties bij de klant georganiseerd, en zijn er behoeften aan specifieke ontwikkeltools, integratie met hardware of formal verification technieken?"
+      ],
+      "followup_answers": [
+        "De klant gebruikt FreeRTOS voor de besturing van industriële machines in hun productieomgeving en voor medische instrumentatie. De RTOS stuurt processen aan zoals precieze motorcontrole, sensordata-acquisitie en veiligheidsprotocollen met strakke timingseisen.",
+        "Er zijn zeer strikte eisen aan de real-time prestaties, met name lage en consistente latency (microseconden) en minimale jitter voor kritieke besturingslussen. Determinisme is absoluut noodzakelijk. Voor de medische instrumentatie zijn er certificeringseisen volgens IEC 62304 en ISO 13485.",
+        "Het ontwikkelproces omvat C/C++ in embedded IDE's (bijv. Visual Studio Code met embedded extensions) en hardware debuggers. Er is behoefte aan meer geavanceerde analyse-tools voor timing en resource-gebruik. Integratie met JTAG-debuggers is standaard. Formal verification technieken worden overwogen voor systemen met de hoogste veiligheidsclassificatie."
+      ]
+    },
+    {
+      "term": "Logstash",
+      "definition": "Een open-source tool voor het verzamelen, parsen en transformeren van loggegevens, vaak gebruikt als onderdeel van de ELK Stack.",
+      "followup_prompts": [
+        "Welke logbronnen (bijvoorbeeld applicatielogs, serverlogs, netwerklogs) verwerkt de klant momenteel met Logstash en welke andere tools worden hiervoor eventueel ingezet naast Logstash?",
+        "Welke specifieke Logstash filters (bijvoorbeeld grok, mutate, date) worden gebruikt om de logdata te parsen en te transformeren, en zijn er complexe parsing-vereisten of behoeften aan nieuwe filters?",
+        "Hoe is de Logstash-infrastructuur bij de klant opgezet (bijvoorbeeld aantal instances, pipeline configuratie), en zijn er wensen voor schaalbaarheid, hoge beschikbaarheid, integratie met andere data-opslagplaatsen (bijvoorbeeld Elasticsearch) of geavanceerde alerting?"
+      ],
+      "followup_answers": [
+        "De klant verwerkt momenteel applicatielogs van hun Java- en .NET-applicaties, serverlogs van Linux-webservers (Apache, Nginx) en enkele syslog-flows van netwerkapparatuur met Logstash. Voor een deel van de Windows Event Logs wordt ook Winlogbeat gebruikt, dat direct naar Elasticsearch verzendt.",
+        "De klant maakt extensief gebruik van de grok-filter voor het parsen van ongestructureerde logs, mutate voor veldmanipulatie en de date-filter voor het normaliseren van timestamps. Er zijn complexe parsing-vereisten voor enkele legacy-applicatiespecifieke logformaten en een behoefte aan filters voor het anonimiseren van gevoelige data (PII).",
+        "De Logstash-infrastructuur bestaat uit meerdere instances, geclusterd voor hogere beschikbaarheid. De pipeline-configuratie omvat meerdere input-, filter- en output-stages. Er is een sterke wens voor verdere schaalbaarheid (meer verwerkingscapaciteit), verbeterde integratie met een centrale Elasticsearch-cluster en geavanceerde alerting via Kibana en Slack."
+      ]
+    }
+  ]
+}

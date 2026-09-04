@@ -107,11 +107,12 @@ Voorbeeldvragen waarmee ik kan testen:
 
 ### Wat het systeem nu kan
 
-- Een interactief CLI-menu aanbieden met twee opties: rapport genereren of HUMINT verzamelen
-- HUMINT interactief verzamelen via tekst of bestandsupload, inclusief bronvermelding, informatietype en betrouwbaarheidsscore, en opslaan als JSON
+- Een interactief CLI-menu aanbieden met vier opties: rapport genereren (A), HUMINT verzamelen + rapport genereren (B), een vraag stellen aan de chatbot (C), of afsluiten (D)
+- HUMINT interactief verzamelen via tekst, bestandsupload of automatische LLM-generatie (voor demodoeleinden), inclusief bronvermelding, informatietype en betrouwbaarheidsscore, en opslaan als JSON + markdown
+- Bij tekst/bestand-invoer optioneel een kort LLM-gestuurd interview afnemen (max. 4 vervolgvragen) totdat er genoeg bruikbare informatie is verzameld, en dat gesprek samenvatten tot HUMINT-tekst
 - Configuratiebestand inlezen
 - HUMINT-bestanden verwerken als input voor de analyseworkflow
-- Prompts automatisch laden vanuit een prompt-directory op numerieke volgorde (001 t/m 005)
+- Prompts automatisch laden vanuit een prompt-directory op numerieke volgorde (001 t/m 007)
 - Technisch landschap genereren via Gemini (met Google Search grounding als WEBINT)
 - Gegenereerde WEBINT opslaan als bestand via `save_webint`
 - Technische termen extraheren uit LLM-output
@@ -120,11 +121,12 @@ Voorbeeldvragen waarmee ik kan testen:
 - Vervolgvragen genereren voor onbekende termen én deze direct laten beantwoorden door het LLM
 - Definitie, vragen en antwoorden samenvoegen in één JSON-object per term via `save_to_json`
 - Embeddings genereren van nieuwe termen
-- Embeddings opslaan in Qdrant
+- Embeddings opslaan in Qdrant, inclusief embeddings per rapportsectie (`save_rapport_embedding`) voor toekomstig hergebruik
 - Een volledig markdownrapport genereren via het LLM
 - Het rapport opslaan als markdownbestand via `save_to_markdown`
+- Via de chatbot vragen beantwoorden over opgeslagen technische kennis: de intentie van de vraag herkennen (`bedrijven`, `definitie` of `technologieen`), termen opzoeken (exacte match in MongoDB, anders een semantische zoekopdracht in Qdrant met een betrouwbaarheidsdrempel van 0.80), en een natuurlijk antwoord formuleren op basis van de gevonden feiten — of direct een vaste "niets gevonden"-melding teruggeven zonder het LLM te gebruiken als er niets gevonden is
 
-Voorbeelden van gegenereerde output: APG, Coca-Cola, Educom, Ernst & Young, Google, The Social Hub.
+Voorbeelden van gegenereerde output: ASML, Educom, Phillips, Van Geloven.
 
 ---
 
@@ -146,7 +148,9 @@ CIRQUI/
 │   │   ├── 002-extract-technical-terms.md
 │   │   ├── 003-generate-followup-prompts.md
 │   │   ├── 004-answer-followup-questions.md
-│   │   └── 005-rapport-summariser.md
+│   │   ├── 005-rapport-summariser.md
+│   │   ├── 006-query-intent.md               – Classificeert de intentie van een chatbotvraag
+│   │   └── 007-answer-formatter.md           – Formatteert het chatbotantwoord in natuurlijke taal
 │   │
 │   └── webInt/                               – Gegenereerde WEBINT-bestanden per klant
 │       └── {bedrijf}_webint.txt
@@ -154,6 +158,16 @@ CIRQUI/
 ├── design/
 │   ├── ApplicatieStructuurDiagram.drawio
 │   └── ApplicatieStructuurDiagram.png
+│
+├── docs/
+│   ├── chatbot-userstory.md                  – Userstory voor de chatbotfunctionaliteit
+│   ├── instructies.md
+│   └── issues/                               – Uitgewerkte issues/taken (ISSUE-1 t/m ISSUE-5)
+│
+├── tests/                                    – Testsuite, zelfde mapstructuur als src/
+│   ├── Extractors/
+│   ├── Savers/
+│   └── Workflows/
 │
 └── src/
     │
@@ -165,32 +179,37 @@ CIRQUI/
     │   ├── ConfigReader.py                   – Leest configuratie-instellingen uit config.txt
     │   ├── PromptReader.py                   – Laadt prompts op numerieke volgorde
     │   ├── HUMIntReader.py                   – Leest HUMINT-bestanden van klanten
-    │   └── CollectHUMINT.py                  – Verzamelt HUMINT interactief via CLI
+    │   ├── CollectHUMINT.py                  – Verzamelt HUMINT interactief via CLI (tekst, bestand of LLM-generatie + interview)
+    │   └── Chatbot.py                        – CLI-loop voor de chatbot (optie C in het menu)
     │
     ├── Services/
     │   ├── LLMclient.py                      – Stuurt prompts naar Gemini via OpenRouter
-    │   └── EmbeddingService.py               – Genereert embeddings via embedding API
+    │   └── EmbeddingService.py               – Genereert embeddings via de OpenAI embedding-API
     │
     ├── Extractors/
     │   ├── TechnicalTermExtractor.py         – Extraheert technische termen uit LLM-output
-    │   └── TermComparator.py                 – Vergelijkt termen met bestaande MongoDB-data
+    │   ├── TermComparator.py                 – Vergelijkt termen met bestaande MongoDB-data
+    │   ├── TermMatcher.py                    – Normaliseert termen, filtert op betrouwbaarheid, intersecteert bedrijvenlijsten
+    │   ├── QueryIntentExtractor.py           – Classificeert en valideert de intentie van een chatbotvraag
+    │   └── AnswerComposer.py                 – Stelt het uiteindelijke chatbotantwoord samen
     │
     ├── Savers/
-    │   ├── MongoSaver.py                     – Opslag van termen en analyses in MongoDB
-    │   ├── QdrantSaver.py                    – Opslag van embeddings in Qdrant
-    │   ├── JsonSaver.py                      – Slaat definitie, vragen en antwoorden op als JSON
+    │   ├── MongoSaver.py                     – Opslag van termen en analyses in MongoDB (met JSON-fallback)
+    │   ├── QdrantSaver.py                    – Opslag/zoeken van embeddings in Qdrant (termen én rapportsecties)
+    │   ├── JsonSaver.py                      – Slaat definitie, vragen en antwoorden op als JSON, en WEBINT als tekstbestand
     │   └── MarkdownSaver.py                  – Slaat rapporten op als markdownbestand
     │
     ├── Workflows/
-    │   ├── InteractiveWorkflow.py            – CLI-menu: rapport genereren of HUMINT verzamelen
-    │   └── CustomerAnalysisWorkflow.py       – Volledige analysepipeline per klant
+    │   ├── InteractiveWorkflow.py            – CLI-menu: rapport genereren, HUMINT verzamelen of chatbot starten
+    │   ├── CustomerAnalysisWorkflow.py       – Volledige analysepipeline per klant
+    │   └── ChatbotWorkflow.py                – Intentieherkenning, opzoeken en beantwoorden van chatbotvragen
     │
     └── output/                               – Gegenereerde bestanden per klant
         ├── {bedrijf}_analysis.json           – Technische termen, vragen en antwoorden
         └── {bedrijf}_rapport.md              – Markdownrapport
 ```
 
-Voorbeelden van gegenereerde output: APG, Coca-Cola, Educom, Ernst & Young, Google, Linux, Philips, The Social Hub.
+Voorbeelden van gegenereerde output: ASML, Educom, Phillips, Van Geloven.
 
 ---
 
@@ -200,6 +219,7 @@ De huidige versie bevat een werkende end-to-end pipeline, maar een aantal onderd
 
 - **Chunking** is nog niet geïmplementeerd. Teksten worden momenteel als geheel ingelezen en opgeslagen. In een volgende versie wil ik teksten automatisch opdelen in kleinere stukken voor betere embeddings en efficiëntere opslag.
 - **Semantic search tijdens analyses** is nog niet actief. Qdrant wordt gebruikt voor opslag van embeddings, maar bij het genereren van analyses wordt er nog niet gezocht in Qdrant voor relevante context. Dit wil ik toevoegen zodat het systeem bestaande kennis hergebruikt tijdens het prompten.
+- **Rapportembeddings worden nog niet gebruikt.** `save_rapport_embedding` slaat elke rapportsectie op in de Qdrant-collectie `company_rapports`, maar niets in de codebase zoekt daar momenteel in — de chatbot doorzoekt alleen de `technical_knowledge`-collectie met losse termen. Dit is voorbereid voor toekomstig hergebruik, maar nog niet aangesloten.
 
 ---
 

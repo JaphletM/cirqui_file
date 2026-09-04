@@ -4,15 +4,19 @@ from qdrant_client import QdrantClient
 from qdrant_client.models import PointStruct, VectorParams, Distance
 from Services.EmbeddingService import embed_text
 from Extractors.TermMatcher import select_confident_matches
+from Readers.ConfigReader import ConfigReader
 import uuid
 
 
+_config = ConfigReader("data/config/config.txt")
+_config.read_config()
+
 client = QdrantClient(
-    host="localhost",
-    port=6333
+    host=_config.get_config("qdrant_host", "localhost"),
+    port=int(_config.get_config("qdrant_port", "6333"))
 )
 
-COLLECTION_NAME = "technical_knowledge"
+COLLECTION_NAME = _config.get_config("qdrant_collection", "technical_knowledge")
 RAPPORT_COLLECTION_NAME = "company_rapports"
 
 

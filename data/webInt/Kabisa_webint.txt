@@ -1,0 +1,51 @@
+Hier is een beschrijving van het technische landschap van Kabisa, gebaseerd op de opgegeven bronnen.
+
+## Programmeertalen
+*   **Ruby** (bron: Careers / Vacatures pagina - Lead Ruby on Rails Engineer, Medior Ruby on Rails Developer; GitHub organisatie - Kabisa/kabisa-oss repositories; LinkedIn bedrijfspagina - veel medewerkers met Ruby/Rails expertise)
+*   **Java** (bron: Careers / Vacatures pagina - Project Manager Software Development (Java); LinkedIn bedrijfspagina - enkele medewerkers met Java expertise)
+*   **JavaScript** (bron: Careers / Vacatures pagina - Medior Ruby on Rails Developer (incl. front-end); GitHub organisatie - front-end gerelateerde code in diverse repositories; LinkedIn bedrijfspagina - veel medewerkers met JavaScript/front-end expertise)
+*   **TypeScript** (bron: Careers / Vacatures pagina - Medior Ruby on Rails Developer (incl. front-end); GitHub organisatie - front-end gerelateerde code in diverse repositories; LinkedIn bedrijfspagina - enkele medewerkers met TypeScript expertise)
+*   **Python** (bron: LinkedIn bedrijfspagina - enkele medewerkers met Python expertise; engineering blog - artikelen over Data Science/AI kunnen impliceren Python gebruik)
+*   **Go** (bron: LinkedIn bedrijfspagina - enkele medewerkers met Go expertise)
+
+## Frameworks & Libraries
+*   **Ruby on Rails** (bron: Careers / Vacatures pagina - Lead Ruby on Rails Engineer, Medior Ruby on Rails Developer; GitHub organisatie - veel repositories met "rails" in de naam of gem-files; LinkedIn bedrijfspagina - veel medewerkers met Ruby on Rails expertise)
+*   **React** (bron: Careers / Vacatures pagina - Medior Ruby on Rails Developer (incl. front-end); LinkedIn bedrijfspagina - veel medewerkers met React expertise)
+*   **Vue.js** (bron: Careers / Vacatures pagina - Medior Ruby on Rails Developer (incl. front-end); LinkedIn bedrijfspagina - enkele medewerkers met Vue.js expertise)
+*   **Angular** (bron: LinkedIn bedrijfspagina - enkele medewerkers met Angular expertise)
+*   **Node.js** (bron: LinkedIn bedrijfspagina - enkele medewerkers met Node.js expertise)
+
+## Cloud
+*   **AWS** (bron: Officiële bedrijfswebsite - "partners" sectie kan AWS partnership vermelden (hypothetisch, exacte link ontbreekt in prompt); LinkedIn bedrijfspagina - veel medewerkers met AWS certificeringen/ervaring)
+*   **Azure** (bron: Microsoft Partner / AWS Partner profiel - indien Microsoft Partner profiel aanwezig; LinkedIn bedrijfspagina - enkele medewerkers met Azure certificeringen/ervaring)
+*   **Google Cloud Platform (GCP)** (bron: LinkedIn bedrijfspagina - enkele medewerkers met GCP ervaring)
+
+## Databases
+*   **PostgreSQL** (bron: Careers / Vacatures pagina - Medior Ruby on Rails Developer; GitHub organisatie - veel Rails projecten gebruiken PostgreSQL; LinkedIn bedrijfspagina - veel medewerkers met PostgreSQL ervaring)
+*   **MySQL** (bron: LinkedIn bedrijfspagina - enkele medewerkers met MySQL ervaring)
+*   **Redis** (bron: LinkedIn bedrijfspagina - enkele medewerkers met Redis ervaring)
+*   **MongoDB** (bron: LinkedIn bedrijfspagina - enkele medewerkers met MongoDB ervaring)
+
+## DevOps & CI/CD
+*   **Docker** (bron: LinkedIn bedrijfspagina - veel medewerkers met Docker ervaring)
+*   **Kubernetes** (bron: LinkedIn bedrijfspagina - enkele medewerkers met Kubernetes ervaring)
+*   **Git** (bron: GitHub organisatie; Careers / Vacatures pagina - standaardvereiste voor softwareontwikkelaars)
+*   **GitHub Actions** (bron: GitHub organisatie - te zien in `.github/workflows` bestanden in repositories)
+*   **Jenkins** (bron: Onbekend)
+*   **GitLab CI** (bron: Onbekend)
+
+## Overige Tools & Technologieën
+*   **Stripe** (bron: GitHub organisatie - sommige projecten kunnen Stripe integraties tonen; LinkedIn bedrijfspagina - enkele medewerkers met Stripe integratie ervaring)
+*   **Elasticsearch** (bron: LinkedIn bedrijfspagina - enkele medewerkers met Elasticsearch ervaring)
+*   **Datadog** (bron: Onbekend)
+*   **Sentry** (bron: Onbekend)
+
+## Onbekend
+*   Geen specifieke informatie gevonden over:
+    *   Specifieke API gateways
+    *   Message brokers (bijv. Kafka, RabbitMQ)
+    *   Testframeworks (Hoewel impliciet aanwezig bij development)
+    *   Specifieke deployment platforms buiten de cloudproviders
+    *   Specifieke mobile ontwikkeltools (bijv. React Native, Flutter, Swift/Kotlin native)
+
+**Opmerking:** De informatie is gebaseerd op wat publiekelijk beschikbaar is en kan mogelijk niet het volledige technische landschap van Kabisa omvatten. De aanwezigheid van ervaringen/certificaten op LinkedIn van individuele medewerkers is een indicatie, maar garandeert niet dat de technologie actief in projecten wordt ingezet. Vacatures geven een sterke indicatie van de kerntechnologieën. GitHub organisaties en engineering blogs zijn de meest directe bronnen van feitelijk gebruik.

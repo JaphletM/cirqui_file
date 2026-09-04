@@ -1,0 +1,185 @@
+{
+  "company": "ASML",
+  "results": [
+    {
+      "term": "InfluxDB",
+      "definition": "Een open-source time series database, ontworpen voor het opslaan en ophalen van grote hoeveelheden tijdreeksdata, zoals die van IoT-sensoren.",
+      "followup_prompts": [
+        "Welke specifieke use cases voor tijdreeksdata (bijv. IoT-sensordata, monitoring van infrastructuur, financiële data) zijn momenteel een uitdaging voor de klant, en hoe zou InfluxDB deze kunnen oplossen?",
+        "Welke bestaande databronnen met tijdreeks-karakteristieken (bijv. databases, logfiles, API's) gebruikt de klant al, en welke integraties met InfluxDB zijn hiervoor essentieel of gewenst?",
+        "Wat zijn de huidige prestatie-eisen en schaalbaarheidsbehoeften van de klant met betrekking tot het opslaan en analyseren van tijdreeksdata, en hoe verhouden deze zich tot de capaciteiten van InfluxDB?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "GitLab",
+      "definition": "Een webgebaseerde DevOps-platform dat Git-repositorybeheer, CI/CD, beveiliging en meer combineert.",
+      "followup_prompts": [
+        "Hoe is het huidige proces voor versiebeheer, CI/CD en projectmanagement van de klant georganiseerd, en welke pijnpunten of inefficiënties ervaart men hierbij (bijv. gebrek aan integratie, handmatige stappen, onvoldoende overzicht)?",
+        "Welke tools en platforms gebruikt de klant momenteel voor samenwerking tussen ontwikkelteams, en welke specifieke GitLab-functies (bijv. Issues, Merge Requests, Pipelines, Registries) zouden een significante verbetering kunnen opleveren?",
+        "Wat zijn de huidige compliance- en beveiligingsvereisten van de klant met betrekking tot softwareontwikkeling, en hoe zou GitLab's ingebouwde beveiligingsfuncties (bijv. SAST/DAST, Dependency Scanning) hierbij kunnen helpen?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "scikit-learn",
+      "definition": "Een open-source machine learning bibliotheek voor de Python-programmeertaal, met diverse algoritmen voor classificatie, regressie en clustering.",
+      "followup_prompts": [
+        "Welke concrete machine learning problemen probeert de klant momenteel op te lossen (bijv. classificatie, regressie, clustering, aanbevelingssystemen), en welke data is hiervoor beschikbaar of kan worden verzameld?",
+        "Welke ervaring heeft het team van de klant met Python en machine learning bibliotheken, en welke training of ondersteuning zou nodig zijn om scikit-learn effectief te implementeren?",
+        "Wat zijn de verwachte prestatie-eisen (bijv. snelheid van training, nauwkeurigheid van modellen, inferentietijd) voor de machine learning modellen, en hoe kan scikit-learn hieraan voldoen, eventueel in combinatie met andere tools?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "MLflow",
+      "definition": "Een open-source platform voor het beheren van de end-to-end machine learning lifecycle.",
+      "followup_prompts": [
+        "Hoe beheert de klant momenteel de levenscyclus van machine learning experimenten (bijv. bijhouden van parameters, metrics, modellen), en welke inefficiënties of gebrek aan reproduceerbaarheid ervaart men daarbij?",
+        "Welke frameworks en libraries voor machine learning (bijv. TensorFlow, PyTorch, scikit-learn) gebruikt de klant al, en hoe kritiek is naadloze integratie met deze bestaande tools voor MLflow?",
+        "Wat zijn de huidige behoeften van de klant met betrekking tot het delen, deployen en monitoren van machine learning modellen in productie (model registry, deployments, explainability), en hoe kan MLflow hierin ondersteunen?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Databricks MLflow",
+      "definition": "Een implementatie van MLflow binnen het Databricks-platform, ontworpen om de machine learning workflow te stroomlijnen.",
+      "followup_prompts": [
+        "Welke specifieke machine learning workflows voert de klant uit op (big) data, en welke uitdagingen ervaart men momenteel wat betreft schaalbaarheid, samenwerking en governance?",
+        "Welke data engineering en processing platforms (bijv. Spark, Delta Lake) gebruikt de klant al, en hoe zou de integratie van Databricks MLflow hiermee de end-to-end ML-levenscyclus stroomlijnen?",
+        "Wat zijn de huidige governance- en compliance-eisen voor machine learning modellen (bijv. modelversiebeheer, audit trails, modelherkomst), en hoe kan Databricks MLflow hier een robuuste oplossing voor bieden?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Xilinx",
+      "definition": "Een toonaangevende fabrikant van FPGA's (Field-Programmable Gate Arrays).",
+      "followup_prompts": [
+        "Voor welke specifieke toepassingen (bijv. signaalverwerking, AI-acceleratie, embedded systemen, netwerken) overweegt de klant het gebruik van FPGA's, en wat zijn de belangrijkste drijfveren hiervoor (bijv. prestaties, efficiëntie, flexibiliteit)?",
+        "Welke bestaande hardwarearchitecturen en ontwikkeltools gebruikt de klant momenteel, en welke ervaring heeft het team met hardwarebeschrijvingstalen (HDL's) zoals VHDL/Verilog of high-level synthesis (HLS)?",
+        "Wat zijn de prestatie-, stroomverbruik- en kostenbeperkingen voor de beoogde Xilinx-implementaties, en hoe verhoudt dit zich tot alternatieve oplossingen (bijv. CPU's, GPU's, ASIC's) die de klant overweegt?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Altera",
+      "definition": "Een toonaangevende fabrikant van FPGA's (nu onderdeel van Intel).",
+      "followup_prompts": [
+        "Welke specifieke type FPGA-toepassingen heeft de klant voor ogen (bijv. industriële automatisering, militaire toepassingen, netwerkapparatuur) en welke specifieke eisen (bijv. latency, betrouwbaarheid, temperatuurbereik) zijn hierbij van cruciaal belang?",
+        "Welke ontwikkeltools en IP-cores (Intellectual Property) zijn voor de klant van belang bij de implementatie van hun FPGA-ontwerpen, en welke ondersteuning wordt verwacht van de leverancier?",
+        "Wat is de huidige supply chain strategie van de klant met betrekking tot halfgeleiders, en hoe past het gebruik van Altera FPGA's hierin, zowel qua beschikbaarheid als qua leveringszekerheid op lange termijn?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "CAN (Controller Area Network)",
+      "definition": "Een robuuste busstandaard voor communicatie tussen microcontrollers en andere apparaten in voertuigen en industriële automatisering.",
+      "followup_prompts": [
+        "Welke specifieke apparaten of subsystemen moeten communiceren binnen het systeem van de klant (bijv. sensoren, actuatoren, ECU's in auto's, controlepanelen in machines), en wat zijn de realtime eisen voor deze communicatie?",
+        "Welke bestaande communicatieprotocollen worden momenteel gebruikt, en welke tekortkomingen (bijv. bandbreedte, betrouwbaarheid bij storingen, kosten) worden ervaren die met CAN verbeterd kunnen worden?",
+        "Wat zijn de omgevingsfactoren (bijv. elektromagnetische interferentie, temperatuur, trillingen) waarin het CAN-netwerk moet functioneren, en welke robuustheid en fouttolerantie zijn hiervoor vereist?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "EtherCAT",
+      "definition": "Een real-time Ethernet-gebaseerd veldbussysteem, gebruikt voor motion control en gedistribueerde I/O.",
+      "followup_prompts": [
+        "Voor welke specifieke industriële automatiserings- of motion control-applicaties overweegt de klant EtherCAT (bijv. robotica, verpakkingsmachines, productielijnen) en welke prestatie-eisen (bijv. synchronisatie, jitter, cyclustijden) zijn hierbij van cruciaal belang?",
+        "Welke bestaande fieldbus-systemen of netwerken gebruikt de klant momenteel, en welke uitdagingen (bijv. complexiteit, snelheid, schaalbaarheid) probeert men hiermee op te lossen door over te stappen op EtherCAT?",
+        "Wat zijn de integratiebehoeften van de klant met betrekking tot EtherCAT, bijvoorbeeld met PLC's, SCADA-systemen of HMI's, en welke kennis en tools zijn hiervoor aanwezig in de organisatie?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "PLC's (Programmable Logic Controllers)",
+      "definition": "Industriële computers die worden gebruikt om productieprocessen te automatiseren.",
+      "followup_prompts": [
+        "Welke specifieke besturingsproblemen in industriële processen (bijv. machinebesturing, procesautomatisering, scada-integratie) probeert de klant op te lossen met PLC's, en welke functionaliteiten (bijv. safety-functies, analoge/digitale I/O) zijn essentieel?",
+        "Welke merken en modellen PLC's worden momenteel gebruikt in de installaties van de klant, en welke overwegingen (bijv. standaardisatie, kennisbasis, leveranciersrelaties) zijn belangrijk bij de keuze voor nieuwe PLC's?",
+        "Wat zijn de huidige behoeften van de klant met betrekking tot connectiviteit en data-uitwisseling vanuit de PLC's (bijv. naar MES/ERP, cloudplatforms, remote monitoring), en welke protocollen (bijv. OPC UA, Modbus TCP) zijn hierbij relevant?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "ROS (Robot Operating System)",
+      "definition": "Een flexibel framework voor het schrijven van robotsoftware, inclusief een verzameling tools en bibliotheken.",
+      "followup_prompts": [
+        "Welke specifieke robottoepassingen ontwikkelt of exploiteert de klant (bijv. mobiele robots, manipulators, drones, service robots) en welke complexe functionaliteiten (bijv. navigatie, visie, planning, multi-robotcoördinatie) zijn essentieel?",
+        "Welke ervaring heeft het ontwikkelteam van de klant met robotica softwareontwikkeling (bijv. C++, Python, Linux), en welke architectuurkeuzes (bijv. ROS 1 versus ROS 2) zijn relevant voor de lange termijn strategie?",
+        "Wat zijn de eisen van de klant met betrekking tot schaalbaarheid, prestaties (bijv. realtime), en integratie van hardware en softwarecomponenten binnen het robotplatform, en hoe kan ROS hierin tegemoetkomen?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "RHEL",
+      "definition": "Red Hat Enterprise Linux, een commerciële Linux-distributie van Red Hat.",
+      "followup_prompts": [
+        "Voor welke specifieke bedrijfskritische applicaties of infrastructuren (bijv. databases, webservers, virtualisatie, containers) overweegt de klant het gebruik van RHEL, en wat zijn de primaire drijfveren (bijv. stabiliteit, beveiliging, ondersteuning)?",
+        "Welke ervaring heeft het IT-team van de klant met Linux-systemen en enterprise-grade besturingssystemen, en welke behoefte aan training of consultancy is er voor een succesvolle RHEL-implementatie?",
+        "Wat zijn de huidige compliance- en beveiligingsvereisten van de klant met betrekking tot besturingssystemen, en hoe kan RHEL's certificering en beveiligingsfuncties hierbij een oplossing bieden, inclusief updates en patching?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "CentOS",
+      "definition": "Een gratis, open-source Linux-distributie, functioneel compatibel met Red Hat Enterprise Linux (RHEL).",
+      "followup_prompts": [
+        "Welke specifieke applicaties of diensten draaien de klant momenteel op CentOS, en welke impact heeft de lifecycle-wijziging (naar CentOS Stream of alternatieven) op de bedrijfsvoering en toekomstplannen?",
+        "Wat zijn de overwegingen van de klant bij de keuze voor een CentOS-opvolger (bijv. Rocky Linux, AlmaLinux, RHEL betaald), en welke factoren (bijv. kosten, compatibiliteit, ondersteuning) zijn hierbij doorslaggevend?",
+        "Welke migratiestrategieën en -tools overweegt de klant voor het overzetten van bestaande CentOS-installaties, en welke ondersteuning of expertise is hierbij nodig om risico's te minimaliseren?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Ubuntu",
+      "definition": "Een open-source Linux-distributie gebaseerd op Debian, populair voor desktops, servers en cloud-omgevingen.",
+      "followup_prompts": [
+        "Voor welke specifieke use cases (bijv. development environments, edge computing, cloud instances, desktop workstations) zet de klant Ubuntu in, en welke voordelen (bijv. gebruiksgemak, community support, pakketbeheer) zijn hierbij doorslaggevend?",
+        "Welke ervaring heeft het team van de klant met Ubuntu en de bredere Linux-ecosysteem, en welke behoefte is er aan commerciële ondersteuning (bijv. Ubuntu Pro, Canonical) voor kritieke systemen?",
+        "Wat zijn de beveiligings- en compliance-eisen van de klant met betrekking tot hun besturingssystemen, en hoe kan Ubuntu, vooral in enterprise-varianten, voldoen aan deze eisen op het gebied van patching en vulnerability management?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Windows Server",
+      "definition": "Een reeks serverbesturingssystemen ontwikkeld door Microsoft.",
+      "followup_prompts": [
+        "Welke specifieke rollen (bijv. Active Directory, Exchange, SQL Server, fileserver) vervullen Windows Servers momenteel in de infrastructuur van de klant, en welke afhankelijkheden zijn hierbij kritiek?",
+        "Wat zijn de huidige uitdagingen van de klant met betrekking tot beheer, beveiliging, patching en schaalbaarheid van de Windows Server-omgeving, en welke oplossingen (bijv. hybride cloud, automatisering, hardenings) zijn hierbij relevant?",
+        "Welke licentiestrategie hanteert de klant momenteel voor Windows Server, en welke overwegingen (bijv. per core, CAL's, Azure Hybrid Benefit) zijn er bij het plannen van toekomstige upgrades of migraties?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Windows Desktop",
+      "definition": "De desktopbesturingssystemen van Microsoft, zoals Windows 10 of 11.",
+      "followup_prompts": [
+        "Welke specifieke applicaties en tools zijn essentieel voor de dagelijkse werkzaamheden van de medewerkers van de klant, en welke compatibiliteitseisen zijn er met betrekking tot Windows-versies?",
+        "Wat zijn de huidige pijnpunten van de klant met betrekking tot het beheer, de beveiliging en de levenscyclus van hun Windows Desktop-omgeving (bijv. updates, software-distributie, endpoint security, helpdesk calls)?",
+        "Welke strategie heeft de klant met betrekking tot werkplekmodernisering (bijv. VDI, DaaS, cloud computing, BYOD), en hoe past Windows Desktop hierin, zowel qua flexibiliteit als qua beveiliging?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "VxWorks",
+      "definition": "Een eigen real-time besturingssysteem (RTOS) ontwikkeld door Wind River Systems, veel gebruikt in embedded systemen.",
+      "followup_prompts": [
+        "Voor welke specifieke kritieke embedded systemen (bijv. luchtvaart, medische apparatuur, industriële besturing, ruimtevaart) gebruikt de klant VxWorks, en welke certificeringseisen (bijv. DO-178C, IEC 61508) zijn hierbij van toepassing?",
+        "Welke specifieke realtime prestatie-eisen (bijv. hard real-time, jitter, determinism) zijn cruciaal voor de VxWorks-gebaseerde systemen van de klant, en hoe worden deze momenteel gevalideerd?",
+        "Wat zijn de uitdagingen van de klant met betrekking tot ontwikkeltools, debugging, testen en onderhoud van hun VxWorks-gebaseerde producten op de lange termijn (bijv. lange levenscyclus, verouderde hardware, skill-gap)?"
+      ],
+      "followup_answers": []
+    },
+    {
+      "term": "Unity (3D Engine)",
+      "definition": "Een cross-platform game-engine die ook wordt gebruikt voor AR/VR-toepassingen, simulaties en interactieve 3D-ervaringen.",
+      "followup_prompts": [
+        "Voor welke specifieke toepassingen (bijv. games, simulaties, VR/AR, industriële visualisatie, digitale twins) gebruikt de klant Unity, en wat zijn de primaire doelen (bijv. user engagement, trainingsresultaten, efficiëntieverbetering)?",
+        "Welke ervaring heeft het ontwikkelteam van de klant met Unity (C#, C++), en welke tools of activa (bijv. 3D-modellen, animaties, scripts) worden momenteel gebruikt of zijn beschikbaar?",
+        "Wat zijn de prestatie-eisen van de klant met betrekking tot rendering, framerate, schaalbaarheid en hardwarecompatibiliteit van hun Unity-projecten, en welke platforms (bijv. desktop, mobiel, web, VR headsets) zijn hierbij relevant?"
+      ],
+      "followup_answers": []
+    }
+  ]
+}

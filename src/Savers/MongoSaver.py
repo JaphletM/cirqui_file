@@ -4,18 +4,27 @@ from pathlib import Path
 from pymongo import MongoClient
 from pymongo.errors import PyMongoError
 
+from Readers.ConfigReader import ConfigReader
+
 
 JSON_FILE = Path("src/database/MongoDB.json")
+
+_config = ConfigReader("data/config/config.txt")
+_config.read_config()
+
+MONGO_HOST = _config.get_config("mongodb_host", "localhost")
+MONGO_PORT = _config.get_config("mongodb_port", "27017")
+MONGO_DATABASE = _config.get_config("mongodb_database", "cirqui")
 
 
 def get_terms_collection():
     client = MongoClient(
-        "mongodb://localhost:27017/",
+        f"mongodb://{MONGO_HOST}:{MONGO_PORT}/",
         serverSelectionTimeoutMS=2000
     )
     client.admin.command("ping")
 
-    db = client["cirqui"]
+    db = client[MONGO_DATABASE]
     return db["terms"]
 
 

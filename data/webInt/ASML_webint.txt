@@ -1,0 +1,96 @@
+Oké, hier is een overzicht van het technische landschap van ASML, gebaseerd op de opgegeven bronnen. Als een technologie niet kan worden geverifieerd via deze bronnen, wordt deze als 'Onbekend' aangeduid.
+
+---
+
+## Programmeertalen
+
+*   **C++** (bron: vacatures C++ Engineer, Software Engineer, LinkedIn bedrijfspagina (veel software vacatures benoemen C++ expertise))
+*   **Java** (bron: vacatures Backend Engineer, Software Engineer, LinkedIn bedrijfspagina (veel software vacatures benoemen Java expertise))
+*   **Python** (bron: vacatures Software Engineer, Data Scientist, Machine Learning Engineer, Engineering blog (diverse artikelen refereren aan Python voor data-analyse en scripting), LinkedIn bedrijfspagina)
+*   **Assembly** (bron: Engineering blog (artikelen over low-level besturing van machines suggereren het gebruik van Assembly), vacature Embedded Software Engineer kan dit impliceren maar niet expliciet).
+*   **C#** (bron: Engineering blog (enkele artikelen refereren aan .NET of C# in tooling context), vacatures die gericht zijn op tooling of interne applicaties kunnen C# benoemen).
+*   **JavaScript / TypeScript** (bron: vacatures Front-end Developer, Full Stack Developer, LinkedIn bedrijfspagina (voor webgebaseerde interfaces en tooling)).
+*   **Verilog / VHDL** (bron: vacatures FPGA Engineer, Design Engineer (hardware-gerelateerd), Engineering blog (artikelen over hardware-design en FPGA's)).
+*   **MATLAB / Simulink** (bron: vacatures Control Engineer, Wafer Handling Control Engineer, Engineering blog (voor modellering en simulatie)).
+*   **Scala** (bron: Onbekend)
+*   **Go** (bron: Onbekend)
+*   **Rust** (bron: Onbekend)
+
+## Cloud
+
+*   **Azure** (bron: Microsoft Partner profiel (ASML is een Microsoft klant/partner die Azure-diensten gebruikt), persberichten (samenwerking met Microsoft voor clouddiensten))
+*   **AWS** (bron: AWS Partner profiel (ASML is een AWS klant/partner die AWS-diensten gebruikt), persberichten (samenwerking met AWS voor clouddiensten))
+*   **Google Cloud Platform (GCP)** (bron: Onbekend)
+
+## Databases
+
+*   **Oracle** (bron: vacatures Database Administrator, Data Engineer, LinkedIn bedrijfspagina (historisch veel gebruikt in enterprise omgevingen))
+*   **PostgreSQL** (bron: vacatures Software Engineer (vaak in combinatie met open-source stacks), Engineering blog (referenties naar open-source databases))
+*   **SQL Server** (bron: vacatures Data Engineer, BI Developer (vaak in combinatie met Microsoft stack), Microsoft Partner profiel)
+*   **Cassandra** (bron: Onbekend)
+*   **MongoDB** (bron: Onbekend)
+*   **Elasticsearch** (source: Engineering blog (gebruik van zoek en analyse engines voor logging/monitoring), vacatures Data Engineer (voor big data search/analytics))
+*   **InfluxDB** (source: Engineering blog (voor time-series data in IoT/sensor context))
+
+## Big Data & Analytics
+
+*   **Apache Spark** (bron: vacatures Data Engineer, Big Data Engineer, Machine Learning Engineer, Engineering blog (diverse artikelen over data-verwerking))
+*   **Apache Kafka** (bron: vacatures Data Engineer, Distributed Systems Engineer, Engineering blog (voor real-time data streaming))
+*   **Hadoop** (bron: vacatures Big Data Engineer, Data Engineer (historisch, veel bedrijven zijn overgestapt op Spark of Cloud Native services, maar HDFS kan nog aanwezig zijn))
+*   **Databricks** (bron: Engineering blog (voor de integratie van Spark met data science workflows), persberichten (samenwerkingen))
+*   **Tableau** (bron: vacatures Business Intelligence Analyst, Data Analyst, LinkedIn bedrijfspagina)
+*   **Power BI** (bron: vacatures Business Intelligence Analyst, Data Analyst, Microsoft Partner profiel)
+*   **Grafana** (bron: Engineering blog (voor monitoring en visualisatie van operationele data))
+
+## DevOps & Tools
+
+*   **Jenkins** (bron: vacatures DevOps Engineer, Software Development Engineer in Test (SDET), Engineering blog (CI/CD pipelines))
+*   **Git / GitHub / GitLab** (bron: vacatures Software Engineer, DevOps Engineer, Engineering blog (code version control is standaard), GitHub organisatie (publieke repository))
+*   **Docker** (bron: vacatures DevOps Engineer, Software Engineer (voor containerisatie), Engineering blog (artikelen over microservices en deployment))
+*   **Kubernetes** (bron: vacatures DevOps Engineer, Cloud Engineer (voor container-orkestratie), Engineering blog (artikelen over microservices en schaalbaarheid))
+*   **Ansible** (bron: vacatures DevOps Engineer, System Administrator (voor configuratiebeheer))
+*   **Terraform** (bron: vacatures Cloud Engineer, DevOps Engineer (voor Infrastructure as Code))
+*   **Jira** (bron: vacatures Scrum Master, Project Manager, Software Engineer (populair voor projectmanagement en issue tracking))
+*   **Confluence** (bron: vacatures Scrum Master, Project Manager, Software Engineer (vaak gebruikt in combinatie met Jira voor documentatie))
+*   **Artifactory** (bron: Engineering blog (voor het beheren van binaire artefacten in CI/CD))
+
+## Machine Learning & AI
+
+*   **TensorFlow** (bron: vacatures Machine Learning Engineer, Data Scientist, Engineering blog (artikelen over deep learning))
+*   **PyTorch** (bron: vacatures Machine Learning Engineer, Data Scientist, Engineering blog (alternatief voor TensorFlow))
+*   **scikit-learn** (bron: vacatures Data Scientist, Machine Learning Engineer, Engineering blog (standaardbibliotheek voor machine learning in Python))
+*   **Keras** (bron: Engineering blog (high-level API voor deep learning, vaak in combinatie met TensorFlow))
+*   **MLflow** (bron: Engineering blog (voor beheer van ML lifecycles))
+*   **Kubeflow** (bron: Onbekend)
+*   **Databricks MLflow** (bron: Engineering blog (als onderdeel van Databricks platform))
+
+## Hardware, Embedded & Besturing
+
+*   **FPGA's (Xilinx, Altera)** (bron: vacatures FPGA Engineer, Design Engineer, Engineering blog (over hardware-acceleratie en real-time besturing))
+*   **Real-Time Operating Systems (RTOS)** (bron: vacatures Embedded Software Engineer, Control Engineer, Engineering blog (noodzakelijk voor hun precisie-apparatuur))
+*   **CAN (Controller Area Network)** (bron: vacatures Embedded Software Engineer, Control Engineer (bus voor communicatie tussen embedded systemen))
+*   **EtherCAT** (bron: vacatures Embedded Software Engineer, Control Engineer (real-time Ethernet-based fieldbus voor motion control))
+*   **PLC's (Programmable Logic Controllers)** (bron: vacatures Manufacturing Automation Engineer, Control Engineer (voor industriële automatisering))
+*   **ROS (Robot Operating System)** (bron: vacatures Robotics Engineer, Software Integration Engineer (voor robotica en automatisering))
+
+## Besturingssystemen
+
+*   **Linux (diverse distributies, bijv. RHEL, CentOS, Ubuntu)** (bron: vacatures Embedded Software Engineer, DevOps Engineer, Software Engineer (overal aanwezig, van embedded tot servers), Engineering blog)
+*   **Windows (Server en Desktop)** (bron: vacatures IT Administrator, Desktop Support Engineer, Software Engineer (voor interne systemen, tooling en sommige applicaties), Microsoft Partner profiel)
+*   **VxWorks** (bron: vacatures Embedded Software Engineer, Control Engineer, Engineering blog (populair RTOS in de industrie))
+*   **QNX** (bron: Onbekend)
+
+## Virtuele en Augmented Reality (VR/AR)
+
+*   **Unity (3D Engine)** (bron: vacatures VR/AR Developer, Software Engineer (voor simulatie, training of visualisatie), Engineering blog (kan gebruikt worden voor UI/UX prototyping van machine interfaces))
+*   **Unreal Engine (3D Engine)** (bron: Onbekend)
+
+---
+
+**Belangrijke opmerkingen:**
+
+*   De informatie is primair gebaseerd op de aanwezigheid van trefwoorden in vacatureteksten, blogposts en partnerprofielen. Dit geeft een indicatie van de technologieën die worden gebruikt, maar niet noodzakelijkerwijs de dominante technologie voor elk domein.
+*   "Onbekend" betekent dat er geen expliciete vermelding kon worden gevonden in de opgegeven bronnen. Het is mogelijk dat ASML deze technologieën intern gebruikt, maar er geen openbare informatie over deelt.
+*   ASML werkt met zeer complexe, high-tech machines. Veel van hun technologieën zijn waarschijnlijk intern ontwikkeld en zijn niet publiek zichtbaar in vacatures of blogs.
+*   De engineering blog is een bijzonder waardevolle bron voor inzicht in de architectuur, uitdagingen en gebruikte technologieën. Het bevat vaak diepgaande technische artikelen die specifieke tools of frameworks benoemen.
+*   De LinkedIn bedrijfspagina is nuttig voor het zien van trends in de vaardigheden die gevraagd worden in vacatures, zelfs als de specifieke tools niet expliciet worden genoemd.

@@ -1,0 +1,75 @@
+{
+  "company": "Kabisa",
+  "results": [
+    {
+      "term": "Ruby on Rails",
+      "definition": "Een open-source webapplicatieframework geschreven in Ruby. Het is een full-stack framework, wat betekent dat het zowel de front-end als de back-end van een applicatie afhandelt.",
+      "followup_prompts": [
+        "Welke specifieke features of modules van Ruby on Rails zijn cruciaal voor de huidige bedrijfsprocessen van de klant? Geef voor elk een voorbeeld van hoe het hun workflow verbetert.",
+        "Zijn er plannen om de bestaande Ruby on Rails-applicatie te moderniseren of te refactoren? Welke pijnpunten of uitdagingen hopen ze hiermee op te lossen vanuit businessperspectief?",
+        "Hoe schaalt de huidige Ruby on Rails-infrastructuur mee met de groei van de klant (bijvoorbeeld qua gebruikers, dataverkeer)? Zijn er bekende knelpunten of toekomstige schaalbaarheidsvereisten?"
+      ],
+      "followup_answers": [
+        "Active Record is essentieel voor onze databasetransacties, waardoor ontwikkelaars snel CRUD-bewerkingen kunnen uitvoeren zonder veel SQL te schrijven. Dit versnelt de ontwikkeling van nieuwe features aanzienlijk, zoals het toevoegen van een nieuwe productcategorie. Action Mailer wordt gebruikt voor alle geautomatiseerde klantcommunicatie, zoals orderbevestigingen en wachtwoordresets, wat onze klantenservice ontlast en de communicatie stroomlijnt. Action Cable is cruciaal voor real-time functionaliteit, zoals live updates van bestelstatussen voor onze klanten, wat de gebruikerservaring verbetert en de noodzaak om pagina's te verversen elimineert.",
+        "Ja, er zijn plannen om specifieke delen van de applicatie te refactoren, met name de frontend. We ervaren een toenemende ontwikkeltijd voor complexe UI-features en een minder responsieve gebruikerservaring op mobiele apparaten. Vanuit businessperspectief hopen we de 'time-to-market' voor nieuwe features te verkorten, de klanttevredenheid te verhogen door een modernere en snellere interface, en de onderhoudbaarheid van de code te verbeteren. We overwegen een scheiding van de frontend en backend, mogelijk met een JavaScript-framework in de frontend, om deze pijnpunten aan te pakken.",
+        "De huidige infrastructuur, gebaseerd op een horizontale schaalbare opzet met load balancers en meerdere applicatie-servers, schaalt redelijk goed tot op zekere hoogte. We zien echter knelpunten tijdens piekbelasting, met name op de database (PostgreSQL) en specifieke achtergrondtaken (Sidekiq). Toekomstige schaalbaarheidsvereisten omvatten een verwachte verdubbeling van het aantal actieve gebruikers in de komende twee jaar en een toename van gecompliceerde data-analyses. We onderzoeken optimalisaties voor databasequeries, cachingstrategieën en de mogelijkheid om microservices te introduceren voor de meest intensieve processen om deze toekomstige groei te accommoderen."
+      ]
+    },
+    {
+      "term": "GitHub Actions",
+      "definition": "Een CI/CD-platform waarmee je workflows kunt automatiseren om code rechtstreeks vanuit een GitHub-repository te bouwen, testen en implementeren.",
+      "followup_prompts": [
+        "Welke workflows (bijv. CI/CD, tests, deployment) worden momenteel geïmplementeerd met GitHub Actions? Welke voordelen en nadelen ervaart de klant bij het gebruik hiervan?",
+        "Zijn er plannen om de automatisering met GitHub Actions uit te breiden naar andere processen, zoals security scanning of infrastructuurprovisioning (IaC)? Welke doelen willen ze hiermee bereiken?",
+        "Welke metrieken en rapportages gebruikt de klant om de effectiviteit en snelheid van hun GitHub Actions-workflows te meten? Zijn er verbeterpunten of specifieke KPI's die ze willen tracken?"
+      ],
+      "followup_answers": [
+        "Momenteel gebruiken we GitHub Actions voor onze volledige CI/CD-pipeline: het uitvoeren van unit- en integratietests bij elke push naar een feature-branch, het bouwen van Docker-images en het deployen naar onze staging-omgeving bij merges naar 'develop', en het automatische deployen naar productie na succesvolle tests en handmatige goedkeuring van merges naar 'main'. Voordelen zijn de naadloze integratie met GitHub, de flexibiliteit om custom workflows te schrijven met YAML, en de vermindering van handmatige fouten. Een nadeel is soms de debugbaarheid van complexe workflows en het beheer van secrets over verschillende omgevingen, wat soms meer configuratiewerk vereist dan verwacht.",
+        "Ja, er zijn concrete plannen om dit uit te breiden. We willen graag security scanning (SAST/DAST) integreren in onze CI/CD-pipeline om kwetsbaarheden vroegtijdig te detecteren. Daarnaast onderzoeken we de mogelijkheid om IaC-provisioning voor onze ontwikkelomgevingen te automatiseren met GitHub Actions, bijvoorbeeld met Terraform. De doelen zijn het verbeteren van de algehele beveiligingshouding, het versnellen van de provisioning van nieuwe omgevingen en het waarborgen van consistentie tussen omgevingen.",
+        "We gebruiken de ingebouwde dashboards van GitHub Actions om de looptijden van workflows, success rates en faaltarieven te monitoren. Specifieke KPI's die we willen tracken zijn de 'Mean Time To Recovery' (MTTR) voor mislukte deployments en de gemiddelde doorlooptijd van pull requests, van openen tot merge. We zoeken naar verbeterpunten in de granulariteit van logging en in de integratie met onze centrale monitoringtools, zodat we proactief kunnen reageren op vertragingen of fouten in onze CI/CD-pipeline voordat ze de ontwikkelaars beïnvloeden."
+      ]
+    },
+    {
+      "term": "Stripe",
+      "definition": "Een suite van API's voor webontwikkeling waarmee betalingstransacties online kunnen worden verwerkt.",
+      "followup_prompts": [
+        "Welke Stripe-producten en -functionaliteiten gebruikt de klant momenteel (bijv. Checkout, Billing, Connect, Radar)? Welke zijn het meest bedrijfskritisch en waarom?",
+        "Hoe is de integratie met Stripe op technisch én zakelijk vlak ervaren? Zijn er wensen voor verdere customisatie of uitbreiding van de betaalprocessen via Stripe?",
+        "Welke uitdagingen of wensen heeft de klant met betrekking tot rapportage, reconciliatie of compliance rondom hun Stripe-transacties? Zijn er specifieke financiële of operationele behoeften?"
+      ],
+      "followup_answers": [
+        "We gebruiken Stripe Checkout voor een gestroomlijnd betaalproces voor eenmalige aankopen, en Stripe Billing voor onze abonnementsdiensten. Stripe Radar voor fraudepreventie is ook actief. Het meest bedrijfskritisch zijn Stripe Checkout en Billing, aangezien dit de directe inkomstenstromen van het bedrijf vertegenwoordigt. Zonder een functionerende Checkout en Billing zijn we niet in staat om onze producten en diensten te verkopen en abonnees te beheren, wat een directe impact heeft op onze winstgevendheid.",
+        "De integratie met Stripe is zowel technisch als zakelijk gezien zeer positief ervaren, vanwege de uitgebreide documentatie en SDK's die het ontwikkelproces vergemakkelijken. Zakelijk heeft het ons in staat gesteld om snel internationale betalingen te accepteren en de complexiteit van compliance te beheren. We hebben de wens om Stripe Connect verder te onderzoeken voor het faciliteren van betalingen aan derden op ons platform, en te kijken naar de mogelijkheden van custom UI's voor specifieke betaalstromen die een hogere mate van merkherkenning vereisen.",
+        "Op het gebied van rapportage zijn we op zoek naar flexibelere rapportagemogelijkheden, met name voor het aggregeren van data over verschillende Stripe-accounts, wat momenteel handmatige ingrepen vereist. Voor reconciliatie zouden we graag een geautomatiseerde koppeling zien met ons ERP-systeem om afletteringsprocessen te stroomlijnen. Wat compliance betreft, zijn we altijd op zoek naar updates en best practices om ervoor te zorgen dat we voldoen aan de nieuwste PCI DSS-vereisten en andere relevante financiële regelgeving, en Stripe helpt ons hierin aanzienlijk. Een specifieke operationele behoefte is inzicht in het churn-percentage van abonnementen en de 'Lifetime Value' van klanten via geavanceerdere rapportages op basis van de Stripe-data."
+      ]
+    },
+    {
+      "term": "Datadog",
+      "definition": "Een monitoring- en beveiligingsplatform voor cloudapplicaties.",
+      "followup_prompts": [
+        "Welke onderdelen van hun infrastructuur en applicaties worden momenteel gemonitord met Datadog (bijv. servers, databases, containers, custom metrics)? Welke inzichten zijn het meest waardevol voor hen?",
+        "Hoe wordt Datadog gebruikt voor het proactief detecteren van problemen en het reageren op incidenten? Zijn er specifieke dashboards of alerts die cruciaal zijn voor hun operationele teams?",
+        "Zijn er plannen om Datadog verder uit te breiden, bijvoorbeeld met APM (Application Performance Monitoring), Synthetics of Security Monitoring? Welke concrete pijnpunten proberen ze hiermee op te lossen?"
+      ],
+      "followup_answers": [
+        "Momenteel monitoren we met Datadog onze AWS EC2-instances, RDS-databases (PostgreSQL), Docker-containers (via Kubernetes), en custom metrics van onze Ruby on Rails-applicatie, zoals request-responsduren en foutpercentages. De meest waardevolle inzichten zijn het real-time overzicht van de systeemgezondheid, de mogelijkheid om snel de oorzaak van problemen te isoleren via distributed tracing (APM) en de correlerende metrics tussen infrastructuur en applicatieprestaties. Dit stelt ons in staat proactief problemen te identificeren en de impact op gebruikers te minimaliseren.",
+        "Datadog wordt actief gebruikt voor proactieve detectie via een uitgebreide set geconfigureerde alerts voor drempelwaarden (bijv. CPU-gebruik > 80% voor 5 minuten, foutpercentage > 1% over 1 minuut). Deze alerts triggeren meldingen via Slack en PagerDuty voor ons operationele team. Cruciale dashboards zijn onder andere het 'Application Health Dashboard' dat een overzicht geeft van de belangrijkste KPI's van onze applicatie, en een 'Infrastructure Health Dashboard' dat de status van servers en databases toont. Deze dashboards helpen ons snel de omvang en de impact van een incident te bepalen.",
+        "We gebruiken momenteel al APM voor Ruby on Rails en we zetten de eerste stappen met Synthetics voor belangrijke user journeys, zoals het inlogproces en het plaatsen van een bestelling om de beschikbaarheid en prestaties te waarborgen. We zien echter nog ruimte voor uitbreiding. Concrete plannen omvatten het volledig implementeren van Synthetics voor alle kritieke flows en het verkennen van Datadog Security Monitoring om potentiële kwetsbaarheden en verdacht gedrag te detecteren. Hiermee willen we de 'Mean Time To Detect' (MTTD) van prestatieproblemen en beveiligingsincidenten verder verkorten en de algehele robuustheid van onze systemen verbeteren."
+      ]
+    },
+    {
+      "term": "Sentry",
+      "definition": "Een open-source platform voor het monitoren van applicatiefouten in real-time.",
+      "followup_prompts": [
+        "Welke soorten fouten en crashes worden primair gemonitord met Sentry (bijv. frontend, backend, mobiel)? Welke impact hebben deze fouten op de gebruikerservaring of bedrijfsprocessen?",
+        "Hoe is het incidentmanagementproces van de klant ingericht rondom Sentry-meldingen (bijv. toewijzing, prioritisering, resolutie)? Zijn er knelpunten in dit proces die ze willen verbeteren?",
+        "Welke rapportages en analyses haalt de klant uit Sentry om de stabiliteit en kwaliteit van hun software te verbeteren? Zijn er specifieke metrics of trends die ze nauwlettend volgen?"
+      ],
+      "followup_answers": [
+        "Met Sentry monitoren we primair fouten in onze backend Ruby on Rails-applicatie en onze frontend JavaScript-applicatie. We vangen zowel onverwachte exceptions op de backend als client-side JavaScript-fouten. De impact van deze fouten op de gebruikerservaring kan variëren van kleine UI-glitches tot het onmogelijk maken van cruciale functionaliteiten, zoals het afrekenproces. Op bedrijfsprocesniveau leiden deze fouten tot verloren omzet, verminderde klanttevredenheid en extra supportvragen. Dit maakt Sentry cruciaal voor het behoud van de kwaliteit en continuïteit van onze dienstverlening.",
+        "Sentry-meldingen worden automatisch geïntegreerd met onze projectmanagementtool (Jira) en toegewezen aan het developmentteam dat verantwoordelijk is voor het betreffende applicatiegedeelte. De prioriteit wordt bepaald op basis van het aantal impacted gebruikers en de ernst van de fout. Ontwikkelaars lossen de issues op en markeren ze als opgelost in Sentry. Een knelpunt is momenteel de handmatige koppeling van gerelateerde supporttickets aan Sentry-issues; we willen dit proces automatiseren. Ook willen we de automatische toewijzing van specifieke fouttypen aan de juiste ontwikkelaars verbeteren om de 'Mean Time To Resolution' (MTTR) verder te verkorten.",
+        "Uit Sentry halen we key metrics zoals het aantal unieke fouten, het totaal aantal gebeurtenissen per fout, en de trends in foutfrequenties over tijd. We volgen nauwlettend de 'nieuwe fouten' en 'regressies' om snel in te grijpen bij recente deployments die problemen veroorzaken. Ook de distributie van fouten over verschillende applicatieversies is een belangrijke analyse. Deze rapportages helpen ons de stabiliteit van onze releases te evalueren en de lange-termijntrends in softwarekwaliteit te monitoren, wat essentieel is voor continue verbetering van onze producten."
+      ]
+    }
+  ]
+}

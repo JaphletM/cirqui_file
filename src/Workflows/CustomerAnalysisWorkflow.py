@@ -46,9 +46,7 @@ def run_customer_analysis_workflow(customer_name: str = None, llm_client=None):
     print("\n🗄️  Termen worden vergeleken met database...")
     comparison_results = compare_terms_with_database(extracted_terms)
 
-    check_terms_in_vector_store(comparison_results)
-
-    new_terms_for_followup = find_new_terms(comparison_results)
+    new_terms_for_followup = check_terms_in_vector_store(comparison_results)
     print(f"✓ {len(new_terms_for_followup)} nieuwe termen gevonden.")
 
     print("\n💬 Vervolgvragen worden gegenereerd en beantwoord...")
@@ -141,15 +139,6 @@ def compare_terms_with_database(extracted_terms):
     return compare_terms(extracted_terms, existing_terms)
 
 
-def find_new_terms(comparison_results: list) -> list:
-    return [result for result in comparison_results if not is_known_term(result)]
-
-
-def is_known_term(result: dict) -> bool:
-    request = {"term": result.get("term"), "definition": result.get("definition", "")}
-    return bool(find_existing_term(request))
-
-
 def save_terms(comparison_results, company_name):
     save_new_terms(comparison_results, company_name)
     return None
@@ -173,26 +162,24 @@ def save_and_report_embedding(term_doc: dict) -> None:
     return None
 
 
-def check_terms_in_vector_store(comparison_results):
-    for result in comparison_results:
-        report_term_status(result)
-
-    return None
+def check_terms_in_vector_store(comparison_results: list) -> list:
+    return [result for result in comparison_results if not term_known_in_vector_store(result)]
 
 
-def report_term_status(result: dict) -> None:
+def term_known_in_vector_store(result: dict) -> bool:
     term = result.get("term")
-    if not term:
-        return None
-
     request = {"term": term, "definition": result.get("definition", "")}
     existing_info = find_existing_term(request)
-    if not existing_info:
-        print(f"  + Nieuwe term: {term}")
-        return None
 
-    print(f"  ✓ Bestaande kennis gevonden voor: {term}")
-    return None
+    if not term:
+        return bool(existing_info)
+
+    if existing_info:
+        print(f"  ✓ Bestaande kennis gevonden voor: {term}")
+    else:
+        print(f"  + Nieuwe term: {term}")
+
+    return bool(existing_info)
 
 
 def generate_followup_prompts(request: dict, llm_client) -> tuple:

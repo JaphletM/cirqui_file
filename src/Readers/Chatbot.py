@@ -20,7 +20,7 @@ def run_chatbot(llm_client=None) -> None:
 
     print("Welkom bij de chatbot! Typ 'exit' om te stoppen.")
     while True:
-        question = input("Stel een vraag: ")
+        question = input("Stel een vraag in de vorm 'Wat is de \"technische term\"' of 'Welke bedrijven werken met  \"technische term\"': ")
         if question.lower() == "exit":
             break
 

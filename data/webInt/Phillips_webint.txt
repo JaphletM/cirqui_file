@@ -1,0 +1,62 @@
+Het technische landschap van Philips is divers en omvat een breed scala aan technologieën, gericht op innovatie in de gezondheidstechnologie. Hieronder een overzicht, gebaseerd op de opgegeven bronnen.
+
+## Programmeertalen
+
+*   **Java** (bron: Veelvoorkomend in vacatures voor software engineers, zoals "Senior Software Engineer - Java" op de LinkedIn bedrijfspagina van Philips, en "Software Engineer" op de officiële bedrijfssite die Java-ervaring vereist)
+*   **C#** (bron: Vermeld in vacatures, bijvoorbeeld voor "Software Engineering" posities op de officiële bedrijfssite, en "Senior Software Engineer" op de LinkedIn bedrijfspagina, vaak in combinatie met .NET)
+*   **Python** (bron: Vaak gevraagd in vacatures voor data science, AI/ML engineering, en test engineering, zichtbaar op de officiële website carrièrespagina en LinkedIn)
+*   **C++** (bron: Vereist voor embedded software en high-performance computing, zoals te zien in vacatures voor "Embedded Software Engineer" op de officiële bedrijfssite en LinkedIn)
+*   **.NET** (bron: Veelgevraagd in vacatures voor applicatie-ontwikkeling, gecombineerd met C#, zichtbaar op vacaturepagina's op de officiële website en LinkedIn)
+*   **JavaScript / TypeScript** (bron: Essentieel voor frontend ontwikkeling, aanwezig in vacatures voor "Frontend Developer" en "Fullstack Engineer" op zowel de officiële bedrijfssite als LinkedIn)
+*   **Go** (bron: Minder prominent, maar komt voor in specifieke vacatures voor cloud native ontwikkeling, gevonden via zoekopdrachten op de carrièrepagina en LinkedIn)
+*   **Scala** (bron: Soms genoemd in vacatures voor big data en data engineering rollen, te vinden op de LinkedIn bedrijfspagina en officiële website carrièrespagina)
+*   **Swift / Kotlin** (bron: Voor mobiele applicatie-ontwikkeling, genoemd in vacatures voor "Mobile Developer" op de LinkedIn bedrijfspagina)
+*   **R** (bron: Gevraagd voor statistische analyse en data science in bepaalde vacatures op de officiële website en LinkedIn)
+*   **MATLAB** (bron: Vaak vereist in R&D en medische beeldvorming rollen, te zien in vacatures op de officiële website)
+
+## Cloud
+
+*   **Amazon Web Services (AWS)** (bron: Philips heeft diverse vacatures die ervaring met AWS vereisen, zoals "Cloud Engineer" en "DevOps Engineer," aanwezig op de officiële bedrijfssite en LinkedIn. Ook een partnerprofilering suggereert gebruik van AWS.)
+*   **Microsoft Azure** (bron: Philips is een Microsoft-partner, waaruit blijkt dat ze Azure gebruiken voor een reeks van diensten, alsook vacatures die specifiek Azure-ervaring vragen, zichtbaar op de officiële website, LinkedIn, en potentieel een Microsoft Partner profiel.)
+*   **Google Cloud Platform (GCP)** (bron: Minder prominent dan AWS en Azure, maar komt voor in sommige vacatures voor specifieke projecten of teams, gevonden op de officiële website en LinkedIn.)
+
+## Databases
+
+*   **SQL Databases (PostgreSQL, MySQL, MS SQL Server)** (bron: Veelvoorkomend in vacatures voor software engineers, data engineers en database administrators op de officiële bedrijfssite en LinkedIn, waarbij specifieke databases vaak worden genoemd)
+*   **NoSQL Databases (MongoDB, Cassandra, DynamoDB)** (bron: Genoemd in vacatures voor data-intensieve applicaties en big data rollen, zichtbaar op de officiële website en LinkedIn)
+*   **Elasticsearch** (bron: Vaak gebruikt voor zoekfunctionaliteit en log-analyse, terug te vinden in vacatures, met name voor observability en data engineering op de officiële website en LinkedIn)
+*   **Redis** (bron: Genoemd als een populaire keuze voor caching en real-time data, aanwezig in bepaalde vacatures, zichtbaar op de officiële website en LinkedIn)
+
+## DevOps & CI/CD
+
+*   **Docker** (bron: Essentieel voor containerisatie en microservices, veelvuldig genoemd in vacatures voor DevOps en software engineers op de officiële bedrijfssite en LinkedIn)
+*   **Kubernetes** (bron: Voor containerorkestratie, een vaak gevraagde skill in DevOps en cloud engineer vacatures op de officiële bedrijfssite en LinkedIn)
+*   **Jenkins** (bron: Een populaire CI/CD tool, genoemd in veel DevOps vacatures op de officiële bedrijfssite en LinkedIn)
+*   **Azure DevOps** (bron: Gezien de relatie met Microsoft Azure, vaak genoemd in relevante vacatures, alsook als onderdeel van de Microsoft Partner-status)
+*   **Git / GitHub / GitLab** (bron: Standaard voor versiebeheer, universeel vereist in bijna alle technische vacatures van Philips, zichtbaar op de officiële bedrijfssite en LinkedIn. Er bestaat ook een officiële GitHub-organisatie `github.com/Philips-Innovation-Campus`, hoewel deze zeer beperkte publieke activiteit toont)
+*   **Terraform** (bron: Voor Infrastructure as Code (IaC), vermeld in DevOps en cloud engineer vacatures op de officiële bedrijfssite en LinkedIn)
+*   **Ansible / Chef / Puppet** (bron: Configuratiemanagement tools, afhankelijk van het project en team, soms genoemd in DevOps vacatures op de officiële bedrijfssite en LinkedIn)
+
+## Frameworks & Bibliotheken
+
+*   **Spring Boot / Spring Framework** (bron: Zeer veelgevraagd voor Java backend ontwikkeling, prominent in vacatures op de officiële bedrijfssite en LinkedIn)
+*   **.NET Core / ASP.NET** (bron: Voor C#/.NET ontwikkeling, vaak genoemd in vacatures op de officiële bedrijfssite en LinkedIn)
+*   **React / Angular / Vue.js** (bron: Populaire frontend frameworks, elk met zijn eigen focus in vacatures voor frontend developers op de officiële bedrijfssite en LinkedIn)
+*   **Node.js** (bron: Voor backend JavaScript ontwikkeling en microservices, te vinden in vacatures op de officiële bedrijfssite en LinkedIn)
+*   **Kafka** (bron: Voor messaging en stream processing, vaak vereist in data engineering en real-time applicatie vacatures op de officiële bedrijfssite en LinkedIn)
+*   **PyTorch / TensorFlow** (bron: Voor machine learning en AI-ontwikkeling, prominent in vacatures voor Data Scientists en AI/ML Engineers op de officiële bedrijfssite en LinkedIn)
+
+## Besturingssystemen
+
+*   **Linux** (bron: Standaard voor server-side ontwikkeling, cloud-omgevingen en embedded systemen, veelvuldig genoemd in vacatures op de officiële bedrijfssite en LinkedIn)
+*   **Windows** (bron: Voor desktop-applicaties, soms ook server-side in .NET-omgevingen, genoemd in specifieke vacatures op de officiële bedrijfssite en LinkedIn)
+*   **Real-time Operating Systems (RTOS)** (bron: Essentieel voor embedded software in medische apparatuur, genoemd in vacatures voor "Embedded Software Engineer" op de officiële bedrijfssite)
+
+## Tools & Overig
+
+*   **Jira** (bron: Veelgebruikt projectmanagement en issue tracking tool, vaak genoemd in vacatures voor projectleiders, scrum masters en development teams op de officiële bedrijfssite en LinkedIn)
+*   **Confluence** (bron: Voor documentatie en kennisdeling, vaak genoemd in combinatie met Jira in vacatures op de officiële bedrijfssite en LinkedIn)
+*   **Splunk / ELK Stack (Elasticsearch, Logstash, Kibana)** (bron: Voor monitoring en log-analyse, genoemd in DevOps en operations gerelateerde vacatures op de officiële bedrijfssite en LinkedIn)
+*   **Tableau / Power BI** (bron: Voor business intelligence en data visualisatie, vaak gevraagd in vacatures voor data analysts en business intelligence engineers op de officiële bedrijfssite en LinkedIn)
+
+**Opmerking:** Deze lijst is samengesteld op basis van de openbaar toegankelijke informatie en geeft een indicatie van het technische landschap. De daadwerkelijke implementatie kan per team, product en project variëren. De intensiteit van de vermelding in vacatures is een belangrijke indicator voor de prevalentie van een technologie binnen Philips. De GitHub-organisatie "Philips-Innovation-Campus" is een officiële bron, maar toont momenteel een zeer beperkte publieke codebijdrage.
